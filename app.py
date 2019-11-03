@@ -45,12 +45,16 @@ def callback():
 def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
- 		TextSendMessage(text=event.message.text))
+ 		TextSendMessage(text="加油"))
 def function(event):
-	if event.message.text == "132":
+	if event.message.text == "好累":
 		line_bot_api.reply_message(	
         	event.reply_token,
  			TextSendMessage(text=event.message.text))
+	if event.message.text == "飲料":
+		line_bot_api.reply_message(	
+        	event.reply_token,
+ 			TextSendMessage(text="白酒"))	
 								
 
 
