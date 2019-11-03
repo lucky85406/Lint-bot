@@ -46,7 +46,7 @@ def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text="繼續努力!!"),
-    	if "a" == "a":
+    	if True:
     		TextSendMessage(text="好好加油!!"))
     	
 
