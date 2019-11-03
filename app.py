@@ -42,10 +42,6 @@ def callback():
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    line_bot_api.reply_message(
-        event.reply_token,
- 		TextSendMessage(text="加油"))
 def function(event):
 	if event.message.text == "好累":
 		line_bot_api.reply_message(	
@@ -55,6 +51,10 @@ def function(event):
 		line_bot_api.reply_message(	
         	event.reply_token,
  			TextSendMessage(text="白酒"))	
+def handle_message(event):
+    line_bot_api.reply_message(
+        event.reply_token,
+ 		TextSendMessage(text="加油"))
 								
 
 
