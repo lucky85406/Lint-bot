@@ -51,10 +51,7 @@ def function(event):
 		line_bot_api.reply_message(	
         	event.reply_token,
  			TextSendMessage(text="白酒"))
- 	else :
- 		line_bot_api.reply_message(
-        event.reply_token,
- 		TextSendMessage(text="加油"))		
+	
 
 
 								
