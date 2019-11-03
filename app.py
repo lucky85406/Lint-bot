@@ -45,8 +45,8 @@ def callback():
 def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
-        if(event.message.text="你好"):
-        TextSendMessage(text="晚上好XD"))
+        if event.message.text == "你好":TextSendMessage(text="晚上好!!"))
+    	if event.message.text == "晚安":TextSendMessage(text="祝你有個好眠!!"))
 
 
 if __name__ == "__main__":
