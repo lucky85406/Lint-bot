@@ -50,11 +50,13 @@ def function(event):
 	if event.message.text == "飲料":
 		line_bot_api.reply_message(	
         	event.reply_token,
- 			TextSendMessage(text="白酒"))	
-def handle_message(event):
-    line_bot_api.reply_message(
+ 			TextSendMessage(text="白酒"))
+ 	else :
+ 		line_bot_api.reply_message(
         event.reply_token,
- 		TextSendMessage(text="加油"))
+ 		TextSendMessage(text="加油"))		
+
+
 								
 
 
