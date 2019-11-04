@@ -60,8 +60,7 @@ def function(event):
 				,["afkop","冰靈麗絲玲黑皮諾微甜粉紅酒","黃尾袋鼠粉紅氣泡酒","邁坡莊園花漾微甜粉紅酒","南法小豬格納希粉紅酒"]]
 	addstr=''
 
-	message2 = ImageSendMessage(original_content_url='https://example.com/original.jpg',
-    						preview_image_url='https://example.com/preview.jpg')
+
 
 	for y in range(0,2):
 		if event.message.text == (drinklist[y][0]):
