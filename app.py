@@ -1,3 +1,5 @@
+import module
+
 from flask import Flask, request, abort
 
 from linebot import (
@@ -10,7 +12,7 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
-#import mymodule
+
 
 
 app = Flask(__name__)
