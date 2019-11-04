@@ -50,30 +50,8 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
+	message = TextSendMessage(text='Hello, world')
 	line_bot_api.reply_message(event.reply_token, message)
-	message=TemplateSendMessage(
-	alt_text='Buttons template',
-	template=ButtonsTemplate(
-		thumbnail_image_url='https://example.com/image.jpg',
-		title='Menu',
-		text='Please select',
-		actions=[
-		PostbackTemplateAction(
-			label='postback',
-			text='postback text',
-			data='action=buy&itemid=1'
-			),
-		MessageTemplateAction(
-			label='message',
-			text='message text'
-			),
-		URITemplateAction(
-			label='uri',
-			uri='http://example.com/'
-			)
-		]
-		)
-	)
 
 
 		
