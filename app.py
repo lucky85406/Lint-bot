@@ -1,5 +1,5 @@
 
-import pydata
+import C:\Users\陳柏任\AppData\Local\Programs\Python\Python38-32\Scripts\pydata
 conn = pymssql.connect(server='localhost', user='DESKTOP-3EGC1SF\陳柏任', password='', database='MyDB')  
 cursor = conn.cursor()  
 cursor.execute('SELECT id,name,list FROM mychoose')
