@@ -43,27 +43,19 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	foodlist = ["白肉", "紅肉", "海鮮", "甜點"]
-	aromalist = ["花香","漿果","柑橘","熱帶水果","淺色水果","香料"]
-	tastelist = ["清香","甜","圓潤","濃厚"]
-	pacelist = ["家樂福"]
-	pricelist = ["351~600","100~350","600+"]
-	if event.message.text == "好累" and event.message.text == "好累" and event.message.text == "好累":
-		line_bot_api.reply_message(	
-        	event.reply_token,
- 			TextSendMessage(text=event.message.text))
-	if event.message.text == "飲料":
-		line_bot_api.reply_message(	
-        	event.reply_token,
- 			TextSendMessage(text="白酒"))
-	if event.message.text == "食物":
-		line_bot_api.reply_message(	
-        	event.reply_token,
- 			TextSendMessage(text="白肉"))
-	if event.message.text == (foodlist[3]+aromalist[0]+tastelist[1]+pacelist[0]+pricelist[0]) or event.message.text == (foodlist[3]+aromalist[2]+tastelist[1]+pacelist[0]+pricelist[0]):
+	foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
+	aromalist = [["e","花香"], ["f","漿果"],["g","柑橘"],["h","熱帶水果"],["i","淺色水果"],["j","香料"]]
+	tastelist = [["k","清香"], ["l","甜"],["m","圓潤"],["n","濃厚"]]
+	pacelist = [["o","家樂福"]
+	pricelist = [["p","351~600"], ["q","100~350"],["r","600+"]]
+
+	if event.message.text == (foodlist[0,0]+aromalist[4,0]+tastelist[0,0]+pacelist[0,0]+pricelist[1,0]):
 			line_bot_api.reply_message(	
         	event.reply_token,
- 			TextSendMessage(text="your choose->"+event.message.text+"-- 冰靈麗絲玲黑皮諾微甜粉紅酒"))
+ 			TextSendMessage(text="your choose->"+foodlist[0,1]+"--"+aromalist[4,1]+"--"+tastelist[0,1]+"--"+pacelist[0,1]+"--"+pricelist[1,1]+"-- 美國加州庫克斯氣泡酒"))
+		
+
+
 	
 
 
