@@ -45,6 +45,9 @@ def callback():
 def function(event):
 	foodlist = ["白肉", "紅肉", "海鮮", "甜點"]
 	aromalist = ["花香","漿果","柑橘","熱帶水果","淺色水果","香料"]
+	tastelist = ["清香","甜","圓潤","濃厚"]
+	pacelist = ["家樂福"]
+	pricelist = ["351~600","100~350","600+"]
 	if event.message.text == "好累" and event.message.text == "好累" and event.message.text == "好累":
 		line_bot_api.reply_message(	
         	event.reply_token,
@@ -57,10 +60,11 @@ def function(event):
 		line_bot_api.reply_message(	
         	event.reply_token,
  			TextSendMessage(text="白肉"))
-	if event.message.text == (foodlist[3]+aromalist[0]) or event.message.text == (foodlist[3]+aromalist[2]):
+	if event.message.text == (foodlist[3]+aromalist[0]+tastelist[1]+pacelist[0]+pricelist[0])
+	 or event.message.text == (foodlist[3]+aromalist[2]+tastelist[1]+pacelist[0]+pricelist[0]):
 			line_bot_api.reply_message(	
         	event.reply_token,
- 			TextSendMessage(text="冰靈麗絲玲黑皮諾微甜粉紅酒"))
+ 			TextSendMessage(text="your choose->"+event.message.text+"-- 冰靈麗絲玲黑皮諾微甜粉紅酒"))
 	
 
 
