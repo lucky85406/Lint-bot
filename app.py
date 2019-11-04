@@ -51,8 +51,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	message = ImageSendMessage(
-    original_content_url='file:///E:/line_chatbot/img/%E6%B3%95%E6%97%BA%E7%B4%85%E9%85%92.png',
-    preview_image_url='file:///E:/line_chatbot/img/%E6%B3%95%E6%97%BA%E7%B4%85%E9%85%92.png'
+    original_content_url='https://i.screenshot.net/eqdppak',
+    preview_image_url='https://i.screenshot.net/eqdppak'
 )
 line_bot_api.reply_message(event.reply_token, message)
 
