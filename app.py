@@ -50,13 +50,12 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	message = ImageSendMessage(
-    original_content_url='https://i.screenshot.net/eqdppak',
-    preview_image_url='https://i.screenshot.net/eqdppak',+
-    original_content_url='https://i.screenshot.net/eqdppak',
-    preview_image_url='https://i.screenshot.net/eqdppak',
-	)
-	line_bot_api.reply_message(event.reply_token,message)
+	for x in xrange(1,3):
+		message[x] = ImageSendMessage(
+    	original_content_url='https://i.screenshot.net/eqdppak',
+    	preview_image_url='https://i.screenshot.net/eqdppak',+
+		)
+	line_bot_api.reply_message(event.reply_token,message[0])
 
 
 	#foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
