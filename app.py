@@ -56,12 +56,16 @@ def function(event):
 	)
 	message2 = ImageSendMessage(
     original_content_url='https://i.screenshot.net/eqdppak',
+    preview_image_url='https://i.screenshot.net/eqdppak',
+    original_content_url='https://i.screenshot.net/eqdppak',
     preview_image_url='https://i.screenshot.net/eqdppak'
 	)
 	if event.message.text == "紅酒":
 		for x in range(0,5):
 			message = ImageSendMessage(
     		    original_content_url='https://i.screenshot.net/eqdppak',
+    			preview_image_url='https://i.screenshot.net/eqdppak',
+    			original_content_url='https://i.screenshot.net/eqdppak',
     			preview_image_url='https://i.screenshot.net/eqdppak'
 		)
 		line_bot_api.reply_message(event.reply_token, message)	
