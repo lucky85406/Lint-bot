@@ -60,7 +60,7 @@ def function(event):
 	if event.message.text == (drinklist[0][0]):
 			line_bot_api.reply_message(	
         	event.reply_token,
-        	for x in xrange(1,7):
+        	for x in range(1,7):
         		TextSendMessage(text="your choose->"+drinklist[0][x]))
 
 		
