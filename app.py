@@ -50,7 +50,10 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	message = TextSendMessage(text='Hello, world')
+	message = ImageSendMessage(
+    original_content_url='https://example.com/original.jpg',
+    preview_image_url='https://example.com/preview.jpg'
+		)
 	line_bot_api.reply_message(event.reply_token, message)
 
 
