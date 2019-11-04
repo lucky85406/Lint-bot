@@ -46,8 +46,8 @@ def function(event):
 	foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
 	aromalist = [["e","花香"], ["f","漿果"],["g","柑橘"],["h","熱帶水果"],["i","淺色水果"],["j","香料"]]
 	tastelist = [["k","清香"], ["l","甜"],["m","圓潤"],["n","濃厚"]]
-	pacelist = [["o","家樂福"]
-	pricelist = [["p","351~600"], ["q","100~350"],["r","600+"]]
+	pacelist = [["o","家樂福"]]
+	pricelist = [["p","351~600"],["q","100~350"],["r","600+"]]
 
 	if event.message.text == (foodlist[0,0]+aromalist[4,0]+tastelist[0,0]+pacelist[0,0]+pricelist[1,0]):
 			line_bot_api.reply_message(	
