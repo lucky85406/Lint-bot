@@ -68,6 +68,20 @@ def function(event):
                     label='postback2',
                     text='postback text2',
                     data='action=buy&itemid=2'
+                ),
+            ImageCarouselColumn(
+                image_url='https://upload.wikimedia.org/wikipedia/commons/8/82/MRT_Singapore_Destination_8_%281%29.png',
+                action=PostbackTemplateAction(
+                    label='postback3',
+                    text='postback text3',
+                    data='action=buy&itemid=3'
+                ),
+            ImageCarouselColumn(
+                image_url='https://blognumbers.files.wordpress.com/2010/09/81.jpg',
+                action=PostbackTemplateAction(
+                    label='postback4',
+                    text='postback text4',
+                    data='action=buy&itemid=4'
                 )
             )
         ]
