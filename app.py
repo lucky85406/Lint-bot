@@ -9,7 +9,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction
+    MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate,
     )
 
 
@@ -51,29 +51,30 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	message = TemplateSendMessage(
-    alt_text='Buttons template',
-    template=ButtonsTemplate(
-        thumbnail_image_url='https://example.com/image.jpg',
-        title='Menu',
-        text='Please select',
-        actions=[
-            PostbackTemplateAction(
-                label='postback',
-                text='postback text',
-                data='action=buy&itemid=1'
+    alt_text='ImageCarousel template',
+    template=ImageCarouselTemplate(
+        columns=[
+            ImageCarouselColumn(
+                image_url='https://example.com/item1.jpg',
+                action=PostbackTemplateAction(
+                    label='postback1',
+                    text='postback text1',
+                    data='action=buy&itemid=1'
+                )
             ),
-            MessageTemplateAction(
-                label='message',
-                text='message text'
-            	),
-            URITemplateAction(
-                label='uri',
-                uri='https://www.youtube.com/?gl=TW&hl=zh-tw'
-            	)
-        	]
-    	)
-	)
-	line_bot_api.reply_message(event.reply_token, message)
+            ImageCarouselColumn(
+                image_url='https://example.com/item2.jpg',
+                action=PostbackTemplateAction(
+                    label='postback2',
+                    text='postback text2',
+                    data='action=buy&itemid=2'
+                )
+            )
+        ]
+    )
+)
+line_bot_api.reply_message(event.reply_token, message)
+
 	#foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
 	#aromalist = [["e","花香"], ["f","漿果"],["g","柑橘"],["h","熱帶水果"],["i","淺色水果"],["j","香料"]]
 	#tastelist = [["k","清香"], ["l","甜"],["m","圓潤"],["n","濃厚"]]
