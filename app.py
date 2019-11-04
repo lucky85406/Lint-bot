@@ -50,6 +50,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
+	line_bot_api.reply_message(event.reply_token, message)
 	message=TemplateSendMessage(
 	alt_text='Buttons template',
 	template=ButtonsTemplate(
@@ -73,7 +74,7 @@ def function(event):
 		]
 		)
 	)
-line_bot_api.reply_message(event.reply_token, message)
+
 
 		
 
