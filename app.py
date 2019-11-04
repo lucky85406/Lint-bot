@@ -63,7 +63,7 @@ def function(event):
                 )
             ),
             ImageCarouselColumn(
-                image_url='https://www.redhat.com/cms/managed-files/img-rhel-8-hero-mobile.png',
+                image_url='E:\line_chatbot\img\法旺紅酒.png',
                 action=PostbackTemplateAction(
                     label='postback2',
                     text='postback text2',
