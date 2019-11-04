@@ -1,11 +1,4 @@
-import module
 
-conn = pymssql.connect(
-	host='localhost',
-	user='DESKTOP-3EGC1SF\陳柏任',
-	password='happt75348',
-	database='mychoose'
-	)
 
 from flask import Flask, request, abort
 
@@ -55,6 +48,15 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
+
+import module
+
+	conn = pymssql.connect(
+	host='localhost',
+	user='DESKTOP-3EGC1SF\陳柏任',
+	password='happt75348',
+	database='mychoose'
+	)
 
 	foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
 	aromalist = [["e","花香"], ["f","漿果"],["g","柑橘"],["h","熱帶水果"],["i","淺色水果"],["j","香料"]]
