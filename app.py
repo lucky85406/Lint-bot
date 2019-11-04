@@ -5,7 +5,7 @@ cursor = conn.cursor()
 cursor.execute('SELECT id,name,list FROM mychoose')
 row = cursor.fetchone()  
 while row:  
-	print str(row[0]) + " " + str(row[1]) + " " + str(row[2])     
+	print(row)     
 	row = cursor.fetchone()
 conn.commit()
 conn.close()    
