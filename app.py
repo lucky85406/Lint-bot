@@ -55,10 +55,10 @@ def function(event):
 	pacelist = [["o","家樂福"]]
 	pricelist = [["p","351~600"],["q","100~350"],["r","600+"]]
 
-	drinklist = [["aekop","冰靈麗絲玲黑皮諾微甜粉紅酒","義大利愛茉拉慕斯卡多甜白酒","南法小豬格納希粉紅酒","義大利若林慕斯卡微氣泡白酒","隆河紫羅蘭風土科倫坡白酒","冰靈麗絲玲黑皮諾微甜粉紅酒","德國丹赫1794慕斯卡白酒"]]
+	drinklist = [["aekop","冰靈麗絲玲黑皮諾微甜粉紅酒","義大利愛茉拉慕斯卡多甜白酒","南法小豬格納希粉紅酒","義大利若林慕斯卡微氣泡白酒","隆河紫羅蘭風土科倫坡白酒","德國丹赫1794慕斯卡白酒"]]
 
 	if event.message.text == (drinklist[0][0]):
-		for x in range(1,7):
+		for x in range(1,6):
 			line_bot_api.reply_message(	
         		event.reply_token,
         		TextSendMessage(text="your choose->"+drinklist[0][x]))
