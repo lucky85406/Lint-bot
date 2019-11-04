@@ -4,9 +4,9 @@ conn = pymssql.connect(server='localhost', user='DESKTOP-3EGC1SF\陳柏任', pas
 cursor = conn.cursor()  
 cursor.execute('SELECT id,name,list FROM mychoose')
 row = cursor.fetchone()  
-   	while row:  
-        print str(row[0]) + " " + str(row[1]) + " " + str(row[2])     
-        row = cursor.fetchone()
+while row:  
+	print str(row[0]) + " " + str(row[1]) + " " + str(row[2])     
+	row = cursor.fetchone()
 conn.commit()
 conn.close()    
 
