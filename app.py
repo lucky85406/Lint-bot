@@ -69,7 +69,7 @@ def function(event):
 				addstr += drinklist[y][x]+"\n"
 			line_bot_api.reply_message(	
         		event.reply_token,
-        		TextSendMessage(text="your choose->\n"+addstr),message2)
+        		TextSendMessage(text="your choose->\n"+addstr))
 
 		
 
