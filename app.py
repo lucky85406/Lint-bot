@@ -59,7 +59,7 @@ def function(event):
     preview_image_url='https://i.screenshot.net/eqdppak'
 	)
 	if event.message.text == "紅酒":
-		for x in range(1,3):
+		for x in range(0,5):
 			message = ImageSendMessage(
     		    original_content_url='https://i.screenshot.net/eqdppak',
     			preview_image_url='https://i.screenshot.net/eqdppak'
