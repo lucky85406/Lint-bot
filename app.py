@@ -51,8 +51,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	message = ImageSendMessage(
-    original_content_url='https://example.com/original.jpg',
-    preview_image_url='https://example.com/preview.jpg'
+    original_content_url='https://www.moedict.tw/%E4%B9%9D.png',
+    preview_image_url='https://www.moedict.tw/%E5%85%AB.png'
 		)
 	line_bot_api.reply_message(event.reply_token, message)
 
