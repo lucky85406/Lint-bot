@@ -59,7 +59,7 @@ def function(event):
     preview_image_url='https://i.screenshot.net/eqdppak'
 	)
 	if event.message.text == "紅酒":
-		for x in xrange(1,3):
+		for x in range(1,3):
 			line_bot_api.reply_message(event.reply_token, message2)
 	if event.message.text == "白酒":
 		line_bot_api.reply_message(event.reply_token, message)	
