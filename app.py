@@ -1,5 +1,12 @@
 import module
 
+conn = pymssql.connect(
+	host='localhost',
+	user='DESKTOP-3EGC1SF\陳柏任',
+	password='happt75348',
+	database='mychoose'
+	)
+
 from flask import Flask, request, abort
 
 from linebot import (
