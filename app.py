@@ -60,8 +60,7 @@ def function(event):
 		line_bot_api.reply_message(	
         	event.reply_token,
  			TextSendMessage(text="白肉"))
-	if event.message.text == (foodlist[3]+aromalist[0]+tastelist[1]+pacelist[0]+pricelist[0])
-	 or event.message.text == (foodlist[3]+aromalist[2]+tastelist[1]+pacelist[0]+pricelist[0]):
+	if event.message.text == (foodlist[3]+aromalist[0]+tastelist[1]+pacelist[0]+pricelist[0]) or event.message.text == (foodlist[3]+aromalist[2]+tastelist[1]+pacelist[0]+pricelist[0]):
 			line_bot_api.reply_message(	
         	event.reply_token,
  			TextSendMessage(text="your choose->"+event.message.text+"-- 冰靈麗絲玲黑皮諾微甜粉紅酒"))
