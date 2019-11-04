@@ -47,14 +47,6 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 
-	conn = mymodule.connect(host='1.160.52.232',user='localhost',password='happy75348',database='MyDB',charset='utf8')
-	#查看连接是否成功
-	cursor = conn.cursor()
-		sql = 'select * from mychoose'
-		cursor.execute(sql)
-		#用一个rs变量获取数据
-		rs = cursor.fetchall()
-
 	foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
 	aromalist = [["e","花香"], ["f","漿果"],["g","柑橘"],["h","熱帶水果"],["i","淺色水果"],["j","香料"]]
 	tastelist = [["k","清香"], ["l","甜"],["m","圓潤"],["n","濃厚"]]
@@ -64,7 +56,7 @@ def function(event):
 	if event.message.text == (foodlist[0][0]+aromalist[4][0]+tastelist[0][0]+pacelist[0][0]+pricelist[1][0]):
 			line_bot_api.reply_message(	
         	event.reply_token,
- 			TextSendMessage(text="your choose->"+foodlist[0][1]+"--"+aromalist[4][1]+"--"+tastelist[0][1]+"--"+pacelist[0][1]+"--"+pricelist[1][1]+"-- 美國加州庫克斯氣泡酒"+rs))
+ 			TextSendMessage(text="your choose->"+foodlist[0][1]+"--"+aromalist[4][1]+"--"+tastelist[0][1]+"--"+pacelist[0][1]+"--"+pricelist[1][1]+"-- 美國加州庫克斯氣泡酒"))
 		
 
 
