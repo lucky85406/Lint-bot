@@ -55,7 +55,7 @@ def function(event):
     template=ImageCarouselTemplate(
         columns=[
             ImageCarouselColumn(
-                image_url='https://example.com/item1.jpg',
+                image_url='https://comps.canstockphoto.com.tw/abc-%E6%B6%B2%E4%BD%93-%E7%B3%BB%E5%88%97-%E6%95%B8%E5%AD%97-%E6%B0%B4-8-%E7%BE%8E%E5%B7%A5%E5%90%91%E9%87%8F_csp7832476.jpg',
                 action=PostbackTemplateAction(
                     label='postback1',
                     text='postback text1',
@@ -63,7 +63,7 @@ def function(event):
                 )
             ),
             ImageCarouselColumn(
-                image_url='https://example.com/item2.jpg',
+                image_url='https://www.redhat.com/cms/managed-files/img-rhel-8-hero-mobile.png',
                 action=PostbackTemplateAction(
                     label='postback2',
                     text='postback text2',
