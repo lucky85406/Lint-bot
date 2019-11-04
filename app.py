@@ -44,6 +44,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	foodlist = ["白肉", "紅肉", "海鮮", "甜點"]
+	aromalist = ["花香","漿果","柑橘","熱帶水果","淺色水果","香料"]
 	if event.message.text == "好累" and event.message.text == "好累" and event.message.text == "好累":
 		line_bot_api.reply_message(	
         	event.reply_token,
@@ -56,11 +57,10 @@ def function(event):
 		line_bot_api.reply_message(	
         	event.reply_token,
  			TextSendMessage(text="白肉"))
-	for i in range(4):
-		if event.message.text == foodlist[i]:
+	if event.message.text == (foodlist[3]+aromalist[0]) or event.message.text == (foodlist[3]+aromalist[2])
 			line_bot_api.reply_message(	
         	event.reply_token,
- 			TextSendMessage(text=event.message.text))
+ 			TextSendMessage(text="冰靈麗絲玲黑皮諾微甜粉紅酒"))
 	
 
 
