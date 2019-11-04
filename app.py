@@ -21,7 +21,7 @@ while row:
 	print(row)     
 	row = cursor.fetchone()
 conn.commit()
-conn.close()   
+ 
 
 
 
@@ -81,4 +81,4 @@ def function(event):
 
 if __name__ == "__main__":
     app.run()
-    
+    conn.close()  
