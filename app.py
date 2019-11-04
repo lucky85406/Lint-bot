@@ -50,15 +50,26 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	message = ImageSendMessage(
-    original_content_url='https://ddk18b8ivywnu.cloudfront.net/wp-content/uploads/2018/05/%E8%80%81%E7%88%BA%E5%B7%B4%E6%8B%BF%E9%A6%AC%E8%98%AD%E5%A7%86%E9%85%9212%E5%B9%B4.jpg',
-    preview_image_url='https://ddk18b8ivywnu.cloudfront.net/wp-content/uploads/2018/05/%E8%80%81%E7%88%BA%E5%B7%B4%E6%8B%BF%E9%A6%AC%E8%98%AD%E5%A7%86%E9%85%9212%E5%B9%B4.jpg'
-	)
-	message2 = ImageSendMessage(
-    original_content_url='https://i.screenshot.net/eqdppak',
-    preview_image_url='https://i.screenshot.net/eqdppak',
-	)
-	line_bot_api.reply_message(event.reply_token, message2)	
+message = ImagemapSendMessage(
+    base_url='https://example.com/base',
+    alt_text='this is an imagemap',
+    base_size=BaseSize(height=1040, width=1040),
+    actions=[
+        URIImagemapAction(
+            link_uri='https://example.com/',
+            area=ImagemapArea(
+                x=0, y=0, width=520, height=1040
+            )
+        ),
+        MessageImagemapAction(
+            text='hello',
+            area=ImagemapArea(
+                x=520, y=0, width=520, height=1040
+            )
+        )
+    ]
+)
+line_bot_api.reply_message(event.reply_token, message)
 
 	#foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
 	#aromalist = [["e","花香"], ["f","漿果"],["g","柑橘"],["h","熱帶水果"],["i","淺色水果"],["j","香料"]]
