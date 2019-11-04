@@ -50,7 +50,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	for x in xrange(0,3):
+	for x in range(0,3):
 		message[x] = ImageSendMessage(
     	original_content_url='https://i.screenshot.net/eqdppak',
     	preview_image_url='https://i.screenshot.net/eqdppak',+
