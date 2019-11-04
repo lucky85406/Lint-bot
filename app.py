@@ -54,7 +54,11 @@ def function(event):
     original_content_url='https://i.screenshot.net/eqdppak',
     preview_image_url='https://i.screenshot.net/eqdppak'
 	)
-	line_bot_api.reply_message(event.reply_token,message)
+	message2 = ImageSendMessage(
+    original_content_url='https://i.screenshot.net/eqdppak',
+    preview_image_url='https://i.screenshot.net/eqdppak'
+	)
+	line_bot_api.reply_message(event.reply_token,message+message2)
 
 
 	#foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
