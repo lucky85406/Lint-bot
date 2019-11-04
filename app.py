@@ -58,9 +58,9 @@ def function(event):
 
 	drinklist = [["aekop","冰靈麗絲玲黑皮諾微甜粉紅酒","義大利愛茉拉慕斯卡多甜白酒","南法小豬格納希粉紅酒","義大利若林慕斯卡微氣泡白酒","隆河紫羅蘭風土科倫坡白酒","德國丹赫1794慕斯卡白酒"],["afkop","冰靈麗絲玲黑皮諾微甜粉紅酒","黃尾袋鼠粉紅氣泡酒","邁坡莊園花漾微甜粉紅酒","南法小豬格納希粉紅酒"]]
 	addstr=''
-	for y in xrange(0,1):
+	for y in range(0,2):
 		if event.message.text == (drinklist[y][0]):
-			for x in range(1,6):
+			for x in range(1,7):
 				addstr += drinklist[y][x]+"\n"
 			line_bot_api.reply_message(	
         		event.reply_token,
