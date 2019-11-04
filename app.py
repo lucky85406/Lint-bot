@@ -50,25 +50,11 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-message = ImagemapSendMessage(
-    base_url='https://example.com/base',
-    alt_text='this is an imagemap',
-    base_size=BaseSize(height=1040, width=1040),
-    actions=[
-        URIImagemapAction(
-            link_uri='https://example.com/',
-            area=ImagemapArea(
-                x=0, y=0, width=520, height=1040
-            )
-        ),
-        MessageImagemapAction(
-            text='hello',
-            area=ImagemapArea(
-                x=520, y=0, width=520, height=1040
-            )
-        )
-    ]
-)
+message = {
+  "type": "image",
+  "originalContentUrl": "https://i.screenshot.net/eqdppak",
+  "previewImageUrl": "https://i.screenshot.net/eqdppak"
+}
 line_bot_api.reply_message(event.reply_token, message)
 
 	#foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
