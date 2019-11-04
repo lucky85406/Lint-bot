@@ -10,6 +10,7 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
+import mymodule
 
 
 app = Flask(__name__)
@@ -45,6 +46,17 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
+
+	conn = mymodule.connect(host='1.160.52.232',user='localhost',password='happy75348',database='MyDB',charset='utf8')
+	#查看连接是否成功
+		cursor = conn.cursor()
+		sql = 'select * from mychoose'
+		cursor.execute(sql)
+		#用一个rs变量获取数据
+		rs = cursor.fetchall()
+
+		print(rs)
+
 	foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
 	aromalist = [["e","花香"], ["f","漿果"],["g","柑橘"],["h","熱帶水果"],["i","淺色水果"],["j","香料"]]
 	tastelist = [["k","清香"], ["l","甜"],["m","圓潤"],["n","濃厚"]]
