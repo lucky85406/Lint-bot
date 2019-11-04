@@ -81,4 +81,4 @@ def function(event):
 
 if __name__ == "__main__":
     app.run()
-    conn.close()  
+    #conn.close()  
