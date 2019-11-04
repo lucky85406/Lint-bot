@@ -10,16 +10,7 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
-import mymodule
-conn = mymodule.connect(host='1.160.52.232',user='localhost',password='happy75348',database='MyDB',charset='utf8')
-#查看连接是否成功
-cursor = conn.cursor()
-sql = 'select * from mychoose'
-cursor.execute(sql)
-#用一个rs变量获取数据
-rs = cursor.fetchall()
 
-print(rs)
 
 app = Flask(__name__)
 
