@@ -51,6 +51,10 @@ def function(event):
 		line_bot_api.reply_message(	
         	event.reply_token,
  			TextSendMessage(text="白酒"))
+	if event.message.text == "食物":
+		line_bot_api.reply_message(	
+        	event.reply_token,
+ 			TextSendMessage(text="白肉"))
 	
 
 
