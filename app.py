@@ -10,6 +10,17 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
+import mymodule
+conn = mymodule.connect(host='1.160.52.232',user='localhost',password='happy75348',database='master',charset='utf8')
+#查看连接是否成功
+cursor = conn.cursor()
+sql = 'select * from student'
+cursor.execute(sql)
+#用一个rs变量获取数据
+rs = cursor.fetchall()
+
+print(rs)
+
 app = Flask(__name__)
 
 line_bot_api = LineBotApi('+xnEz6H8r8/SZr2w0WRZxzuYUfJ98uPnZmkwybxctShP3J7j2H9P7Wub9o4/m7Cwb3jgsXNBFxBxOQ+NFvIsSM4HEccnDapK8x8rI2lRCGggqRGtwdlacsdtDalahZmiEI5K/GI1T6XqjkQf41CqNAdB04t89/1O/w1cDnyilFU=')
