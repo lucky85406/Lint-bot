@@ -21,7 +21,7 @@ while row:
 	print(row)     
 	row = cursor.fetchone()
 conn.commit()
- 
+conn.close() 
 
 
 
@@ -67,7 +67,7 @@ def function(event):
 			line_bot_api.reply_message(	
         	event.reply_token,
  			TextSendMessage(text="your choose->"+foodlist[0][1]+"--"+aromalist[4][1]+"--"+tastelist[0][1]+"--"+pacelist[0][1]+"--"+pricelist[1][1]+"-- 美國加州庫克斯氣泡酒"))
- 			conn.close() 
+
 		
 
 
