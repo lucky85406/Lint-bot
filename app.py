@@ -53,7 +53,7 @@ def function(event):
 	for x in range(0,3):
 		message[x] = ImageSendMessage(
     	original_content_url='https://i.screenshot.net/eqdppak',
-    	preview_image_url='https://i.screenshot.net/eqdppak',+
+    	preview_image_url='https://i.screenshot.net/eqdppak'
 		)
 	line_bot_api.reply_message(event.reply_token,message[0])
 
