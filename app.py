@@ -65,15 +65,15 @@ def function(event):
             MessageTemplateAction(
                 label='message',
                 text='message text'
-            ),
+            	),
             URITemplateAction(
                 label='uri',
                 uri='http://example.com/'
-            )
-        ]
-    )
-)
-line_bot_api.reply_message(event.reply_token, message)
+            	)
+        	]
+    	)
+	)
+	line_bot_api.reply_message(event.reply_token, message)
 	#foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
 	#aromalist = [["e","花香"], ["f","漿果"],["g","柑橘"],["h","熱帶水果"],["i","淺色水果"],["j","香料"]]
 	#tastelist = [["k","清香"], ["l","甜"],["m","圓潤"],["n","濃厚"]]
