@@ -54,10 +54,13 @@ def function(event):
 	tastelist = [["k","清香"], ["l","甜"],["m","圓潤"],["n","濃厚"]]
 	pacelist = [["o","家樂福"]]
 	pricelist = [["p","351~600"],["q","100~350"],["r","600+"]]
-	if event.message.text == (foodlist[0][0]+aromalist[4][0]+tastelist[0][0]+pacelist[0][0]+pricelist[1][0]):
+
+	drinklist = [["aekop","冰靈麗絲玲黑皮諾微甜粉紅酒"]]
+
+	if event.message.text == (drinklist[0][0]):
 			line_bot_api.reply_message(	
         	event.reply_token,
- 			TextSendMessage(text="your choose->"+foodlist[0][1]+"--"+aromalist[4][1]+"--"+tastelist[0][1]+"--"+pacelist[0][1]+"--"+pricelist[1][1]+"-- 美國加州庫克斯氣泡酒"))
+ 			TextSendMessage(text="your choose->"+drinklist[0][1])
 
 		
 
