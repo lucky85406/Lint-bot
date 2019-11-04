@@ -52,10 +52,11 @@ def callback():
 def function(event):
 	message = ImageSendMessage(
     original_content_url='https://i.screenshot.net/eqdppak',
-    preview_image_url='https://i.screenshot.net/eqdppak'
+    preview_image_url='https://i.screenshot.net/eqdppak',+
+    original_content_url='https://i.screenshot.net/eqdppak',
+    preview_image_url='https://i.screenshot.net/eqdppak',
 	)
-	line_bot_api.reply_message(event.reply_token,for x in range(1,3):
-		message)
+	line_bot_api.reply_message(event.reply_token,message)
 
 
 	#foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
