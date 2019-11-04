@@ -42,6 +42,7 @@ def callback():
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
+foodlist = ["白肉", "紅肉", "海鮮", "甜點"]
 def function(event):
 	if event.message.text == "好累" and event.message.text == "好累" and event.message.text == "好累":
 		line_bot_api.reply_message(	
@@ -55,6 +56,11 @@ def function(event):
 		line_bot_api.reply_message(	
         	event.reply_token,
  			TextSendMessage(text="白肉"))
+	for i in range(4):
+		if event.message.text == foodlist[i]:
+			line_bot_api.reply_message(	
+        	event.reply_token,
+ 			TextSendMessage(text=event.message.text))
 	
 
 
