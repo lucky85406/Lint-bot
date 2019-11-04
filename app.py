@@ -68,7 +68,7 @@ def function(event):
             	),
             URITemplateAction(
                 label='uri',
-                uri='http://example.com/'
+                uri='https://www.youtube.com/?gl=TW&hl=zh-tw'
             	)
         	]
     	)
