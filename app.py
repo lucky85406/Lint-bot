@@ -57,17 +57,22 @@ def function(event):
 	pacelist = [["o","家樂福"]]
 	pricelist = [["p","351~600"],["q","100~350"],["r","600+"]]
 	drinklist = [["test","c01.美國加州庫克斯氣泡酒","c02.法國凱芙氣泡甜酒","c03.黃尾袋鼠夏多內白酒","a01.奇蒂雅遲收甜白葡萄酒","a13.冰靈麗絲玲白葡萄酒"]\
-				,["afkop","冰靈麗絲玲黑皮諾微甜粉紅酒","黃尾袋鼠粉紅氣泡酒","邁坡莊園花漾微甜粉紅酒","南法小豬格納希粉紅酒"]]
+				,["test2","c04.冰靈黑皮諾微甜粉紅酒","a03.香奈歪脖子夏多內白葡萄酒","a09.多力士酒廠艾斯瑪瑞達白葡萄酒","a10.南法小豬夏多內白葡萄酒","a11.聖海倫娜酒廠夏多內白葡萄酒"]\
+				,["test3","a02.路易菲利普白牌白蘇雅維翁白葡萄酒","a04.黃玉帛金香白葡萄酒","a05.奇蒂雅遲收甜白葡萄酒","a06.囍瑞鳥啼有機白葡萄酒"]\
+				,["test4","a07.黃尾袋鼠粉紅慕斯卡多葡萄酒.","a08.黃尾袋鼠慕斯卡多白葡萄酒","a12.小花瑞田麝香白葡萄酒"]]
 	urllistc = [["c01","https://i.screenshot.net/yj2k2h5"],["c02","https://i.screenshot.net/p8w2waq"],["c03","https://i.screenshot.net/e5dplf0"],["c04","https://i.screenshot.net/03q81fj"]]
-	urllista = [["a01","https://i.screenshot.net/n2k9kud"],["a13","https://i.screenshot.net/wrk2oc9"]]
+	urllista = [["a01","https://i.screenshot.net/n2k9kud"],["a02","https://i.screenshot.net/wrk2oc9"],["a03","https://i.screenshot.net/r6wzwsk"],["a04","https://i.screenshot.net/569qkae"]\
+				,["a05","https://i.screenshot.net/690vda1"],["a06","https://i.screenshot.net/0xn1lar"],["a07","https://i.screenshot.net/pwopeag"],["a08","https://i.screenshot.net/6zjxkhr"]\
+				,["a09","https://i.screenshot.net/r04p2cp"],["a10","https://i.screenshot.net/7od49cq"],["a11","https://i.screenshot.net/77r6gi7"],["a12","https://i.screenshot.net/nyzkqbz"]\
+				,["a13","https://i.screenshot.net/wrk2oc9"]]
 	addstr=''
 	urlstr=''
 	fistr=''
-	for cl in range(0,2):	
+	for cl in range(0,len(urllistc[][])):	
 		if event.message.text == urllistc[cl][0]:
 			urlstr = urllistc[cl][1]
 			fistr = "t"
-	for al in range(0,2):
+	for al in range(0,urllista[][]):
 		if event.message.text == urllista[al][0]:
 			urlstr = urllista[al][1] 	
 			fistr = "t"	
@@ -76,7 +81,7 @@ def function(event):
     preview_image_url=urlstr
 	)
 
-	for y in range(0,2):
+	for y in range(0,drinklist[][]):
 		if event.message.text == (drinklist[y][0]):
 			for x in range(1,len(drinklist[y])):
 				addstr += drinklist[y][x]+"\n"
