@@ -63,27 +63,26 @@ def function(event):
 	addstr=''
 	urlstr=''
 	fistr=''
-	for cl in range(0,len(urllistc)):	
+	for cl in range(0,2):	
 		if event.message.text == urllistc[cl][0]:
 			urlstr = urllistc[cl][1]
 			fistr = "c"
-	for al in range(0,len(urllista))
+	for al in range(0,2):
 		if event.message.text == urllista[al][0]:
 			urlstr = urllista[al][1] 	
 			fistr = "a"	
-
 	message2 = ImageSendMessage(
     original_content_url=urlstr,
     preview_image_url=urlstr
 	)
 
-	if event.message.text == (drinklist[0][0]):
-		for x in range(1,len(drinklist[0])):
-			addstr += drinklist[y][x]+"\n"
-		line_bot_api.reply_message(	
-        	event.reply_token,
-        	TextSendMessage(text="your choose->\n"+addstr))
-
+	for y in range(0,2):
+		if event.message.text == (drinklist[y][0]):
+			for x in range(1,len(drinklist[y])):
+				addstr += drinklist[y][x]+"\n"
+			line_bot_api.reply_message(	
+        		event.reply_token,
+        		TextSendMessage(text="your choose->\n"+addstr))
 	if event.message.text == "c01":
 			line_bot_api.reply_message(event.reply_token,message2)
 
