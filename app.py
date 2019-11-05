@@ -66,11 +66,11 @@ def function(event):
 	for cl in range(0,2):	
 		if event.message.text == urllistc[cl][0]:
 			urlstr = urllistc[cl][1]
-			fistr = "c"
+			fistr = "t"
 	for al in range(0,2):
 		if event.message.text == urllista[al][0]:
 			urlstr = urllista[al][1] 	
-			fistr = "a"	
+			fistr = "t"	
 	message2 = ImageSendMessage(
     original_content_url=urlstr,
     preview_image_url=urlstr
@@ -83,7 +83,7 @@ def function(event):
 			line_bot_api.reply_message(	
         		event.reply_token,
         		TextSendMessage(text="your choose->\n"+addstr))
-	if event.message.text == "c01":
+	if fistr == "t":
 			line_bot_api.reply_message(event.reply_token,message2)
 
 
