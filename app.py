@@ -57,12 +57,18 @@ def function(event):
 	pacelist = [["o","家樂福"]]
 	pricelist = [["p","351~600"],["q","100~350"],["r","600+"]]
 
-	drinklist = [["aekop","a.冰靈麗絲玲黑皮諾微甜粉紅酒","b.義大利愛茉拉慕斯卡多甜白酒","c.南法小豬格納希粉紅酒","d.義大利若林慕斯卡微氣泡白酒","e.隆河紫羅蘭風土科倫坡白酒","f.德國丹赫1794慕斯卡白酒"]\
+	drinklist = [["test","c01.美國加州庫克斯氣泡酒","c02.法國凱芙氣泡甜酒","c03.黃尾袋鼠夏多內白酒","a01.奇蒂雅遲收甜白葡萄酒","a13.冰靈麗絲玲白葡萄酒"]\
 				,["afkop","冰靈麗絲玲黑皮諾微甜粉紅酒","黃尾袋鼠粉紅氣泡酒","邁坡莊園花漾微甜粉紅酒","南法小豬格納希粉紅酒"]]
+	urllistc = [["c01","https://i.screenshot.net/yj2k2h5"],["c02","https://i.screenshot.net/p8w2waq"],["c03","https://i.screenshot.net/e5dplf0"],["c04","https://i.screenshot.net/03q81fj"]]
+	urllista = [["a01","https://i.screenshot.net/n2k9kud"],["a13","https://i.screenshot.net/wrk2oc9"]]
 	addstr=''
 	urlstr=''
-	if event.message.text =="a":
-		urlstr = 'https://i.screenshot.net/569qkae'
+	for cl in range(0,len(urllistc)):	
+		if event.message.text == urllistc[cl][0]:
+			urlstr = urllistc[cl][1]
+	for al in range(0,len(urllista))
+		if event.message.text == urllista[al][0]:
+			urlstr = urllista[al][1] 		
 	message2 = ImageSendMessage(
     original_content_url=urlstr,
     preview_image_url=urlstr
