@@ -61,7 +61,7 @@ def function(event):
 				,["afkop","冰靈麗絲玲黑皮諾微甜粉紅酒","黃尾袋鼠粉紅氣泡酒","邁坡莊園花漾微甜粉紅酒","南法小豬格納希粉紅酒"]]
 	addstr=''
 	urlstr=''
-	if event.message.text =="aekop":
+	if event.message.text =="a":
 		urlstr = 'https://i.screenshot.net/569qkae'
 	message2 = ImageSendMessage(
     original_content_url=urlstr,
