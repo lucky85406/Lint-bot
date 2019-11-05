@@ -50,14 +50,6 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	#message = ImageSendMessage(
-    #original_content_url='https://i.screenshot.net/eqdppak',
-    #preview_image_url='https://i.screenshot.net/eqdppak'
-	#)
-	message2 = ImageSendMessage(
-    original_content_url='https://i.screenshot.net/eqdppak',
-    preview_image_url='https://i.screenshot.net/eqdppak'
-	)
 	#line_bot_api.reply_message(event.reply_token,message2)
 	foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
 	aromalist = [["e","花香"], ["f","漿果"],["g","柑橘"],["h","熱帶水果"],["i","淺色水果"],["j","香料"]]
@@ -68,6 +60,14 @@ def function(event):
 	drinklist = [["aekop","a.冰靈麗絲玲黑皮諾微甜粉紅酒","b.義大利愛茉拉慕斯卡多甜白酒","c.南法小豬格納希粉紅酒","d.義大利若林慕斯卡微氣泡白酒","e.隆河紫羅蘭風土科倫坡白酒","f.德國丹赫1794慕斯卡白酒"]\
 				,["afkop","冰靈麗絲玲黑皮諾微甜粉紅酒","黃尾袋鼠粉紅氣泡酒","邁坡莊園花漾微甜粉紅酒","南法小豬格納希粉紅酒"]]
 	addstr=''
+	urlstr=''
+	if event.message.text =="aekop":
+		urlstr = 'https://i.screenshot.net/569qkae'
+	message2 = ImageSendMessage(
+    original_content_url=urlstr,
+    preview_image_url=urlstr
+	)
+
 	for y in range(0,2):
 		if event.message.text == (drinklist[y][0]):
 			for x in range(1,len(drinklist[y])):
