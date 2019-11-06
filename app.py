@@ -77,7 +77,7 @@ def function(event):
 				slection_len = len(drinklist[y])
 				rx[x] = x+1 			
 	print(slection_len)
-	rx = random.sample(rx,5)
+	rx = random.sample(rx,(slection_len)-1)
 	print(rx)
 	for cl in range(0,len(urllistc)):	
 		if event.message.text == urllistc[cl][0]:
