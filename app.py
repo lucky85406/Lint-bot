@@ -91,7 +91,7 @@ def function(event):
 				addstr += drinklist[y][rlist[x-1]]+"\n"
 			line_bot_api.reply_message(	
         		event.reply_token,
-        		TextSendMessage(text= chr(0x100079)+"your choose->\n"+addstr+"\n"+chr(0x100091)))
+        		TextSendMessage(text= chr(0x100079)+"your choose->\n"+addstr+chr(0x100091)))
 	if fistr == "t":
 			line_bot_api.reply_message(event.reply_token,message2)
 
