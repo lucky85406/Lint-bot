@@ -69,7 +69,7 @@ def function(event):
 	addstr=''
 	urlstr=''
 	fistr=''
-	rx=[12,12,32,32,55,11,23,55]
+	rx=[1,2,3,4,5,6,7,8,9,10,11]
 	rlist = random.sample(rx,5)
 	print(rlist)
 	for cl in range(0,len(urllistc)):	
