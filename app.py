@@ -47,14 +47,6 @@ def callback():
 
     return 'OK'
 
-def random_int_list(start, stop, length):
-	start, stop = (int(start), int(stop)) if start <= stop else (int(stop), int(start))
-	length = int(abs(length)) if length else 0
-	random_list = []
-	for i in range(length):
-		random_list.append(random.randint(start, stop))
-	return random_list
-
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
@@ -77,7 +69,9 @@ def function(event):
 	addstr=''
 	urlstr=''
 	fistr=''
-	rx=[]
+	rx=[12,12,32,32,55,11,23,55]
+	rlist = random.sample(rx,5)
+	print(rlist)
 	for cl in range(0,len(urllistc)):	
 		if event.message.text == urllistc[cl][0]:
 			urlstr = urllistc[cl][1]
@@ -90,10 +84,6 @@ def function(event):
     original_content_url=urlstr,
     preview_image_url=urlstr
 	)
-
-	for tx in range(0,9):
-		rx = random_int_list(1,10,10)
-		print(rx[tx])
 
 	for y in range(0,len(drinklist)):
 		if event.message.text == (drinklist[y][0]):
