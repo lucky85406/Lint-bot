@@ -92,7 +92,7 @@ def function(event):
 	)
 
 	for tx in range(0,9):
-		rx[tx] = random_int_list(1,10,1)
+		rx = random_int_list(1,10,1)
 		print(rx[tx])
 
 	for y in range(0,len(drinklist)):
