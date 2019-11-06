@@ -91,9 +91,11 @@ def function(event):
     preview_image_url=urlstr
 	)
 
+	for tx in range(0,9):
+		rx[tx] = random_int_list(1,10,1)
+
 	for y in range(0,len(drinklist)):
 		if event.message.text == (drinklist[y][0]):
-			rx = random_int_list(1,10,5)
 			for x in range(1,len(drinklist[y])):	
 				addstr += drinklist[y][x]+"\n"
 				print(rx[x-1])
