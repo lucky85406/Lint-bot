@@ -74,7 +74,7 @@ def function(event):
 		if event.message.text == (drinklist[y][0]):
 			rx = [0]*(len(drinklist[y])-1)
 			for x in range(0,len(drinklist[y])-1):
-				slection_len++
+				slection_len = len(drinklist[y])
 				rx[x] = x+1 			
 	print(slection_len)
 	rx = random.sample(rx,5)
