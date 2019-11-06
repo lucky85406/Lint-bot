@@ -69,11 +69,11 @@ def function(event):
 	addstr=''
 	urlstr=''
 	fistr=''
+	slection_len=0
 	for y in range(0,len(drinklist)):
-		print(len(drinklist[y]))
 		if event.message.text == (drinklist[y][0]):
 			rx = [0]*len(drinklist[y])
-			for x in range(0,len(drinklist[y])):
+			for x in range(0,len(drinklist[y]-1)):
 				rx[x] = x+1 			
 	print(rx)
 	rx = random.sample(rx,5)
