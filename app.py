@@ -71,7 +71,7 @@ def function(event):
 	fistr=''
 	rx = [1]
 	for y in range(0,len(drinklist)):
-		rx = [1]*len(drinklist[y])-1
+		rx = [1]*len(drinklist[y])
 		if event.message.text == (drinklist[y][0]):
 			for x in range(1,len(drinklist[y])):
 				rx[x] = x 
