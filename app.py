@@ -73,8 +73,10 @@ def function(event):
 		print(len(drinklist[y]))
 		if event.message.text == (drinklist[y][0]):
 			rx = [0]*len(drinklist[y])
-			for x in range(1,len(drinklist[y])):
-				rx[x] = x 			
+			for x in range(0,len(drinklist[y])):
+				rx[x] = x+1 			
+	print(rx)
+	rx = random.sample(rx,5)
 	print(rx)
 	for cl in range(0,len(urllistc)):	
 		if event.message.text == urllistc[cl][0]:
