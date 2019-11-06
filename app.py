@@ -72,7 +72,7 @@ def function(event):
 	slection_len=0
 	for y in range(0,len(drinklist)):
 		if event.message.text == (drinklist[y][0]):
-			rx = [0]*len(drinklist[y])
+			rx = [0]*(len(drinklist[y])-1)
 			for x in range(0,len(drinklist[y])-1):
 				rx[x] = x+1 			
 	print(rx)
