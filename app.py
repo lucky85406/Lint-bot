@@ -69,7 +69,7 @@ def function(event):
 	addstr=''
 	urlstr=''
 	fistr=''
-	rx = [len(drinklist)]
+	rx = [len(drinklist[y])]
 	for y in range(0,len(drinklist)):
 		if event.message.text == (drinklist[y][0]):
 			print(len(rx))
