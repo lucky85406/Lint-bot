@@ -69,7 +69,12 @@ def function(event):
 	addstr=''
 	urlstr=''
 	fistr=''
-	rx=[1,2,3,4,5]
+	rx=[]
+
+	for y in range(0,len(drinklist)):
+		if event.message.text == (drinklist[y][0]):
+			for x in range(1,len(drinklist[y])):	
+				rx[x-1] = x 
 	rlist = random.sample(rx,5)
 	print(rlist)
 	for cl in range(0,len(urllistc)):	
@@ -88,7 +93,7 @@ def function(event):
 	for y in range(0,len(drinklist)):
 		if event.message.text == (drinklist[y][0]):
 			for x in range(1,len(drinklist[y])):	
-				addstr += random.sample(drinklist[y][x],1)+"\n"
+				addstr += drinklist[y][x]+"\n"
 			line_bot_api.reply_message(	
         		event.reply_token,
         		TextSendMessage(text= chr(0x100079)+"your choose->\n"+addstr+chr(0x100091)))
