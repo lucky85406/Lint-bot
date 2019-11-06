@@ -47,9 +47,6 @@ def callback():
 
     return 'OK'
 
-
-# 處理訊息
-@handler.add(MessageEvent, message=TextMessage)
 def random_int_list(start, stop, length):
 	start, stop = (int(start), int(stop)) if start <= stop else (int(stop), int(start))
 	length = int(abs(length)) if length else 0
@@ -58,6 +55,9 @@ def random_int_list(start, stop, length):
 	random_list.append(random.randint(start, stop))
 	return random_list
 
+
+# 處理訊息
+@handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	#line_bot_api.reply_message(event.reply_token,message2)
 	foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
