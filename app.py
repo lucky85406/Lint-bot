@@ -77,6 +77,7 @@ def function(event):
 	addstr=''
 	urlstr=''
 	fistr=''
+	rx=0
 	for cl in range(0,len(urllistc)):	
 		if event.message.text == urllistc[cl][0]:
 			urlstr = urllistc[cl][1]
@@ -93,7 +94,7 @@ def function(event):
 	for y in range(0,len(drinklist)):
 		if event.message.text == (drinklist[y][0]):
 			for x in range(1,len(drinklist[y])):
-				rx = random_int_list(1,len(drinklist[y]),1)
+				rx = random_int_list(1,5,1)
 				addstr += drinklist[y][rx]+"\n"
 			line_bot_api.reply_message(	
         		event.reply_token,
