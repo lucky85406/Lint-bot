@@ -77,7 +77,7 @@ def function(event):
 	addstr=''
 	urlstr=''
 	fistr=''
-	rx[]=random_int_list(1,4,1)
+	rx=random_int_list(1,4,1)
 	print(rx[0])
 	for cl in range(0,len(urllistc)):	
 		if event.message.text == urllistc[cl][0]:
