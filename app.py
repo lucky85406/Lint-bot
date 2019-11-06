@@ -71,12 +71,12 @@ def function(event):
 	fistr=''
 	rx = [1]
 	for y in range(0,len(drinklist)):
-		rx = [1]*len(drinklist[y])
+		rx = [1]*(len(drinklist[y])-1)
 		if event.message.text == (drinklist[y][0]):
-			for x in range(0,len(drinklist[y])):
+			for x in range(1,len(drinklist[y])):
 				rx[x] = x 
 				print(rx)			
-	rlist = random.sample(rx,4)
+	rlist = random.sample(rx,5)
 	print(rlist)
 	for cl in range(0,len(urllistc)):	
 		if event.message.text == urllistc[cl][0]:
