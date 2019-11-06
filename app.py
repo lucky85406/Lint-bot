@@ -94,7 +94,8 @@ def function(event):
 	for y in range(0,len(drinklist)):
 		if event.message.text == (drinklist[y][0]):
 			rx = random_int_list(1,len(drinklist[y]),5)
-			for x in range(1,len(drinklist[y])):	
+			for x in range(1,len(drinklist[y])):
+				print(rx[x-1])	
 				addstr += drinklist[y][rx[x-1]]+"\n"
 			line_bot_api.reply_message(	
         		event.reply_token,
