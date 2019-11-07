@@ -107,7 +107,6 @@ def function(event):
 			line_bot_api.reply_message(event.reply_token,message2)
 
 	if event.message.text == "Image Carousel":
-		print("Image Carousel")
 		Image_Carousel = TemplateSendMessage(
 			alt_text='目錄 template',
 			template=ImageCarouselTemplate(
