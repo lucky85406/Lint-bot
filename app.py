@@ -99,6 +99,7 @@ def function(event):
 			line_bot_api.reply_message(	
         		event.reply_token,
         		TextSendMessage(text= chr(0x100079)+"your choose->\n"+addstr+chr(0x100091)))
+			
 	if fistr == "t":
 			line_bot_api.reply_message(event.reply_token,message2)
 
