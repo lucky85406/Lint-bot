@@ -107,31 +107,31 @@ def function(event):
 			line_bot_api.reply_message(event.reply_token,message2)
 
 	if event.message.text == "Image Carousel":
-		print("Image Carousel")       
-        Image_Carousel = TemplateSendMessage(
-        alt_text='目錄 template',
-        template=ImageCarouselTemplate(
-        columns=[
-            ImageCarouselColumn(
-                image_url='https://i.screenshot.net/yj2k2h5',
-                action=PostbackTemplateAction(
-                    label='postback1',
-                    text='postback text1',
-                    data='action=buy&itemid=1'
-                )
-            ),
-            ImageCarouselColumn(
-                image_url='https://i.screenshot.net/p8w2waq',
-                action=PostbackTemplateAction(
-                    label='postback2',
-                    text='postback text2',
-                    data='action=buy&itemid=2'
-                )
-            )
-        ]
-    )
-    )
-        line_bot_api.reply_message(event.reply_token,Image_Carousel)		
+		print("Image Carousel")
+	Image_Carousel = TemplateSendMessage(
+		alt_text='目錄 template',
+		template=ImageCarouselTemplate(
+		columns=[
+			ImageCarouselColumn(
+				image_url='https://i.screenshot.net/yj2k2h5',
+				action=PostbackTemplateAction(
+				label='postback1',
+				text='postback text1',
+				data='action=buy&itemid=1'
+					)
+				),
+			ImageCarouselColumn(
+				image_url='https://i.screenshot.net/p8w2waq',
+				action=PostbackTemplateAction(
+				label='postback2',
+				text='postback text2',
+				data='action=buy&itemid=2'
+					)
+				)
+			]
+		)
+	)
+	line_bot_api.reply_message(event.reply_token,Image_Carousel)		
 
 
 
