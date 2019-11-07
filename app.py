@@ -112,7 +112,7 @@ def function(event):
 			template=ImageCarouselTemplate(
 			columns=[
 				ImageCarouselColumn(
-					image_url='https://img.ltn.com.tw/Upload/liveNews/BigPic/600_phpxB7gOg.jpg'
+					image_url='https://img.ltn.com.tw/Upload/liveNews/BigPic/600_phpxB7gOg.jpg',
 					action=PostbackTemplateAction(
 					label='postback1',
 					text='postback text1',
