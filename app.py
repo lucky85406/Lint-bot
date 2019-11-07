@@ -120,7 +120,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.screenshot.net/p8w2waq',
+					preview_image_url='https://i.screenshot.net/p8w2waq',
 					action=PostbackTemplateAction(
 					label='postback2',
 					text='postback text2',
