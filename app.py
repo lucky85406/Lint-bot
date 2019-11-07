@@ -69,16 +69,19 @@ def function(event):
 	addstr=''
 	urlstr=''
 	fistr=''
+	randstr=''
 	slection_len=0
 	for y in range(0,len(drinklist)):
 		if event.message.text == (drinklist[y][0]):
+			randstr="t"
 			rx = [0]*(len(drinklist[y])-1)
 			for x in range(0,len(drinklist[y])-1):
 				slection_len = len(drinklist[y])
-				rx[x] = x+1 			
-	print(slection_len)
-	rx = random.sample(rx,(slection_len)-1)
-	print(rx)
+				rx[x] = x+1
+	if randstr == "t":
+		print(slection_len)
+		rx = random.sample(rx,(slection_len)-1)
+		print(rx)
 	for cl in range(0,len(urllistc)):	
 		if event.message.text == urllistc[cl][0]:
 			urlstr = urllistc[cl][1]
@@ -99,7 +102,7 @@ def function(event):
 			line_bot_api.reply_message(	
         		event.reply_token,
         		TextSendMessage(text= chr(0x100079)+"your choose->\n"+addstr+chr(0x100091)))
-			
+
 	if fistr == "t":
 			line_bot_api.reply_message(event.reply_token,message2)
 
