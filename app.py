@@ -112,7 +112,7 @@ def function(event):
 			template=ImageCarouselTemplate(
 			columns=[
 				ImageCarouselColumn(
-					image_url='https://img.ltn.com.tw/Upload/liveNews/BigPic/600_phpxB7gOg.jpg',
+					image_url='https://i.imgur.com/EvGbEqN.jpg',
 					action=PostbackTemplateAction(
 					label='postback1',
 					text='postback text1',
@@ -125,6 +125,70 @@ def function(event):
 					label='postback2',
 					text='postback text2',
 					data='action=buy&itemid=2'
+						)
+					),
+				ImageCarouselColumn(
+					image_url='https://i.imgur.com/5aP3gNz.jpg',
+					action=PostbackTemplateAction(
+					label='postback3',
+					text='postback text3',
+					data='action=buy&itemid=3'
+						)
+					),
+				ImageCarouselColumn(
+					image_url='https://i.imgur.com/es9zI3e.jpg',
+					action=PostbackTemplateAction(
+					label='postback4',
+					text='postback text4',
+					data='action=buy&itemid=4'
+						)
+					),
+				ImageCarouselColumn(
+					image_url='https://i.imgur.com/eZXnd2t.jpg',
+					action=PostbackTemplateAction(
+					label='postback5',
+					text='postback text5',
+					data='action=buy&itemid=5'
+						)
+					),
+				ImageCarouselColumn(
+					image_url='https://i.imgur.com/5QBfSdC.jpg',
+					action=PostbackTemplateAction(
+					label='postback6',
+					text='postback text6',
+					data='action=buy&itemid=6'
+						)
+					),
+				ImageCarouselColumn(
+					image_url='https://i.imgur.com/a4FNJ1Y.jpg',
+					action=PostbackTemplateAction(
+					label='postback7',
+					text='postback text7',
+					data='action=buy&itemid=7'
+						)
+					),
+				ImageCarouselColumn(
+					image_url='https://i.imgur.com/Lz5Xm6p.jpg',
+					action=PostbackTemplateAction(
+					label='postback8',
+					text='postback text8',
+					data='action=buy&itemid=8'
+						)
+					),
+				ImageCarouselColumn(
+					image_url='https://i.imgur.com/wLMg8i6.jpg',
+					action=PostbackTemplateAction(
+					label='postback9',
+					text='postback text9',
+					data='action=buy&itemid=9'
+						)
+					),
+				ImageCarouselColumn(
+					image_url='https://i.imgur.com/JkCbYWO.jpg',
+					action=PostbackTemplateAction(
+					label='postback10',
+					text='postback text10',
+					data='action=buy&itemid=10'
 						)
 					)
 				]
