@@ -106,14 +106,11 @@ def function(event):
 	if fistr == "t":
 			line_bot_api.reply_message(event.reply_token,message2)
 
-	a="1"
-
 	if event.message.text == "Image Carousel":
 		Image_Carousel = TemplateSendMessage(
 			alt_text='目錄 template',
 			template=ImageCarouselTemplate(
 			columns=[
-			if a == "1":
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
@@ -179,7 +176,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/DdYjpZq.jpg',
+					image_url='https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=be7b6ffbd462853592b5da27a0df5afe/0b46f21fbe096b63d30f4b590d338744ebf8aca0.jpg',
 					action=PostbackTemplateAction(
 					label='postback9',
 					text='postback text9',
@@ -187,7 +184,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/DdYjpZq.jpg',
+					image_url='https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=be7b6ffbd462853592b5da27a0df5afe/0b46f21fbe096b63d30f4b590d338744ebf8aca0.jpg',
 					action=PostbackTemplateAction(
 					label='postback10',
 					text='postback text10',
