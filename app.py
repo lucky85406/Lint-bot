@@ -106,19 +106,13 @@ def function(event):
 	if fistr == "t":
 			line_bot_api.reply_message(event.reply_token,message2)
 
+	imgstr = "ImageCarouselColumn(image_url='https://i.imgur.com/XX3WRsa.jpg',action=PostbackTemplateAction(label='postback1',text='postback text1',data='action=buy&itemid=1'))"
+
 	if event.message.text == "Image Carousel":
 		Image_Carousel = TemplateSendMessage(
 			alt_text='目錄 template',
 			template=ImageCarouselTemplate(
-			columns=[
-				ImageCarouselColumn(
-					image_url='https://i.imgur.com/XX3WRsa.jpg',
-					action=PostbackTemplateAction(
-					label='postback1',
-					text='postback text1',
-					data='action=buy&itemid=1'
-						)
-					),
+			columns=[imgstr,
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
