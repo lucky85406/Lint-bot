@@ -190,6 +190,14 @@ def function(event):
 					text='postback text10',
 					data='action=buy&itemid=10'
 						)
+					),
+				ImageCarouselColumn(
+					image_url='https://i.imgur.com/DdYjpZq.jpg',
+					action=PostbackTemplateAction(
+					label='postback11',
+					text='postback text11',
+					data='action=buy&itemid=11'
+						)
 					)
 				]
 			)
