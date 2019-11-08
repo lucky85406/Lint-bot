@@ -106,14 +106,14 @@ def function(event):
 	if fistr == "t":
 			line_bot_api.reply_message(event.reply_token,message2)
 
-	a=1
+	a="1"
 
 	if event.message.text == "Image Carousel":
 		Image_Carousel = TemplateSendMessage(
 			alt_text='目錄 template',
 			template=ImageCarouselTemplate(
 			columns=[
-			if a == 1:
+			if a == "1":
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
