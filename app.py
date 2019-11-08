@@ -184,7 +184,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='1',
+					image_url='https://i.imgur.com/DdYjpZq.jpg',
 					action=PostbackTemplateAction(
 					label='postback10',
 					text='postback text10',
