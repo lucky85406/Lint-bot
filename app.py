@@ -114,7 +114,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
-					label='1',
+					label=' ',
 					text='postback text1',
 					data='action=buy&itemid=1'
 						)
@@ -122,7 +122,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
-					label='2',
+					label=' ',
 					text='postback text2',
 					data='action=buy&itemid=2'
 						)
@@ -130,7 +130,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
-					label='3',
+					label=' ',
 					text='postback text3',
 					data='action=buy&itemid=3'
 						)
@@ -138,7 +138,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
-					label='4',
+					label=' ',
 					text='postback text4',
 					data='action=buy&itemid=4'
 						)
@@ -146,7 +146,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
-					label='5',
+					label=' ',
 					text='postback text5',
 					data='action=buy&itemid=5'
 						)
@@ -154,7 +154,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/DdYjpZq.jpg',
 					action=PostbackTemplateAction(
-					label='6',
+					label=' ',
 					text='postback text6',
 					data='action=buy&itemid=6'
 						)
@@ -162,7 +162,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/DdYjpZq.jpg',
 					action=PostbackTemplateAction(
-					label='7',
+					label=' ',
 					text='postback text7',
 					data='action=buy&itemid=7'
 						)
@@ -170,7 +170,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/DdYjpZq.jpg',
 					action=PostbackTemplateAction(
-					label='8',
+					label=' ',
 					text='postback text8',
 					data='action=buy&itemid=8'
 						)
