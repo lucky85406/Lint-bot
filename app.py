@@ -114,7 +114,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
-					label='postback1',
+					label='',
 					text='postback text1',
 					data='action=buy&itemid=1'
 						)
@@ -122,7 +122,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
-					label='postback2',
+					label='',
 					text='postback text2',
 					data='action=buy&itemid=2'
 						)
@@ -130,7 +130,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
-					label='postback3',
+					label='',
 					text='postback text3',
 					data='action=buy&itemid=3'
 						)
@@ -138,7 +138,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
-					label='postback4',
+					label='',
 					text='postback text4',
 					data='action=buy&itemid=4'
 						)
@@ -147,14 +147,14 @@ def function(event):
 					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
 					label='postback5',
-					text='postback text5',
+					text='',
 					data='action=buy&itemid=5'
 						)
 					),
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/DdYjpZq.jpg',
 					action=PostbackTemplateAction(
-					label='postback6',
+					label='',
 					text='postback text6',
 					data='action=buy&itemid=6'
 						)
@@ -162,7 +162,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/DdYjpZq.jpg',
 					action=PostbackTemplateAction(
-					label='postback7',
+					label='',
 					text='postback text7',
 					data='action=buy&itemid=7'
 						)
@@ -170,7 +170,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://i.imgur.com/DdYjpZq.jpg',
 					action=PostbackTemplateAction(
-					label='postback8',
+					label='',
 					text='postback text8',
 					data='action=buy&itemid=8'
 						)
@@ -178,7 +178,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=be7b6ffbd462853592b5da27a0df5afe/0b46f21fbe096b63d30f4b590d338744ebf8aca0.jpg',
 					action=PostbackTemplateAction(
-					label='postback9',
+					label='',
 					text='postback text9',
 					data='action=buy&itemid=9'
 						)
@@ -186,7 +186,7 @@ def function(event):
 				ImageCarouselColumn(
 					image_url='https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=be7b6ffbd462853592b5da27a0df5afe/0b46f21fbe096b63d30f4b590d338744ebf8aca0.jpg',
 					action=PostbackTemplateAction(
-					label='postback10',
+					label='',
 					text='postback text10',
 					data='action=buy&itemid=10'
 						)
