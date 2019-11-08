@@ -112,7 +112,7 @@ def function(event):
 			template=ImageCarouselTemplate(
 			columns=[
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/EvGbEqN.jpg',
+					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
 					label='postback1',
 					text='postback text1',
@@ -120,7 +120,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/qVm9xTE.jpg',
+					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
 					label='postback2',
 					text='postback text2',
@@ -128,7 +128,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/5aP3gNz.jpg',
+					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
 					label='postback3',
 					text='postback text3',
@@ -136,7 +136,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/es9zI3e.jpg',
+					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
 					label='postback4',
 					text='postback text4',
@@ -144,7 +144,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/eZXnd2t.jpg',
+					image_url='https://i.imgur.com/XX3WRsa.jpg',
 					action=PostbackTemplateAction(
 					label='postback5',
 					text='postback text5',
@@ -152,7 +152,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/5QBfSdC.jpg',
+					image_url='https://i.imgur.com/DdYjpZq.jpg',
 					action=PostbackTemplateAction(
 					label='postback6',
 					text='postback text6',
@@ -160,7 +160,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/a4FNJ1Y.jpg',
+					image_url='https://i.imgur.com/DdYjpZq.jpg',
 					action=PostbackTemplateAction(
 					label='postback7',
 					text='postback text7',
@@ -168,7 +168,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/Lz5Xm6p.jpg',
+					image_url='https://i.imgur.com/DdYjpZq.jpg',
 					action=PostbackTemplateAction(
 					label='postback8',
 					text='postback text8',
@@ -176,7 +176,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/wLMg8i6.jpg',
+					image_url='https://i.imgur.com/DdYjpZq.jpg',
 					action=PostbackTemplateAction(
 					label='postback9',
 					text='postback text9',
@@ -184,7 +184,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/JkCbYWO.jpg',
+					image_url='https://i.imgur.com/DdYjpZq.jpg',
 					action=PostbackTemplateAction(
 					label='postback10',
 					text='postback text10',
