@@ -126,95 +126,104 @@ def function(event):
 		["小花微甜麝香白葡萄酒","https://i.imgur.com/mYrcuR2.jpg","demru","dgmru","demqu","dgmqu"],\
 		["冰靈黑皮諾微甜粉紅酒","https://i.imgur.com/RUIF55d.jpg","belqu","bflqu","celqu","cflqu"]]
 
-	if event.message.text == "Image Carousel":
-		print(len(drinklist))
-		Image_Carousel = TemplateSendMessage(
-			alt_text='目錄 template',
-			template=ImageCarouselTemplate(
-			columns=[
-				ImageCarouselColumn(
-					image_url=drinklist[0][1],
-					action=PostbackTemplateAction(
-					label=' ',
-					text='postback text1',
-					data='action=buy&itemid=1'
-						)
-					),
-				ImageCarouselColumn(
-					image_url=drinklist[8][1],
-					action=PostbackTemplateAction(
-					label=' ',
-					text='postback text2',
-					data='action=buy&itemid=2'
-						)
-					),
-				ImageCarouselColumn(
-					image_url=drinklist[40][1],
-					action=PostbackTemplateAction(
-					label=' ',
-					text='postback text3',
-					data='action=buy&itemid=3'
-						)
-					),
-				ImageCarouselColumn(
-					image_url=drinklist[60][1],
-					action=PostbackTemplateAction(
-					label=' ',
-					text='postback text4',
-					data='action=buy&itemid=4'
-						)
-					),
-				ImageCarouselColumn(
-					image_url=drinklist[14][1],
-					action=PostbackTemplateAction(
-					label=' ',
-					text='postback text5',
-					data='action=buy&itemid=5'
-						)
-					),
-				ImageCarouselColumn(
-					image_url=drinklist[25][1],
-					action=PostbackTemplateAction(
-					label=' ',
-					text='postback text6',
-					data='action=buy&itemid=6'
-						)
-					),
-				ImageCarouselColumn(
-					image_url=drinklist[7][1],
-					action=PostbackTemplateAction(
-					label=' ',
-					text='postback text7',
-					data='action=buy&itemid=7'
-						)
-					),
-				ImageCarouselColumn(
-					image_url=drinklist[5][1],
-					action=PostbackTemplateAction(
-					label=' ',
-					text='postback text8',
-					data='action=buy&itemid=8'
-						)
-					),
-				ImageCarouselColumn(
-					image_url=drinklist[2][1],
-					action=PostbackTemplateAction(
-					label='X',
-					text='postback text9',
-					data='action=buy&itemid=9'
-						)
-					),
-				ImageCarouselColumn(
-					image_url=drinklist[0][1],
-					action=PostbackTemplateAction(
-					label='X',
-					text='postback text10',
-					data='action=buy&itemid=10'
-						)
+		addstr = []
+		addint = 0
+	for x in range(0,len(drinklist)):
+		for y in range(0,len(drinklist[x])):
+			if event.message.text == drinklist[x][y]:
+				addstr[addint] = drinklist[x][1]
+				addint = addint+1	
+	for x in range(0,len(drinklist)):
+		for y in range(0,len(drinklist[x])):
+			if event.message.text == drinklist[x][y]:
+				print(len(drinklist))
+				Image_Carousel = TemplateSendMessage(
+					alt_text='目錄 template',
+					template=ImageCarouselTemplate(
+					columns=[
+						ImageCarouselColumn(
+							image_url=drinklist[0][1],
+							action=PostbackTemplateAction(
+							label=' ',
+							text='postback text1',
+							data='action=buy&itemid=1'
+								)
+							),
+						ImageCarouselColumn(
+							image_url=drinklist[8][1],
+							action=PostbackTemplateAction(
+							label=' ',
+							text='postback text2',
+							data='action=buy&itemid=2'
+								)
+							),
+						ImageCarouselColumn(
+							image_url=drinklist[40][1],
+							action=PostbackTemplateAction(
+							label=' ',
+							text='postback text3',
+							data='action=buy&itemid=3'
+								)
+							),
+						ImageCarouselColumn(
+							image_url=drinklist[60][1],
+							action=PostbackTemplateAction(
+							label=' ',
+							text='postback text4',
+							data='action=buy&itemid=4'
+								)
+							),
+						ImageCarouselColumn(
+							image_url=drinklist[14][1],
+							action=PostbackTemplateAction(
+							label=' ',
+							text='postback text5',
+							data='action=buy&itemid=5'
+								)
+							),
+						ImageCarouselColumn(
+							image_url=drinklist[25][1],
+							action=PostbackTemplateAction(
+							label=' ',
+							text='postback text6',
+							data='action=buy&itemid=6'
+								)
+							),
+						ImageCarouselColumn(
+							image_url=drinklist[7][1],
+							action=PostbackTemplateAction(
+							label=' ',
+							text='postback text7',
+							data='action=buy&itemid=7'
+								)
+							),
+						ImageCarouselColumn(
+							image_url=drinklist[5][1],
+							action=PostbackTemplateAction(
+							label=' ',
+							text='postback text8',
+							data='action=buy&itemid=8'
+								)
+							),
+						ImageCarouselColumn(
+							image_url=drinklist[2][1],
+							action=PostbackTemplateAction(
+							label='X',
+							text='postback text9',
+							data='action=buy&itemid=9'
+								)
+							),
+						ImageCarouselColumn(
+							image_url=drinklist[0][1],
+							action=PostbackTemplateAction(
+							label='X',
+							text='postback text10',
+							data='action=buy&itemid=10'
+								)
+							)
+						]
 					)
-				]
-			)
-		)
+				)
 	line_bot_api.reply_message(event.reply_token,Image_Carousel)		
 
 
