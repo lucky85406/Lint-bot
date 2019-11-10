@@ -131,7 +131,7 @@ def function(event):
 		line_bot_api.reply_message(	
         		event.reply_token,
         		TextSendMessage(text= "選單"+"\n"\
-        							+chr(0x10009D)+"----------食品----------"+chr(0x10009D)+"\n"\
+        							+chr(0x1F602)+"----------食品----------"+chr(0x10009D)+"\n"\
         							+"a. 紅肉\n"+"b. 白肉\n"+"c. 海鮮\n"+"d. 甜點\n"\
         							+chr(0x10009F)+"---------香氣----------"+chr(0x10009F)+"\n"\
         							+"e. 花香\n"+"f. 漿果\n"+"g. 柑橘\n"+"h. 熱帶水果\n"+"i. 淺色水果\n"+"j. 香料\n"+"k. 土木\n"\
@@ -166,7 +166,7 @@ def function(event):
 							image_url=addstr[0],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='postback text1',
+							text='',
 							data='action=buy&itemid=1'
 								)
 							),
@@ -174,7 +174,7 @@ def function(event):
 							image_url=addstr[1],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='postback text2',
+							text='',
 							data='action=buy&itemid=2'
 								)
 							),
@@ -182,7 +182,7 @@ def function(event):
 							image_url=addstr[2],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='postback text3',
+							text='',
 							data='action=buy&itemid=3'
 								)
 							),
@@ -190,7 +190,7 @@ def function(event):
 							image_url=addstr[3],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='postback text4',
+							text='',
 							data='action=buy&itemid=4'
 								)
 							),
@@ -198,7 +198,7 @@ def function(event):
 							image_url=addstr[4],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='postback text5',
+							text='',
 							data='action=buy&itemid=5'
 								)
 							),
@@ -206,7 +206,7 @@ def function(event):
 							image_url=addstr[5],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='postback text6',
+							text='',
 							data='action=buy&itemid=6'
 								)
 							),
@@ -214,7 +214,7 @@ def function(event):
 							image_url=addstr[6],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='postback text7',
+							text='',
 							data='action=buy&itemid=7'
 								)
 							),
@@ -222,7 +222,7 @@ def function(event):
 							image_url=addstr[7],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='postback text8',
+							text='',
 							data='action=buy&itemid=8'
 								)
 							),
@@ -230,7 +230,7 @@ def function(event):
 							image_url=addstr[8],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='postback text9',
+							text='',
 							data='action=buy&itemid=9'
 								)
 							),
@@ -238,7 +238,7 @@ def function(event):
 							image_url=addstr[9],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='postback text10',
+							text='',
 							data='action=buy&itemid=10'
 								)
 							)
