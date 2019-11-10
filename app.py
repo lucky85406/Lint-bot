@@ -142,7 +142,7 @@ def function(event):
 					template=ImageCarouselTemplate(
 					columns=[
 						ImageCarouselColumn(
-							image_url=drinklist[0][1],
+							image_url=addstr[0],
 							action=PostbackTemplateAction(
 							label=' ',
 							text='postback text1',
@@ -150,7 +150,7 @@ def function(event):
 								)
 							),
 						ImageCarouselColumn(
-							image_url=drinklist[8][1],
+							image_url=addstr[1],
 							action=PostbackTemplateAction(
 							label=' ',
 							text='postback text2',
@@ -158,7 +158,7 @@ def function(event):
 								)
 							),
 						ImageCarouselColumn(
-							image_url=drinklist[40][1],
+							image_url=addstr[2],
 							action=PostbackTemplateAction(
 							label=' ',
 							text='postback text3',
