@@ -125,6 +125,24 @@ def function(event):
 		["聖海倫娜酒廠夏多內白葡萄酒","https://i.imgur.com/PyhIZJV.jpg","chlru","celru","cilru"],\
 		["小花微甜麝香白葡萄酒","https://i.imgur.com/mYrcuR2.jpg","demru","dgmru","demqu","dgmqu"],\
 		["冰靈黑皮諾微甜粉紅酒","https://i.imgur.com/RUIF55d.jpg","belqu","bflqu","celqu","cflqu"]]
+
+	titletxt = ""
+	if event.message.text == "選單":
+		line_bot_api.reply_message(	
+        		event.reply_token,
+        		TextSendMessage(text= chr(0x10008A)+"----------option----------"+chr(0x10008A)+"\n"\
+        							+chr(0x10009D)+"----------食品----------"+chr(0x10009D)+"\n"\
+        							+"a. 紅肉\n"+"b. 白肉\n"+"c. 海鮮\n"+"d. 甜點\n"\
+        							+chr(0x10009F)+"---------香氣----------"+chr(0x10009F)+"\n"\
+        							+"e. 花香\n"+"f. 漿果\n"+"g. 柑橘\n"+"h. 熱帶水果\n"+"i. 淺色水果\n"+"j. 香料\n"+"k. 土木\n"+"l. 清香\n"\
+        							+chr(0x10000C)+"----------口感-----------"+chr(0x10000C)+"\n"\
+        							+"m. 甜\n"+"n. 圓潤\n"+"o. 酸\n"+"p. 濃厚\n"\
+        							+chr(0x1000A4)+"----------通路----------"+chr(0x1000A4)+"\n"\
+        							+"q. 家樂福\n"+"r. 全聯\n"+"s. costco\n"\
+        							+chr(0x10008C)+"----------價格----------"+chr(0x10008C)+"\n"\
+        							+"t. 100~350\n"+"u. 351~600\n"+"v. 600↑\n"\
+        							+"----------注意-----------\n"\
+        							+"以上字母全為小寫"))
 	Trans = "https://i.imgur.com/d7DjDmy.png"
 	addstr = [""]*10
 	addint = 0
