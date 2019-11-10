@@ -130,12 +130,12 @@ def function(event):
 	if event.message.text == "選單":
 		line_bot_api.reply_message(	
         		event.reply_token,
-        		TextSendMessage(text= chr(0x10008A)+"----------option----------"+chr(0x10008A)+"\n"\
+        		TextSendMessage(text= "選單"+"\n"\
         							+chr(0x10009D)+"----------食品----------"+chr(0x10009D)+"\n"\
         							+"a. 紅肉\n"+"b. 白肉\n"+"c. 海鮮\n"+"d. 甜點\n"\
         							+chr(0x10009F)+"---------香氣----------"+chr(0x10009F)+"\n"\
         							+"e. 花香\n"+"f. 漿果\n"+"g. 柑橘\n"+"h. 熱帶水果\n"+"i. 淺色水果\n"+"j. 香料\n"+"k. 土木\n"+"l. 清香\n"\
-        							+chr(0x10000C)+"----------口感-----------"+chr(0x10000C)+"\n"\
+        							+chr(0x10000C)+"---------口感----------"+chr(0x10000C)+"\n"\
         							+"m. 甜\n"+"n. 圓潤\n"+"o. 酸\n"+"p. 濃厚\n"\
         							+chr(0x1000A4)+"----------通路----------"+chr(0x1000A4)+"\n"\
         							+"q. 家樂福\n"+"r. 全聯\n"+"s. costco\n"\
