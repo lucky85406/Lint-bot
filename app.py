@@ -133,7 +133,7 @@ def function(event):
 			if event.message.text == drinklist[x][y]:
 				addstr[addint] = drinklist[x][1]
 				addint = addint+1
-	for z in range(0,len(addstr)):
+	for z in range(0,10):
 		if addstr[z] == "":
 			addstr[z] == Trans										
 	for x in range(0,len(drinklist)):
