@@ -135,9 +135,11 @@ def function(event):
 					+chr(0x1F4CC)+"口感\n"+"l.清 香"+chr(0x100039)+" m.甜"+chr(0x1F36C)+" n.圓 潤"+chr(0x1F353)+" o.酸"+chr(0x100098)+" p.濃 厚"+chr(0x100065)+"\n"+"\n"\
 					+chr(0x1F4CC)+"通路\n"+"q.家樂福"+" r. 全聯"+" s. Costco"+"\n"+"\n"\
 					+chr(0x1F4CC)+"價格\n"+"t.100-350元"+" u.351-600 元"+" v.600 以上"))
+
 	Trans = "https://i.imgur.com/d7DjDmy.png"
 	addstr = [""]*10
 	addint = 0
+	
 	for x in range(0,len(drinklist)):
 		for y in range(0,len(drinklist[x])):
 			if event.message.text == drinklist[x][y]:
