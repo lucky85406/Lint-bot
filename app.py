@@ -51,68 +51,89 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	#line_bot_api.reply_message(event.reply_token,message2)
-	foodlist = [["a","白肉"], ["b","紅肉"],["c","海鮮"],["d","甜點"]]
-	aromalist = [["e","花香"], ["f","漿果"],["g","柑橘"],["h","熱帶水果"],["i","淺色水果"],["j","香料"]]
-	tastelist = [["k","清香"], ["l","甜"],["m","圓潤"],["n","濃厚"]]
-	pacelist = [["o","家樂福"]]
-	pricelist = [["p","351~600"],["q","100~350"],["r","600+"]]
-	drinklist = [["test1","c01.美國加州庫克斯氣泡酒","c02.法國凱芙氣泡甜酒","c03.黃尾袋鼠夏多內白酒","a01.奇蒂雅遲收甜白葡萄酒","a13.冰靈麗絲玲白葡萄酒"]\
-				,["test2","c04.冰靈黑皮諾微甜粉紅酒","a03.香奈歪脖子夏多內白葡萄酒","a09.多力士酒廠艾斯瑪瑞達白葡萄酒","a10.南法小豬夏多內白葡萄酒","a11.聖海倫娜酒廠夏多內白葡萄酒"]\
-				,["test3","a02.路易菲利普白牌白蘇雅維翁白葡萄酒","a04.黃玉帛金香白葡萄酒","a05.奇蒂雅遲收甜白葡萄酒","a06.囍瑞鳥啼有機白葡萄酒"]\
-				,["test4","a07.黃尾袋鼠粉紅慕斯卡多葡萄酒.","a08.黃尾袋鼠慕斯卡多白葡萄酒","a12.小花瑞田麝香白葡萄酒"]]
-	urllistc = [["c01","https://i.screenshot.net/yj2k2h5"],["c02","https://i.screenshot.net/p8w2waq"],["c03","https://i.screenshot.net/e5dplf0"],["c04","https://i.screenshot.net/03q81fj"]]
-	urllista = [["a01","https://i.screenshot.net/n2k9kud"],["a02","https://i.screenshot.net/wrk2oc9"],["a03","https://i.screenshot.net/r6wzwsk"],["a04","https://i.screenshot.net/569qkae"]\
-				,["a05","https://i.screenshot.net/690vda1"],["a06","https://i.screenshot.net/0xn1lar"],["a07","https://i.screenshot.net/pwopeag"],["a08","https://i.screenshot.net/6zjxkhr"]\
-				,["a09","https://i.screenshot.net/r04p2cp"],["a10","https://i.screenshot.net/7od49cq"],["a11","https://i.screenshot.net/77r6gi7"],["a12","https://i.screenshot.net/nyzkqbz"]\
-				,["a13","https://i.screenshot.net/wrk2oc9"]]
-	addstr=''
-	urlstr=''
-	fistr=''
-	randstr=''
-	slection_len=0
-	for y in range(0,len(drinklist)):
-		if event.message.text == (drinklist[y][0]):
-			randstr="t"
-			rx = [0]*(len(drinklist[y])-1)
-			for x in range(0,len(drinklist[y])-1):
-				slection_len = len(drinklist[y])
-				rx[x] = x+1
-	if randstr == "t":
-		print(slection_len)
-		rx = random.sample(rx,(slection_len)-1)
-		print(rx)
-	for cl in range(0,len(urllistc)):	
-		if event.message.text == urllistc[cl][0]:
-			urlstr = urllistc[cl][1]
-			fistr = "t"
-	for al in range(0,len(urllista)):
-		if event.message.text == urllista[al][0]:
-			urlstr = urllista[al][1] 	
-			fistr = "t"	
-	message2 = ImageSendMessage(
-    original_content_url=urlstr,
-    preview_image_url=urlstr
-	)
-
-	for y in range(0,len(drinklist)):
-		if event.message.text == (drinklist[y][0]):
-			for x in range(1,len(drinklist[y])):	
-				addstr += drinklist[y][rx[x-1]]+"\n"
-			line_bot_api.reply_message(	
-        		event.reply_token,
-        		TextSendMessage(text= chr(0x100079)+"your choose->\n"+addstr+chr(0x100091)))
-
-	if fistr == "t":
-			line_bot_api.reply_message(event.reply_token,message2)
+drinklist = [["南法小豬格納希粉紅酒","https://i.imgur.com/Rk9AEb3.jpg","bflqu","bilqu","bhlqu","cflqu","cilqu","chlqu"],\
+["阿爾薩斯斐得萊格烏茲塔明娜","https://i.imgur.com/qWt8bca.jpg","bipqu","bhpqu","cipqu","chpqu"],\
+["邁坡酒莊花樣微甜白酒","https://i.imgur.com/JNKuGvw.jpg","dgmqu","demqu","dglqu","delqu"],\
+["邁坡莊園花樣微甜粉紅酒","https://i.imgur.com/jMrI5b3.jpg","bimqu","bgmqu","bfmqu","bilqu","bglqu","bflqu","cimqu","cgmqu","cfmqu","cilqu","cglqu","cflqu","dimqu","dgmqu","dfmqu","dilqu","dglqu","dflqu"],\
+["愛瑜珈慕斯甜白酒","https://i.imgur.com/5XKzEnl.jpg","bimqt","bhmqt","dimqt","dhmqt"],\
+["三風酒之舞白蘇維翁白酒","https://i.imgur.com/VO7cNqz.jpg","cglqu","celqu"],\
+["愛慕拉慕斯卡多甜白酒","https://i.imgur.com/QCZe8BI.jpg","bimqu","bemqu","bilqu","belqu","cimqu","cemqu","cilqu","celqu","dimqu","demqu","dilqu","delqu"],\
+["巴富酒莊慕斯卡白葡萄酒","https://i.imgur.com/mNeE89w.jpg","bilqt","bglqt","dilqt","dglqt"],\
+["巴富酒莊慕斯卡粉紅酒","https://i.imgur.com/x1zn4dv.jpg","bgnqt","benqt","bfnqt","dgnqt","denqt","dfnqt"],\
+["真我系列慕斯卡白酒","https://i.imgur.com/2uwcB1j.jpg","dgmqu","dimqu","demqu","dglqu","dilqu","delqu"],\
+["3人黃金夏多內白酒","https://i.imgur.com/oJzL0ny.jpg","chpqu","cjpqu","cepqu"],\
+["布隆嘉谷莊園蘇維翁白酒","https://i.imgur.com/oHIOiBu.jpg","cgnqt","chnqt","cjnqt"],\
+["貝林格金芬黛粉紅酒","https://i.imgur.com/onL3ap0.jpg","bgnqu","bfnqu","binqu","dgnqu","dfnqu","dinqu"],\
+["地中海波曼桐粉紅酒","https://i.imgur.com/uUjT7di.jpg","dfnqt","dgnqt","denqt"],\
+["JC氣泡酒","https://i.imgur.com/hysqVzu.jpg","bhlqt","chlqt"],\
+["JC粉紅氣泡酒","https://i.imgur.com/qTf8zWF.jpg","dhmqt","dfmqt","dimqt","dhlqt","dflqt","dilqt"],\
+["情盼多倫特粉紅微甜氣泡酒","https://i.imgur.com/5Vtpaid.jpg","dfmqv","demqv"],\
+["克萊喜水蜜桃氣泡酒","https://i.imgur.com/HvSYPWI.jpg","cilqt","dilqt"],\
+["卡迪威氣泡酒","https://i.imgur.com/a3Xf4Sg.jpg","bglqu","bilqu","belqu","cglqu","cilqu","celqu"],\
+["鴕鳥氣泡白酒","https://i.imgur.com/DJAhiAb.jpg","bhnqt","benqt","chnqt","cenqt","dhnqt","denqt"],\
+["蒙多羅氣泡酒","https://i.imgur.com/qzhRDMC.jpg","bhlqu","bilqu","chlqu","cilqu"],\
+["巴塔希慕斯卡多微甜氣泡酒","https://i.imgur.com/m32hSMd.jpg","cimqu"],\
+["威廉水蜜桃氣泡酒","https://i.imgur.com/lfFieF8.jpg","dilqt"],\
+["巴洛亞荔枝氣泡酒","https://i.imgur.com/G1H6PAv.jpg","dhlqt","dglqt"],\
+["巴洛亞雨果氣泡酒","https://i.imgur.com/43DWNQI.jpg","dglqt","delqt"],\
+["米娜多特雷維索氣泡酒","https://i.imgur.com/sT64juU.jpg","cinqv","cenqv"],\
+["坎帕羅拉酒莊氣泡酒","https://i.imgur.com/n4c0uwu.jpg","chmqu","cimqu"],\
+["坎培氣泡白酒","https://i.imgur.com/UBBKTOm.jpg","ailqt","aglqt","cilqt","cglqt","bilqt","bglqt"],\
+["坎培氣泡甜白酒","https://i.imgur.com/bST52xR.jpg","cgnqt","cinqt","cenqt","cjnqt","bgnqt","binqt","benqt","bjnqt","dgnqt","dinqt","denqt","djnqt"],\
+["黃尾袋鼠粉紅氣泡酒","https://i.imgur.com/bJz4dbB.jpg","aflqu","aglqu","ahlqu","cflqu","cglqu","chlqu","bflqu","bglqu","bhlqu"],\
+["康蒂雅不甜氣泡酒","https://i.imgur.com/FeF6rbS.jpg","bilqt","bglqt","cilqt","cglqt"],\
+["慕斯卡朵粉紅氣泡酒","https://i.imgur.com/k0jdEIK.jpg","dfmqu","dfnqu"],\
+["慕斯卡多白氣泡酒","https://i.imgur.com/tGBUoUk.jpg","dhmqv","dgmqv","dhlqv","dglqv"],\
+["蘿朵莊園精選花季氣泡酒","https://i.imgur.com/5TKBPsr.jpg","dinqv","denqv"],\
+["寶蘭美蜜桃氣泡酒","https://i.imgur.com/dPN5yjd.jpg","dilqu","dglqu"],\
+["丹赫氣泡酒","https://i.imgur.com/R0mda2B.jpg","dilqu","dhlqu","dglqu"],\
+["聖塔瑪格莉特氣泡酒","https://i.imgur.com/m3odXh2.jpg","bipqt","cipqt"],\
+["閨蜜粉紅氣泡酒","https://i.imgur.com/KdQp515.jpg","cilqu"],\
+["迴音金芬黛粉紅酒","https://i.imgur.com/2ReNkff.jpg","bflqt","aflqt"],\
+["托斯堤慕斯卡多粉紅微甜氣泡酒","https://i.imgur.com/lGzdAwn.jpg","dilqv","dflqv"],\
+["加泰隆氣泡酒","https://i.imgur.com/IH1RSXg.jpg","binqu","benqu","cinqu","cenqu","dinqu","denqu"],\
+["雀拉微氣泡白酒","https://i.imgur.com/0Hv1Tqa.jpg","bilqt","cilqt"],\
+["露飛諾氣泡酒","https://i.imgur.com/dsUDhJP.jpg","bilqv","bglqv","cilqv","cglqv","dilqv","dglqv"],\
+["托斯堤阿斯堤微甜氣泡酒","https://i.imgur.com/p7QpRVl.jpg","dimqv","dhmqv","demqv"],\
+["托斯堤慕斯卡多微甜白酒","https://i.imgur.com/tF4o01j.jpg","demqv","dhmqv"],\
+["韓可氣泡酒","https://i.imgur.com/d4n1jGi.jpg","cipqu","cepqu"],\
+["康緹氣泡酒","https://i.imgur.com/69OjlaP.jpg","demqu","dhmqu"],\
+["禾富鷹牌氣泡酒","https://i.imgur.com/8WBSaVU.jpg","cilqu","cglqu"],\
+["安德烈氣泡酒","https://i.imgur.com/84PtiGC.jpg","bilqt","bglqt","cilqt","cglqt"],\
+["藍多克凱利蘭仙梭粉紅酒","https://i.imgur.com/x3brhqi.jpg","cenqt","denqt"],\
+["艾思綺幻普羅旺斯粉紅酒","https://i.imgur.com/c471R2W.jpg","cfnqv","cgnqv","cenqv"],\
+["莎特金芬黛粉紅酒","https://i.imgur.com/n6BzIyg.jpg","bfmqt","bgmqt","bemqt","cfmqt","cgmqt","cemqt"],\
+["寶帝加浪漫紅分子氣泡酒(櫻桃)","https://i.imgur.com/v8baLLX.jpg","bfnqv","bhnqv","cfnqv","chnqv"],\
+["寶帝加浪漫金分子氣泡酒(柑橘)","https://i.imgur.com/CW8paiJ.jpg","bgnqv","bhnqv","cgnqv","chnqv","",""],\
+["寶帝加浪漫粉分子氣泡酒(草莓)","https://i.imgur.com/Fx5Lw3z.jpg","bfnqv","benqv","cfnqv","cenqv"],\
+["庫倫斯玫瑰香檳","https://i.imgur.com/hHUCVt3.jpg","bilqv","bglqv","cilqv","cglqv"],\
+["庫倫斯香檳","https://i.imgur.com/kFc17Od.jpg","bilqv","bglqv","cilqv","cglqv","",""],\
+["庫克斯氣泡酒","https://i.imgur.com/DjmE3x3.jpg","bilqt","bglqt","cilqt","cglqt"],\
+["凱芙氣泡甜酒","https://i.imgur.com/KmvsCGa.jpg","dimqu","demqu","dilqu","delqu"],\
+["奇蒂雅遲收甜白葡萄酒","https://i.imgur.com/qQD5OQw.jpg","dimru","demru"],\
+["路易菲利普白牌白蘇微翁白葡萄酒","https://i.imgur.com/nx5dcE6.jpg","cgnru","chnru"],\
+["路易菲利普晚摘白葡萄酒","https://i.imgur.com/CMonCf9.jpg","dgmru","dimru","demru"],\
+["香奈歪脖子夏多內白葡萄酒","https://i.imgur.com/5px7cyk.jpg","bgnru","bhnru"],\
+["玉泉金香白葡萄酒","https://i.imgur.com/VOAD1E9.jpg","bglrt","bilrt","bklrt","cglrt","cilrt","cklrt"],\
+["嘉露金牌慕斯卡白葡萄酒","https://i.imgur.com/mgyVkO5.jpg","dglrt","dilrt"],\
+["囍瑞鳥啼有機白葡萄酒","https://i.imgur.com/fYIz9HJ.jpg","chnru","dhnru","chlru","dhlru"],\
+["黃尾袋鼠夏多內白酒","https://i.imgur.com/w9lDPYm.jpg","bimqu","bjmqu","cimqu","cjmqu"],\
+["黃尾袋鼠粉紅慕斯卡多葡萄酒","https://i.imgur.com/LewcbeI.jpg","cflrt","dflrt","cflqt","dflqt"],\
+["黃尾袋鼠慕斯卡多白葡萄酒","https://i.imgur.com/YqU7kDD.jpg","chlrt","celrt","cflrt","dhlrt","delrt","dflrt","chlqt","celqt","cflqt","dhlqt","delqt","dflqt"],\
+["多利士酒廠艾斯瑪瑞達白葡萄酒","https://i.imgur.com/Y5TRp33.jpg","belrt","bglrt","celrt","cglrt","delrt","dglrt"],\
+["南法小豬夏多內白葡萄酒","https://i.imgur.com/3FD99FT.jpg","bgpru","cgpru"],\
+["聖海倫娜酒廠夏多內白葡萄酒","https://i.imgur.com/PyhIZJV.jpg","chlru","celru","cilru"],\
+["小花微甜麝香白葡萄酒","https://i.imgur.com/mYrcuR2.jpg","demru","dgmru","demqu","dgmqu"],\
+["冰靈黑皮諾微甜粉紅酒","https://i.imgur.com/RUIF55d.jpg","belqu","bflqu","celqu","cflqu"]]
 
 	if event.message.text == "Image Carousel":
+		print(len(drinklist))
 		Image_Carousel = TemplateSendMessage(
 			alt_text='目錄 template',
 			template=ImageCarouselTemplate(
 			columns=[
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/XX3WRsa.jpg',
+					image_url=drinklist[0][3],
 					action=PostbackTemplateAction(
 					label=' ',
 					text='postback text1',
@@ -120,7 +141,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/XX3WRsa.jpg',
+					image_url=drinklist[0][3],
 					action=PostbackTemplateAction(
 					label=' ',
 					text='postback text2',
@@ -128,7 +149,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/XX3WRsa.jpg',
+					image_url=drinklist[0][3],
 					action=PostbackTemplateAction(
 					label=' ',
 					text='postback text3',
@@ -136,7 +157,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/XX3WRsa.jpg',
+					image_url=drinklist[0][3],
 					action=PostbackTemplateAction(
 					label=' ',
 					text='postback text4',
@@ -144,7 +165,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/XX3WRsa.jpg',
+					image_url=drinklist[0][3],
 					action=PostbackTemplateAction(
 					label=' ',
 					text='postback text5',
@@ -152,7 +173,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/DdYjpZq.jpg',
+					image_url=drinklist[0][3],
 					action=PostbackTemplateAction(
 					label=' ',
 					text='postback text6',
@@ -160,7 +181,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/DdYjpZq.jpg',
+					image_url=drinklist[0][3],
 					action=PostbackTemplateAction(
 					label=' ',
 					text='postback text7',
@@ -168,7 +189,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://i.imgur.com/DdYjpZq.jpg',
+					image_url=drinklist[0][3],
 					action=PostbackTemplateAction(
 					label=' ',
 					text='postback text8',
@@ -176,7 +197,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=be7b6ffbd462853592b5da27a0df5afe/0b46f21fbe096b63d30f4b590d338744ebf8aca0.jpg',
+					image_url=drinklist[0][3],
 					action=PostbackTemplateAction(
 					label='X',
 					text='postback text9',
@@ -184,7 +205,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url='https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=be7b6ffbd462853592b5da27a0df5afe/0b46f21fbe096b63d30f4b590d338744ebf8aca0.jpg',
+					image_url=drinklist[0][3],
 					action=PostbackTemplateAction(
 					label='X',
 					text='postback text10',
