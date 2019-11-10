@@ -125,14 +125,17 @@ def function(event):
 		["聖海倫娜酒廠夏多內白葡萄酒","https://i.imgur.com/PyhIZJV.jpg","chlru","celru","cilru"],\
 		["小花微甜麝香白葡萄酒","https://i.imgur.com/mYrcuR2.jpg","demru","dgmru","demqu","dgmqu"],\
 		["冰靈黑皮諾微甜粉紅酒","https://i.imgur.com/RUIF55d.jpg","belqu","bflqu","celqu","cflqu"]]
-
-	addstr = [""]*len(drinklist)
+	Trans = "https://i.imgur.com/d7DjDmy.png"
+	addstr = [""]*10
 	addint = 0
 	for x in range(0,len(drinklist)):
 		for y in range(0,len(drinklist[x])):
 			if event.message.text == drinklist[x][y]:
 				addstr[addint] = drinklist[x][1]
-				addint = addint+1	
+				addint = addint+1
+	for z in range(0,len(addstr)):
+		if addstr[z] == "":
+			addstr[z] == Trans										
 	for x in range(0,len(drinklist)):
 		for y in range(0,len(drinklist[x])):
 			if event.message.text == drinklist[x][y]:
@@ -166,7 +169,7 @@ def function(event):
 								)
 							),
 						ImageCarouselColumn(
-							image_url=drinklist[60][1],
+							image_url=addstr[3],
 							action=PostbackTemplateAction(
 							label=' ',
 							text='postback text4',
@@ -174,7 +177,7 @@ def function(event):
 								)
 							),
 						ImageCarouselColumn(
-							image_url=drinklist[14][1],
+							image_url=addstr[4],
 							action=PostbackTemplateAction(
 							label=' ',
 							text='postback text5',
@@ -182,7 +185,7 @@ def function(event):
 								)
 							),
 						ImageCarouselColumn(
-							image_url=drinklist[25][1],
+							image_url=addstr[5],
 							action=PostbackTemplateAction(
 							label=' ',
 							text='postback text6',
@@ -190,7 +193,7 @@ def function(event):
 								)
 							),
 						ImageCarouselColumn(
-							image_url=drinklist[7][1],
+							image_url=addstr[6],
 							action=PostbackTemplateAction(
 							label=' ',
 							text='postback text7',
@@ -198,7 +201,7 @@ def function(event):
 								)
 							),
 						ImageCarouselColumn(
-							image_url=drinklist[5][1],
+							image_url=addstr[7],
 							action=PostbackTemplateAction(
 							label=' ',
 							text='postback text8',
@@ -206,17 +209,17 @@ def function(event):
 								)
 							),
 						ImageCarouselColumn(
-							image_url=drinklist[2][1],
+							image_url=addstr[8],
 							action=PostbackTemplateAction(
-							label='X',
+							label=' ',
 							text='postback text9',
 							data='action=buy&itemid=9'
 								)
 							),
 						ImageCarouselColumn(
-							image_url=drinklist[0][1],
+							image_url=addstr[9],
 							action=PostbackTemplateAction(
-							label='X',
+							label=' ',
 							text='postback text10',
 							data='action=buy&itemid=10'
 								)
