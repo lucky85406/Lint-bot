@@ -139,7 +139,7 @@ def function(event):
 	Trans = "https://i.imgur.com/d7DjDmy.png"
 	addstr = [""]*10
 	addint = 0
-	
+
 	for x in range(0,len(drinklist)):
 		for y in range(0,len(drinklist[x])):
 			if event.message.text == drinklist[x][y]:
@@ -160,7 +160,7 @@ def function(event):
 							image_url=addstr[0],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='',
+							text=' ',
 							data='action=buy&itemid=1'
 								)
 							),
@@ -168,7 +168,7 @@ def function(event):
 							image_url=addstr[1],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='',
+							text=' ',
 							data='action=buy&itemid=2'
 								)
 							),
@@ -176,7 +176,7 @@ def function(event):
 							image_url=addstr[2],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='',
+							text=' ',
 							data='action=buy&itemid=3'
 								)
 							),
@@ -184,7 +184,7 @@ def function(event):
 							image_url=addstr[3],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='',
+							text=' ',
 							data='action=buy&itemid=4'
 								)
 							),
@@ -192,7 +192,7 @@ def function(event):
 							image_url=addstr[4],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='',
+							text=' ',
 							data='action=buy&itemid=5'
 								)
 							),
@@ -200,7 +200,7 @@ def function(event):
 							image_url=addstr[5],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='',
+							text=' ',
 							data='action=buy&itemid=6'
 								)
 							),
@@ -208,7 +208,7 @@ def function(event):
 							image_url=addstr[6],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='',
+							text=' ',
 							data='action=buy&itemid=7'
 								)
 							),
@@ -216,7 +216,7 @@ def function(event):
 							image_url=addstr[7],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='',
+							text=' ',
 							data='action=buy&itemid=8'
 								)
 							),
@@ -224,7 +224,7 @@ def function(event):
 							image_url=addstr[8],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='',
+							text=' ',
 							data='action=buy&itemid=9'
 								)
 							),
@@ -232,7 +232,7 @@ def function(event):
 							image_url=addstr[9],
 							action=PostbackTemplateAction(
 							label=' ',
-							text='',
+							text=' ',
 							data='action=buy&itemid=10'
 								)
 							)
