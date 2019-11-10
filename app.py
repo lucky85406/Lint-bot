@@ -130,10 +130,10 @@ def function(event):
 	if event.message.text == "選單":
 		line_bot_api.reply_message(	
         		event.reply_token,
-        		TextSendMessage(text= chr(0x1F4CC)+"食物\n"+"a.紅 肉 "+chr(0x1F969)+" b.白 肉 "+chr(0x1F416)+" c.海 鮮"+chr(0x1F990)+"d.甜 點"+chr(0x1F370)+"\n"\
-        			+chr(0x1F4CC)+"香氣"+"e.花 香 "+chr(0x1000B9)+" f.漿 果"+chr(0x1F347)+" g.柑 橘"+chr(0x1F34A)+" h.熱 帶 水 果"+chr(0x1F34D)+" I.淺 色 水 果"+chr(0x1F34E)+"  j.香 料 "+chr(0x1F343)+" k.土 木 味"+chr(0x1F332)\
-					+chr(0x1F4CC)+"口感"+"l.清 香 "+chr(0x100039)+" m.甜 "+chr(0x1F36C)+" n.圓 潤 "+chr(0x1F353)+" o.酸 "+chr(0x100098)+" p.濃 厚"+chr(0x100065)+"\n"\
-					+chr(0x1F4CC)+"通路"+"q.家樂福 r. 全聯 s. Costco"+"\n"\
+        		TextSendMessage(text= chr(0x1F4CC)+"食物\n"+"a.紅 肉 "+chr(0x1F969)+" b.白 肉 "+chr(0x1F416)+" c.海 鮮"+chr(0x1F990)+"d.甜 點"+chr(0x1F370)+"\n"+"\n"\
+        			+chr(0x1F4CC)+"香氣"+"e.花 香 "+chr(0x1000B9)+" f.漿 果"+chr(0x1F347)+" g.柑 橘"+chr(0x1F34A)+" h.熱 帶 水 果"+chr(0x1F34D)+" I.淺 色 水 果"+chr(0x1F34E)+"  j.香 料 "+chr(0x1F343)+" k.土 木 味"+chr(0x1F332)+"\n"+"\n"\
+					+chr(0x1F4CC)+"口感"+"l.清 香 "+chr(0x100039)+" m.甜 "+chr(0x1F36C)+" n.圓 潤 "+chr(0x1F353)+" o.酸 "+chr(0x100098)+" p.濃 厚"+chr(0x100065)+"\n"+"\n"\
+					+chr(0x1F4CC)+"通路"+"q.家樂福 r. 全聯 s. Costco"+"\n"+"\n"\
 					+chr(0x1F4CC)+"價格"+"t. 100-350 元 u. 351-600 元 v. 600 以上"))
 	Trans = "https://i.imgur.com/d7DjDmy.png"
 	addstr = [""]*10
