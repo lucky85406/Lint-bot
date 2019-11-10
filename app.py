@@ -126,7 +126,7 @@ def function(event):
 		["小花微甜麝香白葡萄酒","https://i.imgur.com/mYrcuR2.jpg","demru","dgmru","demqu","dgmqu"],\
 		["冰靈黑皮諾微甜粉紅酒","https://i.imgur.com/RUIF55d.jpg","belqu","bflqu","celqu","cflqu"]]
 
-	addstr = []*len(drinklist)
+	addstr = [""]*len(drinklist)
 	addint = 0
 	for x in range(0,len(drinklist)):
 		for y in range(0,len(drinklist[x])):
