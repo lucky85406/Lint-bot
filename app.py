@@ -131,7 +131,7 @@ def function(event):
 		line_bot_api.reply_message(	
         		event.reply_token,
         		TextSendMessage(text= "選單"+"\n"\
-        							+chr(0x1F602)+"----------食品----------"+chr(0x10009D)+"\n"\
+        							+chr(0xF4CC)+"食物"+"\n"\
         							+"a. 紅肉\n"+"b. 白肉\n"+"c. 海鮮\n"+"d. 甜點\n"\
         							+chr(0x10009F)+"---------香氣----------"+chr(0x10009F)+"\n"\
         							+"e. 花香\n"+"f. 漿果\n"+"g. 柑橘\n"+"h. 熱帶水果\n"+"i. 淺色水果\n"+"j. 香料\n"+"k. 土木\n"\
