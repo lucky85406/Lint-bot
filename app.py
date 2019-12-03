@@ -171,8 +171,8 @@ def function(event):
 	ranint = [0]*len(drinklist)
 	rancon = [0]*10
 	for x in range(0,len(drinklist)):
-		for y in range(0,len(drinklist[x]))
-			if event.message.text == drinklist[x][y]
+		for y in range(0,len(drinklist[x])):
+			if event.message.text == drinklist[x][y]:
 				ranint[rint] = x
 				rint = rint+1;
 
