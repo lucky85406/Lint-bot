@@ -173,6 +173,7 @@ def function(event):
 		ranint[x] = x
 
 	rancon = random.sample(ranint,10)
+	print(ranint)
 	print(rancon)
 	if len(drinklist) <=10:
 		for x in range(0,len(drinklist)):
