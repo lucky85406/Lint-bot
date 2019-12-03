@@ -168,7 +168,7 @@ def function(event):
 	addstr = [""]*10
 	addint = 0
 	rint =0
-	ranint = [0]*100
+	ranint = [0]*20
 	rancon = [0]*10
 	for x in range(0,len(drinklist)):
 		for y in range(0,len(drinklist[x])):
