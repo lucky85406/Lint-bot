@@ -182,8 +182,8 @@ def function(event):
 				ranint[rint] = x
 				rint = rint+1;
 
-	rancon = random.sample(ranint,10)
 	print(ranint)
+	rancon = random.sample(ranint,10)
 	print(rancon)
 	for x in range(0,len(rancon)):
 		a = rancon[x]
