@@ -180,12 +180,12 @@ def function(event):
 	print(ranint)
 	print(rancon)
 	for x in range(0,len(rancon)-1):
+		a = rancon[x]
 		for y in range(0,len(drinklist[x])):
-			a = rancon[x]
 			if event.message.text == drinklist[a][y]:
 				addstr[addint] = drinklist[a][1]
 				addint = addint+1				
-
+	print(a)
 	for z in range(0,10):
 		if addstr[z] == "":
 			addstr[z] = Trans										
