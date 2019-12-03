@@ -179,11 +179,9 @@ def function(event):
 	rancon = random.sample(ranint,10)
 	print(ranint)
 	print(rancon)
-	a = rancon[0]
-	print(a)
 	for x in range(0,len(rancon)):
 		for y in range(0,len(drinklist[x])):
-			
+			a = rancon[x]
 			if event.message.text == drinklist[a][y]:
 				addstr[addint] = drinklist[a][1]
 				addint = addint+1				
