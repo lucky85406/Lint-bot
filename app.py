@@ -152,6 +152,8 @@ def function(event):
 	["克羅伊木桐城堡波爾多紅酒","https://i.imgur.com/52y6R7k.jpg","ajpsu","akpsu","bjpsu","bkpsu"],
 	["羅柏蒙岱維梅洛紅酒","https://i.imgur.com/TI3fKDA.jpg","ajpsv","afpsv","ajnsv","afnsv"]]
 
+
+
 	titletxt = ""
 	if event.message.text == "選單":
 		line_bot_api.reply_message(	
@@ -165,12 +167,26 @@ def function(event):
 	Trans = "https://i.imgur.com/d7DjDmy.png"
 	addstr = [""]*10
 	addint = 0
-
+	ranint = [0]*len(drinklist)
+	rancon = [0]*10
 	for x in range(0,len(drinklist)):
-		for y in range(0,len(drinklist[x])):
-			if event.message.text == drinklist[x][y]:
-				addstr[addint] = drinklist[x][1]
-				addint = addint+1
+		ranint[x] = x
+
+	rancon = random.sample(ranint,10)
+
+	if len(drinklist) <=10:
+		for x in range(0,len(drinklist)):
+			for y in range(0,len(drinklist[x])):
+				if event.message.text == drinklist[x][y]:
+					addstr[addint] = drinklist[x][1]
+					addint = addint+1
+	else:
+		for x in range(0,len(rancon)):
+			for y in range(0,len(drinklist[x])):
+				if event.message.text == drinklist[x][y]:
+					addstr[addint] = drinklist[x][1]
+					addint = addint+1				
+
 	for z in range(0,10):
 		if addstr[z] == "":
 			addstr[z] = Trans										
