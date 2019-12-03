@@ -173,7 +173,7 @@ def function(event):
 		ranint[x] = x
 
 	rancon = random.sample(ranint,10)
-
+	print(rancon)
 	if len(drinklist) <=10:
 		for x in range(0,len(drinklist)):
 			for y in range(0,len(drinklist[x])):
@@ -193,7 +193,6 @@ def function(event):
 	for x in range(0,len(drinklist)):
 		for y in range(0,len(drinklist[x])):
 			if event.message.text == drinklist[x][y]:
-				print(len(drinklist))
 				Image_Carousel = TemplateSendMessage(
 					alt_text='目錄 template',
 					template=ImageCarouselTemplate(
