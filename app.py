@@ -168,7 +168,6 @@ def function(event):
 	addstr = [""]*10
 	addint = 0
 	rint =0
-	a=0
 	ranint = [0]*11
 	rancon = [0]*10
 	for x in range(0,len(drinklist)):
@@ -180,12 +179,14 @@ def function(event):
 	rancon = random.sample(ranint,10)
 	print(ranint)
 	print(rancon)
-	
+	a = rancon[x]
+	print(a)
 	for x in range(0,len(rancon)):
 		for y in range(0,len(drinklist[x])):
-			a = rancon[x]
-			addstr[addint] = drinklist[a][1]
-			addint = addint+1				
+			
+			if event.message.text == drinklist[a][y]:
+				addstr[addint] = drinklist[a][1]
+				addint = addint+1				
 
 	for z in range(0,10):
 		if addstr[z] == "":
