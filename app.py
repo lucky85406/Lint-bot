@@ -185,7 +185,7 @@ def function(event):
 				if event.message.text == drinklist[x][y]:
 					addstr[addint] = drinklist[x][1]
 					addint = addint+1
-	if rint >10
+	if rint >10:
 		for x in range(0,len(rancon)):
 			for y in range(0,len(drinklist[x])):
 				if event.message.text == drinklist[x][y]:
