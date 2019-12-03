@@ -183,7 +183,9 @@ def function(event):
 				rint = rint+1;
 
 	print(ranint)
-	rancon = random.sample(ranint,10)
+	if len(ranint) > 10:
+		rancon = random.sample(ranint,10)
+	
 	print(rancon)
 	for x in range(0,len(rancon)):
 		a = rancon[x]
