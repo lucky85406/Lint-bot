@@ -182,8 +182,9 @@ def function(event):
 	
 	for x in range(0,len(rancon)):
 		for y in range(0,len(drinklist[x])):
-			if event.message.text == drinklist[rancon[x]][y]:
-				addstr[addint] = drinklist[rancon[x]][1]
+			a = rancon[x]
+			if event.message.text == drinklist[a][y]:
+				addstr[addint] = drinklist[a][1]
 				addint = addint+1				
 
 	for z in range(0,10):
