@@ -179,7 +179,7 @@ def function(event):
 	rancon = random.sample(ranint,10)
 	print(ranint)
 	print(rancon)
-	a = rancon[x]
+	a = rancon[0]
 	print(a)
 	for x in range(0,len(rancon)):
 		for y in range(0,len(drinklist[x])):
