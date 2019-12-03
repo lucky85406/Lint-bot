@@ -167,10 +167,14 @@ def function(event):
 	Trans = "https://i.imgur.com/d7DjDmy.png"
 	addstr = [""]*10
 	addint = 0
+	rint =0
 	ranint = [0]*len(drinklist)
 	rancon = [0]*10
 	for x in range(0,len(drinklist)):
-		ranint[x] = x
+		for y in range(0,len(drinklist[x]))
+			if event.message.text == drinklist[x][y]
+				ranint[rint] = x
+				rint = rint+1;
 
 	rancon = random.sample(ranint,10)
 	print(ranint)
