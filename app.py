@@ -305,8 +305,8 @@ def function(event):
 		line_bot_api.reply_message(event.reply_token,Image_Carousel)		
 #測試輸出文件
 f = open("test.txt","r")
-words = f.read()
-print(words)
+for line in f:
+	print(line)
 f.close()
 
 
