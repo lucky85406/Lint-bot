@@ -306,7 +306,7 @@ def function(event):
 
 #測試輸出文件
 	if event.message.text == "測試":
-		with open('test_io.txt','r')as f:
+		with open('/line_chatbot/test_io.txt','r')as f:
 			data = f.read()
 			print(data)
 
