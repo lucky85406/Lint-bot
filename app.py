@@ -307,8 +307,8 @@ def function(event):
 
 #測試輸出文件
 with open('test_io.txt', 'w') as f:
-f.write('Try up ')
-f.close()
+	f.write('Try up ')
+	f.close()
 
 
 		
