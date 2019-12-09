@@ -306,7 +306,7 @@ def function(event):
 
 #測試輸出文件
 	if event.message.text == "測試":
-		fo = open("foo.txt", "wb")
+		fo = open("foo.txt", "w")
 		fo.write( "Python is a great language. Yeah its great!! ");
 # Close opend file
 		fo.close()
