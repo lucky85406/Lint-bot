@@ -305,9 +305,10 @@ def function(event):
 		line_bot_api.reply_message(event.reply_token,Image_Carousel)		
 
 #測試輸出文件
-f = open('test_io.txt','w')
-f.write("Try to use")
-f.close()
+	if event.message.text == "測試":
+		f = open('test_io.txt','w')
+		f.write("Try to use")
+		f.close()
 
 
 
