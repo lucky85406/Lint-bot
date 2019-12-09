@@ -159,7 +159,7 @@ def function(event):
 	if event.message.text == "測試":
 		line_bot_api.reply_message(	
         		event.reply_token,
-        		TextSendMessage(text="感謝您的訊息"+chr(0x100008)+"很抱歉無法搜尋到符合您輸入的選項！!"+chr(0x26A00xFE0F)+"請確認前後是否有空格存在"+chr(0x10002E))
+        		TextSendMessage(text="感謝您的訊息"+chr(0x100008)+"很抱歉無法搜尋到符合您輸入的選項！!"+chr(0x26A00xFE0F)+"請確認前後是否有空格存在"+chr(0x10002E)))
 	
 
 	Trans = "https://i.imgur.com/d7DjDmy.png"
