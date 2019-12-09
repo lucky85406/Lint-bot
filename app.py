@@ -1,5 +1,6 @@
  
 import random
+import json
 
 from flask import Flask, request, abort
 
@@ -306,9 +307,8 @@ def function(event):
 
 #測試輸出文件
 	if event.message.text == "測試":
-		with open("data.txt",mode="w+")as f:
-			f.write("Hello file")
-			f.close()
+		with open('data.txt', 'w') as f:
+			json.dump('abcdefGH', f, ensure_ascii=False)
 
 
 		
