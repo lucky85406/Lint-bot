@@ -17,7 +17,10 @@ from linebot.models import (
 
 
 
-
+#測試輸出文件
+f = open(r'E:/line_chatbot/test_io.txt','w')
+f.write("我最愛 小白")
+f.close()
 
 app = Flask(__name__)
 
@@ -305,10 +308,7 @@ def function(event):
 		)
 		line_bot_api.reply_message(event.reply_token,Image_Carousel)		
 
-#測試輸出文件
-f= open(r'E:/line_chatbot/test_io.txt','w')
-f.write("我最愛 小白")
-f.close()
+
 
 
 		
