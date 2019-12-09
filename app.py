@@ -171,7 +171,7 @@ def function(event):
 
 
 #如果有符合的選項
-	if judge == true:
+	if judge == True:
 		Trans = "https://i.imgur.com/d7DjDmy.png"
 		addstr = [""]*10
 		addint = 0
