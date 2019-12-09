@@ -50,6 +50,7 @@ def callback():
 
 def fun():
 	os.system("python test.py")
+	print("test")
 
 
 # 處理訊息
