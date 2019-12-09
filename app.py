@@ -153,7 +153,7 @@ def function(event):
 	["羅柏蒙岱維梅洛紅酒","https://i.imgur.com/TI3fKDA.jpg","ajpsv","afpsv","ajnsv","afnsv"]]
 
 
-
+#前期判斷
 	judge = False
 	judstr = event.message.text
 	for x in range(0,len(drinklist)):
@@ -169,137 +169,140 @@ def function(event):
 									+chr(0x26A0)+chr(0xFE0F)+"請確認前後是否有空格存在"+chr(0x10002E)))
 	
 
-	Trans = "https://i.imgur.com/d7DjDmy.png"
-	addstr = [""]*10
-	addint = 0
-	rint =0
-	ranlen =0;
-	rancon = [0]*10
 
-	for x in range(0,len(drinklist)):
-		for y in range(0,len(drinklist[x])):
-			if event.message.text == drinklist[x][y]:
-				ranlen =ranlen+1;
-	ranint = [0]*ranlen
-	for x in range(0,len(drinklist)):
-		for y in range(0,len(drinklist[x])):
-			if event.message.text == drinklist[x][y]:
-				ranint[rint] = x
-				rint = rint+1;
+#如果有符合的選項
+	if judge == true:
+		Trans = "https://i.imgur.com/d7DjDmy.png"
+		addstr = [""]*10
+		addint = 0
+		rint =0
+		ranlen =0;
+		rancon = [0]*10
 
-	print(ranint)
-	if len(ranint) > 10:
-		rancon = random.sample(ranint,10)
-	
-	print(rancon)
-	if len(ranint) > 10:
-		for x in range(0,len(rancon)):
-			a = rancon[x]
-			for y in range(0,len(drinklist[a])):
-				if event.message.text == drinklist[a][y]:
-					addstr[addint] = drinklist[a][1]
-					addint = addint+1
-	else:
 		for x in range(0,len(drinklist)):
 			for y in range(0,len(drinklist[x])):
 				if event.message.text == drinklist[x][y]:
-					addstr[addint] = drinklist[x][1]
-					addint = addint+1
-										
-	for z in range(0,10):
-		if addstr[z] == "":
-			addstr[z] = Trans										
-	for x in range(0,len(drinklist)):
-		for y in range(0,len(drinklist[x])):
-			if event.message.text == drinklist[x][y]:
-				Image_Carousel = TemplateSendMessage(
-					alt_text='目錄 template',
-					template=ImageCarouselTemplate(
-					columns=[
-						ImageCarouselColumn(
-							image_url=addstr[0],
-							action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=1'
+					ranlen =ranlen+1;
+		ranint = [0]*ranlen
+		for x in range(0,len(drinklist)):
+			for y in range(0,len(drinklist[x])):
+				if event.message.text == drinklist[x][y]:
+					ranint[rint] = x
+					rint = rint+1;
+
+		print(ranint)
+		if len(ranint) > 10:
+			rancon = random.sample(ranint,10)
+		
+		print(rancon)
+		if len(ranint) > 10:
+			for x in range(0,len(rancon)):
+				a = rancon[x]
+				for y in range(0,len(drinklist[a])):
+					if event.message.text == drinklist[a][y]:
+						addstr[addint] = drinklist[a][1]
+						addint = addint+1
+		else:
+			for x in range(0,len(drinklist)):
+				for y in range(0,len(drinklist[x])):
+					if event.message.text == drinklist[x][y]:
+						addstr[addint] = drinklist[x][1]
+						addint = addint+1
+											
+		for z in range(0,10):
+			if addstr[z] == "":
+				addstr[z] = Trans										
+		for x in range(0,len(drinklist)):
+			for y in range(0,len(drinklist[x])):
+				if event.message.text == drinklist[x][y]:
+					Image_Carousel = TemplateSendMessage(
+						alt_text='目錄 template',
+						template=ImageCarouselTemplate(
+						columns=[
+							ImageCarouselColumn(
+								image_url=addstr[0],
+								action=PostbackTemplateAction(
+								label=' ',
+								text=' ',
+								data='action=buy&itemid=1'
+									)
+								),
+							ImageCarouselColumn(
+								image_url=addstr[1],
+								action=PostbackTemplateAction(
+								label=' ',
+								text=' ',
+								data='action=buy&itemid=2'
+									)
+								),
+							ImageCarouselColumn(
+								image_url=addstr[2],
+								action=PostbackTemplateAction(
+								label=' ',
+								text=' ',
+								data='action=buy&itemid=3'
+									)
+								),
+							ImageCarouselColumn(
+								image_url=addstr[3],
+								action=PostbackTemplateAction(
+								label=' ',
+								text=' ',
+								data='action=buy&itemid=4'
+									)
+								),
+							ImageCarouselColumn(
+								image_url=addstr[4],
+								action=PostbackTemplateAction(
+								label=' ',
+								text=' ',
+								data='action=buy&itemid=5'
+									)
+								),
+							ImageCarouselColumn(
+								image_url=addstr[5],
+								action=PostbackTemplateAction(
+								label=' ',
+								text=' ',
+								data='action=buy&itemid=6'
+									)
+								),
+							ImageCarouselColumn(
+								image_url=addstr[6],
+								action=PostbackTemplateAction(
+								label=' ',
+								text=' ',
+								data='action=buy&itemid=7'
+									)
+								),
+							ImageCarouselColumn(
+								image_url=addstr[7],
+								action=PostbackTemplateAction(
+								label=' ',
+								text=' ',
+								data='action=buy&itemid=8'
+									)
+								),
+							ImageCarouselColumn(
+								image_url=addstr[8],
+								action=PostbackTemplateAction(
+								label=' ',
+								text=' ',
+								data='action=buy&itemid=9'
+									)
+								),
+							ImageCarouselColumn(
+								image_url=addstr[9],
+								action=PostbackTemplateAction(
+								label=' ',
+								text=' ',
+								data='action=buy&itemid=10'
+									)
 								)
-							),
-						ImageCarouselColumn(
-							image_url=addstr[1],
-							action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=2'
-								)
-							),
-						ImageCarouselColumn(
-							image_url=addstr[2],
-							action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=3'
-								)
-							),
-						ImageCarouselColumn(
-							image_url=addstr[3],
-							action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=4'
-								)
-							),
-						ImageCarouselColumn(
-							image_url=addstr[4],
-							action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=5'
-								)
-							),
-						ImageCarouselColumn(
-							image_url=addstr[5],
-							action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=6'
-								)
-							),
-						ImageCarouselColumn(
-							image_url=addstr[6],
-							action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=7'
-								)
-							),
-						ImageCarouselColumn(
-							image_url=addstr[7],
-							action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=8'
-								)
-							),
-						ImageCarouselColumn(
-							image_url=addstr[8],
-							action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=9'
-								)
-							),
-						ImageCarouselColumn(
-							image_url=addstr[9],
-							action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=10'
-								)
-							)
-						]
+							]
+						)
 					)
-				)
-	line_bot_api.reply_message(event.reply_token,Image_Carousel)		
+		line_bot_api.reply_message(event.reply_token,Image_Carousel)		
 
 
 
