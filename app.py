@@ -158,7 +158,7 @@ def function(event):
 
 	for x in range(0,len(drinklist)):
 		for y in range(2,len(drinklist[x])):
-			if event.message.text == drinklist[x][y] || event.message.text == "選單":
+			if event.message.text == drinklist[x][y] or event.message.text == "選單":
 				judge = True;
 	
 	if judge == False:
