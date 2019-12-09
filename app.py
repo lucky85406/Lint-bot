@@ -306,8 +306,8 @@ def function(event):
 
 #測試輸出文件
 	if event.message.text == "測試":
-		with open('E:/line_chatbot/test_io.txt','w')as f:
-			f.write(poem)
+		with open("data.txt",mode="w")as f:
+			f.write("Hello file")
 			f.close()
 
 
