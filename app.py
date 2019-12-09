@@ -306,9 +306,9 @@ def function(event):
 #測試輸出文件
 with open("test.txt","r") as f:
 	f.write("這是測試")
-data=open("E:/line_chatbot/test.txt",'w+')
-print('這是測試',file=data)
-data.close()
+	data=open("E:/line_chatbot/test.txt",'w+')
+	print('這是測試',file=data)
+	data.close()
 
 
 
