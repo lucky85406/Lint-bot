@@ -303,10 +303,10 @@ def function(event):
 			)
 		)
 		line_bot_api.reply_message(event.reply_token,Image_Carousel)		
+
 #測試輸出文件
-f = open("test.txt","r")
-for line in f:
-	print(line)
+f = open("test.txt","w")
+f.write("test1")
 f.close()
 
 
