@@ -2,11 +2,6 @@
 import random
 import os
 
-import imp
-b=imp.load_source('b','E:/line_chatbot/test.py')
-b.add("aaaa")
-
-
 from flask import Flask, request, abort
 
 from linebot import (
@@ -53,13 +48,16 @@ def callback():
 
     return 'OK'
 
-
+def fun():
+	os.system("python test.py")
 
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	#測試輸出文件
+	if event.message.text == "測試":
+		fun()
 	# 資料源
 	drinklist = [["拉圖城堡紅酒","https://i.imgur.com/diorIgW.jpg","afnsv","ajnsv","bfnsv","bjnsv"],
 	["Insignia紅酒","https://i.imgur.com/pSZcQg4.jpg","afpsv","ajpsv","afnsv","ajnsv"],
