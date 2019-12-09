@@ -49,7 +49,7 @@ def callback():
     return 'OK'
 
 def fun():
-	os.system("python test.py")
+	os.system("notepad 1.txt")
 
 
 # 處理訊息
