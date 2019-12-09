@@ -173,7 +173,7 @@ def function(event):
 				event.reply_token,
 				TextSendMessage(text= "感謝您的訊息"+chr(0x100008)+"\n"\
 									+"很抱歉無法搜尋到符合您輸入的選項！!\n"\
-									+chr(0x26A0)+chr(0xFE0F)+"請確認前後是否有空格存在"+chr(0x10002E)))
+									+chr(0x26A0)+chr(0xFE0F)+"請確認前後是否有空格存在"))
 	# 如果有符合的選項
 	if meetjud == True:
 		Trans = "https://i.imgur.com/d7DjDmy.png"
