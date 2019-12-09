@@ -155,11 +155,16 @@ def function(event):
 
 #前期判斷
 	judge = False
+	meetjud = False
 	judstr = event.message.text
+
+	if judstr == "選單" or judstr == "？" or judstr == "?":
+		judge = True;
+
 	for x in range(0,len(drinklist)):
 		for y in range(2,len(drinklist[x])):
-			if judstr == drinklist[x][y] or judstr == "選單" or judstr == "？" or judstr == "?":
-				judge = True;
+			if judstr == drinklist[x][y]:
+				meetjud = True;
 	
 	if judge == False:
 		line_bot_api.reply_message(	
@@ -171,7 +176,7 @@ def function(event):
 
 
 #如果有符合的選項
-	if judge == True:
+	if meetjud == True:
 		Trans = "https://i.imgur.com/d7DjDmy.png"
 		addstr = [""]*10
 		addint = 0
