@@ -17,10 +17,7 @@ from linebot.models import (
 
 
 
-#測試輸出文件
-f = open(r'E:/line_chatbot/test_io.txt','w',encoding='utf-8')
-f.write("我最愛 小白")
-f.close()
+
 
 app = Flask(__name__)
 
@@ -55,6 +52,10 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
+	#測試輸出文件
+	f = open(r'E:/line_chatbot/test_io.txt','w',encoding='utf-8')
+	f.write("我最愛 小白")
+	f.close()
 	# 資料源
 	drinklist = [["拉圖城堡紅酒","https://i.imgur.com/diorIgW.jpg","afnsv","ajnsv","bfnsv","bjnsv"],
 	["Insignia紅酒","https://i.imgur.com/pSZcQg4.jpg","afpsv","ajpsv","afnsv","ajnsv"],
