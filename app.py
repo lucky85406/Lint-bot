@@ -307,8 +307,11 @@ def function(event):
 #測試輸出文件
 	if event.message.text == "測試":
 		f = open('test_io.txt','r')
+		w = open('test_io.txt','w')
 		words = f.read()
+		w.write("try to use")
 		print(words)
+		w.close()
 		f.close()
 
 
