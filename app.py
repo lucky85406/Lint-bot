@@ -157,16 +157,16 @@ def function(event):
 	judge = False
 	meetjud = False
 	judstr = event.message.text
-
+	#根據line manager 內設定做判斷
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True;
-
+	#根據資料有無符合選項
 	for x in range(0,len(drinklist)):
 		for y in range(2,len(drinklist[x])):
 			if judstr == drinklist[x][y]:
 				meetjud = True;
 	
-	if judge == False:
+	if judge == False and meetjud == False:
 		line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= "感謝您的訊息"+chr(0x100008)+"\n"\
