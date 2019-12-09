@@ -1,4 +1,4 @@
-a="cccccccc"
+a="zzzzzzzzzz"
 
 def add(x):
 	a = x
