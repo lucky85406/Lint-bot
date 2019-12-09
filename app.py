@@ -3,8 +3,7 @@ import random
 import os
 
 import imp
-b = imp.load_source('b','E:/line_chatbot/test.py')
-b.add(x)
+
 
 from flask import Flask, request, abort
 
@@ -328,7 +327,8 @@ def function(event):
 
 #執行
 if __name__ == 'b':
-	b.add("cccc")
+	b = imp.load_source('b','test.py')
+	b.add("xxxxx")
 if __name__ == "__main__":
     app.run()
      
