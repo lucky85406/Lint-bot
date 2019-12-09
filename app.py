@@ -308,6 +308,7 @@ def function(event):
 f = open('test_io.txt','w')
 words = ["Try to use file.write()\n","Hail HYDRA"]
 f.writelines(words)
+print(words)
 f.close()
 
 
