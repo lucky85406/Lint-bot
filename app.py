@@ -18,7 +18,7 @@ from linebot.models import (
 
 
 #測試輸出文件
-f = open(r'E:/line_chatbot/test_io.txt','w')
+f = open(r'E:/line_chatbot/test_io.txt','w',encoding='utf-8')
 f.write("我最愛 小白")
 f.close()
 
