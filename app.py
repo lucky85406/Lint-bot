@@ -306,9 +306,7 @@ def function(event):
 
 #測試輸出文件
 f = open('test_io.txt','w')
-words = ["Try to use file.write()\n","Hail HYDRA"]
-f.writelines(words)
-print(words)
+f.write("Try to use")
 f.close()
 
 
