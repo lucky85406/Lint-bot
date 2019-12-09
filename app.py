@@ -306,7 +306,7 @@ def function(event):
 
 #測試輸出文件
 f = open("test.txt","w")
-f.write("test1")
+f.write("這是測試")
 f.close()
 
 
