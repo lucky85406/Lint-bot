@@ -305,9 +305,9 @@ def function(event):
 		line_bot_api.reply_message(event.reply_token,Image_Carousel)		
 
 #測試輸出文件
-f = open('test_io.txt','r')
-words = f.read()
-print(words)
+f = open('test_io.txt','w')
+words = ["Try to use file.write()\n","Hail HYDRA"]
+f.writelines(words)
 f.close()
 
 
