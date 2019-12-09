@@ -303,7 +303,11 @@ def function(event):
 			)
 		)
 		line_bot_api.reply_message(event.reply_token,Image_Carousel)		
-
+with open("test.txt","r") as f:
+	f.write("這是測試")
+data=open("E:/line_chatbot/test.txt",'w+')
+print('這是測試',file=data)
+data.close()
 
 
 
