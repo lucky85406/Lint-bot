@@ -58,9 +58,6 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	#測試輸出文件
-	if event.message.text == "測試":
-		os.system("python test.py")
-		add(event.message.text)
 	# 資料源
 	drinklist = [["拉圖城堡紅酒","https://i.imgur.com/diorIgW.jpg","afnsv","ajnsv","bfnsv","bjnsv"],
 	["Insignia紅酒","https://i.imgur.com/pSZcQg4.jpg","afpsv","ajpsv","afnsv","ajnsv"],
@@ -326,9 +323,8 @@ def function(event):
 								
 
 #執行
-if __name__ == 'b':
+if __name__ == "__main__":
 	b = imp.load_source('b','test.py')
 	b.add("xxxxx")
-if __name__ == "__main__":
     app.run()
      
