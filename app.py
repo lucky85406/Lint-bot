@@ -306,7 +306,7 @@ def function(event):
 
 #測試輸出文件
 	if event.message.text == "測試":
-		with open("data.txt",mode="w")as f:
+		with open("data.txt",mode="r+")as f:
 			f.write("Hello file")
 			f.close()
 
