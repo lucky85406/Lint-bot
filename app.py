@@ -328,6 +328,7 @@ def function(event):
 
 #執行
 if __name__ == 'b':
+	b.add("cccc")
 if __name__ == "__main__":
     app.run()
      
