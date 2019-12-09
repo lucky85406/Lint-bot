@@ -56,9 +56,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	#測試輸出文件
-	f = open(r'test_io.txt','w')
-	f.write("12352")
-	f.close()
+	function()
 	# 資料源
 	drinklist = [["拉圖城堡紅酒","https://i.imgur.com/diorIgW.jpg","afnsv","ajnsv","bfnsv","bjnsv"],
 	["Insignia紅酒","https://i.imgur.com/pSZcQg4.jpg","afpsv","ajpsv","afnsv","ajnsv"],
