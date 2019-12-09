@@ -306,8 +306,9 @@ def function(event):
 		line_bot_api.reply_message(event.reply_token,Image_Carousel)		
 
 #測試輸出文件
-with open('data.txt', 'w') as f:
-	f.write('Try up')
+with open('test_io.txt', 'r') as f:
+	word = f.read()
+	print(word)
 	f.close()
 
 
