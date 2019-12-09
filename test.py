@@ -1,4 +1,4 @@
-def function():
+def add(x):
 	f = open(r'test_io.txt','w')
-	f.write("5562266")
+	f.write(x)
 	f.close()
