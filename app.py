@@ -154,9 +154,14 @@ def function(event):
 
 
 
-	titletxt = ""
+	judge = False
+
+	for x in range(0,len(drinklist)):
+		for y in range(2,len(drinklist[x])):
+			if event.message.text == drinklist[x][y]:
+				judge = True;
 	
-	if event.message.text == "測試":
+	if judge == False:
 		line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= "感謝您的訊息"+chr(0x100008)+"\n"\
