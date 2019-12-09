@@ -306,9 +306,9 @@ def function(event):
 		line_bot_api.reply_message(event.reply_token,Image_Carousel)		
 
 #測試輸出文件
-	if event.message.text == "測試":
-		with open('data.txt', 'w') as f:
-			json.dump('abcdefGH', f, ensure_ascii=False)
+with open('data.txt', 'w') as f:
+	f.write('Try up')
+	f.close()
 
 
 		
