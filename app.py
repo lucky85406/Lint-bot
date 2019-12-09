@@ -1,6 +1,7 @@
  
 import random
-import json
+
+from test import function
 
 from flask import Flask, request, abort
 
@@ -49,12 +50,14 @@ def callback():
     return 'OK'
 
 
+
+
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	#測試輸出文件
-	f = open(r'E:/line_chatbot/test_io.txt','w')
-	f.write("321")
+	f = open(r'test_io.txt','w')
+	f.write("12352")
 	f.close()
 	# 資料源
 	drinklist = [["拉圖城堡紅酒","https://i.imgur.com/diorIgW.jpg","afnsv","ajnsv","bfnsv","bjnsv"],
