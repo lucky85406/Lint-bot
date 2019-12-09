@@ -53,8 +53,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	#測試輸出文件
-	f = open(r'E:/line_chatbot/test_io.txt','w',encoding='utf-8')
-	f.write("我最愛 小白")
+	f = open(r'E:/line_chatbot/test_io.txt','w')
+	f.write("123")
 	f.close()
 	# 資料源
 	drinklist = [["拉圖城堡紅酒","https://i.imgur.com/diorIgW.jpg","afnsv","ajnsv","bfnsv","bjnsv"],
