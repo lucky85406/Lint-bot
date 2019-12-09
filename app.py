@@ -306,13 +306,10 @@ def function(event):
 
 #測試輸出文件
 	if event.message.text == "測試":
-		f = open("E:\line_chatbot\test_io.txt", 'w', encoding = 'UTF-8')    # 也可使用指定路徑等方式，如： C:\A.txt
-		f.write('你好1\n')
-		f.write('你好2\n')
-		f.write('你好3\n')
-		f.close()
-
-
+		fo = open("foo.txt", "wb")
+		fo.write( "Python is a great language.Yeah its great!!");
+# Close opend file
+		fo.close()
 
 
 		
