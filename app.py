@@ -59,7 +59,7 @@ def callback():
 def function(event):
 	#測試輸出文件
 	if event.message.text == "測試":
-		os.system("python E:/line_chatbot/test.py")
+		os.system("python test.py")
 		add(event.message.text)
 	# 資料源
 	drinklist = [["拉圖城堡紅酒","https://i.imgur.com/diorIgW.jpg","afnsv","ajnsv","bfnsv","bjnsv"],
