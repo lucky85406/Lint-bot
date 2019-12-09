@@ -309,8 +309,8 @@ def function(event):
 		f = open('test_io.txt','r')
 		w = open('test_io.txt','w')
 		words = f.read()
-		w.write("try to use")
 		print(words)
+		w.write("try to use")
 		w.close()
 		f.close()
 
