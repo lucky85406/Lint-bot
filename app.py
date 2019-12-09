@@ -194,13 +194,10 @@ def function(event):
 				if judstr == drinklist[x][y]:
 					ranint[rint] = x
 					rint = rint+1;
-		# 當符合的數目大於10個隨機產生10個選項
-		print(ranint)
+		# 將符合的選項圖片url顯示圖片的陣列中(如果項目超過10個，隨機產生10個)
 		if len(ranint) > 10:
 			rancon = random.sample(ranint,10)
-		print(rancon)
-		# 將符合的選項圖片url顯示圖片的陣列中
-		if len(ranint) > 10:
+			print(rancon)
 			for x in range(0,len(rancon)):
 				a = rancon[x]
 				for y in range(0,len(drinklist[a])):
