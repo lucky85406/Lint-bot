@@ -306,8 +306,10 @@ def function(event):
 
 #測試輸出文件
 	if event.message.text == "測試":
-		f = open('test_io.txt','w')
-		f.write("try to ues")
+		f = open('A.txt', 'w', encoding = 'UTF-8')    # 也可使用指定路徑等方式，如： C:\A.txt
+		f.write('你好1\n')
+		f.write('你好2\n')
+		f.write('你好3\n')
 		f.close()
 
 
