@@ -67,7 +67,7 @@ def function(event):
 		while True:
 			try:
 				scope = ['https://spreadsheets.google.com/feeds']
-				key = SAC.from_json_keyfile_name(GDriveJSON, scope)
+				key = ServiceAccountCredentials.from_json_keyfile_name(GDriveJSON, scope)
 				gc = gspread.authorize(key)
 				worksheet = gc.open(GSpreadSheet).sheet1
 			except Exception as ex:
