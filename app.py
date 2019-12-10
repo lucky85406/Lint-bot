@@ -12,7 +12,7 @@ from linebot.models import (
 from test import pri
 
 import random
-import gspread
+
 
 app = Flask(__name__)
 
