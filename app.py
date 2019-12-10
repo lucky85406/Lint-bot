@@ -1,7 +1,6 @@
  
 import random
-import sys
-import datetime
+import time
 #import gspread
 #from oauth2client.service_account import ServiceAccountCredentials as SAC
 
@@ -19,6 +18,29 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, ImageSendMessage, URIImagemapAction, MessageImagemapAction
     )
 
+
+
+auth_json_path = 'PythonUpload-841c8b986f44.json' #由剛剛建立出的憑證，放置相同目錄以供引入
+gss_scopes = ['https://spreadsheets.google.com/feeds'] #我們想要取用的範圍
+
+
+
+def auth_gss_client(path, scopes):
+    credentials = ServiceAccountCredentials.from_json_keyfile_name(path, scopes)
+    return gspread.authorize(credentials)
+
+gss_client = auth_gss_client(auth_json_path, gss_scopes) #呼叫我們的函式
+
+
+#從剛剛建立的sheet，把網址中 https://docs.google.com/spreadsheets/d/〔key〕/edit 的 〔key〕的值代入 
+spreadsheet_key_path = '1vhiAa6idyIwIkVVZdTXzhAHKclf9lvb5j4PXhsodWXM'
+
+#我們透過open_by_key這個method來開啟sheet
+sheet = gss_client.open_by_key(spreadsheet_key_path).sheet1
+#單純取出時間稍後塞入sheet
+today = time.strftime("%c")
+#透過insert_row寫入值 第二行塞入時間,abc,123的值
+sheet.insert_row([today,"HIIIIIIIII	", 532], 2)
 
 
 app = Flask(__name__)
@@ -56,29 +78,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	#測試輸出文件
-	if event.message.text == "1":
-		line_bot_api.reply_message(event.reply_token,TextSendMessage(text="紀錄成功"))
-		pass
-		#GDriveJSON就輸入下載下來Json檔名稱
-		#GSpreadSheet是google試算表名稱
-		GDriveJSON = 'PythonUpload-841c8b986f44.json'
-		GSpreadSheet = ' P_UpLoadTest'
-		while True:
-			try:
-				scope = ['https://spreadsheets.google.com/feeds']
-				key = SAC.from_json_keyfile_name(GDriveJSON, scope)
-				gc = gspread.authorize(key)
-				worksheet = gc.open(GSpreadSheet).sheet1
-			except Exception as ex:
-				print('無法連線Google試算表', ex)
-				sys.exit(1)
-			textt=""
-			textt+=event.message.text
-			if textt!="":
-				worksheet.append_row((datetime.datetime.now(), textt))
-				print('新增一列資料到試算表' ,GSpreadSheet)
-				return textt                 
+	#測試輸出文件              
 	# 資料源
 	drinklist = [["拉圖城堡紅酒","https://i.imgur.com/diorIgW.jpg","afnsv","ajnsv","bfnsv","bjnsv"],
 	["Insignia紅酒","https://i.imgur.com/pSZcQg4.jpg","afpsv","ajpsv","afnsv","ajnsv"],
