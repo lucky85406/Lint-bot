@@ -3,7 +3,7 @@ import time #待會會取時間
 from oauth2client.service_account import ServiceAccountCredentials
 
 context =""
-def cont(a)
+def cont(a):
 	context = a
 	return context
 
