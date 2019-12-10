@@ -3,7 +3,7 @@ import random
 import sys
 import datetime
 #import gspread
-from oauth2client.service_account import ServiceAccountCredentials as SAC
+#from oauth2client.service_account import ServiceAccountCredentials as SAC
 
 
 
