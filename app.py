@@ -57,7 +57,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	#測試輸出文件
-	if event.message.text == "1":
+	if event.message.text == "2":
 		line_bot_api.reply_message(event.reply_token,TextSendMessage(text="紀錄成功"))
 		pass
 		#GDriveJSON就輸入下載下來Json檔名稱
