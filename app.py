@@ -1,6 +1,5 @@
  
 import random
-from auth_gss_client import cont
 
 
 
@@ -16,8 +15,6 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, ImageSendMessage, URIImagemapAction, MessageImagemapAction
     )
 
-def test():
-	return "哈囉"
 
 app = Flask(__name__)
 
