@@ -2,8 +2,8 @@
 import random
 import sys
 import datetime
-#import gspread
-#from oauth2client.service_account import ServiceAccountCredentials as SAC
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials as SAC
 
 
 
@@ -67,7 +67,7 @@ def function(event):
 		while True:
 			try:
 				scope = ['https://spreadsheets.google.com/feeds']
-				key = ServiceAccountCredentials.from_json_keyfile_name(GDriveJSON, scope)
+				key = SAC.from_json_keyfile_name(GDriveJSON, scope)
 				gc = gspread.authorize(key)
 				worksheet = gc.open(GSpreadSheet).sheet1
 			except Exception as ex:
