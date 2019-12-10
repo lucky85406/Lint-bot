@@ -2,10 +2,9 @@ import gspread
 import time #待會會取時間
 from oauth2client.service_account import ServiceAccountCredentials
 
-context =""
-def cont(a):
-	context = a
-	return context
+context ="test"
+
+	
 
 auth_json_path = 'PythonUpload-841c8b986f44.json' #由剛剛建立出的憑證，放置相同目錄以供引入
 gss_scopes = ['https://spreadsheets.google.com/feeds'] #我們想要取用的範圍
@@ -27,5 +26,5 @@ sheet = gss_client.open_by_key(spreadsheet_key_path).sheet1
 #單純取出時間稍後塞入sheet
 today = time.strftime("%c")
 #透過insert_row寫入值 第二行塞入時間,abc,123的值
-def cont(a):
-	sheet.insert_row([today,a, 532], 2)
+#def cont(a):
+sheet.insert_row([today,context, 532], 2)
