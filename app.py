@@ -1,11 +1,10 @@
  
 import random
-import os
+import sys
+import datetime
 import gspread
-import time #待會會取時間
 
 from oauth2client.service_account import ServiceAccountCredentials 
-
 
 from flask import Flask, request, abort
 
