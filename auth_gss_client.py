@@ -27,4 +27,4 @@ sheet = gss_client.open_by_key(spreadsheet_key_path).sheet1
 today = time.strftime("%c")
 #透過insert_row寫入值 第二行塞入時間,abc,123的值
 #def cont(a):
-sheet.insert_row([today,context, 532], 2)
+sheet.insert_row([today,"112132", 532], 2)
