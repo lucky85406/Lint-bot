@@ -18,7 +18,7 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, ImageSendMessage, URIImagemapAction, MessageImagemapAction
     )
 
-#
+
 
 auth_json_path = 'PythonUpload-841c8b986f44.json' #由剛剛建立出的憑證，放置相同目錄以供引入
 gss_scopes = ['https://spreadsheets.google.com/feeds'] #我們想要取用的範圍
