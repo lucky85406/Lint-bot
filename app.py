@@ -62,8 +62,8 @@ def function(event):
 		pass
 		#GDriveJSON就輸入下載下來Json檔名稱
 		#GSpreadSheet是google試算表名稱
-		GDriveJSON = 'LineBot.json'
-		GSpreadSheet = 'BotTest'
+		GDriveJSON = 'PythonUpload-841c8b986f44.json'
+		GSpreadSheet = ' P_UpLoadTest'
 		while True:
 			try:
 				scope = ['https://spreadsheets.google.com/feeds']
