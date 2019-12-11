@@ -72,9 +72,6 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	#測試輸出文件
-	#透過insert_row寫入值 第二行塞入時間,abc,123的值
-	sheet.insert_row([today,event.message.text, 111], 2)
 	# 資料源
 	drinklist = [["拉圖城堡紅酒","https://i.imgur.com/diorIgW.jpg","afnsv","ajnsv","bfnsv","bjnsv"],
 	["Insignia紅酒","https://i.imgur.com/pSZcQg4.jpg","afpsv","ajpsv","afnsv","ajnsv"],
@@ -234,7 +231,10 @@ def function(event):
 					if judstr == drinklist[x][y]:
 						addstr[addint] = drinklist[x][1]
 						addint = addint+1
-		# 如果陣列中出現空的情況放入一張透明圖片									
+	#測試輸出文件
+	#透過insert_row寫入值 第二行塞入時間,abc,123的值
+	sheet.insert_row([today,event.message.text, 111], 2)				
+		# 如果陣列中出現空的情況放入一張透明圖片								
 		for z in range(0,10):
 			if addstr[z] == "":
 				addstr[z] = Trans
