@@ -231,9 +231,9 @@ def function(event):
 					if judstr == drinklist[x][y]:
 						addstr[addint] = drinklist[x][1]
 						addint = addint+1
-	#測試輸出文件
-	#透過insert_row寫入值 第二行塞入時間,abc,123的值
-	sheet.insert_row([today,event.message.text, 111], 2)				
+		#測試輸出文件
+		#透過insert_row寫入值 第二行塞入時間,abc,123的值
+		sheet.insert_row([today,event.message.text, 111], 2)				
 		# 如果陣列中出現空的情況放入一張透明圖片								
 		for z in range(0,10):
 			if addstr[z] == "":
