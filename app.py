@@ -9,7 +9,7 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, ImageSendMessage, URIImagemapAction, MessageImagemapAction
     )
-from test import pri
+
 
 import random
 import gspread
@@ -35,8 +35,6 @@ spreadsheet_key_path = '1vhiAa6idyIwIkVVZdTXzhAHKclf9lvb5j4PXhsodWXM'
 sheet = gss_client.open_by_key(spreadsheet_key_path).sheet1
 #單純取出時間稍後塞入sheet
 today = time.strftime("%c")
-#透過insert_row寫入值 第二行塞入時間,abc,123的值
-sheet.insert_row([today,"context", 532], 2)
 
 
 app = Flask(__name__)
@@ -75,7 +73,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	#測試輸出文件
-	pri(event.message.text)
+	#透過insert_row寫入值 第二行塞入時間,abc,123的值
+	sheet.insert_row([today,event.message.text, 111], 2)
 	# 資料源
 	drinklist = [["拉圖城堡紅酒","https://i.imgur.com/diorIgW.jpg","afnsv","ajnsv","bfnsv","bjnsv"],
 	["Insignia紅酒","https://i.imgur.com/pSZcQg4.jpg","afpsv","ajpsv","afnsv","ajnsv"],
