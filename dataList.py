@@ -103,12 +103,12 @@ def dataList(intxt):
 	dlen =0;
 	for x in range(0,len(drinklist)):
 		for y in range(2,len(drinklist[x])):
-			if judstr == drinklist[x][y]:
+			if intxt == drinklist[x][y]:
 				dlen=dlen+1;
 	dlist=[""]*dlen
 	d=0
 	for x in range(0,len(drinklist)):
 		for y in range(2,len(drinklist[x])):
-			if judstr == drinklist[x][y]:
+			if intxt == drinklist[x][y]:
 				dlist[d] = drinklist[x][1];
 	return dlist
