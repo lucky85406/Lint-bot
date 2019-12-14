@@ -82,9 +82,10 @@ def function(event):
 	meetjud = False
 	judstr = event.message.text
 	data = dataList(judstr)
-	dlen = len(dataList(judstr))
+	dlen = -1
 	if judstr == "選單" or judstr == "？" or judstr == "?":
-		judge = True;
+		judge = True
+		dlen =len(dataList(judstr))
 	else if dlen==0:
 		line_bot_api.reply_message(	
 				event.reply_token,
