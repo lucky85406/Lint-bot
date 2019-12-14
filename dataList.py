@@ -111,4 +111,5 @@ def dataList(intxt):
 		for y in range(2,len(drinklist[x])):
 			if intxt == drinklist[x][y]:
 				dlist[d] = drinklist[x][1];
+				d=d+1
 	return dlist
