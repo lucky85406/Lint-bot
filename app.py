@@ -84,10 +84,11 @@ def function(event):
 	data = dataList(judstr)
 	dlen = len(dataList(judstr))
 	
-
+	w = open('usertxt.txt',encoding='UTF-8','w')
+	w.write(judstr)
 	f = open('usertxt.txt','r')
-	f.write(judstr)
 	print(f.read())
+	f.close()
 
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True
