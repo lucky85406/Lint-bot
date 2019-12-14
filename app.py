@@ -84,7 +84,7 @@ def function(event):
 	data = dataList(judstr)
 	dlen = len(dataList(judstr))
 	
-	w = open('usertxt.txt',encoding='UTF-8','w')
+	w = open('usertxt.txt','w')
 	w.write(judstr)
 	f = open('usertxt.txt','r')
 	print(f.read())
