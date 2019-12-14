@@ -106,9 +106,8 @@ def function(event):
 			rancon = random.sample(ranint,10)
 			for x in range(0,len(rancon)):
 				a = rancon[x]
-				for y in range(0,dlen):
-					addstr[addint] = data[a]
-					addint = addint+1
+				addstr[addint] = data[a]
+				addint = addint+1
 		else:
 			for x in range(0,dlen):
 				addstr[addint] = drinklist[x]
