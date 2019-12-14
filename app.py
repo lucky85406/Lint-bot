@@ -88,7 +88,7 @@ def function(event):
 		f.write(judstr)
 	with open('usertxt.txt','r') as f:
 		if judstr == "測試":
-			testxt = f.read()
+			testxt += f.read()
 	line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= testxt))
