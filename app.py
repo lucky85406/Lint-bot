@@ -82,17 +82,16 @@ def function(event):
 	meetjud = False
 	judstr = event.message.text
 	data = dataList(judstr)
-	dlen = -1
+	dlen = len(dataList(judstr))
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True
-		dlen =len(dataList(judstr))
-	else if dlen==0:
+	elif dlen==0:
 		line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= "感謝您的訊息"+chr(0x100008)+"\n"\
 									+"很抱歉無法搜尋到符合您輸入的選項！!\n"\
 									+chr(0x26A0)+chr(0xFE0F)+"請確認前後是否有空格存在"+chr(0x10002E)))
-	else if dlen>0:
+	elif dlen>0:
 		Trans = "https://i.imgur.com/d7DjDmy.png"
 		addstr = [""]*10
 		addint = 0
