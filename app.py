@@ -99,6 +99,10 @@ def function(event):
 		ranlen =0;
 		rancon = [0]*10
 		if dlen>10:
+			ranint = [0]*dlen
+			for x in range(0,dlen):
+					ranint[rint] = x
+					rint = rint+1;
 			rancon = random.sample(ranint,10)
 			for x in range(0,len(rancon)):
 				a = rancon[x]
