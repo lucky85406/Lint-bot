@@ -83,6 +83,7 @@ def function(event):
 	judstr = event.message.text
 	data = dataList(judstr)
 	dlen = len(dataList(judstr))
+	print(data)
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True
 	elif dlen==0:
