@@ -96,7 +96,7 @@ def function(event):
 					TextSendMessage(text= testxt))
 	elif judstr == "返回":
 		with open('usertxt.txt','w') as f:
-		f.write("")
+			f.write("")
 	'''
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True
