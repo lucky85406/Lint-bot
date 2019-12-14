@@ -90,9 +90,10 @@ def function(event):
 		f.write(testxt+judstr)
 	with open('usertxt.txt','r') as f:
 		testxt = f.read()
-	line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= testxt))
+	if judstr == "測試":
+		line_bot_api.reply_message(	
+					event.reply_token,
+					TextSendMessage(text= testxt))
 	'''
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True
