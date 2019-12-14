@@ -111,7 +111,7 @@ def function(event):
 				addint = addint+1
 		else:
 			for x in range(0,dlen):
-				addstr[addint] = drinklist[x]
+				addstr[addint] = data[x]
 				addint = addint+1
 		#透過insert_row寫入值 第二行塞入時間,abc,123的值
 		sheet.insert_row([today,event.message.text, 111], 2)
