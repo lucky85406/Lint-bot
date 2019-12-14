@@ -88,7 +88,6 @@ def function(event):
 	w.write(judstr)
 	f = open('usertxt.txt','r')
 	print(f.read())
-	f.close()
 
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True
