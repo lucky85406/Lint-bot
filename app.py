@@ -83,14 +83,15 @@ def function(event):
 	judstr = event.message.text
 	data = dataList(judstr)
 	dlen = len(dataList(judstr))
-	
+	testxt=""
 	with open('usertxt.txt','w') as f:
 		f.write(judstr)
 	with open('usertxt.txt','r') as f:
 		if judstr == "測試":
-			line_bot_api.reply_message(	
+			testxt = f.read()
+	line_bot_api.reply_message(	
 				event.reply_token,
-				TextSendMessage(text= f.read()))
+				TextSendMessage(text= testxt))
 
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True
