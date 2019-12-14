@@ -83,7 +83,12 @@ def function(event):
 	judstr = event.message.text
 	data = dataList(judstr)
 	dlen = len(dataList(judstr))
-	print(data)
+	
+
+	f = Open("usertxt.txt",encoding = "UTF-8","r")
+	f.write(judstr)
+	print(f.read())
+
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True
 	elif dlen==0:
