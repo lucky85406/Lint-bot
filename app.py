@@ -83,6 +83,7 @@ def function(event):
 	judstr = event.message.text
 	data = dataList(judstr)
 	dlen = len(dataList(judstr))
+	'''
 	testxt=""
 	with open('usertxt.txt','r') as f:
 		testxt = f.read()
@@ -224,7 +225,7 @@ def function(event):
 		)
 		line_bot_api.reply_message(event.reply_token,Image_Carousel)		
 
-'''
+
 
 
 		
