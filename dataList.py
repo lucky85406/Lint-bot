@@ -101,18 +101,21 @@ def dataList(intxt):
 			["克羅伊木桐城堡波爾多紅酒","https://i.imgur.com/52y6R7k.jpg","ajpsu","akpsu","bjpsu","bkpsu"],
 			["羅柏蒙岱維梅洛紅酒","https://i.imgur.com/TI3fKDA.jpg","ajpsv","afpsv","ajnsv","afnsv"]]
 
-	dlen =0;
+	dlen =0
+	dlist=[""]
 	for x in range(0,len(drinklist)):
 		for y in range(2,len(drinklist[x])):
 			if intxt == drinklist[x][y]:
-				dlen=dlen+1;
-	dlist=[""]*dlen
+				dlist[dlen] = drinklist[x][1]
+				dlen=dlen+1
+	'''
 	d=0
 	for x in range(0,len(drinklist)):
 		for y in range(2,len(drinklist[x])):
 			if intxt == drinklist[x][y]:
-				dlist[d] = drinklist[x][1];
+				dlist[d] = drinklist[x][1]
 				d=d+1
+	'''
 	return dlist
 
 def dataOpen(intxt):
