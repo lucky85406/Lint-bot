@@ -3,3 +3,4 @@ flask==1.0.2
 gunicorn
 gspread
 oauth2client
+numpy
