@@ -101,8 +101,9 @@ drinklist = [["拉圖城堡紅酒","https://i.imgur.com/diorIgW.jpg","afnsv","aj
 			["克羅伊木桐城堡波爾多紅酒","https://i.imgur.com/52y6R7k.jpg","ajpsu","akpsu","bjpsu","bkpsu"],
 			["羅柏蒙岱維梅洛紅酒","https://i.imgur.com/TI3fKDA.jpg","ajpsv","afpsv","ajnsv","afnsv"]]
 dalen = len(drinklist)
-a=0
+
 def dataList(intxt):
+	a=0
 	dlen =0;
 	for x in range(0,dalen):
 		a = len(drinklist[x]
