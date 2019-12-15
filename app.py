@@ -83,22 +83,6 @@ def function(event):
 	judstr = event.message.text
 	data = dataList(judstr)
 	dlen = len(dataList(judstr))
-	'''
-	testxt=""
-	with open('usertxt.txt','r') as f:
-		testxt = f.read()
-	with open('usertxt.txt','w') as f:
-		f.write(testxt+judstr)
-	with open('usertxt.txt','r') as f:
-		testxt = f.read()
-	if judstr == "測試":
-		line_bot_api.reply_message(	
-					event.reply_token,
-					TextSendMessage(text= testxt))
-	elif judstr == "返回":
-		with open('usertxt.txt','w') as f:
-			f.write("")
-	'''
 
 	print(dataOpen(judstr))
 
