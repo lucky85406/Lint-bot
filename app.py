@@ -73,10 +73,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	# 資料源
-	
-
-
+	tStart = time.time()
 	# 根據line manager 內設定做判斷
 	judge = False
 	meetjud = False
@@ -210,6 +207,8 @@ def function(event):
 				]
 			)
 		)
+		tEnd = time.time()
+		print ("It cost %f sec" % (tEnd - tStart))
 		line_bot_api.reply_message(event.reply_token,Image_Carousel)		
 
 
