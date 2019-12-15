@@ -113,3 +113,17 @@ def dataList(intxt):
 				dlist[d] = drinklist[x][1];
 				d=d+1
 	return dlist
+
+def dataOpen(intxt):
+	testxt=""
+	with open('usertxt.txt','r') as f:
+		testxt = f.read()
+	with open('usertxt.txt','w') as f:
+		f.write(testxt+judstr)
+	with open('usertxt.txt','r') as f:
+		testxt = f.read()
+	if intxt == "測試":
+		return testxt
+	elif judstr == "返回":
+		with open('usertxt.txt','w') as f:
+			f.write("")

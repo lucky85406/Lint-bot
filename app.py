@@ -99,6 +99,9 @@ def function(event):
 		with open('usertxt.txt','w') as f:
 			f.write("")
 	'''
+
+	dataOpen(judstr)
+
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True
 	elif dlen==0:
