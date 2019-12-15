@@ -104,7 +104,7 @@ def function(event):
 					ranint[rint] = x
 					rint = rint+1;
 			rancon = random.sample(ranint,10)
-			for x in range(0,len(rancon)):
+			for x in range(0,10):
 				a = rancon[x]
 				addstr[addint] = data[a]
 				addint = addint+1
