@@ -102,14 +102,14 @@ def dataList(intxt):
 		["羅柏蒙岱維梅洛紅酒","https://i.imgur.com/TI3fKDA.jpg","ajpsv","afpsv","ajnsv","afnsv"]],dtype='object')
 
 	dlen =0;
-	for x in range(0,len(drinklist)):
-		for y in range(2,len(drinklist[x])):
+	for x in range(0,drinklist.size()):
+		for y in range(2,drinklist[x].size()):
 			if intxt == drinklist[x][y]:
 				dlen=dlen+1;
 	dlist=[""]*dlen
 	d=0
-	for x in range(0,len(drinklist)):
-		for y in range(2,len(drinklist[x])):
+	for x in range(0,drinklist.size()):
+		for y in range(2,drinklist[x].size()):
 			if intxt == drinklist[x][y]:
 				dlist[d] = drinklist[x][1];
 				d=d+1
