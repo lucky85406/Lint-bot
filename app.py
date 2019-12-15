@@ -16,6 +16,7 @@ import random
 import gspread
 import time #待會會取時間
 
+tStart = time.time()
 
 auth_json_path = 'PythonUpload-841c8b986f44.json' #由剛剛建立出的憑證，放置相同目錄以供引入
 gss_scopes = ['https://spreadsheets.google.com/feeds'] #我們想要取用的範圍
@@ -73,7 +74,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	tStart = time.time()
+	
 	# 根據line manager 內設定做判斷
 	judge = False
 	meetjud = False
@@ -208,12 +209,12 @@ def function(event):
 			)
 		)
 		tEnd = time.time()
-		print ("It cost %f sec" % (tEnd - tStart))
+		
 		line_bot_api.reply_message(event.reply_token,Image_Carousel)		
 
 
 
-
+print ("It cost %f sec" % (tEnd - tStart))
 		
 
 
