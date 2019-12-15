@@ -1,6 +1,6 @@
 from numpy import *
-def dataList(intxt):
-	drinklist = [["拉圖城堡紅酒","https://i.imgur.com/diorIgW.jpg","afnsv","ajnsv","bfnsv","bjnsv"],
+
+drinklist = [["拉圖城堡紅酒","https://i.imgur.com/diorIgW.jpg","afnsv","ajnsv","bfnsv","bjnsv"],
 			["Insignia紅酒","https://i.imgur.com/pSZcQg4.jpg","afpsv","ajpsv","afnsv","ajnsv"],
 			["葛拉漢年份波特酒","https://i.imgur.com/o6lYsmx.jpg","dfpsv","djpsv","depsv"],
 			["那帕鹿躍費園紅酒","https://i.imgur.com/4tTK1St.jpg","afpsv","ajpsv","bfpsv","bjpsv"],
@@ -101,21 +101,19 @@ def dataList(intxt):
 			["克羅伊木桐城堡波爾多紅酒","https://i.imgur.com/52y6R7k.jpg","ajpsu","akpsu","bjpsu","bkpsu"],
 			["羅柏蒙岱維梅洛紅酒","https://i.imgur.com/TI3fKDA.jpg","ajpsv","afpsv","ajnsv","afnsv"]]
 
-	dlen =0
-	dlist=[""]
+def dataList(intxt):
+	dlen =0;
 	for x in range(0,len(drinklist)):
 		for y in range(2,len(drinklist[x])):
 			if intxt == drinklist[x][y]:
-				dlist[dlen] = drinklist[x][1]
-				dlen=dlen+1
-	'''
+				dlen=dlen+1;
+	dlist=[""]*dlen
 	d=0
 	for x in range(0,len(drinklist)):
 		for y in range(2,len(drinklist[x])):
 			if intxt == drinklist[x][y]:
-				dlist[d] = drinklist[x][1]
+				dlist[d] = drinklist[x][1];
 				d=d+1
-	'''
 	return dlist
 
 def dataOpen(intxt):
