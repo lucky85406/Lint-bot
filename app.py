@@ -100,7 +100,7 @@ def function(event):
 			f.write("")
 	'''
 
-	dataOpen(judstr)
+	print(dataOpen(judstr))
 
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True
