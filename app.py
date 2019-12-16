@@ -65,8 +65,6 @@ def function(event):
 	dlen = len(data)
 	dlist = list(data)
 
-	dataInput(judstr)
-
 	if dlen<10:
 		for x in range(dlen,10):
 			dlist.append(pngurl)
