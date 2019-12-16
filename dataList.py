@@ -20,7 +20,6 @@ def dataList(intxt):
 		for x in range(0,10):
 			if a<x:
 				set1.add(pngurl)
-		print(a)
-		set2 = random.sample(set1,10)		
+		return set1	
 
 	return set2
