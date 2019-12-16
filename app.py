@@ -11,7 +11,7 @@ from linebot.models import (
     )
 from oauth2client.service_account import ServiceAccountCredentials 
 
-from dataList import (dataList,dataOpen)
+from dataList import (dataList)
 import random
 import gspread
 import time #待會會取時間
@@ -80,9 +80,8 @@ def function(event):
 	meetjud = False
 	judstr = event.message.text
 	data = dataList(judstr)
-	dlen = len(dataList(judstr))
-
-	print(dataOpen(judstr))
+	dlen = len(data)
+	dlist = list(data)
 
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True
@@ -93,6 +92,7 @@ def function(event):
 									+"很抱歉無法搜尋到符合您輸入的選項！!\n"\
 									+chr(0x26A0)+chr(0xFE0F)+"請確認前後是否有空格存在"+chr(0x10002E)))
 	elif dlen>0:
+		'''
 		Trans = "https://i.imgur.com/d7DjDmy.png"
 		addstr = [""]*10
 		addint = 0
@@ -120,13 +120,14 @@ def function(event):
 		for z in range(0,10):
 			if addstr[z] == "":
 				addstr[z] = Trans
+		'''
 		# 將所有圖片陣列顯示出來										
 		Image_Carousel = TemplateSendMessage(
 			alt_text='目錄 template',
 			template=ImageCarouselTemplate(
 			columns=[
 				ImageCarouselColumn(
-					image_url=addstr[0],
+					image_url=dlist[0],
 					action=PostbackTemplateAction(
 					label=' ',
 					text=' ',
@@ -134,7 +135,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url=addstr[1],
+					image_url=dlist[1],
 					action=PostbackTemplateAction(
 					label=' ',
 					text=' ',
@@ -142,7 +143,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url=addstr[2],
+					image_url=dlist[2],
 					action=PostbackTemplateAction(
 					label=' ',
 					text=' ',
@@ -150,7 +151,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url=addstr[3],
+					image_url=dlist[3],
 					action=PostbackTemplateAction(
 					label=' ',
 					text=' ',
@@ -158,7 +159,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url=addstr[4],
+					image_url=dlist[4],
 					action=PostbackTemplateAction(
 					label=' ',
 					text=' ',
@@ -166,7 +167,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url=addstr[5],
+					image_url=dlist[5],
 					action=PostbackTemplateAction(
 					label=' ',
 					text=' ',
@@ -174,7 +175,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url=addstr[6],
+					image_url=dlist[6],
 					action=PostbackTemplateAction(
 					label=' ',
 					text=' ',
@@ -182,7 +183,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url=addstr[7],
+					image_url=dlist[7],
 					action=PostbackTemplateAction(
 					label=' ',
 					text=' ',
@@ -190,7 +191,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url=addstr[8],
+					image_url=dlist[8],
 					action=PostbackTemplateAction(
 					label=' ',
 					text=' ',
@@ -198,7 +199,7 @@ def function(event):
 						)
 					),
 				ImageCarouselColumn(
-					image_url=addstr[9],
+					image_url=dlist[9],
 					action=PostbackTemplateAction(
 					label=' ',
 					text=' ',
