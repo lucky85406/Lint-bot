@@ -43,8 +43,8 @@ def dataInput(intxt):
 
 
 	def auth_gss_client(path, scopes):
-    	credentials = ServiceAccountCredentials.from_json_keyfile_name(path, scopes)
-    	return gspread.authorize(credentials)
+		credentials = ServiceAccountCredentials.from_json_keyfile_name(path, scopes)
+		return gspread.authorize(credentials)
 
 	gss_client = auth_gss_client(auth_json_path, gss_scopes) #呼叫我們的函式
 
