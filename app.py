@@ -17,9 +17,8 @@ import time  # 待會會取時間
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi(
-    'SE2ze7zRWntpaA+vp22pDMAm/BI93Pti5qNo3wZ0NOOHO11HSm+ffoSdWxKXw7cEggPiLBQK0XZ87QtMp3bVn4MDTDGBRktZO10RvV+s8CMLyL33aonQyn8dUBSDjZ2vbsulJmZdnykXosjs9dhoSAdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('c8d07de2da7598c580b0979f0c96978d')
+line_bot_api = LineBotApi('SE2ze7zRWntpaA+vp22pDMAm/BI93Pti5qNo3wZ0NOOHO11HSm+ffoSdWxKXw7cEggPiLBQK0XZ87QtMp3bVn4MDTDGBRktZO10RvV+s8CMLyL33aonQyn8dUBSDjZ2vbsulJmZdnykXosjs9dhoSAdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler('c7342786e81022d70ef05e4757461fd7')
 
 
 @app.route("/")
