@@ -92,35 +92,6 @@ def function(event):
 									+"很抱歉無法搜尋到符合您輸入的選項！!\n"\
 									+chr(0x26A0)+chr(0xFE0F)+"請確認前後是否有空格存在"+chr(0x10002E)))
 	elif dlen>0:
-		'''
-		Trans = "https://i.imgur.com/d7DjDmy.png"
-		addstr = [""]*10
-		addint = 0
-		rint =0
-		ranlen =0;
-		rancon = [0]*10
-		if dlen>10:
-			ranint = [0]*dlen
-			for x in range(0,dlen):
-					ranint[rint] = x
-					rint = rint+1;
-			rancon = random.sample(ranint,10)
-			for x in range(0,10):
-				a = rancon[x]
-				addstr[addint] = data[a]
-				addint = addint+1
-		else:
-			for x in range(0,dlen):
-				addstr[addint] = data[x]
-				addint = addint+1
-		#透過insert_row寫入值 第二行塞入時間,abc,123的值
-		sheet.insert_row([today,event.message.text, 111], 2)
-
-		# 如果陣列中出現空的情況放入一張透明圖片								
-		for z in range(0,10):
-			if addstr[z] == "":
-				addstr[z] = Trans
-		'''
 		# 將所有圖片陣列顯示出來										
 		Image_Carousel = TemplateSendMessage(
 			alt_text='目錄 template',
