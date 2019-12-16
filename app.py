@@ -79,9 +79,15 @@ def function(event):
 	judge = False
 	meetjud = False
 	judstr = event.message.text
+	pngurl="https://stickersofast.com/images/transparent_500.jpg?3"
 	data = dataList(judstr)
 	dlen = len(data)
 	dlist = list(data)
+
+	if dlen<10:
+		for x in range(dlen,10):
+			dlist.append(pngurl)
+	
 
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True
