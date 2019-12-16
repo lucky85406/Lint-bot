@@ -10,6 +10,5 @@ def dataList(intxt):
 			for x in range(0,18):
 				if row[Lcode[x]] == intxt:
 					set1.add(row['url'])
+	set1 = random.sample(set1,10)
 	return set1
-rlist = random.sample(datalist("afnsv"),10)
-print(rlist)
