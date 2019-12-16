@@ -167,9 +167,9 @@ def function(event):
 				]
 			)
 		)
+		dataInput(judstr)
 		tEnd = time.time()
 		print ("It cost %f sec" % (tEnd - tStart))
-		dataInput(judstr)
 		line_bot_api.reply_message(event.reply_token,Image_Carousel)		
 
 
