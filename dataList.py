@@ -57,5 +57,5 @@ def dataInput(intxt):
 	#單純取出時間稍後塞入sheet
 	today = time.strftime("%c")
 	#透過insert_row寫入值 第二行塞入時間,abc,123的值
-	sheet.insert_row([today,intxt, 123], 2)	
+	sheet.insert_row([today,intxt], 2)	
 	
