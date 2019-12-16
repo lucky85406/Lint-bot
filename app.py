@@ -68,12 +68,14 @@ def function(event):
 	if dlen<10:
 		for x in range(dlen,10):
 			dlist.append(pngurl)
-	
+	#打印資料
+	'''
 	dataOpen(judstr)
 	if judstr == "show":
 		line_bot_api.reply_message(	
 						event.reply_token,
 						TextSendMessage(text= dataOpen(judstr)))
+	'''
 
 	if judstr == "選單" or judstr == "？" or judstr == "?":
 		judge = True
