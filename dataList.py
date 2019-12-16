@@ -31,7 +31,7 @@ def dataOpen(intxt):
 		f.write(testxt+intxt)
 	with open('usertxt.txt','r') as f:
 		testxt = f.read()
-	if intxt == "測試":
+	if intxt == "show":
 		return testxt
 	elif intxt == "返回":
 		with open('usertxt.txt','w') as f:
