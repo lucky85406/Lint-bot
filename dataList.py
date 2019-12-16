@@ -28,7 +28,7 @@ def dataOpen(intxt):
 	with open('usertxt.txt','r') as f:
 		testxt = f.read()
 	with open('usertxt.txt','w') as f:
-		f.write(testxt+intxt)
+		f.write(testxt+intxt+"、")
 	with open('usertxt.txt','r') as f:
 		testxt = f.read()
 	if intxt == "show":
