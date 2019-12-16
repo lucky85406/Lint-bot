@@ -16,7 +16,7 @@ def dataList(intxt):
 	if a >=10:
 		set2 = random.sample(set1,10)
 	else:
-		li = list(set2)
+		li = list(set1)
 		for x in range(0,10):
 			if li[x] == " ":
 				li[x] = pngurl
