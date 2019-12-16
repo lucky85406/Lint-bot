@@ -11,7 +11,7 @@ from linebot.models import (
     )
 
 
-from dataList import (dataList,dataOpen)
+from dataList import (dataList,dataOpen,dataInput)
 import random
 import time #待會會取時間
 
@@ -65,8 +65,7 @@ def function(event):
 	dlen = len(data)
 	dlist = list(data)
 
-	print(dataOpen(judstr))
-
+	dataInput(judstr)
 
 	if dlen<10:
 		for x in range(dlen,10):
