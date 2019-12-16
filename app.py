@@ -85,6 +85,8 @@ def function(event):
 	dlist = list(data)
 
 	print(dataOpen(judstr))
+	#透過insert_row寫入值 第二行塞入時間,abc,123的值
+	sheet.insert_row([today,judstr, 123], 2)
 
 	if dlen<10:
 		for x in range(dlen,10):
