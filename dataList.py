@@ -18,3 +18,17 @@ def dataList(intxt):
 		return set1	
 
 	return set2
+def dataOpen(intxt):
+	testxt=""
+	with open('usertxt.txt','r') as f:
+		testxt = f.read()
+	with open('usertxt.txt','w') as f:
+		f.write(testxt+intxt)
+	with open('usertxt.txt','r') as f:
+		testxt = f.read()
+	if intxt == "測試":
+		return testxt
+	elif intxt == "返回":
+		with open('usertxt.txt','w') as f:
+			f.write("")
+	

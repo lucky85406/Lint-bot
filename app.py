@@ -11,7 +11,7 @@ from linebot.models import (
     )
 from oauth2client.service_account import ServiceAccountCredentials 
 
-from dataList import (dataList)
+from dataList import (dataList,dataOpen)
 import random
 import gspread
 import time #待會會取時間
@@ -83,6 +83,8 @@ def function(event):
 	data = dataList(judstr)
 	dlen = len(data)
 	dlist = list(data)
+
+	print(dataOpen(judstr))
 
 	if dlen<10:
 		for x in range(dlen,10):
