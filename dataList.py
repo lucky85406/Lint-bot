@@ -18,7 +18,7 @@ def dataList(intxt):
 	else:
 		li = list(set2)
 		for x in range(0,10):
-			if li[x] == "":
+			if li[x] == " ":
 				li[x] = pngurl
 		set2 = set(li)		
 
