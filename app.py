@@ -79,7 +79,7 @@ def function(event):
 	judge = False
 	meetjud = False
 	judstr = event.message.text
-	pngurl="https://stickersofast.com/images/transparent_500.jpg?3"
+	pngurl="https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=be7b6ffbd462853592b5da27a0df5afe/0b46f21fbe096b63d30f4b590d338744ebf8aca0.jpg"
 	data = dataList(judstr)
 	dlen = len(data)
 	dlist = list(data)
