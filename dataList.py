@@ -13,10 +13,11 @@ def dataList(intxt):
 				if row[Lcode[x]] == s:
 					set1.add(row['url'])
 	a = len(set1)
+	print(a)
 	if a >=10:
 		set2 = random.sample(set1,10)
 	else:
-		for x in range(0,9):
+		for x in range(0,10):
 			if a<x:
 				set1.add(pngurl)
 		set2 = random.sample(set1,10)		
