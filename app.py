@@ -51,7 +51,7 @@ def function(event):
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 	with open("usertxt.txt","w") as f:
-		mes = f.write(mes+event.message.text+"\n")
+		mes = f.write(mes+"\n"+event.message.text)
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 		if event.message.text == "show":
