@@ -48,17 +48,19 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	mes = ""
+	catmes=""
 	li="list: "
 	a=0
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 	with open("usertxt.txt","w") as f:
 		mes = f.write("\n"+li+event.message.text+mes)
+		catmes = catmes+mes
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 		line_bot_api.reply_message(	
 			event.reply_token,
-			TextSendMessage(text= mes))		
+			TextSendMessage(text= catmes))		
 
 
 
