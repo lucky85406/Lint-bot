@@ -52,13 +52,12 @@ def function(event):
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 	with open("usertxt.txt","w") as f:
-		mes = f.write(mes+"\n"+event.message.text)
+		mes = f.write("\n"+event.message.text+mes)
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
-		if event.message.text == "show":
-			line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= mes))		
+		line_bot_api.reply_message(	
+			event.reply_token,
+			TextSendMessage(text= mes))		
 
 
 
