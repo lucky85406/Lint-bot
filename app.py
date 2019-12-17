@@ -63,6 +63,54 @@ def function(event):
 			line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= li))
+	if event.message.text == "食物":
+		Image_Carousel = TemplateSendMessage(
+			alt_text='目錄 template',
+			template=ImageCarouselTemplate(
+			columns=[
+				ImageCarouselColumn(
+					image_url="https://i.imgur.com/6btHgSL.jpg",
+					action=PostbackTemplateAction(
+					label='a',
+					text='a',
+					data='action=buy&itemid=1'
+						)
+					),
+				ImageCarouselColumn(
+					image_url="https://i.imgur.com/0I6l6mm.jpg",
+					action=PostbackTemplateAction(
+					label='b',
+					text='b',
+					data='action=buy&itemid=2'
+						)
+					),
+				ImageCarouselColumn(
+					image_url="https://i.imgur.com/eVbMryK.jpg",
+					action=PostbackTemplateAction(
+					label='c',
+					text='c',
+					data='action=buy&itemid=3'
+						)
+					),
+				ImageCarouselColumn(
+					image_url="https://i.imgur.com/5lTDJIq.jpg",
+					action=PostbackTemplateAction(
+					label='d',
+					text='d',
+					data='action=buy&itemid=4'
+						)
+					),
+				ImageCarouselColumn(
+					image_url="https://i.imgur.com/52y6R7k.jpg",
+					action=PostbackTemplateAction(
+					label='e',
+					text='e',
+					data='action=buy&itemid=5'
+						)
+					)
+				]
+			)
+		)
 
 
 
