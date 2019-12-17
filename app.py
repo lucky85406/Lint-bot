@@ -61,7 +61,7 @@ def function(event):
 			mes =""
 			line_bot_api.reply_message(	
 				event.reply_token,
-				TextSendMessage(text= mes))
+				TextSendMessage(text= li))
 
 
 
