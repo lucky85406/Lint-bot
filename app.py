@@ -47,13 +47,13 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	mes = ""
+	mes = event.message.text
 	li=""
 	a=0
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 	with open("usertxt.txt","w") as f:
-		mes = f.write(event.message.text+mes)
+		mes = f.write(mes+event.message.text)
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 		if len(mes)>=5:
