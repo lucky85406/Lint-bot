@@ -48,7 +48,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	mes = ""
-	li="list: "
+	li=""
 	a=0
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
@@ -57,10 +57,12 @@ def function(event):
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 		if len(mes)==5:
+			li = mes
+			mes =""
 			line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= mes))
-			mes=""		
+
 
 
 
