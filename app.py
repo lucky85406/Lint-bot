@@ -56,7 +56,7 @@ def function(event):
 		mes = f.write(event.message.text+mes)
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
-		if len(mes)==5:
+		if len(mes)>=5:
 			li = mes
 			with open("usertxt.txt","w") as f:
 				mes = f.write("")
