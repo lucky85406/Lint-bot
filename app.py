@@ -59,7 +59,8 @@ def function(event):
 		if len(mes)==5:
 			line_bot_api.reply_message(	
 				event.reply_token,
-				TextSendMessage(text= mes))		
+				TextSendMessage(text= mes))
+			mes=""		
 
 
 
