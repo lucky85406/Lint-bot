@@ -43,15 +43,17 @@ def callback():
 
     return 'OK'
 
-mes = ""
+
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	
+	mes = ""
+	a=0
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 	with open("usertxt.txt","w") as f:
-		mes = f.write(event.message.text+"\n"+mes)
+		mes = f.write(a+mes+event.message.text+"\n")
+		a=a+1
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 		if event.message.text == "show":
