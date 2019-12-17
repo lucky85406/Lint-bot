@@ -58,7 +58,8 @@ def function(event):
 		mes = f.read()
 		if len(mes)==5:
 			li = mes
-			mes =""
+			with open("usertxt.txt","w") as f:
+				mes = f.write("")
 			line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= li))
