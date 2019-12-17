@@ -8,9 +8,6 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, ImageSendMessage, URIImagemapAction, MessageImagemapAction
 )
-
-
-from dataList import (dataList, dataOpen, dataInput)
 import random
 import time  # 待會會取時間
 
@@ -51,14 +48,14 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	mes = ""
-    with open("usertxt.txt","r") as f:
-    	mes = f.read()
-    with open("usertxt.txt","w") as f:
-    	mes = f.write(event.message.text)
-    with open("usertxt.txt","r") as f:
-    	mes = f.read()
-    	if event.message.text == "show":
-    		line_bot_api.reply_message(	
+	with open("usertxt.txt","r") as f:
+		mes = f.read()
+	with open("usertxt.txt","w") as f:
+		mes = f.write(event.message.text)
+	with open("usertxt.txt","r") as f:
+		mes = f.read()
+		if event.message.text == "show":
+			line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= mes))		
 
