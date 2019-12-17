@@ -53,7 +53,7 @@ def function(event):
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 	with open("usertxt.txt","w") as f:
-		mes = f.write(li+event.message.text+"\n"+mes)
+		mes = f.write(li+mes+"\n"+event.message.text)
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 		line_bot_api.reply_message(	
