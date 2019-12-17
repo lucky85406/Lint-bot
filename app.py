@@ -64,6 +64,8 @@ def function(event):
 				event.reply_token,
 				TextSendMessage(text= li))
 	if event.message.text == "食物":
+		with open("usertxt.txt","w") as f:
+				mes = f.write("")
 		Image_Carousel = TemplateSendMessage(
 			alt_text='目錄 template',
 			template=ImageCarouselTemplate(
