@@ -43,7 +43,7 @@ def callback():
 
     return 'OK'
 
-mes = ""
+mes = "list"
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
