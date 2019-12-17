@@ -43,11 +43,11 @@ def callback():
 
     return 'OK'
 
-
+mes = ""
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	mes = ""
+	
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 	with open("usertxt.txt","w") as f:
