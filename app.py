@@ -52,7 +52,7 @@ def function(event):
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
 	with open("usertxt.txt","w") as f:
-		mes = f.write("第{}:{}".format(a,mes+event.message.text+"\n"))
+		mes = f.write("第{}:{}\n".format(a,mes+event.message.text))
 		a=a+1
 	with open("usertxt.txt","r") as f:
 		mes = f.read()
