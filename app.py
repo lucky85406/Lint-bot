@@ -8,7 +8,7 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, ImageSendMessage, URIImagemapAction, MessageImagemapAction
 )
-from utoken import(inU,outU)
+from utoken import(inU,outU,rantoken)
 import random
 import time  # 待會會取時間
 
@@ -48,8 +48,11 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	
-	inU(event.message.text)
+	user=""
+	if event.message.text == "key":
+		user = rantoken()
+
+	inU(user)
 
 	outU()
 

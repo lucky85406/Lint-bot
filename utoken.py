@@ -1,4 +1,10 @@
 import csv
+import random
+
+def rantoken():
+	a = random.random()
+	return("a{}".format(a))
+
 def outU():
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
