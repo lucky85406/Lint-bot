@@ -48,6 +48,8 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
+	usertxt = event.user.text
+	print(usertxt)
 	user=""
 	if event.message.text == "key":
 		user = rantoken()
