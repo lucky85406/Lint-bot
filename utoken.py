@@ -6,7 +6,11 @@ def outU():
 		for row in rows:
 			print(row['Utoken'],row['U1'])
 def  inU(mes):
-	with open('user.csv',newline='') as csvf:
-		writer = csv.writer(csvf)
+	with open('user.csv', 'w' ,newline='') as csvf:
 
-		writer.writerow([mes,111])
+		filedn = ['Utoken','U1']
+
+		writer = csv.DictWriter(csvf,fieldnames=filedn)
+
+		writer.writeheader()
+		writer.writerow({'Utoken':mes,'U1':123})
