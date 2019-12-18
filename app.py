@@ -54,7 +54,7 @@ def function(event):
 
 	inU(user)
 
-	outU()
+	outU(user)
 
 	if event.message.text == "食物":
 		with open("usertxt.txt","w") as f:

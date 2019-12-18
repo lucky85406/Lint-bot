@@ -5,12 +5,13 @@ def rantoken():
 	a = random.random()
 	return("a{}".format(a))
 
-def outU():
+def outU(tok):
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
 
 		for row in rows:
-			print(row['Utoken'],row['U1'])
+			if tok == row['Utoken']:
+				print(row['Utoken'],row['U1'])
 def  inU(mes):
 	with open('user.csv', 'w' ,newline='') as csvf:
 
