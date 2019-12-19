@@ -58,7 +58,9 @@ def function(event):
 				event.reply_token,
 				TextSendMessage(text= "儲存成功"))
 	elif ukey == "show":
-		outU()
+		line_bot_api.reply_message(	
+				event.reply_token,
+				TextSendMessage(text= outU()))		
 	else:
 		if ukey == "a" or ukey == "b" or ukey == "c" or ukey == "d":
 			ina(user_id,ukey)
