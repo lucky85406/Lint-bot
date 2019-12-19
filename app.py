@@ -60,7 +60,7 @@ def function(event):
 	elif ukey == "show":
 		outU()
 	else:
-		if ukey == "a" or ukey == "b" or ukey == "c" or ukey == "d":
+		if ukey == "e" or ukey == "b" or ukey == "c" or ukey == "d":
 			ina(user_id,ukey)
 
 
