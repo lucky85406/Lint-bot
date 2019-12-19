@@ -9,7 +9,7 @@ def outU(uid):
 		for row in rows:
 			if uid == row['Utoken']:
 				print(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
-				return "ID:\n-{}-\n1: {}\n2: {}\n3: {}\n4: {}\n5: {}".format(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
+				return "ID:\n{}\n1: {}\n2: {}\n3: {}\n4: {}\n5: {}".format(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
 	
 
 		
