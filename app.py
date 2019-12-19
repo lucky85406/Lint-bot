@@ -8,7 +8,7 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, ImageSendMessage, URIImagemapAction, MessageImagemapAction
 )
-from utoken import(inU,outU,rantoken)
+from utoken import(inID,outU,inData)
 import random
 import time  # 待會會取時間
 
@@ -48,18 +48,21 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
+
+	ukey = event.message.text
 	#!!!!!!!!!!!!!!!!!這裡有ID
 	user_id = event.source.user_id
-	line_bot_api.reply_message(	
+	if ukey == "go":	
+		inID(user_id)
+		line_bot_api.reply_message(	
 				event.reply_token,
-				TextSendMessage(text= "user_id = {}".format(user_id)))
-	user=""
-	if event.message.text == "key":
-		user = rantoken()
+				TextSendMessage(text= "儲存成功"))
+	elif ukey == "show":
+		outU()
+	else:
+		inData(user_id,ukey)
 
-	inU(user)
 
-	outU(user)
 
 	if event.message.text == "食物":
 		with open("usertxt.txt","w") as f:
