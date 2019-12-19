@@ -43,7 +43,7 @@ def inb(uid,x):
 					writer = csv.DictWriter(wrtf,fieldnames=filedn)
 
 					writer.writeheader()
-					writer.writerow({'U2':x})
+					writer.writerow({'Utoken':uid,'U2':x})
 def inc(uid,x):
 	with open('user.csv',newline='') as readf:
 		rows = csv.DictReader(readf)
@@ -57,7 +57,7 @@ def inc(uid,x):
 					writer = csv.DictWriter(wrtf,fieldnames=filedn)
 
 					writer.writeheader()
-					writer.writerow({'U3':x})
+					writer.writerow({'Utoken':uid,'U3':x})
 def ind(uid,x):
 	with open('user.csv',newline='') as readf:
 		rows = csv.DictReader(readf)
@@ -71,7 +71,7 @@ def ind(uid,x):
 					writer = csv.DictWriter(wrtf,fieldnames=filedn)
 
 					writer.writeheader()
-					writer.writerow({'U4':x})
+					writer.writerow({'Utoken':uid,'U4':x})
 def ine(uid,x):
 	with open('user.csv',newline='') as readf:
 		rows = csv.DictReader(readf)
@@ -85,5 +85,5 @@ def ine(uid,x):
 					writer = csv.DictWriter(wrtf,fieldnames=filedn)
 
 					writer.writeheader()
-					writer.writerow({'U5':x})
+					writer.writerow({'Utoken':uid,'U5':x})
 
