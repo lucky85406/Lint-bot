@@ -6,7 +6,7 @@ def outU():
 		rows = csv.DictReader(csvf)
 		for row in rows:
 			print(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
-		set1.add(rows)
+			set1.add(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
 		return set1
 		
 def  inID(uid):
