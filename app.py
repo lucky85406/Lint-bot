@@ -8,7 +8,7 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, ImageSendMessage, URIImagemapAction, MessageImagemapAction
 )
-from utoken import(inID,outU,ina)
+from utoken import(inID,outU,ina,ine,inl,inq,inu)
 import random
 import time  # 待會會取時間
 
@@ -60,8 +60,16 @@ def function(event):
 	elif ukey == "show":
 		outU()
 	else:
-		if ukey == "e" or ukey == "b" or ukey == "c" or ukey == "d":
+		if ukey == "a" or ukey == "b" or ukey == "c" or ukey == "d":
 			ina(user_id,ukey)
+		elif ukey == "e" or ukey == "f" or ukey == "g" or ukey == "h" or ukey == "i" or ukey == "j" or ukey == "k":
+			ine(user_id,ukey)
+		elif ukey == "l" or ukey == "m" or ukey == "n" or ukey == "o" or ukey == "p" :
+			inl(user_id,ukey)
+		elif ukey == "q" or ukey == "r" or ukey == "s":
+			inq(user_id,ukey)
+		elif ukey == "t" or ukey == "u" or ukey == "v":
+			inu(user_id,ukey) 
 
 
 
