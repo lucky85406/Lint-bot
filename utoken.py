@@ -15,7 +15,7 @@ def  inID(uid):
 
 		writer.writeheader()
 		writer.writerow({'Utoken':uid,'U1':"",'U2':"",'U3':"",'U4':"",'U5':""})
-def inData(uid,x):
+def ina(uid,x):
 	with open('user.csv',newline='') as readf:
 		rows = csv.DictReader(readf)
 
@@ -23,18 +23,66 @@ def inData(uid,x):
 			if uid == row['Utoken']:
 				with open('user.csv', 'w' ,newline='') as wrtf:
 
-					filedn = ['Utoken','U1','U2','U3','U4','U5']
+					filedn = ['Utoken','U1']
 
 					writer = csv.DictWriter(wrtf,fieldnames=filedn)
 
 					writer.writeheader()
-					if x == "a" or x == "b" or x == "c" or x == "d":
-						writer.writerow({'U1':x})
-					elif x == "e" or x == "f" or x == "g" or x == "h" or x == "i" or x == "j" or x == "k":
-						writer.writerow({'U2':x})
-					elif x == "l" or x == "m" or x == "n" or x == "o" or x == "p":
-						writer.writerow({'U3':x})
-					elif x == "q" or x == "r" or x == "s":
-						writer.writerow({'U4':x})
-					elif x == "t" or x == "u" or x == "v":
-						writer.writerow({'U5':x})
+					writer.writerow({'Utoken':uid,'U1':x})
+def inb(uid,x):
+	with open('user.csv',newline='') as readf:
+		rows = csv.DictReader(readf)
+
+		for row in rows:
+			if uid == row['Utoken']:
+				with open('user.csv', 'w' ,newline='') as wrtf:
+
+					filedn = ['Utoken','U2']
+
+					writer = csv.DictWriter(wrtf,fieldnames=filedn)
+
+					writer.writeheader()
+					writer.writerow({'U2':x})
+def inc(uid,x):
+	with open('user.csv',newline='') as readf:
+		rows = csv.DictReader(readf)
+
+		for row in rows:
+			if uid == row['Utoken']:
+				with open('user.csv', 'w' ,newline='') as wrtf:
+
+					filedn = ['Utoken','U3']
+
+					writer = csv.DictWriter(wrtf,fieldnames=filedn)
+
+					writer.writeheader()
+					writer.writerow({'U3':x})
+def ind(uid,x):
+	with open('user.csv',newline='') as readf:
+		rows = csv.DictReader(readf)
+
+		for row in rows:
+			if uid == row['Utoken']:
+				with open('user.csv', 'w' ,newline='') as wrtf:
+
+					filedn = ['Utoken','U4']
+
+					writer = csv.DictWriter(wrtf,fieldnames=filedn)
+
+					writer.writeheader()
+					writer.writerow({'U4':x})
+def ine(uid,x):
+	with open('user.csv',newline='') as readf:
+		rows = csv.DictReader(readf)
+
+		for row in rows:
+			if uid == row['Utoken']:
+				with open('user.csv', 'w' ,newline='') as wrtf:
+
+					filedn = ['Utoken','U5']
+
+					writer = csv.DictWriter(wrtf,fieldnames=filedn)
+
+					writer.writeheader()
+					writer.writerow({'U5':x})
+
