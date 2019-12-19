@@ -60,7 +60,7 @@ def function(event):
 	elif ukey == "show":
 		line_bot_api.reply_message(	
 				event.reply_token,
-				TextSendMessage(text= outU()))		
+				TextSendMessage(text= outU(user_id)))		
 	else:
 		if ukey == "a" or ukey == "b" or ukey == "c" or ukey == "d":
 			ina(user_id,ukey)

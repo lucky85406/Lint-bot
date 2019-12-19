@@ -1,14 +1,15 @@
 import csv
 import random
 import json
-def outU():
+def outU(uid):
 	
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
 		lis = rows
 		for row in rows:
-			print(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
-			return "ID:\n{"+"{}"+"}\n1:{}\n2:{}\n3:{}\n4:{}\n5:{}".format(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
+			if uid == row['Utoken']:
+				print(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
+				return "ID:\n-{}-\n1: {}\n2: {}\n3: {}\n4: {}\n5: {}".format(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
 	
 
 		
