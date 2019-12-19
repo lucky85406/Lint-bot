@@ -8,7 +8,7 @@ def outU():
 		lis = rows
 		for row in rows:
 			print(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
-			return "ID:{} 1:{} 2:{} 3:{} 4:{} 5:{}".format(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
+			return "ID:{}\n1:{}\n2:{}\n3:{}\n4:{}\n5:{}".format(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
 	
 
 		
