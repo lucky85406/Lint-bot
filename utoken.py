@@ -21,5 +21,13 @@ def ina(uid,x):
 		rows = csv.DictReader(csvf)
 		for row in rows:
 			if row['Utoken'] == uid:
+				with open('user.csv', 'w' ,newline='') as csvf:
+
+					filedn = ['Utoken','U1','U2','U3','U4','U5']
+
+					writer = csv.DictWriter(csvf,fieldnames=filedn)
+
+					writer.writeheader()
+					writer.writerow({'U1':x})				
 				print(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
 

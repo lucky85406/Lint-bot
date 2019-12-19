@@ -62,14 +62,6 @@ def function(event):
 	else:
 		if ukey == "a" or ukey == "b" or ukey == "c" or ukey == "d":
 			ina(user_id,ukey)
-		elif ukey == "e" or ukey == "f" or ukey == "g" or ukey == "h" or ukey == "i" or ukey == "j" or ukey == "k":
-			inb(user_id,ukey)
-		elif ukey == "l" or ukey == "m" or ukey == "n" or ukey == "o" or ukey == "p":
-			inc(user_id,ukey)	
-		elif ukey == "q" or ukey == "r" or ukey == "s":
-			ind(user_id,ukey)
-		elif ukey == "t" or ukey == "u" or ukey == "v":
-			ine(user_id,ukey)	
 
 
 
