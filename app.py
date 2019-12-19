@@ -8,7 +8,7 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, ImageSendMessage, URIImagemapAction, MessageImagemapAction
 )
-from utoken import(inID,outU,ina,inb,inc,ind,ine)
+from utoken import(inID,outU,ina)
 import random
 import time  # 待會會取時間
 
