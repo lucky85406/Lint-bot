@@ -61,15 +61,15 @@ def function(event):
 		outU()
 	else:
 		if ukey == "a" or ukey == "b" or ukey == "c" or ukey == "d":
-			ina(ukey)
+			ina(user_id,ukey)
 		elif ukey == "e" or ukey == "f" or ukey == "g" or ukey == "h" or ukey == "i" or ukey == "j" or ukey == "k":
-			inb(ukey)
+			inb(user_id,ukey)
 		elif ukey == "l" or ukey == "m" or ukey == "n" or ukey == "o" or ukey == "p":
-			inc(ukey)	
+			inc(user_id,ukey)	
 		elif ukey == "q" or ukey == "r" or ukey == "s":
-			ind(ukey)
+			ind(user_id,ukey)
 		elif ukey == "t" or ukey == "u" or ukey == "v":
-			ine(ukey)	
+			ine(user_id,ukey)	
 
 
 
