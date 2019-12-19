@@ -48,6 +48,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
+	#!!!!!!!!!!!!!!!!!這裡有ID
 	user_id = event.source.user_id
 	line_bot_api.reply_message(	
 				event.reply_token,
