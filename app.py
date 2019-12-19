@@ -64,14 +64,29 @@ def function(event):
 	else:
 		if ukey == "a" or ukey == "b" or ukey == "c" or ukey == "d":
 			ina(user_id,ukey)
+			line_bot_api.reply_message(	
+				event.reply_token,
+				TextSendMessage(text= "儲存成功"))		
 		elif ukey == "e" or ukey == "f" or ukey == "g" or ukey == "h" or ukey == "i" or ukey == "j" or ukey == "k":
 			ine(user_id,ukey)
+			line_bot_api.reply_message(	
+				event.reply_token,
+				TextSendMessage(text= "儲存成功"))
 		elif ukey == "l" or ukey == "m" or ukey == "n" or ukey == "o" or ukey == "p" :
 			inl(user_id,ukey)
+			line_bot_api.reply_message(	
+				event.reply_token,
+				TextSendMessage(text= "儲存成功"))
 		elif ukey == "q" or ukey == "r" or ukey == "s":
 			inq(user_id,ukey)
+			line_bot_api.reply_message(	
+				event.reply_token,
+				TextSendMessage(text= "儲存成功"))
 		elif ukey == "t" or ukey == "u" or ukey == "v":
 			inu(user_id,ukey) 
+			line_bot_api.reply_message(	
+				event.reply_token,
+				TextSendMessage(text= "儲存成功"))
 
 
 
