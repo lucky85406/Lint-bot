@@ -9,7 +9,7 @@ def outU():
 def  inID(uid):
 	with open('user.csv', 'w' ,newline='') as csvf:
 
-		filedn = ['Utoken','U1']
+		filedn = ['Utoken','U1','U2','U3','U4','U5']
 
 		writer = csv.DictWriter(csvf,fieldnames=filedn)
 
