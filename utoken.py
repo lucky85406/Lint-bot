@@ -1,13 +1,11 @@
 import csv
 import random
-set1 = set()
 def outU():
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
 		for row in rows:
 			print(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
-			set1.add(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
-		return set1
+		return rows
 		
 def  inID(uid):
 	with open('user.csv', 'w' ,newline='') as csvf:
