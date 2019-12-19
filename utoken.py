@@ -2,11 +2,13 @@ import csv
 import random
 import json
 def outU():
+	lis = list()
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
 		for row in rows:
+			lis = [row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5']]
 			print(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
-		return json.loads(rows)
+	return lis
 		
 def  inID(uid):
 	with open('user.csv', 'w' ,newline='') as csvf:
