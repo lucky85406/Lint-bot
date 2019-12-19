@@ -29,12 +29,12 @@ def inData(uid,x):
 
 					writer.writeheader()
 					if x == "a" or x == "b" or x == "c" or x == "d":
-						writer.writerow({'Utoken':uid,'U1':x})
+						writer.writerow({'U1':x})
 					elif x == "e" or x == "f" or x == "g" or x == "h" or x == "i" or x == "j" or x == "k":
-						writer.writerow({'Utoken':uid,'U2':x})
+						writer.writerow({'U2':x})
 					elif x == "l" or x == "m" or x == "n" or x == "o" or x == "p":
-						writer.writerow({'Utoken':uid,'U3':x})
+						writer.writerow({'U3':x})
 					elif x == "q" or x == "r" or x == "s":
-						writer.writerow({'Utoken':uid,'U4':x})
+						writer.writerow({'U4':x})
 					elif x == "t" or x == "u" or x == "v":
-						writer.writerow({'Utoken':uid,'U5':x})
+						writer.writerow({'U5':x})
