@@ -7,8 +7,7 @@ def outU():
 		rows = csv.DictReader(csvf)
 
 		for row in rows:
-			if tok == row['Utoken']:
-				print(row['Utoken'],row['U1'])
+			print(row['Utoken'],row['U1'])
 def  inID(uid):
 	with open('user.csv', 'w' ,newline='') as csvf:
 
