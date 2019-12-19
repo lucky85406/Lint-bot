@@ -28,6 +28,7 @@ def ina(uid,x):
 					writer = csv.DictWriter(csvf,fieldnames=filedn)
 
 					writer.writeheader()
-					writer.writerow({'U1':x})				
+					if row['U1'] != '' and row['U2'] != '' and row['U3'] != '' and row['U4'] != '' and row['U5'] != '':
+						writer.writerow({'Utoken':uid,'U1':x,'U2':row['U2'],'U3':row['U3'],'U4':row['U4'],'U5':row['U5']})				
 				print(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
 
