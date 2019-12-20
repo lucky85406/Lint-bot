@@ -13,22 +13,18 @@ def outU(uid):
 		
 		
 def  inID(uid):
-	x=0
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
 		for row in rows:
 			if row['Utoken'] != uid:
-				x = x+1
-		with open('user.csv', 'w' ,newline='') as csvf:
-			filedn = ['Utoken','U1','U2','U3','U4','U5']
+				with open('user.csv', 'w' ,newline='') as csvf:
 
-			writer = csv.DictWriter(csvf,fieldnames=filedn)
+					filedn = ['Utoken','U1','U2','U3','U4','U5']
 
-			writer.writeheader()
-			for row in rows:
-				for y in range(0,x):
-					if row['Utoken'] == uid:
-						writer.writerow({'Utoken':uid,'U1':"a",'U2':"e",'U3':"l",'U4':"q",'U5':"t"})
+					writer = csv.DictWriter(csvf,fieldnames=filedn)
+
+					writer.writeheader()
+					writer.writerow({'Utoken':uid,'U1':"a",'U2':"e",'U3':"l",'U4':"q",'U5':"t"})
 def ina(uid,x):
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
