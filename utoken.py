@@ -22,7 +22,7 @@ def  inID(uid):
 		writer = csv.DictWriter(csvf,fieldnames=filedn)
 
 		writer.writeheader()
-		writer.writerow({'Utoken':uid,'U1':"",'U2':"",'U3':"",'U4':"",'U5':""})
+		writer.writerow({'Utoken':uid,'U1':"a",'U2':"e",'U3':"l",'U4':"q",'U5':"s"})
 def ina(uid,x):
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
