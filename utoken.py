@@ -14,10 +14,10 @@ def outU(uid):
 		
 def  inID(uid):
 	with open('user.csv', 'w' ,newline='') as csvf:
-		filedn = ['Utoken','U1','U2','U3','U4','U5']
-		writer = csv.DictWriter(csvf,fieldnames=filedn)
-		writer.writerows({'Utoken','U1','U2','U3','U4','U5'})
-		writer.writerows({uid,"a","e","l","q","t"})
+			filedn = ['Utoken','U1','U2','U3','U4','U5']
+			writer = csv.DictWriter(csvf,fieldnames=filedn)
+			writer.writeheader({'Utoken','U1','U2','U3','U4','U5'})
+			writer.writerows({uid,"a","e","l","q","t"})
 def ina(uid,x):
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
