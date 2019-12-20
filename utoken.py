@@ -24,7 +24,7 @@ def  inID(uid):
 					writer = csv.DictWriter(csvf,fieldnames=filedn)
 
 					writer.writeheader()
-					writer.writerow({'Utoken':uid,'U1':"a",'U2':"e",'U3':"l",'U4':"q",'U5':"t"})
+					writer.writerows({'Utoken':uid,'U1':"a",'U2':"e",'U3':"l",'U4':"q",'U5':"t"})
 def ina(uid,x):
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
@@ -37,7 +37,7 @@ def ina(uid,x):
 					writer = csv.DictWriter(csvf,fieldnames=filedn)
 
 					writer.writeheader()
-					writer.writerow({'Utoken':uid,'U1':x,'U2':row['U2'],'U3':row['U3'],'U4':row['U4'],'U5':row['U5']})
+					writer.writerows({'Utoken':uid,'U1':x,'U2':row['U2'],'U3':row['U3'],'U4':row['U4'],'U5':row['U5']})
 def ine(uid,x):
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
@@ -50,7 +50,7 @@ def ine(uid,x):
 					writer = csv.DictWriter(csvf,fieldnames=filedn)
 
 					writer.writeheader()
-					writer.writerow({'Utoken':uid,'U1':row['U1'],'U2':x,'U3':row['U3'],'U4':row['U4'],'U5':row['U5']})
+					writer.writerows({'Utoken':uid,'U1':row['U1'],'U2':x,'U3':row['U3'],'U4':row['U4'],'U5':row['U5']})
 def inl(uid,x):
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
@@ -63,7 +63,7 @@ def inl(uid,x):
 					writer = csv.DictWriter(csvf,fieldnames=filedn)
 
 					writer.writeheader()
-					writer.writerow({'Utoken':uid,'U1':row['U1'],'U2':row['U2'],'U3':x,'U4':row['U4'],'U5':row['U5']})
+					writer.writerows({'Utoken':uid,'U1':row['U1'],'U2':row['U2'],'U3':x,'U4':row['U4'],'U5':row['U5']})
 def inq(uid,x):
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
@@ -76,7 +76,7 @@ def inq(uid,x):
 					writer = csv.DictWriter(csvf,fieldnames=filedn)
 
 					writer.writeheader()
-					writer.writerow({'Utoken':uid,'U1':row['U1'],'U2':row['U2'],'U3':row['U3'],'U4':x,'U5':row['U5']})
+					writer.writerows({'Utoken':uid,'U1':row['U1'],'U2':row['U2'],'U3':row['U3'],'U4':x,'U5':row['U5']})
 def inu(uid,x):
 	with open('user.csv',newline='') as csvf:
 		rows = csv.DictReader(csvf)
@@ -89,5 +89,5 @@ def inu(uid,x):
 					writer = csv.DictWriter(csvf,fieldnames=filedn)
 
 					writer.writeheader()
-					writer.writerow({'Utoken':uid,'U1':row['U1'],'U2':row['U2'],'U3':row['U3'],'U4':row['U4'],'U5':x})
+					writer.writerows({'Utoken':uid,'U1':row['U1'],'U2':row['U2'],'U3':row['U3'],'U4':row['U4'],'U5':x})
 
