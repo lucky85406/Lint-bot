@@ -33,6 +33,8 @@ def showMes(url):
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
-			if row['Utoken'] == url:
+			if row['Utoken'] == url and row['n'] == '1':
+				return "ID:\n{}\nU1: {}\nn: {}".format(row['Utoken'],row['U1'],row['n'])
+			elif row['Utoken'] == url and row['n'] == '2':
 				return "ID:\n{}\nU1: {}\nn: {}".format(row['Utoken'],row['U1'],row['n'])
 				
