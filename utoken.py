@@ -10,7 +10,7 @@ def goMes(url):
 
 		writer.writeheader()
 
-		writer.writerow({'Utoken':url,'U1':'x','U2':'x','U3':x,'U4':'x','U5':'x'})
+		writer.writerow({'Utoken':url,'U1':'x','U2':'x','U3':'x','U4':'x','U5':'x'})
 
 def inMes(url,x):
 	with open('user.csv',newline='') as csvfile:
