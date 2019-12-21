@@ -13,7 +13,7 @@ def go(url,x,n):
 			writer.writerow({'Utoken':url,'U1':x,'n':n})
 
 def inMes(url,x):
-	with op('user.csv',newline) as c:
+	with open('user.csv',newline) as c:
 		rows = csv.DictReader(c)
 
 		for row in rows:
