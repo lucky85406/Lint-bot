@@ -19,7 +19,7 @@ def inMes(url,x):
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			b = row['Ver']
-			if row['ID'] == url and int(b)<=5:
+			if row['ID'] == url:
 				if  x == "a" or x == "b" or x == "c" or x == "d":
 					with open('user.csv','a',newline='')as cfile:
 							fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
