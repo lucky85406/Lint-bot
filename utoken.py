@@ -13,7 +13,7 @@ def go(url):
 			writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})
 
 def inMes(url,x):
-	con = ""
+	con = "fa"
 	Dlist = [""]*5
 	ver = ""
 	with open('user.csv',newline='') as csvfile:
@@ -54,7 +54,7 @@ def inMes(url,x):
 				Dlist[3] = row['D4']
 				Dlist[4] = x
 				ver = "5"
-			else:
+			elif row['ID'] != url and con == "fa":
 				con = "tr"			
 
 	with open('user.csv','a',newline='')as cfile:
