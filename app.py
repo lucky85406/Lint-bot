@@ -8,7 +8,7 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, ImageSendMessage, URIImagemapAction, MessageImagemapAction
 )
-from utoken import(goMes,inMes,showMes)
+from utoken import(go,inMes,showMes)
 import random
 import time  # 待會會取時間
 
@@ -58,12 +58,9 @@ def function(event):
 		line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= showMes(user_id)))
-	elif ukey == "go":
+	elif ukey =="go":
 		user_id = event.source.user_id
-		goMes(user_id)
-		line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= "ID: {} 儲存成功".format(user_id)))
+		go(user_id,"a",0)
 	else:
 		user_id = event.source.user_id
 		inMes(user_id,ukey)
