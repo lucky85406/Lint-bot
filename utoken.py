@@ -13,19 +13,14 @@ def goMes(url):
 		writer.writerow({'Utoken':url,'U1':'x','U2':'x','U3':'x','U4':'x','U5':'x'})
 
 def inMes(url,x):
-	with open('user.csv',newline='') as csvfile:
-		rows = csv.DictReader(csvfile)
+	with open('user.csv','a+',newline='')as cfile:
+		fieldn = ['Utoken','U1','U2','U3','U4','U5']
 
-		for row in rows:
-			if row['Utoken'] == url:
-				with open('user.csv','a+',newline='')as cfile:
-					fieldn = ['Utoken','U1','U2','U3','U4','U5']
+		writer = csv.DictWriter(cfile,fieldnames=fieldn)
 
-					writer = csv.DictWriter(cfile,fieldnames=fieldn)
+		writer.writeheader()
 
-					writer.writeheader()
-
-					writer.writerow({'Utoken':row['Utoken'],'U1':row['U1'],'U2':row['U2'],'U3':x,'U4':row['U4'],'U5':row['U5']})
+		writer.writerow({'Utoken':row['Utoken'],'U1':row['U1'],'U2':row['U2'],'U3':x,'U4':row['U4'],'U5':row['U5']})
 def showMes(url):
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
