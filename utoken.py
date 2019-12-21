@@ -68,6 +68,8 @@ def inMes(url,x):
 				
 			elif con == "fa":
 				writer.writerow({'ID':url,'D1':Dlist[0],'D2':Dlist[1],'D3':Dlist[2],'D4':Dlist[3],'D5':Dlist[4],'Ver':ver})			
+			else:
+				writer.writerow({'ID':url,'D1':Dlist[0],'D2':Dlist[1],'D3':Dlist[2],'D4':Dlist[3],'D5':Dlist[4],'Ver':ver})		
 	
 
 def showMes(url):
