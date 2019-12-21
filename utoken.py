@@ -20,7 +20,7 @@ def inMes(url,x):
 
 		writer.writeheader()
 
-		writer.writerow({'Utoken':row['Utoken'],'U1':row['U1'],'U2':row['U2'],'U3':x,'U4':row['U4'],'U5':row['U5']})
+		writer.writerow({'Utoken':"x",'U1':"x",'U2':"x",'U3':x,'U4':"x",'U5':"x"})
 def showMes(url):
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
