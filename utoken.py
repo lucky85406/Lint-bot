@@ -17,7 +17,7 @@ def inMes(url,x):
 		rows = csv.DictReader(c)
 
 		for row in rows:
-			a = row['n']
+			a = "1"
 			if int(a)>0:
 				with open('user.csv','a+',newline='')as cfile:
 						fieldn = ['Utoken','U1','n']
