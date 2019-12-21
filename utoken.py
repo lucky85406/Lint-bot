@@ -27,7 +27,7 @@ def showMes(url):
 		a =0
 		for row in rows:
 			b =str(a)
-			if row['Utoken'] == url and row['U1'] == b:
+			if row['Utoken'] == url and row['U1'] == '2':
 				return "ID:\n{}\nU1: {}\nU2: {}\nU3: {}\nU4: {}\nU5: {}\n".format(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
 			else:
 				a = a+1	
