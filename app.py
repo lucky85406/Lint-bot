@@ -63,26 +63,31 @@ def function(event):
 				TextSendMessage(text= outU(event.source.user_id)))		
 	else:
 		if ukey == "a" or ukey == "b" or ukey == "c" or ukey == "d":
+			inID(user_id)
 			ina(event.source.user_id,ukey)
 			line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= "儲存成功"))		
 		elif ukey == "e" or ukey == "f" or ukey == "g" or ukey == "h" or ukey == "i" or ukey == "j" or ukey == "k":
+			inID(user_id)
 			ine(event.source.user_id,ukey)
 			line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= "儲存成功"))
 		elif ukey == "l" or ukey == "m" or ukey == "n" or ukey == "o" or ukey == "p" :
+			inID(user_id)
 			inl(event.source.user_id,ukey)
 			line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= "儲存成功"))
 		elif ukey == "q" or ukey == "r" or ukey == "s":
+			inID(user_id)
 			inq(event.source.user_id,ukey)
 			line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= "儲存成功"))
 		elif ukey == "t" or ukey == "u" or ukey == "v":
+			inID(user_id)
 			inu(event.source.user_id,ukey) 
 			line_bot_api.reply_message(	
 				event.reply_token,
