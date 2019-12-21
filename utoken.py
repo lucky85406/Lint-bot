@@ -20,6 +20,7 @@ def inMes(url,x):
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			if row['ID'] == url and row['Ver'] == "0" and row['D1'] == "":
+				con = row['ID']
 				Dlist[0] = x
 				Dlist[1] = row['D2']
 				Dlist[2] = row['D3']
@@ -53,17 +54,14 @@ def inMes(url,x):
 				Dlist[2] = row['D3']
 				Dlist[3] = row['D4']
 				Dlist[4] = x
-				ver = "5"
-			elif row['ID'] != url and con == "":
-				con = "tr"			
+				ver = "5"		
 
 	with open('user.csv','a',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
 
-			if con == "tr":
-				con = "fa"
+			if con != url:
 				writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})	
 			else:
 				writer.writerow({'ID':url,'D1':Dlist[0],'D2':Dlist[1],'D3':Dlist[2],'D4':Dlist[3],'D5':Dlist[4],'Ver':ver})		
