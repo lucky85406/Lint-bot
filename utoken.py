@@ -13,6 +13,7 @@ def go(url):
 			writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})
 
 def inMes(url,x):
+	test = ""
 	con = ""
 	Dlist = [""]*5
 	ver = ""
