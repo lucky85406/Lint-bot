@@ -41,6 +41,6 @@ def showMes(url):
 				print('\n--------------')
 			elif row['n'] == '2':
 				print('--------------\n')
-				print(row)
+				print('ID:{} U1:{} N:{}'.format(row['Utoken'],row['U1'],row['n']))
 				print('\n--------------')				
 				
