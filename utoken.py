@@ -37,7 +37,7 @@ def inMes(url,x):
 
 							writer.writerow({'ID':url,'D1':row['D1'],'D2':x,'D3':row['D3'],'D4':row['D4'],'D5':row['D5'],'Ver':int(b)+1})
 
-				elif x == "l" or x == "m" or x == "n" or x == "o" or == "p":
+				elif x == "l" or x == "m" or x == "n" or x == "o" or x == "p":
 					with open('user.csv','a',newline='')as cfile:
 							fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
@@ -54,7 +54,7 @@ def inMes(url,x):
 
 
 							writer.writerow({'ID':url,'D1':row['D1'],'D2':row['D2'],'D3':row['D3'],'D4':x,'D5':row['D5'],'Ver':int(b)+1})
-							
+
 				elif x == "t" or x == "u" or x == "v":
 					with open('user.csv','a',newline='')as cfile:
 							fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
