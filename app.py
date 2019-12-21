@@ -60,7 +60,7 @@ def function(event):
 				TextSendMessage(text= showMes(user_id)))
 	elif ukey =="go":
 		user_id = event.source.user_id
-		go(user_id,"a",0)
+		go(user_id,"b",0)
 	else:
 		user_id = event.source.user_id
 		inMes(user_id,ukey)
