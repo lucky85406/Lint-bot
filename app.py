@@ -64,9 +64,6 @@ def function(event):
 	else:
 		user_id = event.source.user_id
 		inMes(user_id,ukey)
-		line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= "ID: {} 儲存成功".format(user_id)))
 
 
 	if event.message.text == "食物":
