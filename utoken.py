@@ -35,11 +35,11 @@ def showMes(url):
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
-			if row['n':'1']:
+			if row['n'] == '1':
 				print('--------------\n')
 				print(row)
 				print('\n--------------')
-			elif row['n':'2']:
+			elif row['n'] == '2':
 				print('--------------\n')
 				print(row)
 				print('\n--------------')				
