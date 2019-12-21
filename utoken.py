@@ -1,86 +1,20 @@
 import csv
 import random
 import json
-def outU(uid):
-	
-	with open('user.csv',newline='') as csvf:
-		rows = csv.DictReader(csvf)
+
+def inMes(url,x):
+	with open('user.csv','a+',newline='')as cfile:
+		fieldn = ['Utoken','U1','U2','U3','U4','U5']
+
+		writer = csv.DictWriter(cfile,fieldnames=fieldn)
+
+		writer.writeheader()
+
+		writer.writerow({'Utoken':url,'U1':'x','U2':'x','U3':x,'U4':'x','U5':'x'})
+def showMes(url):
+	with open('user.csv',newline='') as csvfile:
+		rows = csv.DictReader(csvfile)
+
 		for row in rows:
-			if uid == row['Utoken']:
-				return "ID:\n{}\n1: {}\n2: {}\n3: {}\n4: {}\n5: {}".format(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
-	
-
-		
-		
-def  inID(uid):
-	with open('user.csv', 'a' ,newline='') as csvf:
-			filedn = ['Utoken','U1','U2','U3','U4','U5']
-			writer = csv.DictWriter(csvf,fieldnames=filedn)
-			writer.writeheader()
-			writer.writerow({'Utoken':uid,'U1':"a",'U2':"e",'U3':"l",'U4':"q",'U5':"t"})
-def ina(uid,x):
-	with open('user.csv',newline='') as csvf:
-		rows = csv.DictReader(csvf)
-		for row in rows:
-			if row['Utoken'] == uid:
-				with open('user.csv', 'a' ,newline='') as csvf:
-
-					filedn = ['Utoken','U1','U2','U3','U4','U5']
-
-					writer = csv.DictWriter(csvf,fieldnames=filedn)
-
-					writer.writeheader()
-					writer.writerow({'Utoken':uid,'U1':x,'U2':row['U2'],'U3':row['U3'],'U4':row['U4'],'U5':row['U5']})
-def ine(uid,x):
-	with open('user.csv',newline='') as csvf:
-		rows = csv.DictReader(csvf)
-		for row in rows:
-			if row['Utoken'] == uid:
-				with open('user.csv', 'a' ,newline='') as csvf:
-
-					filedn = ['Utoken','U1','U2','U3','U4','U5']
-
-					writer = csv.DictWriter(csvf,fieldnames=filedn)
-
-					writer.writeheader()
-					writer.writerow({'Utoken':uid,'U1':row['U1'],'U2':x,'U3':row['U3'],'U4':row['U4'],'U5':row['U5']})
-def inl(uid,x):
-	with open('user.csv',newline='') as csvf:
-		rows = csv.DictReader(csvf)
-		for row in rows:
-			if row['Utoken'] == uid:
-				with open('user.csv', 'a' ,newline='') as csvf:
-
-					filedn = ['Utoken','U1','U2','U3','U4','U5']
-
-					writer = csv.DictWriter(csvf,fieldnames=filedn)
-
-					writer.writeheader()
-					writer.writerow({'Utoken':uid,'U1':row['U1'],'U2':row['U2'],'U3':x,'U4':row['U4'],'U5':row['U5']})
-def inq(uid,x):
-	with open('user.csv',newline='') as csvf:
-		rows = csv.DictReader(csvf)
-		for row in rows:
-			if row['Utoken'] == uid:
-				with open('user.csv', 'a' ,newline='') as csvf:
-
-					filedn = ['Utoken','U1','U2','U3','U4','U5']
-
-					writer = csv.DictWriter(csvf,fieldnames=filedn)
-
-					writer.writeheader()
-					writer.writerow({'Utoken':uid,'U1':row['U1'],'U2':row['U2'],'U3':row['U3'],'U4':x,'U5':row['U5']})
-def inu(uid,x):
-	with open('user.csv',newline='') as csvf:
-		rows = csv.DictReader(csvf)
-		for row in rows:
-			if row['Utoken'] == uid:
-				with open('user.csv', 'a' ,newline='') as csvf:
-
-					filedn = ['Utoken','U1','U2','U3','U4','U5']
-
-					writer = csv.DictWriter(csvf,fieldnames=filedn)
-
-					writer.writeheader()
-					writer.writerow({'Utoken':uid,'U1':row['U1'],'U2':row['U2'],'U3':row['U3'],'U4':row['U4'],'U5':x})
-
+			if row['Utoken'] == url:
+				return "ID:\n{}\nU1: {}\nU2: {}\nU3: {}\nU4: {}\nU5: {}\n".format(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])

@@ -8,7 +8,7 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, ImageSendMessage, URIImagemapAction, MessageImagemapAction
 )
-from utoken import(inID,outU,ina,ine,inl,inq,inu)
+from utoken import(inMes,showMes)
 import random
 import time  # 待會會取時間
 
@@ -52,47 +52,18 @@ def function(event):
 	ukey = event.message.text
 	#!!!!!!!!!!!!!!!!!這裡有ID
 	user_id = event.source.user_id
-	if ukey == "go":	
-		inID(user_id)
+	
+	if ukey == "show":
+		user_id = event.source.user_id
 		line_bot_api.reply_message(	
 				event.reply_token,
-				TextSendMessage(text= "儲存成功"))
-	elif ukey == "show":
-		line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= outU(event.source.user_id)))		
+				TextSendMessage(text= showMes(user_id)))
 	else:
-		if ukey == "a" or ukey == "b" or ukey == "c" or ukey == "d":
-			inID(user_id)
-			ina(event.source.user_id,ukey)
-			line_bot_api.reply_message(	
+		user_id = event.source.user_id
+		inMes(user_id,ukey)
+				line_bot_api.reply_message(	
 				event.reply_token,
-				TextSendMessage(text= "儲存成功"))		
-		elif ukey == "e" or ukey == "f" or ukey == "g" or ukey == "h" or ukey == "i" or ukey == "j" or ukey == "k":
-			inID(user_id)
-			ine(event.source.user_id,ukey)
-			line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= "儲存成功"))
-		elif ukey == "l" or ukey == "m" or ukey == "n" or ukey == "o" or ukey == "p" :
-			inID(user_id)
-			inl(event.source.user_id,ukey)
-			line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= "儲存成功"))
-		elif ukey == "q" or ukey == "r" or ukey == "s":
-			inID(user_id)
-			inq(event.source.user_id,ukey)
-			line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= "儲存成功"))
-		elif ukey == "t" or ukey == "u" or ukey == "v":
-			inID(user_id)
-			inu(event.source.user_id,ukey) 
-			line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= "儲存成功"))
-
+				TextSendMessage(text= "ID: {} 儲存成功".format(user_id)))
 
 
 	if event.message.text == "食物":
