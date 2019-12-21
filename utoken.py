@@ -19,8 +19,6 @@ def inMes(url,x):
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
-			if row['ID'] != url:
-				con = "tr"
 			if row['ID'] == url and row['Ver'] == "0" and row['D1'] == "":
 				Dlist[0] = x
 				Dlist[1] = row['D2']
@@ -55,7 +53,9 @@ def inMes(url,x):
 				Dlist[2] = row['D3']
 				Dlist[3] = row['D4']
 				Dlist[4] = x
-				ver = "5"			
+				ver = "5"
+			else:
+				con = "tr"			
 
 	with open('user.csv','a',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
@@ -64,10 +64,7 @@ def inMes(url,x):
 
 			if con == "tr":
 				con = "fa"
-				writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})
-				
-			elif con == "fa":
-				writer.writerow({'ID':url,'D1':Dlist[0],'D2':Dlist[1],'D3':Dlist[2],'D4':Dlist[3],'D5':Dlist[4],'Ver':ver})			
+				writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})	
 			else:
 				writer.writerow({'ID':url,'D1':Dlist[0],'D2':Dlist[1],'D3':Dlist[2],'D4':Dlist[3],'D5':Dlist[4],'Ver':ver})		
 	
