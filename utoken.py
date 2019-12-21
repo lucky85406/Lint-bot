@@ -18,7 +18,6 @@ def inMes(url,x):
 
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
 
-			writer.writeheader()
 
 			writer.writerow({'Utoken':url,'U1':"z",'n':"2"})
 
