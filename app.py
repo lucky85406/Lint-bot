@@ -58,7 +58,7 @@ def function(event):
 		showMes(user_id)
 	elif ukey =="go":
 		user_id = event.source.user_id
-		go(user_id,"b","0")
+		go(user_id)
 	else:
 		user_id = event.source.user_id
 		inMes(user_id,ukey)
