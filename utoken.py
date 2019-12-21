@@ -3,7 +3,7 @@ import random
 import json
 
 def go(url,x,n):
-	with open('user.csv','a+',newline='')as cfile:
+	with open('user.csv','w',newline='')as cfile:
 			fieldn = ['Utoken','U1','n']
 
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
