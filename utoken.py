@@ -26,5 +26,4 @@ def showMes(url):
 		rows = csv.DictReader(csvfile)
 
 		for row in rows:
-			if row['Utoken'] == url:
-				return "ID:\n{}\nU1: {}\nU2: {}\nU3: {}\nU4: {}\nU5: {}\n".format(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
+			return "ID:\n{}\nU1: {}\nU2: {}\nU3: {}\nU4: {}\nU5: {}\n".format(row['Utoken'],row['U1'],row['U2'],row['U3'],row['U4'],row['U5'])
