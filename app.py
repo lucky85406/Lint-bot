@@ -60,6 +60,7 @@ def function(event):
 				TextSendMessage(text= showMes(user_id)))
 	elif ukey == "go":
 		user_id = event.source.user_id
+		goMes(user_id)
 		line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= "ID: {} 儲存成功".format(user_id)))
