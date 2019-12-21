@@ -17,7 +17,7 @@ def inMes(url,x):
 		rows = csv.DictReader(c)
 
 		for row in rows:
-			if row['n']>0:
+			if int(row['n'])>0:
 				with open('user.csv','a+',newline='')as cfile:
 						fieldn = ['Utoken','U1','n']
 
@@ -25,7 +25,7 @@ def inMes(url,x):
 
 						writer.writeheader()
 
-						writer.writerow({'Utoken':url,'U1':x,'n':row['n']+1})
+						writer.writerow({'Utoken':url,'U1':x,'n':int(row['n'])+1})
 
 	
 def showMes(url):
