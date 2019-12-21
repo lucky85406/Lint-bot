@@ -29,7 +29,7 @@ def inMes(url,x):
 	with open('user.csv',newline='')as cfile:
 		rows = csv.DictReader(cfile)
 		for row in rows:
-			with open('user.csv','w',newline='')as cfile:
+			with open('user.csv','a',newline='')as cfile:
 					fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
 					writer = csv.DictWriter(cfile,fieldnames=fieldn)
