@@ -21,7 +21,7 @@ def inMes(url,x):
 			b = row['Ver']
 			if row['ID'] == url:
 				if  x == "a" or x == "b" or x == "c" or x == "d":
-					if row['Ver']=="1":
+					if row['Ver']=="0":
 						with open('user.csv','a',newline='')as cfile:
 								fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
@@ -30,7 +30,7 @@ def inMes(url,x):
 								writer.writerow({'ID':url,'D1':x,'D2':row['D2'],'D3':row['D3'],'D4':row['D4'],'D5':row['D5'],'Ver':int(b)+1})
 
 				elif x == "e" or x == "f" or x == "g" or x == "h" or x == "i" or x =="j" or x =="k":
-					if row['Ver']=="2":
+					if row['Ver']=="1":
 						with open('user.csv','a',newline='')as cfile:
 								fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
@@ -40,7 +40,7 @@ def inMes(url,x):
 								writer.writerow({'ID':url,'D1':row['D1'],'D2':x,'D3':row['D3'],'D4':row['D4'],'D5':row['D5'],'Ver':int(b)+1})
 
 				elif x == "l" or x == "m" or x == "n" or x == "o" or x == "p":
-					if row['Ver']=="3":
+					if row['Ver']=="2":
 						with open('user.csv','a',newline='')as cfile:
 								fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
@@ -50,7 +50,7 @@ def inMes(url,x):
 								writer.writerow({'ID':url,'D1':row['D1'],'D2':row['D2'],'D3':x,'D4':row['D4'],'D5':row['D5'],'Ver':int(b)+1})
 
 				elif x == "q" or x == "r" or x == "s":
-					if row['Ver']=="4":
+					if row['Ver']=="3":
 						with open('user.csv','a',newline='')as cfile:
 								fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
@@ -60,7 +60,7 @@ def inMes(url,x):
 								writer.writerow({'ID':url,'D1':row['D1'],'D2':row['D2'],'D3':row['D3'],'D4':x,'D5':row['D5'],'Ver':int(b)+1})
 
 				elif x == "t" or x == "u" or x == "v":
-					if row['Ver']=="5":
+					if row['Ver']=="4":
 						with open('user.csv','a',newline='')as cfile:
 								fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
