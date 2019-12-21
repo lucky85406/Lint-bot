@@ -26,7 +26,7 @@ def inMes(url,x):
 
 						writer.writeheader()
 
-						writer.writerow({'Utoken':url,'U1':x,'n':int(row['n'])+1})
+						writer.writerow({'Utoken':url,'U1':x,'n':int(a)+1})
 
 	
 def showMes(url):
