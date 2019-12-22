@@ -304,17 +304,15 @@ def function(event):
 						title = '測試',
 						alt_text = "測試1",
 						base_size = BaseSize(height = 1000,width = 1040 ),
-						actions=[
-							MessageImagemapAction(
-								text = '測試2',
-								area = ImagemapArea(
-									x = 0,
-									y = 0,
-									width = 260,
-									height = 1000
+						actions=MessageImagemapAction(
+									text = '測試2',
+									area = ImagemapArea(
+										x = 0,
+										y = 0,
+										width = 260,
+										height = 1000
 							)
 						)
-					]
 				)
 			)
 
