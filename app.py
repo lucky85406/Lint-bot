@@ -78,8 +78,8 @@ def function(event):
 		columns=[
 			CarouselColumn(
 				title='食物',				
-				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
 				text='1',
+				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
 				actions=[
 					MessageTemplateAction(
 						label='紅肉',
@@ -93,8 +93,8 @@ def function(event):
 			),
 			CarouselColumn(
 				title='食物',				
-				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
 				text='2',
+				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
 				actions=[
 					MessageTemplateAction(
 						label='海鮮',
