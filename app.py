@@ -92,7 +92,8 @@ def function(event):
 				]
 			),
 			CarouselColumn(
-				title='食物',
+				title='食物',				
+				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
 				text='2',
 				actions=[
 					MessageTemplateAction(
