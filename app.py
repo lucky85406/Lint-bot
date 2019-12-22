@@ -11,7 +11,8 @@ from linebot.models import (
     URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, 
     ImageSendMessage, URIImagemapAction, MessageImagemapAction, CarouselTemplate ,
     CarouselColumn, MessageImagemapAction, ImagemapArea, ImagemapSendMessage, BaseSize,
-    BubbleContainer, BoxComponent, TextComponent, FlexSendMessage, ImageComponent
+    BubbleContainer, BoxComponent, TextComponent, FlexSendMessage, ImageComponent, ButtonComponent,
+    URIAction
 )
 from utoken import(go,inMes,showMes)
 import random
