@@ -54,7 +54,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-
+	'''
 	ukey = event.message.text
 	#!!!!!!!!!!!!!!!!!這裡有ID
 	user_id = event.source.user_id
@@ -284,7 +284,7 @@ def function(event):
 	else:
 		user_id = event.source.user_id
 		inMes(user_id,ukey)
-
+'''
 	if event.message.text == "我要測試":
 		ISM = BubbleContainer(
 			header = BoxComponent(
@@ -300,14 +300,15 @@ def function(event):
 				]
 				),
 			body = BoxComponent(
-					layout = 'baseline',
-					contents = [
-						ButtonComponent(
-							type = 'button',
-							action = MessageAction(label='測試',text='測試'),
-							style = 'primary',
-							height = 'sm',
-							color = '#FF00FF'
+				type='box',
+				layout = 'baseline',
+				contents = [
+					ButtonComponent(
+						type = 'button',
+						action = MessageAction(label='測試',text='測試'),
+						style = 'primary',
+						height = 'sm',
+						color = '#FF00FF'
 						)	
 					]
 				)
