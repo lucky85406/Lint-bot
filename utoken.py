@@ -98,5 +98,4 @@ def showMes(url):
 				print('ID:{} D1:{} D2:{} D3:{} D4:{} D5:{} Ver:{}'.format(row['ID'],row['D1'],row['D2'],row['D3'],row['D4'],row['D5'],row['Ver']))
 				print('\n--------------')
 				return "{}{}{}{}{}".format(row['D1'],row['D2'],row['D3'],row['D4'],row['D5'])
-			else:
 	return a
