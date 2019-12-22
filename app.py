@@ -304,15 +304,23 @@ def function(event):
 					aspectMode = 'cover',
 					aspect_ratio='10:3',
 					size='full',
-					action=MessageImagemapAction(
-						text = '測試2',
-						area = ImagemapArea(
-							x = 0,
-							y = 0,
-							width = 260,
-							height = 1000
+					action=ImagemapSendMessage(
+						base_url = "https://i.imgur.com/6btHgSL.jpg",
+						title = '測試',
+						alt_text = "測試1",
+						base_size = BaseSize(height = 1000,width = 1040 ),
+						actions=[
+							MessageImagemapAction(
+								text = '測試2',
+								area = ImagemapArea(
+									x = 0,
+									y = 0,
+									width = 260,
+									height = 1000
+							)
 						)
-					)
+					]
+				)
 			)
 
 			)
