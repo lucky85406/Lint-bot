@@ -146,6 +146,10 @@ def function(event):
 					MessageTemplateAction(
 						label='淺色水果',
 						text='i'
+					),
+					MessageTemplateAction(
+						label='X',
+						text='null'
 					)
 				]
 			),
@@ -161,6 +165,10 @@ def function(event):
 					MessageTemplateAction(
 						label='土木',
 						text='k'
+					),
+					MessageTemplateAction(
+						label='X',
+						text='null'
 					)
 				]
 			)
@@ -204,6 +212,10 @@ def function(event):
 					MessageTemplateAction(
 						label='濃厚',
 						text='p'
+					),
+					MessageTemplateAction(
+						label='X',
+						text='null'
 					)
 				]
 			)
