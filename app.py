@@ -77,7 +77,7 @@ def function(event):
 		template=CarouselTemplate(
 		columns=[
 			CarouselColumn(
-				thumbnail_image_url='http://pic.90sjimg.com/design/03/28/43/08/5cd79a0fc3148.png',
+				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
 				title='食物',
 				text='1',
 				actions=[
@@ -92,7 +92,7 @@ def function(event):
 				]
 			),
 			CarouselColumn(
-				thumbnail_image_url='http://pic.90sjimg.com/design/03/28/43/08/5cd79a0fc3148.png',
+				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
 				title='食物',
 				text='2',
 				actions=[
