@@ -300,6 +300,7 @@ def function(event):
 				]
 				),
 			body = BoxComponent(
+					type = 'button',
 					layout = 'baseline',
 					contents = [
 						ButtonComponent(
