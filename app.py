@@ -10,7 +10,8 @@ from linebot.models import (
     ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, 
     URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, 
     ImageSendMessage, URIImagemapAction, MessageImagemapAction, CarouselTemplate ,
-    CarouselColumn, MessageImagemapAction, ImagemapArea, ImagemapSendMessage, BaseSize
+    CarouselColumn, MessageImagemapAction, ImagemapArea, ImagemapSendMessage, BaseSize,
+    BubbleContainer, BoxComponent, TextComponent
 )
 from utoken import(go,inMes,showMes)
 import random
@@ -284,27 +285,21 @@ def function(event):
 		inMes(user_id,ukey)
 
 	if event.message.text == "我要測試":
-		ISM = ImagemapSendMessage(
-			base_url = "https://i.imgur.com/6btHgSL.jpg",
-			title = '測試',
-			alt_text = "測試1",
-			base_size = BaseSize(height = 1000,width = 1040 ),
-			actions=[
-				MessageImagemapAction(
-					text = '測試2',
-					area = ImagemapArea(
-						x = 0,
-						y = 0,
-						width = 260,
-						height = 1000
+		ISM = BubbleContainer(
+			header = BoxComponent(
+				layout = 'baseline',
+				contents = [
+					TextComponent(
+						text = '示範',
+						weight = 'bold',
+						size = 'xxl',
+						flex =2,
+						align = 'center'
 						)
-					),
-				MessageTemplateAction(
-					label='351~600元',
-					text='u'
-					)
-			]
-		)
+				]
+				)
+
+			)
 		line_bot_api.reply_message(event.reply_token,ISM)
 
 
