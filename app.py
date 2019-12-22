@@ -297,6 +297,20 @@ def function(event):
 						align = 'center'
 						)
 				]
+				),
+			hero = ImageComponent(
+				url = "https://i.imgur.com/6btHgSL.jpg",
+				action = [
+				MessageImagemapAction(
+					text = '測試2',
+					area = ImagemapArea(
+						x = 0,
+						y = 0,
+						width = 260,
+						height = 1000
+						)
+					)
+					]
 				)
 
 			)
