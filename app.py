@@ -299,20 +299,16 @@ def function(event):
 						)
 				]
 				),
-			hero=ImagemapSendMessage(
-						base_url = "https://i.imgur.com/6btHgSL.jpg",
-						title = '測試',
-						alt_text = "測試1",
-						base_size = BaseSize(height = 1000,width = 1040 ),
-						actions=MessageImagemapAction(
-									text = '測試2',
-									area = ImagemapArea(
-										x = 0,
-										y = 0,
-										width = 260,
-										height = 1000
-							)
+			body = BoxComponent(
+				layout = 'baseline',
+				contents = [
+					ButtonComponent(
+						action = MessageAction(label='測試',text='測試'),
+						style = 'primary',
+						height = 'sm',
+						color = '#FF00FF'
 						)
+				]
 				)
 			)
 
