@@ -299,11 +299,13 @@ def function(event):
 						)
 				]
 				),
-			hero = ButtonComponent(
-				action = URIAction(label = '查看網頁',uri="https://i.imgur.com/6btHgSL.jpg",text='測試'),
-				style = 'primary',
-				height='em'
-				)
+			hero=ImageComponent(
+                    url='https://i.imgur.com/d1XQC5H.jpg',
+                    aspectMode = 'cover',
+                    aspect_ratio='10:3',
+                    size='full',
+                    action=URIAction(uri='http://www.ccu.edu.tw/', label='label'),
+            )
 
 			)
 		message = FlexSendMessage(alt_text = "hello",contents=ISM)
