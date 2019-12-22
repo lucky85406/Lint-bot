@@ -304,7 +304,15 @@ def function(event):
 					aspectMode = 'cover',
 					aspect_ratio='10:3',
 					size='full',
-					action=URIAction(uri='http://www.ccu.edu.tw/', label='label'),
+					action=MessageImagemapAction(
+						text = '測試2',
+						area = ImagemapArea(
+							x = 0,
+							y = 0,
+							width = 260,
+							height = 1000
+						)
+					)
 			)
 
 			)
