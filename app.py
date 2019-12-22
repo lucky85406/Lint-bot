@@ -287,15 +287,15 @@ def function(event):
 		ISM = ImagemapSendMessage(
 			base_url = "https://i.imgur.com/6btHgSL.jpg",
 			alt_text = "測試1",
-			base_size = BaseSize(height = 300,width = 1040 ),
+			base_size = BaseSize(height = 768,width = 1040 ),
 			action=[
 				MessageImagemapAction(
 					text = '測試2',
 					area = ImagemapArea(
 						x = 0,
 						y = 0,
-						width = 150,
-						height = 150
+						width = 500,
+						height = 768
 						)
 					)
 			]
