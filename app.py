@@ -303,7 +303,7 @@ def function(event):
 				size = 'full',
 				aspect_ratio='1024:1000',
 				aspect_mode = 'cover',
-				action = [
+				actions = [
 				MessageImagemapAction(
 					text = '測試2',
 					area = ImagemapArea(
