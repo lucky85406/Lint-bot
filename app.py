@@ -298,6 +298,18 @@ def function(event):
 						align = 'center'
 						)
 					]
+				),
+			body = BoxComponent(
+				layout = 'baseline',
+				contents = [
+					TextComponent(
+						text = '示範',
+						weight = 'bold',
+						size = 'xxl',
+						flex =2,
+						align = 'center'
+						)
+					]
 				)		
 			)
 
