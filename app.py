@@ -299,7 +299,7 @@ def function(event):
 						)
 				]
 				),
-			body = ButtonComponent(
+			footer = ButtonComponent(
 				type = 'button',
 				action = MessageAction(label='測試',text='測試'),
 				style = 'primary',
