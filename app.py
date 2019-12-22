@@ -328,6 +328,18 @@ def function(event):
 						action=MessageAction(label='設定起始數字',text='測試')
 					),										
 					]
+				),
+			footer = BoxComponent(
+				layout = 'baseline',
+				contents = [
+					TextComponent(
+						text = '示範',
+						weight = 'bold',
+						size = 'xxl',
+						flex =2,
+						align = 'center'
+						)
+					]
 				)		
 			)
 
