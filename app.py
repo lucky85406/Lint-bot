@@ -6,7 +6,10 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, ImageSendMessage, URIImagemapAction, MessageImagemapAction
+    MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, 
+    ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, 
+    URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, 
+    ImageSendMessage, URIImagemapAction, MessageImagemapAction, CarouselTemplate
 )
 from utoken import(go,inMes,showMes)
 import random
