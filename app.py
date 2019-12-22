@@ -300,6 +300,9 @@ def function(event):
 				),
 			hero = ImageComponent(
 				url = "https://i.imgur.com/6btHgSL.jpg",
+				size = 'full',
+				aspect_ratio='1024:1000',
+				aspect_mode = 'cover',
 				action = [
 				MessageImagemapAction(
 					text = '測試2',
