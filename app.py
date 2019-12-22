@@ -11,7 +11,7 @@ from linebot.models import (
     URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, 
     ImageSendMessage, URIImagemapAction, MessageImagemapAction, CarouselTemplate ,
     CarouselColumn, MessageImagemapAction, ImagemapArea, ImagemapSendMessage, BaseSize,
-    BubbleContainer, BoxComponent, TextComponent
+    BubbleContainer, BoxComponent, TextComponent, FlexSendMessage
 )
 from utoken import(go,inMes,showMes)
 import random
@@ -300,7 +300,8 @@ def function(event):
 				)
 
 			)
-		line_bot_api.reply_message(event.reply_token,ISM)
+		message = FlexSendMessage(alt_text = "hello",contents=ISM)
+		line_bot_api.reply_message(event.reply_token,message)
 
 
 	if event.message.text == "食物":
