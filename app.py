@@ -298,8 +298,7 @@ def function(event):
 						align = 'center'
 						),
 					ButtonComponent(
-						type = 'button',
-						action = MessageAction(label='測試',text='測試'),
+						action = URIAction(label='測試',uri='https://www.youtube.com/?gl=TW&hl=zh-tw'),
 						style = 'primary',
 						height = 'sm',
 						color = '#FF00FF'
