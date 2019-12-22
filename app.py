@@ -299,12 +299,17 @@ def function(event):
 						)
 				]
 				),
-			body = ButtonComponent(
+			body = BoxComponent(
+					layout = 'baseline',
+					contents = [
+						ButtonComponent(
 						action = MessageAction(label='測試',text='測試'),
 						style = 'primary',
 						height = 'sm',
 						color = '#FF00FF'
 						)	
+					]
+				)
 			)
 
 			
