@@ -77,42 +77,32 @@ def function(event):
 		template=CarouselTemplate(
 		columns=[
 			CarouselColumn(
-				thumbnail_image_url='https://i.imgur.com/6btHgSL.jpg',
-				title='this is menu1',
-				text='description1',
+				thumbnail_image_url='http://pic.90sjimg.com/design/03/28/43/08/5cd79a0fc3148.png',
+				title='食物',
+				text='1',
 				actions=[
-					PostbackTemplateAction(
-						label='postback1',
-						text='postback text1',
-						data='action=buy&itemid=1'
+					MessageTemplateAction(
+						label='紅肉',
+						text='a'
 					),
 					MessageTemplateAction(
-						label='message1',
-						text='message text1'
-					),
-					URITemplateAction(
-						label='uri1',
-						uri='http://example.com/1'
+						label='白肉',
+						text='b'
 					)
 				]
 			),
 			CarouselColumn(
-				thumbnail_image_url='https://i.imgur.com/6btHgSL.jpg',
-				title='this is menu2',
-				text='description2',
+				thumbnail_image_url='http://pic.90sjimg.com/design/03/28/43/08/5cd79a0fc3148.png',
+				title='食物',
+				text='2',
 				actions=[
-					PostbackTemplateAction(
-						label='postback2',
-						text='postback text2',
-						data='action=buy&itemid=2'
+					MessageTemplateAction(
+						label='海鮮',
+						text='c'
 					),
 					MessageTemplateAction(
-						label='message2',
-						text='message text2'
-					),
-					URITemplateAction(
-						label='連結2',
-						uri='http://example.com/2'
+						label='甜點',
+						text='d'
 					)
 				]
 			)
