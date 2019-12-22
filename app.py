@@ -77,7 +77,8 @@ def function(event):
 		template=CarouselTemplate(
 		columns=[
 			CarouselColumn(
-				title='食物',
+				title='食物',				
+				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
 				text='1',
 				actions=[
 					MessageTemplateAction(
