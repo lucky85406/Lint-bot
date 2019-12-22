@@ -9,7 +9,8 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, 
     ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, 
     URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, 
-    ImageSendMessage, URIImagemapAction, MessageImagemapAction, CarouselTemplate
+    ImageSendMessage, URIImagemapAction, MessageImagemapAction, CarouselTemplate ,
+    CarouselColumn
 )
 from utoken import(go,inMes,showMes)
 import random
