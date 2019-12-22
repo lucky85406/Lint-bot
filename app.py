@@ -55,8 +55,8 @@ def function(event):
 	
 	if ukey == "show":
 		user_id = event.source.user_id
-		showMes(user_id)
-		if showMes(user_id) == "1":
+		a = showMes(user_id)
+		if a == "1":
 			line_bot_api.reply_message(	
 				event.reply_token,
 				TextSendMessage(text= "null"))
