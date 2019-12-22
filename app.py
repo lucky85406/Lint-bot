@@ -77,7 +77,7 @@ def function(event):
 		template=CarouselTemplate(
 		columns=[
 			CarouselColumn(
-				thumbnail_image_url='顯示在開頭的大圖片網址',
+				thumbnail_image_url='https://i.imgur.com/6btHgSL.jpg',
 				title='this is menu1',
 				text='description1',
 				actions=[
@@ -97,7 +97,7 @@ def function(event):
 				]
 			),
 			CarouselColumn(
-				thumbnail_image_url='顯示在開頭的大圖片網址',
+				thumbnail_image_url='https://i.imgur.com/6btHgSL.jpg',
 				title='this is menu2',
 				text='description2',
 				actions=[
