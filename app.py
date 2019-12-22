@@ -110,6 +110,163 @@ def function(event):
 	)
 	)
 		line_bot_api.reply_message(event.reply_token,Carousel_template)
+	elif ukey =="menu2":
+		Carousel_template = TemplateSendMessage(
+		alt_text='Carousel template',
+		template=CarouselTemplate(
+		columns=[
+			CarouselColumn(
+				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
+				title='香氣',
+				text='1',
+				actions=[
+					MessageTemplateAction(
+						label='花香',
+						text='e'
+					),
+					MessageTemplateAction(
+						label='漿果',
+						text='f'
+					),
+					MessageTemplateAction(
+						label='柑橘',
+						text='g'
+					)
+				]
+			),
+			CarouselColumn(
+				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
+				title='香氣',
+				text='2',
+				actions=[
+					MessageTemplateAction(
+						label='熱帶水果',
+						text='h'
+					),
+					MessageTemplateAction(
+						label='淺色水果',
+						text='i'
+					)
+				]
+			),
+			CarouselColumn(
+				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
+				title='香氣',
+				text='3',
+				actions=[
+					MessageTemplateAction(
+						label='香料',
+						text='j'
+					),
+					MessageTemplateAction(
+						label='土木',
+						text='k'
+					)
+				]
+			)
+		]
+	)
+	)
+		line_bot_api.reply_message(event.reply_token,Carousel_template)
+	elif ukey =="menu3":
+		Carousel_template = TemplateSendMessage(
+		alt_text='Carousel template',
+		template=CarouselTemplate(
+		columns=[
+			CarouselColumn(
+				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
+				title='口感',
+				text='1',
+				actions=[
+					MessageTemplateAction(
+						label='清香',
+						text='l'
+					),
+					MessageTemplateAction(
+						label='甜',
+						text='m'
+					),
+					MessageTemplateAction(
+						label='圓潤',
+						text='n'
+					)
+				]
+			),
+			CarouselColumn(
+				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
+				title='口感',
+				text='2',
+				actions=[
+					MessageTemplateAction(
+						label='酸',
+						text='o'
+					),
+					MessageTemplateAction(
+						label='濃厚',
+						text='p'
+					)
+				]
+			)
+		]
+	)
+	)
+		line_bot_api.reply_message(event.reply_token,Carousel_template)
+	elif ukey =="menu4":
+		Carousel_template = TemplateSendMessage(
+		alt_text='Carousel template',
+		template=CarouselTemplate(
+		columns=[
+			CarouselColumn(
+				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
+				title='通路',
+				text='1',
+				actions=[
+					MessageTemplateAction(
+						label='家樂福',
+						text='q'
+					),
+					MessageTemplateAction(
+						label='全聯',
+						text='r'
+					),
+					MessageTemplateAction(
+						label='Costco',
+						text='s'
+					)
+				]
+			)
+		]
+	)
+	)
+		line_bot_api.reply_message(event.reply_token,Carousel_template)
+	elif ukey =="menu5":
+		Carousel_template = TemplateSendMessage(
+		alt_text='Carousel template',
+		template=CarouselTemplate(
+		columns=[
+			CarouselColumn(
+				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
+				title='價格',
+				text='1',
+				actions=[
+					MessageTemplateAction(
+						label='100~350元',
+						text='t'
+					),
+					MessageTemplateAction(
+						label='351~600元',
+						text='u'
+					),
+					MessageTemplateAction(
+						label='600元以上',
+						text='v'
+					)
+				]
+			)
+		]
+	)
+	)
+		line_bot_api.reply_message(event.reply_token,Carousel_template)
 	else:
 		user_id = event.source.user_id
 		inMes(user_id,ukey)
