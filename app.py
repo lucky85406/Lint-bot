@@ -304,15 +304,15 @@ def function(event):
 				aspect_ratio='1024:1000',
 				aspect_mode = 'cover',
 				actions = [
-				MessageImagemapAction(
-					text = '測試2',
-					area = ImagemapArea(
-						x = 0,
-						y = 0,
-						width = 260,
-						height = 1000
+					MessageImagemapAction(
+						text = '測試2',
+						area = ImagemapArea(
+							x = 0,
+							y = 0,
+							width = 260,
+							height = 1000
+							)
 						)
-					)
 					]
 				)
 
