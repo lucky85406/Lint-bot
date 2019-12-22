@@ -283,6 +283,25 @@ def function(event):
 		user_id = event.source.user_id
 		inMes(user_id,ukey)
 
+	if event.message.text == "我要測試":
+		ISM = ImagemapSendMessage(
+			base_url = "https://i.imgur.com/6btHgSL.jpg",
+			alt_text = "測試1",
+			base_size = BaseSize(height = 300,width = 1040 ),
+			action=[
+				MessageImagemapAction(
+					text = '測試2',
+					area = ImagemapArea(
+						x = 0,
+						y = 0,
+						width = 150,
+						height = 150
+						)
+					)
+			]
+		)
+		line_bot_api.reply_message(event.reply_token,ISM)
+
 
 	if event.message.text == "食物":
 		with open("usertxt.txt","w") as f:
