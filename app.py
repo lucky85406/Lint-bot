@@ -290,13 +290,6 @@ def function(event):
 			header = BoxComponent(
 				layout = 'baseline',
 				contents = [
-					TextComponent(
-						text = '示範',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						),
 					ButtonComponent(
 						action = URIAction(label='測試',uri='https://www.youtube.com/?gl=TW&hl=zh-tw'),
 						style = 'primary',
