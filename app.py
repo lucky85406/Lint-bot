@@ -299,12 +299,7 @@ def function(event):
 						)
 				]
 				),
-			hero=ImageComponent(
-					url='https://i.imgur.com/d1XQC5H.jpg',
-					aspectMode = 'cover',
-					aspect_ratio='10:3',
-					size='full',
-					action=ImagemapSendMessage(
+			hero=ImagemapSendMessage(
 						base_url = "https://i.imgur.com/6btHgSL.jpg",
 						title = '測試',
 						alt_text = "測試1",
@@ -323,7 +318,7 @@ def function(event):
 				)
 			)
 
-			)
+			
 		message = FlexSendMessage(alt_text = "hello",contents=ISM)
 		line_bot_api.reply_message(event.reply_token,message)
 
