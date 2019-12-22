@@ -326,7 +326,25 @@ def function(event):
 						color='#FFEE99',
 						height='sm',
 						action=MessageAction(label='設定起始數字',text='測試')
-					),										
+					),
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='設定起始數字',text='測試')
+					),
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='設定起始數字',text='測試')
+					),
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='設定起始數字',text='測試')
+					)										
 					]
 				),
 			footer = BoxComponent(
