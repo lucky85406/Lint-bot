@@ -10,7 +10,7 @@ from linebot.models import (
     ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, 
     URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, 
     ImageSendMessage, URIImagemapAction, MessageImagemapAction, CarouselTemplate ,
-    CarouselColumn, MessageImagemapAction, ImagemapArea, ImagemapSendMessage
+    CarouselColumn, MessageImagemapAction, ImagemapArea, ImagemapSendMessage, BaseSize
 )
 from utoken import(go,inMes,showMes)
 import random
