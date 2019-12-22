@@ -300,14 +300,14 @@ def function(event):
 				]
 				),
 			body = BoxComponent(
-					type = 'button',
 					layout = 'baseline',
 					contents = [
 						ButtonComponent(
-						action = MessageAction(label='測試',text='測試'),
-						style = 'primary',
-						height = 'sm',
-						color = '#FF00FF'
+							type = 'button',
+							action = MessageAction(label='測試',text='測試'),
+							style = 'primary',
+							height = 'sm',
+							color = '#FF00FF'
 						)	
 					]
 				)
