@@ -86,6 +86,22 @@ def function(event):
 					MessageTemplateAction(
 						label='message',
 						text='message text'
+					),
+					MessageTemplateAction(
+						label='message',
+						text='message text'
+					),
+					MessageTemplateAction(
+						label='message',
+						text='message text'
+					),
+					MessageTemplateAction(
+						label='message',
+						text='message text'
+					),
+					MessageTemplateAction(
+						label='message',
+						text='message text'
 					)
 				]
 			)
