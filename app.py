@@ -286,6 +286,7 @@ def function(event):
 	if event.message.text == "我要測試":
 		ISM = ImagemapSendMessage(
 			base_url = "https://i.imgur.com/6btHgSL.jpg",
+			title = '測試',
 			alt_text = "測試1",
 			base_size = BaseSize(height = 1000,width = 1040 ),
 			actions=[
@@ -297,6 +298,10 @@ def function(event):
 						width = 260,
 						height = 1000
 						)
+					),
+				MessageTemplateAction(
+					label='351~600元',
+					text='u'
 					)
 			]
 		)
