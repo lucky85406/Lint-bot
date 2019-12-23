@@ -82,7 +82,7 @@ def function(event):
 			contents = [
 				BubbleContainer(
 					header = BoxComponent(
-						layout = 'horizontal',
+						layout = 'baseline',
 						contents = [
 							TextComponent(
 								text = '示範1',
@@ -94,7 +94,7 @@ def function(event):
 						]
 					),
 					body = BoxComponent(
-						layout = 'vertical',
+						layout = 'horizontal',
 						spacing = 'xs',
 						contents = [
 							IconComponent(
