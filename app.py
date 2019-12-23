@@ -100,6 +100,7 @@ def function(event):
 							IconComponent(
 								url = 'https://i.imgur.com/GsWCrIx.png',
 								size = 'xl',
+								aspectRatio = '1:1'
 							),
 							ButtonComponent(
 								style='secondary',
