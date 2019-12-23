@@ -120,10 +120,7 @@ def function(event):
 								size = 'xxl',
 								flex =2,
 								align = 'center'
-							),
-							SeparatorComponent(
-								color = '#0000FF',
-							)							
+							)						
 						]
 					)		
 				),
