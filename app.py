@@ -169,6 +169,18 @@ def function(event):
 							)
 						]
 					),
+					hero = BoxComponent(
+						layout = 'vertical',
+						contents = [
+							ImageComponent(
+								url = 'https://i.imgur.com/A5TeDg0.png',
+								size = 'full',
+								align = 'center',
+								aspect_ratio = '792:555',
+								aspect_mode = 'cover',
+							)
+						]
+					),
 					body = BoxComponent(
 						layout = 'vertical',
 						spacing = 'xs',
@@ -179,18 +191,6 @@ def function(event):
 								height='sm',
 								action=MessageAction(label='設定起始數字',text='測試')
 							)									
-						]
-					),
-					footer = BoxComponent(
-						layout = 'baseline',
-						contents = [
-							TextComponent(
-								text = '示範',
-								weight = 'bold',
-								size = 'xxl',
-								flex =2,
-								align = 'center'
-							)
 						]
 					)		
 				)
