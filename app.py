@@ -289,7 +289,7 @@ def function(event):
 		message = FlexSendMessage(
 			alt_text = "hello",
 			template = CarouselTemplate(
-			contents = [
+			columns = [
 					CarouselColumn(
 						BubbleContainer(
 							header = BoxComponent(
