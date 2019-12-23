@@ -73,660 +73,131 @@ def function(event):
 	elif ukey =="go":
 		user_id = event.source.user_id
 		go(user_id)
-	elif ukey =="menu":
-		Carousel_template = TemplateSendMessage(
-		alt_text='Carousel template',
-		template=CarouselTemplate(
-		columns=[
-			CarouselColumn(
-				title='食物',				
-				text='1',
-				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
-				actions=[
-					MessageTemplateAction(
-						label='紅肉',
-						text='a'
-					),
-					MessageTemplateAction(
-						label='白肉',
-						text='b'
-					)
-				]
-			),
-			CarouselColumn(
-				title='食物',				
-				text='2',
-				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
-				actions=[
-					MessageTemplateAction(
-						label='海鮮',
-						text='c'
-					),
-					MessageTemplateAction(
-						label='甜點',
-						text='d'
-					)
-				]
-			)
-		]
-	)
-	)
-		line_bot_api.reply_message(event.reply_token,Carousel_template)
-	elif ukey =="menu2":
-		Carousel_template = TemplateSendMessage(
-		alt_text='Carousel template',
-		template=CarouselTemplate(
-		columns=[
-			CarouselColumn(
-				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
-				title='香氣',
-				text='1',
-				actions=[
-					MessageTemplateAction(
-						label='花香',
-						text='e'
-					),
-					MessageTemplateAction(
-						label='漿果',
-						text='f'
-					),
-					MessageTemplateAction(
-						label='柑橘',
-						text='g'
-					)
-				]
-			),
-			CarouselColumn(
-				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
-				title='香氣',
-				text='2',
-				actions=[
-					MessageTemplateAction(
-						label='熱帶水果',
-						text='h'
-					),
-					MessageTemplateAction(
-						label='淺色水果',
-						text='i'
-					),
-					MessageTemplateAction(
-						label='X',
-						text='null'
-					)
-				]
-			),
-			CarouselColumn(
-				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
-				title='香氣',
-				text='3',
-				actions=[
-					MessageTemplateAction(
-						label='香料',
-						text='j'
-					),
-					MessageTemplateAction(
-						label='土木',
-						text='k'
-					),
-					MessageTemplateAction(
-						label='X',
-						text='null'
-					)
-				]
-			)
-		]
-	)
-	)
-		line_bot_api.reply_message(event.reply_token,Carousel_template)
-	elif ukey =="menu3":
-		Carousel_template = TemplateSendMessage(
-		alt_text='Carousel template',
-		template=CarouselTemplate(
-		columns=[
-			CarouselColumn(
-				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
-				title='口感',
-				text='1',
-				actions=[
-					MessageTemplateAction(
-						label='清香',
-						text='l'
-					),
-					MessageTemplateAction(
-						label='甜',
-						text='m'
-					),
-					MessageTemplateAction(
-						label='圓潤',
-						text='n'
-					)
-				]
-			),
-			CarouselColumn(
-				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
-				title='口感',
-				text='2',
-				actions=[
-					MessageTemplateAction(
-						label='酸',
-						text='o'
-					),
-					MessageTemplateAction(
-						label='濃厚',
-						text='p'
-					),
-					MessageTemplateAction(
-						label='X',
-						text='null'
-					)
-				]
-			)
-		]
-	)
-	)
-		line_bot_api.reply_message(event.reply_token,Carousel_template)
-	elif ukey =="menu4":
-		Carousel_template = TemplateSendMessage(
-		alt_text='Carousel template',
-		template=CarouselTemplate(
-		columns=[
-			CarouselColumn(
-				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
-				title='通路',
-				text='1',
-				actions=[
-					MessageTemplateAction(
-						label='家樂福',
-						text='q'
-					),
-					MessageTemplateAction(
-						label='全聯',
-						text='r'
-					),
-					MessageTemplateAction(
-						label='Costco',
-						text='s'
-					)
-				]
-			)
-		]
-	)
-	)
-		line_bot_api.reply_message(event.reply_token,Carousel_template)
-	elif ukey =="menu5":
-		Carousel_template = TemplateSendMessage(
-		alt_text='Carousel template',
-		template=CarouselTemplate(
-		columns=[
-			CarouselColumn(
-				thumbnail_image_url='https://i.imgur.com/LmdGm99.png',
-				title='價格',
-				text='1',
-				actions=[
-					MessageTemplateAction(
-						label='100~350元',
-						text='t'
-					),
-					MessageTemplateAction(
-						label='351~600元',
-						text='u'
-					),
-					MessageTemplateAction(
-						label='600元以上',
-						text='v'
-					)
-				]
-			)
-		]
-	)
-	)
-		line_bot_api.reply_message(event.reply_token,Carousel_template)
 	else:
 		user_id = event.source.user_id
 		inMes(user_id,ukey)
 '''
 	if event.message.text == "我要測試":
 		ISM = CarouselContainer(
-				contents = [
-					BubbleContainer(
-			header = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範1',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
+			contents = [
+				BubbleContainer(
+					header = BoxComponent(
+						layout = 'baseline',
+						contents = [
+							TextComponent(
+								text = '示範1',
+								weight = 'bold',
+								size = 'xxl',
+								flex =2,
+								align = 'center'
+							)
+						]
+					),
+					body = BoxComponent(
+						layout = 'vertical',
+						spacing = 'xs',
+						contents = [
+							ButtonComponent(
+								style='secondary',
+								color='#FFEE99',
+								height='sm',
+								action=MessageAction(label='設定起始數字',text='測試')
+							)										
+						]
+					),
+					footer = BoxComponent(
+						layout = 'baseline',
+						contents = [
+							TextComponent(
+								text = '示範',
+								weight = 'bold',
+								size = 'xxl',
+								flex =2,
+								align = 'center'
+							)
+						]
+					)		
 				),
-			body = BoxComponent(
-				layout = 'vertical',
-				spacing = 'xs',
-				contents = [
-					ButtonComponent(
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='設定起始數字',text='測試')
-					)										
-					]
+				BubbleContainer(
+					header = BoxComponent(
+						layout = 'baseline',
+						contents = [
+							TextComponent(
+								text = '示範2',
+								weight = 'bold',
+								size = 'xxl',
+								flex =2,
+								align = 'center'
+							)
+						]
+					),
+					body = BoxComponent(
+						layout = 'vertical',
+						spacing = 'xs',
+						contents = [
+							ButtonComponent(
+								style='secondary',
+								color='#FFEE99',
+								height='sm',
+								action=MessageAction(label='設定起始數字',text='測試')
+							)									
+						]
+					),
+					footer = BoxComponent(
+						layout = 'baseline',
+						contents = [
+							TextComponent(
+								text = '示範',
+								weight = 'bold',
+								size = 'xxl',
+								flex =2,
+								align = 'center'
+							)
+						]
+					)		
 				),
-			footer = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				)		
-			),
-			BubbleContainer(
-			header = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範2',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				),
-			body = BoxComponent(
-				layout = 'vertical',
-				spacing = 'xs',
-				contents = [
-					ButtonComponent(
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='設定起始數字',text='測試')
-					)									
-					]
-				),
-			footer = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				)		
-			),
-			BubbleContainer(
-			header = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範3',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				),
-			body = BoxComponent(
-				layout = 'vertical',
-				spacing = 'xs',
-				contents = [
-					ButtonComponent(
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='設定起始數字',text='測試')
-					)									
-					]
-				),
-			footer = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				)		
-			),
-			BubbleContainer(
-			header = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範4',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				),
-			body = BoxComponent(
-				layout = 'vertical',
-				spacing = 'xs',
-				contents = [
-					ButtonComponent(
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='設定起始數字',text='測試')
-					)									
-					]
-				),
-			footer = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				)		
-			),
-			BubbleContainer(
-			header = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範5',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				),
-			body = BoxComponent(
-				layout = 'vertical',
-				spacing = 'xs',
-				contents = [
-					ButtonComponent(
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='設定起始數字',text='測試')
-					)									
-					]
-				),
-			footer = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				)		
-			),
-			BubbleContainer(
-			header = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範6',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				),
-			body = BoxComponent(
-				layout = 'vertical',
-				spacing = 'xs',
-				contents = [
-					ButtonComponent(
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='設定起始數字',text='測試')
-					)									
-					]
-				),
-			footer = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				)		
-			),
-			BubbleContainer(
-			header = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範7',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				),
-			body = BoxComponent(
-				layout = 'vertical',
-				spacing = 'xs',
-				contents = [
-					ButtonComponent(
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='設定起始數字',text='測試')
-					)									
-					]
-				),
-			footer = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				)		
-			),
-			BubbleContainer(
-			header = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範8',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				),
-			body = BoxComponent(
-				layout = 'vertical',
-				spacing = 'xs',
-				contents = [
-					ButtonComponent(
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='設定起始數字',text='測試')
-					)									
-					]
-				),
-			footer = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				)		
-			),
-			BubbleContainer(
-			header = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範9',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				),
-			body = BoxComponent(
-				layout = 'vertical',
-				spacing = 'xs',
-				contents = [
-					ButtonComponent(
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='設定起始數字',text='測試')
-					)									
-					]
-				),
-			footer = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				)		
-			),
-			BubbleContainer(
-			header = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範10',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				),
-			body = BoxComponent(
-				layout = 'vertical',
-				spacing = 'xs',
-				contents = [
-					ButtonComponent(
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='設定起始數字',text='測試')
-					)									
-					]
-				),
-			footer = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = '示範',
-						weight = 'bold',
-						size = 'xxl',
-						flex =2,
-						align = 'center'
-						)
-					]
-				)		
-			)
-				]
-			)
+				BubbleContainer(
+					header = BoxComponent(
+						layout = 'baseline',
+						contents = [
+							TextComponent(
+								text = '示範3',
+								weight = 'bold',
+								size = 'xxl',
+								flex =2,
+								align = 'center'
+							)
+						]
+					),
+					body = BoxComponent(
+						layout = 'vertical',
+						spacing = 'xs',
+						contents = [
+							ButtonComponent(
+								style='secondary',
+								color='#FFEE99',
+								height='sm',
+								action=MessageAction(label='設定起始數字',text='測試')
+							)									
+						]
+					),
+					footer = BoxComponent(
+						layout = 'baseline',
+						contents = [
+							TextComponent(
+								text = '示範',
+								weight = 'bold',
+								size = 'xxl',
+								flex =2,
+								align = 'center'
+							)
+						]
+					)		
+				)
+			]
+		)
 		message = FlexSendMessage(alt_text = "hello",contents=ISM)
 		line_bot_api.reply_message(event.reply_token,message)
-
-
-	if event.message.text == "食物":
-		with open("usertxt.txt","w") as f:
-				mes = f.write("")
-		Image_Carousel = TemplateSendMessage(
-			alt_text='目錄 template',
-			template=ImageCarouselTemplate(
-			columns=[
-				ImageCarouselColumn(
-					image_url="https://i.imgur.com/6btHgSL.jpg",
-					action=PostbackTemplateAction(
-					label='a',
-					text='a',
-					data='action=buy&itemid=1'
-						)
-					),
-				ImageCarouselColumn(
-					image_url="https://i.imgur.com/0I6l6mm.jpg",
-					action=PostbackTemplateAction(
-					label='b',
-					text='b',
-					data='action=buy&itemid=2'
-						)
-					),
-				ImageCarouselColumn(
-					image_url="https://i.imgur.com/eVbMryK.jpg",
-					action=PostbackTemplateAction(
-					label='c',
-					text='c',
-					data='action=buy&itemid=3'
-						)
-					),
-				ImageCarouselColumn(
-					image_url="https://i.imgur.com/5lTDJIq.jpg",
-					action=PostbackTemplateAction(
-					label='d',
-					text='d',
-					data='action=buy&itemid=4'
-						)
-					),
-				ImageCarouselColumn(
-					image_url="https://i.imgur.com/52y6R7k.jpg",
-					action=PostbackTemplateAction(
-					label='e',
-					text='e',
-					data='action=buy&itemid=5'
-						)
-					)
-				]
-			)
-		)
-		line_bot_api.reply_message(event.reply_token,Image_Carousel)
-
-
 
 
 # 執行
