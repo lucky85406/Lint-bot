@@ -84,10 +84,6 @@ def function(event):
 					header = BoxComponent(
 						layout = 'horizontal',
 						contents = [
-							IconComponent(
-								url = 'https://i.imgur.com/GsWCrIx.png',
-								size = 'xl',
-							),
 							TextComponent(
 								text = '示範1',
 								weight = 'bold',
@@ -101,6 +97,10 @@ def function(event):
 						layout = 'vertical',
 						spacing = 'xs',
 						contents = [
+							IconComponent(
+								url = 'https://i.imgur.com/GsWCrIx.png',
+								size = 'xl',
+							),
 							ButtonComponent(
 								style='secondary',
 								color='#FFEE99',
