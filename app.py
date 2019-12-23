@@ -12,7 +12,7 @@ from linebot.models import (
     ImageSendMessage, URIImagemapAction, MessageImagemapAction, CarouselTemplate ,
     CarouselColumn, MessageImagemapAction, ImagemapArea, ImagemapSendMessage, BaseSize,
     BubbleContainer, BoxComponent, TextComponent, FlexSendMessage, ImageComponent, ButtonComponent,
-    URIAction, MessageAction, CarouselContainer
+    URIAction, MessageAction, CarouselContainer, SeparatorComponent, IconComponent
 )
 from utoken import(go,inMes,showMes)
 import random
@@ -90,6 +90,9 @@ def function(event):
 								size = 'xxl',
 								flex =2,
 								align = 'center'
+							),
+							SeparatorComponent(
+								color = '#0000FF',
 							)
 						]
 					),
@@ -102,7 +105,10 @@ def function(event):
 								color='#FFEE99',
 								height='sm',
 								action=MessageAction(label='設定起始數字',text='測試')
-							)										
+							),
+							SeparatorComponent(
+								color = '#0000FF',
+							)																	
 						]
 					),
 					footer = BoxComponent(
@@ -114,7 +120,10 @@ def function(event):
 								size = 'xxl',
 								flex =2,
 								align = 'center'
-							)
+							),
+							SeparatorComponent(
+								color = '#0000FF',
+							)							
 						]
 					)		
 				),
