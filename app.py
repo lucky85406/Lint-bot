@@ -87,7 +87,7 @@ def function(event):
 							IconComponent(
 								url = 'https://i.imgur.com/GsWCrIx.png',
 								size = 'xl',
-							)
+							),
 							TextComponent(
 								text = '示範1',
 								weight = 'bold',
