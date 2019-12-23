@@ -169,18 +169,13 @@ def function(event):
 							)
 						]
 					),
-					hero = BoxComponent(
-						layout = 'vertical',
-						contents = [
-							ImageComponent(
+					hero = ImageComponent(
 								url = 'https://pic.pimg.tw/youismylove34/4a923f0f1624a.jpg',
 								size = 'full',
 								align = 'center',
 								aspect_ratio = '792:555',
 								aspect_mode = 'cover',
-							)
-						]
-					),
+							),
 					body = BoxComponent(
 						layout = 'vertical',
 						spacing = 'xs',
