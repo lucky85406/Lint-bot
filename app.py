@@ -286,7 +286,9 @@ def function(event):
 		inMes(user_id,ukey)
 '''
 	if event.message.text == "我要測試":
-		ISM = BubbleContainer(
+		ISM = CarouselContainer(
+				contents = [
+					BubbleContainer(
 			header = BoxComponent(
 				layout = 'baseline',
 				contents = [
@@ -359,6 +361,8 @@ def function(event):
 						)
 					]
 				)		
+			)
+				]
 			)
 		message = FlexSendMessage(alt_text = "hello",contents=ISM)
 		line_bot_api.reply_message(event.reply_token,message)
