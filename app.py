@@ -97,11 +97,6 @@ def function(event):
 						layout = 'horizontal',
 						spacing = 'xs',
 						contents = [
-							IconComponent(
-								url = 'https://i.imgur.com/GsWCrIx.png',
-								size = 'xl',
-								aspectRatio = '1:1'
-							),
 							ButtonComponent(
 								style='secondary',
 								color='#FFEE99',
@@ -123,6 +118,11 @@ def function(event):
 					footer = BoxComponent(
 						layout = 'baseline',
 						contents = [
+							IconComponent(
+								url = 'https://i.imgur.com/GsWCrIx.png',
+								size = 'xl',
+								aspectRatio = '1:1'
+							),
 							TextComponent(
 								text = '示範',
 								weight = 'bold',
