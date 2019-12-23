@@ -289,7 +289,7 @@ def function(event):
 		message = FlexSendMessage(
 			alt_text = "hello",
 			template = CarouselTemplate(
-			columns = [
+			contents = [
 					CarouselColumn(
 						BubbleContainer(
 							header = BoxComponent(
@@ -446,7 +446,7 @@ def function(event):
 				]
 			)
 			)
-			line_bot_api.reply_message(event.reply_token,message)
+		line_bot_api.reply_message(event.reply_token,message)
 
 
 	if event.message.text == "食物":
