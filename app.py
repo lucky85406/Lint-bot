@@ -173,7 +173,7 @@ def function(event):
 						layout = 'vertical',
 						contents = [
 							ImageComponent(
-								url = 'https://i.imgur.com/A5TeDg0.png',
+								url = 'https://pic.pimg.tw/youismylove34/4a923f0f1624a.jpg',
 								size = 'full',
 								align = 'center',
 								aspect_ratio = '792:555',
