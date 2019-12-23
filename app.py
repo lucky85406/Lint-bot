@@ -107,12 +107,8 @@ def function(event):
 								margin = 'xl',
 								color = '#0000FF',
 							),
-							IconComponent(
-								url = 'https://i.imgur.com/GsWCrIx.png',
-								size = 'xl',
-								aspectRatio = '1:1'
-							),
 							TextComponent(
+								margin = 'xl'
 								text = '示範',
 								weight = 'bold',
 								size = 'xxl',
