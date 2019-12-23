@@ -293,7 +293,7 @@ def function(event):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = '示範',
+						text = '示範1',
 						weight = 'bold',
 						size = 'xxl',
 						flex =2,
@@ -331,7 +331,7 @@ def function(event):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = '示範',
+						text = '示範2',
 						weight = 'bold',
 						size = 'xxl',
 						flex =2,
@@ -369,7 +369,7 @@ def function(event):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = '示範',
+						text = '示範3',
 						weight = 'bold',
 						size = 'xxl',
 						flex =2,
@@ -407,7 +407,7 @@ def function(event):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = '示範',
+						text = '示範4',
 						weight = 'bold',
 						size = 'xxl',
 						flex =2,
@@ -445,7 +445,7 @@ def function(event):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = '示範',
+						text = '示範5',
 						weight = 'bold',
 						size = 'xxl',
 						flex =2,
@@ -483,7 +483,7 @@ def function(event):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = '示範',
+						text = '示範6',
 						weight = 'bold',
 						size = 'xxl',
 						flex =2,
@@ -521,7 +521,7 @@ def function(event):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = '示範',
+						text = '示範7',
 						weight = 'bold',
 						size = 'xxl',
 						flex =2,
@@ -559,7 +559,7 @@ def function(event):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = '示範',
+						text = '示範8',
 						weight = 'bold',
 						size = 'xxl',
 						flex =2,
@@ -597,7 +597,7 @@ def function(event):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = '示範',
+						text = '示範9',
 						weight = 'bold',
 						size = 'xxl',
 						flex =2,
@@ -635,7 +635,7 @@ def function(event):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = '示範',
+						text = '示範10',
 						weight = 'bold',
 						size = 'xxl',
 						flex =2,
