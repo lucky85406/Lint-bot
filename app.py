@@ -94,7 +94,7 @@ def function(event):
 						]
 					),
 					body = BoxComponent(
-						layout = 'horizontal',
+						layout = 'vertical',
 						spacing = 'xs',
 						contents = [
 							ButtonComponent(
