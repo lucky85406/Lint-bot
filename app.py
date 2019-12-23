@@ -82,8 +82,12 @@ def function(event):
 			contents = [
 				BubbleContainer(
 					header = BoxComponent(
-						layout = 'baseline',
+						layout = 'horizontal',
 						contents = [
+							IconComponent(
+								url = 'https://i.imgur.com/GsWCrIx.png',
+								size = 'xl',
+							)
 							TextComponent(
 								text = '示範1',
 								weight = 'bold',
@@ -104,6 +108,7 @@ def function(event):
 								action=MessageAction(label='設定起始數字',text='測試')
 							),
 							SeparatorComponent(
+								margin = 'xl',
 								color = '#0000FF',
 							),
 							ButtonComponent(
