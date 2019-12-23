@@ -108,7 +108,7 @@ def function(event):
 								color = '#0000FF',
 							),
 							TextComponent(
-								margin = 'xl'
+								margin = 'xl',
 								text = '示範',
 								weight = 'bold',
 								size = 'xxl',
