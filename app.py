@@ -107,13 +107,12 @@ def function(event):
 								margin = 'xl',
 								color = '#0000FF',
 							),
-							TextComponent(
+							ButtonComponent(
 								margin = 'xl',
-								text = '示範',
-								weight = 'bold',
-								size = 'xxl',
-								flex =2,
-								align = 'center'
+								style='secondary',
+								color='#FFEE99',
+								height='sm',
+								action=MessageAction(label='設定起始數字',text='測試')
 							)																	
 						]
 					),
