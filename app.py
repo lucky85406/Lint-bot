@@ -286,86 +286,81 @@ def function(event):
 		inMes(user_id,ukey)
 '''
 	if event.message.text == "我要測試":
-		message = FlexSendMessage(
-			alt_text = "hello",
-						BubbleContainer(
-							header = BoxComponent(
-								layout = 'baseline',
-								contents = [
-									TextComponent(
-										text = '示範',
-										weight = 'bold',
-										size = 'xxl',
-										flex =2,
-										align = 'center'
-									)
-								]
-							),
-							body = BoxComponent(
-								layout = 'vertical',
-								spacing = 'xs',
-								contents = [
-									ButtonComponent(
-										style='secondary',
-										color='#FFEE99',
-										height='sm',
-										action=MessageAction(label='設定起始數字',text='測試')
-									),
-									ButtonComponent(
-										style='secondary',
-										color='#FFEE99',
-										height='sm',
-										action=MessageAction(label='設定起始數字',text='測試')
-									),
-									ButtonComponent(
-										style='secondary',
-										color='#FFEE99',
-										height='sm',
-										action=MessageAction(label='設定起始數字',text='測試')
-									),
-									ButtonComponent(
-										style='secondary',
-										color='#FFEE99',
-										height='sm',
-										action=MessageAction(label='設定起始數字',text='測試')
-									),
-									ButtonComponent(
-										style='secondary',
-										color='#FFEE99',
-										height='sm',
-										action=MessageAction(label='設定起始數字',text='測試')
-									),
-									ButtonComponent(
-										style='secondary',
-										color='#FFEE99',
-										height='sm',
-										action=MessageAction(label='設定起始數字',text='測試')
-									),
-									ButtonComponent(
-										style='secondary',
-										color='#FFEE99',
-										height='sm',
-										action=MessageAction(label='設定起始數字',text='測試')
-									)										
-								]
-							),
-							footer = BoxComponent(
-								layout = 'baseline',
-								contents = [
-									TextComponent(
-										text = '示範',
-										weight = 'bold',
-										size = 'xxl',
-										flex =2,
-										align = 'center'
-									)
-								]
-							)		
+		ISM = BubbleContainer(
+			header = BoxComponent(
+				layout = 'baseline',
+				contents = [
+					TextComponent(
+						text = '示範',
+						weight = 'bold',
+						size = 'xxl',
+						flex =2,
+						align = 'center'
 						)
-
-					
+					]
+				),
+			body = BoxComponent(
+				layout = 'vertical',
+				spacing = 'xs',
+				contents = [
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='設定起始數字',text='測試')
+					),
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='設定起始數字',text='測試')
+					),
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='設定起始數字',text='測試')
+					),
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='設定起始數字',text='測試')
+					),
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='設定起始數字',text='測試')
+					),
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='設定起始數字',text='測試')
+					),
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='設定起始數字',text='測試')
+					)										
+					]
+				),
+			footer = BoxComponent(
+				layout = 'baseline',
+				contents = [
+					TextComponent(
+						text = '示範',
+						weight = 'bold',
+						size = 'xxl',
+						flex =2,
+						align = 'center'
+						)
+					]
+				)		
 			)
-			
+		message = FlexSendMessage(alt_text = "hello",contents=ISM)
 		line_bot_api.reply_message(event.reply_token,message)
 
 
