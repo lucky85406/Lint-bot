@@ -12,7 +12,7 @@ from linebot.models import (
     ImageSendMessage, URIImagemapAction, MessageImagemapAction, CarouselTemplate ,
     CarouselColumn, MessageImagemapAction, ImagemapArea, ImagemapSendMessage, BaseSize,
     BubbleContainer, BoxComponent, TextComponent, FlexSendMessage, ImageComponent, ButtonComponent,
-    URIAction, MessageAction
+    URIAction, MessageAction, CarouselContainer
 )
 from utoken import(go,inMes,showMes)
 import random
