@@ -107,11 +107,17 @@ def function(event):
 								margin = 'xl',
 								color = '#0000FF',
 							),
-							ButtonComponent(
-								style='secondary',
-								color='#FFEE99',
-								height='sm',
-								action=MessageAction(label='設定起始數字',text='測試')
+							IconComponent(
+								url = 'https://i.imgur.com/GsWCrIx.png',
+								size = 'xl',
+								aspectRatio = '1:1'
+							),
+							TextComponent(
+								text = '示範',
+								weight = 'bold',
+								size = 'xxl',
+								flex =2,
+								align = 'center'
 							)																	
 						]
 					),
