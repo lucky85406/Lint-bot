@@ -51,34 +51,8 @@ def callback():
     return 'OK'
 
 
-# 處理訊息
-@handler.add(MessageEvent, message=TextMessage)
-def function(event):
-	'''
-	ukey = event.message.text
-	#!!!!!!!!!!!!!!!!!這裡有ID
-	user_id = event.source.user_id
-	
-	if ukey == "show":
-		user_id = event.source.user_id
-		a = showMes(user_id)
-		if a == "1":
-			line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= "null"))
-		else:
-			line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= showMes(user_id)))
-	elif ukey =="go":
-		user_id = event.source.user_id
-		go(user_id)
-	else:
-		user_id = event.source.user_id
-		inMes(user_id,ukey)
-'''
-	if event.message.text == "我要測試":
-		ISM = CarouselContainer(
+def food():
+	mes = CarouselContainer(
 			contents = [
 				BubbleContainer(
 					header = BoxComponent(
@@ -129,8 +103,37 @@ def function(event):
 				)
 			]
 		)
-		message = FlexSendMessage(alt_text = "hello",contents=ISM)
-		line_bot_api.reply_message(event.reply_token,message)
+		message = FlexSendMessage(alt_text = "hello",contents=mes)
+		return message
+
+# 處理訊息
+@handler.add(MessageEvent, message=TextMessage)
+def function(event):
+	'''
+	ukey = event.message.text
+	#!!!!!!!!!!!!!!!!!這裡有ID
+	user_id = event.source.user_id
+	
+	if ukey == "show":
+		user_id = event.source.user_id
+		a = showMes(user_id)
+		if a == "1":
+			line_bot_api.reply_message(	
+				event.reply_token,
+				TextSendMessage(text= "null"))
+		else:
+			line_bot_api.reply_message(	
+				event.reply_token,
+				TextSendMessage(text= showMes(user_id)))
+	elif ukey =="go":
+		user_id = event.source.user_id
+		go(user_id)
+	else:
+		user_id = event.source.user_id
+		inMes(user_id,ukey)
+'''
+	if event.message.text == "我要測試":
+		line_bot_api.reply_message(event.reply_token,food())
 
 
 # 執行
