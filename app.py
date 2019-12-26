@@ -103,10 +103,6 @@ def function(event):
 								height='sm',
 								action=MessageAction(label='紅肉',text='紅肉')
 							),
-							SeparatorComponent(
-								margin = 'xl',
-								color = '#0000FF',
-							),
 							ButtonComponent(
 								margin = 'xl',
 								style='secondary',
@@ -114,20 +110,12 @@ def function(event):
 								height='sm',
 								action=MessageAction(label='白肉',text='白肉')
 							),
-							SeparatorComponent(
-								margin = 'xl',
-								color = '#0000FF',
-							),
 							ButtonComponent(
 								margin = 'xl',
 								style='secondary',
 								color='#FFEE99',
 								height='sm',
 								action=MessageAction(label='海鮮',text='海鮮')
-							),
-							SeparatorComponent(
-								margin = 'xl',
-								color = '#0000FF',
 							),
 							ButtonComponent(
 								margin = 'xl',
