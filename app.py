@@ -100,7 +100,7 @@ def food():
 			)		
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
-		return message
+	return message
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
