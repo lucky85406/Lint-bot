@@ -324,6 +324,25 @@ def price():
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
 
+#顯示圖片
+def showimg():
+	mes = BubbleContainer(
+			body = BoxComponent(
+				layout = 'vertical',
+				spacing = 'xs',
+				contents = [
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='ShowImg',text='showImg')
+					)																	
+				]
+			)		
+		)
+	message = FlexSendMessage(alt_text = "hello",contents = mes)
+	return message
+
 def conversionCode(k):
 	code = {'紅肉':'a','白肉':'b','海鮮':'c','甜點':'d','花香':'e'
 			,'漿果':'f','柑橘':'g','熱帶水果':'h','淺色水果':'i','香料':'j'
@@ -352,6 +371,8 @@ def function(event):
 		line_bot_api.reply_message(event.reply_token,chain())
 	elif event.message.text == "價格清單":
 		line_bot_api.reply_message(event.reply_token,price())
+	elif ukey == "100~350元" or ukey == "351~600元" or ukey == "600元以上":
+		line_bot_api.reply_message(event.reply_token,showimg())
 	else:
 		if ukey == "show":
 			user_id = event.source.user_id
