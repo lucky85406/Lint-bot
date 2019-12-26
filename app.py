@@ -14,7 +14,8 @@ from linebot.models import (
     BubbleContainer, BoxComponent, TextComponent, FlexSendMessage, ImageComponent, ButtonComponent,
     URIAction, MessageAction, CarouselContainer, SeparatorComponent, IconComponent
 )
-from utoken import(go,inMes,showMes,showImg)
+from utoken import(go,inMes,showMes)
+from datalist import(dataList)
 import random
 import time  # 待會會取時間
 
@@ -368,7 +369,7 @@ def function(event):
 			go(user_id)
 		elif ukey =="showimg":
 			user_id = event.source.user_id
-			dlist = showImg(showMes(user_id))
+			data = dataList(showMes(user_id))
 			Image_Carousel = TemplateSendMessage(
 				alt_text='目錄 template',
 				template=ImageCarouselTemplate(
