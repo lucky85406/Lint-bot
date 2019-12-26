@@ -99,7 +99,7 @@ def food():
 				]
 			)		
 		)
-			message = FlexSendMessage(alt_text = "hello",contents = mes)
+	message = FlexSendMessage(alt_text = "hello",contents = mes)
 		return message
 
 # 處理訊息
