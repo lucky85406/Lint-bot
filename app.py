@@ -130,7 +130,8 @@ def aroma():
 								margin = 'xl',
 								style='secondary',
 								color='#FFEE99',
-								height='sm',
+								height='md',
+								gravity='center',
 								action=MessageAction(label='花香',text='花香')
 							),
 							ButtonComponent(
