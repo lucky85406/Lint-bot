@@ -361,7 +361,7 @@ def function(event):
 	
 	
 
-	if event.message.text == "showImg":
+	if event.message.text == "showshow":
 		line_bot_api.reply_message(event.reply_token,showimg())
 	elif event.message.text == "香氣清單":
 		line_bot_api.reply_message(event.reply_token,aroma())
