@@ -338,9 +338,6 @@ def function(event):
 	ukey = event.message.text
 	#!!!!!!!!!!!!!!!!!這裡有ID
 	user_id = event.source.user_id
-	
-	
-
 	if event.message.text == "食物清單":
 		line_bot_api.reply_message(event.reply_token,food())
 	elif event.message.text == "香氣清單":
@@ -353,8 +350,8 @@ def function(event):
 		line_bot_api.reply_message(event.reply_token,price())
 	else:
 		if ukey == "show":
-		user_id = event.source.user_id
-		a = showMes(user_id)
+			user_id = event.source.user_id
+			a = showMes(user_id)
 		if a == "1":
 			line_bot_api.reply_message(	
 				event.reply_token,
