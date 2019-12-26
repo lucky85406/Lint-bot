@@ -368,7 +368,9 @@ def function(event):
 	elif event.message.text == "價格清單":
 		line_bot_api.reply_message(event.reply_token,price())
 	else:
-		line_bot_api.reply_message(event.reply_token,text = conversionCode(event.message.text))
+		line_bot_api.reply_message(	
+				event.reply_token,
+				TextSendMessage(text= conversionCode(event.message.text)))
 
 
 # 執行
