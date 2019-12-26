@@ -118,7 +118,7 @@ def aroma():
 				]
 			),
 			body = BoxComponent(
-				layout = 'vertical',
+				layout = 'horizontal',
 				spacing = 'xs',
 				contents = [
 					ButtonComponent(
