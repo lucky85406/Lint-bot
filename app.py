@@ -368,7 +368,7 @@ def function(event):
 			go(user_id)
 		else:
 			user_id = event.source.user_id
-			inMes(user_id,ukey)
+			inMes(user_id,conversionCode(ukey))
 
 
 # 執行
