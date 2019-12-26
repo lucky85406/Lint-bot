@@ -363,14 +363,25 @@ def function(event):
 
 	if event.message.text == "showshow":
 		line_bot_api.reply_message(event.reply_token,showimg())
-	elif event.message.text == "香氣清單":
+	elif ukey == "紅肉" or ukey =="白肉" or ukey =="海鮮" or ukey =="甜點":
+		user_id = event.source.user_id
+		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,aroma())
-	elif event.message.text == "口感清單":
+	elif ukey == "花香" or ukey =="漿果" or ukey =="柑橘" or ukey =="熱帶水果" or ukey =="淺色水果" or ukey =="香料" or ukey =="土木":
+		user_id = event.source.user_id
+		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,taste())
-	elif event.message.text == "通路清單":
+	elif ukey == "清香" or ukey =="甜" or ukey =="圓潤" or ukey =="酸" or ukey =="濃厚":
+		user_id = event.source.user_id
+		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,chain())
-	elif event.message.text == "價格清單":
+	elif ukey == "家樂福" or ukey =="全聯" or ukey =="Costco":
+		user_id = event.source.user_id
+		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,price())
+	elif ukey =="100~350元" or ukey =="351~600元" or ukey =="600元以上":
+		user_id = event.source.user_id
+		inMes(user_id,conversionCode(ukey))
 	else:
 		if ukey == "show":
 			user_id = event.source.user_id
@@ -478,10 +489,7 @@ def function(event):
 				]
 				)
 			)
-			line_bot_api.reply_message(event.reply_token,Image_Carousel)			
-		else:
-			user_id = event.source.user_id
-			inMes(user_id,conversionCode(ukey))
+			line_bot_api.reply_message(event.reply_token,Image_Carousel)
 
 
 # 執行
