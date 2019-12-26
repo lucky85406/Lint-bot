@@ -334,29 +334,13 @@ def conversionCode(k):
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	'''
+	
 	ukey = event.message.text
 	#!!!!!!!!!!!!!!!!!這裡有ID
 	user_id = event.source.user_id
 	
-	if ukey == "show":
-		user_id = event.source.user_id
-		a = showMes(user_id)
-		if a == "1":
-			line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= "null"))
-		else:
-			line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= showMes(user_id)))
-	elif ukey =="go":
-		user_id = event.source.user_id
-		go(user_id)
-	else:
-		user_id = event.source.user_id
-		inMes(user_id,ukey)
-'''
+	
+
 	if event.message.text == "食物清單":
 		line_bot_api.reply_message(event.reply_token,food())
 	elif event.message.text == "香氣清單":
@@ -368,9 +352,23 @@ def function(event):
 	elif event.message.text == "價格清單":
 		line_bot_api.reply_message(event.reply_token,price())
 	else:
-		line_bot_api.reply_message(	
+		if ukey == "show":
+		user_id = event.source.user_id
+		a = showMes(user_id)
+		if a == "1":
+			line_bot_api.reply_message(	
 				event.reply_token,
-				TextSendMessage(text= conversionCode(event.message.text)))
+				TextSendMessage(text= "null"))
+		else:
+			line_bot_api.reply_message(	
+				event.reply_token,
+				TextSendMessage(text= showMes(user_id)))
+		elif ukey =="go":
+			user_id = event.source.user_id
+			go(user_id)
+		else:
+			user_id = event.source.user_id
+			inMes(user_id,conversionCode(ukey))
 
 
 # 執行
