@@ -52,59 +52,55 @@ def callback():
 
 
 def food():
-	mes = CarouselContainer(
-			contents = [
-				BubbleContainer(
-					header = BoxComponent(
-						layout = 'baseline',
-						contents = [
-							TextComponent(
-								text = 'Q1:搭配食物?',
-								weight = 'bold',
-								size = 'xxl',
-								flex =2,
-								align = 'center'
-							)
-						]
+	mes = BubbleContainer(
+			header = BoxComponent(
+				layout = 'baseline',
+				contents = [
+					TextComponent(
+						text = 'Q1:搭配食物?',
+						weight = 'bold',
+						size = 'xxl',
+						flex =2,
+						align = 'center'
+					)
+				]
+			),
+			body = BoxComponent(
+				layout = 'vertical',
+				spacing = 'xs',
+				contents = [
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='紅肉',text='紅肉')
 					),
-					body = BoxComponent(
-						layout = 'vertical',
-						spacing = 'xs',
-						contents = [
-							ButtonComponent(
-								style='secondary',
-								color='#FFEE99',
-								height='sm',
-								action=MessageAction(label='紅肉',text='紅肉')
-							),
-							ButtonComponent(
-								margin = 'xl',
-								style='secondary',
-								color='#FFEE99',
-								height='sm',
-								action=MessageAction(label='白肉',text='白肉')
-							),
-							ButtonComponent(
-								margin = 'xl',
-								style='secondary',
-								color='#FFEE99',
-								height='sm',
-								action=MessageAction(label='海鮮',text='海鮮')
-							),
-							ButtonComponent(
-								margin = 'xl',
-								style='secondary',
-								color='#FFEE99',
-								height='sm',
-								action=MessageAction(label='甜點',text='甜點')
-							)																	
-						]
-					)		
-				)
-			]
+					ButtonComponent(
+						margin = 'xl',
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='白肉',text='白肉')
+					),
+					ButtonComponent(
+						margin = 'xl',
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='海鮮',text='海鮮')
+					),
+					ButtonComponent(
+						margin = 'xl',
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='甜點',text='甜點')
+					)																	
+				]
+			)		
 		)
-		message = FlexSendMessage(alt_text = "hello",contents=mes)
-	return message
+		message = FlexSendMessage(alt_text = "hello",contents = mes)
+		return message
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
