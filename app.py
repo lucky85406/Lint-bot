@@ -57,7 +57,7 @@ def food():
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = 'Q1:搭配食物?',
+						text = 'Q1:搭配食物',
 						weight = 'bold',
 						size = 'xxl',
 						flex =2,
