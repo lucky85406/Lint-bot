@@ -140,7 +140,13 @@ def aroma():
 						color='#FFEE99',
 						height='sm',
 						action=MessageAction(label='柑橘',text='柑橘')
-					),
+					)																	
+				]
+			),
+			BoxComponent(
+				layout = 'vertical',
+				spacing = 'xs',
+				contents = [
 					ButtonComponent(
 						margin = 'xl',
 						style='secondary',
@@ -168,7 +174,7 @@ def aroma():
 						color='#FFEE99',
 						height='sm',
 						action=MessageAction(label='土木',text='土木')
-					)																	
+					)
 				]
 			)		
 		)
