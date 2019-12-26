@@ -142,7 +142,7 @@ def aroma():
 						action=MessageAction(label='柑橘',text='柑橘')
 					),
 					BoxComponent(
-						layout = 'vertical',
+						layout = 'horizontal',
 						spacing = 'xs',
 						contents = [
 							ButtonComponent(
