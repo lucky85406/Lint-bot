@@ -323,6 +323,14 @@ def price():
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
 
+def conversionCode(k):
+	code = {'紅肉':'a','白肉':'b','海鮮':'c','甜點':'d','花香':'e'
+			,'漿果':'f','柑橘':'g','熱帶水果':'h','淺色水果':'i','香料':'j'
+			,'土木':'k','清香':'l','甜':'m','圓潤':'n'
+			,'酸':'o','濃厚':'p','家樂福':'q','全聯':'r','Costco':'s'
+			,'100~350元':'t','351~600元':'u','600元以上':'v'}
+	return code[k]
+
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
@@ -359,6 +367,8 @@ def function(event):
 		line_bot_api.reply_message(event.reply_token,chain())
 	elif event.message.text == "價格清單":
 		line_bot_api.reply_message(event.reply_token,price())
+	else:
+		line_bot_api.reply_message(event.reply_token,text = conversionCode(event.message.text))
 
 
 # 執行
