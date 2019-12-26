@@ -103,5 +103,5 @@ def showImg(t):
 	imglist = [['https://i.imgur.com/5e4vJOd.jpg','aelqt'],['https://i.imgur.com/5e4vJOd.jpg','aelqt'],['https://i.imgur.com/5e4vJOd.jpg','aelqt'],['https://i.imgur.com/5e4vJOd.jpg','aelqt'],['https://i.imgur.com/5e4vJOd.jpg','aelqt'],['https://i.imgur.com/5e4vJOd.jpg','aelqt'],['https://i.imgur.com/5e4vJOd.jpg','aelqt'],['https://i.imgur.com/5e4vJOd.jpg','aelqt'],['https://i.imgur.com/5e4vJOd.jpg','aelqt'],['https://i.imgur.com/5e4vJOd.jpg','aelqt']]
 	set1 = [""]*10
 	for x in range(0,10):
-		set1[x] = imglist[x][1]
+		set1[x] = imglist[x][0]
 	return set1
