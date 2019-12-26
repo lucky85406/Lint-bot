@@ -371,8 +371,6 @@ def function(event):
 		line_bot_api.reply_message(event.reply_token,chain())
 	elif event.message.text == "價格清單":
 		line_bot_api.reply_message(event.reply_token,price())
-	elif ukey == "100~350元" or ukey == "351~600元" or ukey == "600元以上":
-		line_bot_api.reply_message(event.reply_token,showimg())
 	else:
 		if ukey == "show":
 			user_id = event.source.user_id
