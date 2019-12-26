@@ -370,6 +370,7 @@ def function(event):
 		elif ukey =="showimg":
 			user_id = event.source.user_id
 			data = dataList(showMes(user_id))
+			dlist = list(data)
 			Image_Carousel = TemplateSendMessage(
 				alt_text='目錄 template',
 				template=ImageCarouselTemplate(
