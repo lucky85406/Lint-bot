@@ -338,6 +338,9 @@ def function(event):
 	ukey = event.message.text
 	#!!!!!!!!!!!!!!!!!這裡有ID
 	user_id = event.source.user_id
+	
+	
+
 	if event.message.text == "食物清單":
 		line_bot_api.reply_message(event.reply_token,food())
 	elif event.message.text == "香氣清單":
@@ -352,20 +355,20 @@ def function(event):
 		if ukey == "show":
 			user_id = event.source.user_id
 			a = showMes(user_id)
-		if a == "1":
-			line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= "null"))
-		else:
-			line_bot_api.reply_message(	
-				event.reply_token,
-				TextSendMessage(text= showMes(user_id)))
+			if a == "1":
+				line_bot_api.reply_message(	
+					event.reply_token,
+					TextSendMessage(text= "null"))
+			else:
+				line_bot_api.reply_message(	
+					event.reply_token,
+					TextSendMessage(text= showMes(user_id)))
 		elif ukey =="go":
 			user_id = event.source.user_id
 			go(user_id)
 		else:
 			user_id = event.source.user_id
-			inMes(user_id,conversionCode(ukey))
+			inMes(user_id,ukey)
 
 
 # 執行
