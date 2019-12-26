@@ -361,8 +361,8 @@ def function(event):
 	
 	
 
-	if event.message.text == "食物清單":
-		line_bot_api.reply_message(event.reply_token,food())
+	if event.message.text == "showImg":
+		line_bot_api.reply_message(event.reply_token,showimg())
 	elif event.message.text == "香氣清單":
 		line_bot_api.reply_message(event.reply_token,aroma())
 	elif event.message.text == "口感清單":
@@ -386,6 +386,7 @@ def function(event):
 		elif ukey =="go":
 			user_id = event.source.user_id
 			go(user_id)
+			line_bot_api.reply_message(event.reply_token,food())
 		elif ukey =="showImg":
 			user_id = event.source.user_id
 			data = dataList(showMes(user_id))
