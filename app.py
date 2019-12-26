@@ -121,78 +121,54 @@ def aroma():
 				layout = 'vertical',
 				spacing = 'xs',
 				contents = [
-					BoxComponent(
-						layout = 'horizontal',
-						spacing = 'xs',
-						flex = 1,
-						contents =[
-							ButtonComponent(
-								margin = 'xl',
-								style='secondary',
-								color='#FFEE99',
-								height='md',
-								gravity='center',
-								action=MessageAction(label='花香',text='花香')
-							),
-							ButtonComponent(
-								margin = 'xl',
-								style='secondary',
-								color='#FFEE99',
-								height='sm',
-								action=MessageAction(label='漿果',text='漿果')
-							),
-							ButtonComponent(
-								margin = 'xl',
-								style='secondary',
-								color='#FFEE99',
-								height='sm',
-								action=MessageAction(label='柑橘',text='柑橘')
-							)
-							
-						]
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='花香',text='花香')
 					),
-					BoxComponent(
-						layout = 'horizontal',
-						spacing = 'xs',
-						flex = 1,
-						contents =[
-							ButtonComponent(
-								margin = 'xl',
-								style='secondary',
-								color='#FFEE99',
-								height='sm',
-								action=MessageAction(label='熱帶水果',text='熱帶水果')
-							),
-							ButtonComponent(
-								margin = 'xl',
-								style='secondary',
-								color='#FFEE99',
-								height='sm',
-								action=MessageAction(label='淺色水果',text='淺色水果')
-							),
-							ButtonComponent(
-								margin = 'xl',
-								style='secondary',
-								color='#FFEE99',
-								height='sm',
-								action=MessageAction(label='香料',text='香料')
-							)
-						]
+					ButtonComponent(
+						margin = 'xl',
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='漿果',text='漿果')
 					),
-					BoxComponent(
-						layout = 'horizontal',
-						spacing = 'xs',
-						flex =1,
-						contents = [
-							ButtonComponent(
-								margin = 'xl',
-								style='secondary',
-								color='#FFEE99',
-								height='sm',
-								action=MessageAction(label='土木',text='土木')
-							)
-						]
-					)										
+					ButtonComponent(
+						margin = 'xl',
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='柑橘',text='柑橘')
+					),
+					ButtonComponent(
+						margin = 'xl',
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='熱帶水果',text='熱帶水果')
+					),
+					ButtonComponent(
+						margin = 'xl',
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='淺色水果',text='淺色水果')
+					),
+					ButtonComponent(
+						margin = 'xl',
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='香料',text='香料')
+					),
+					ButtonComponent(
+						margin = 'xl',
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label='土木',text='土木')
+					)																	
 				]
 			)		
 		)
@@ -257,7 +233,6 @@ def taste():
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
-
 #通路
 def chain():
 	mes = BubbleContainer(
@@ -383,7 +358,7 @@ def function(event):
 	elif event.message.text == "通路清單":
 		line_bot_api.reply_message(event.reply_token,chain())
 	elif event.message.text == "價格清單":
-		line_bot_api.reply_message(event.reply_token,price())
+		line_bot_api.reply_message(event.reply_token,aroma())
 
 
 # 執行
