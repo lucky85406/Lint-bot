@@ -85,7 +85,7 @@ def function(event):
 						layout = 'baseline',
 						contents = [
 							TextComponent(
-								text = '示範1',
+								text = 'Q1:搭配食物?',
 								weight = 'bold',
 								size = 'xxl',
 								flex =2,
@@ -101,7 +101,7 @@ def function(event):
 								style='secondary',
 								color='#FFEE99',
 								height='sm',
-								action=MessageAction(label='設定起始數字',text='測試')
+								action=MessageAction(label='紅肉',text='紅肉')
 							),
 							SeparatorComponent(
 								margin = 'xl',
@@ -112,96 +112,30 @@ def function(event):
 								style='secondary',
 								color='#FFEE99',
 								height='sm',
-								action=MessageAction(label='設定起始數字',text='測試')
+								action=MessageAction(label='白肉',text='白肉')
+							),
+							SeparatorComponent(
+								margin = 'xl',
+								color = '#0000FF',
+							),
+							ButtonComponent(
+								margin = 'xl',
+								style='secondary',
+								color='#FFEE99',
+								height='sm',
+								action=MessageAction(label='海鮮',text='海鮮')
+							),
+							SeparatorComponent(
+								margin = 'xl',
+								color = '#0000FF',
+							),
+							ButtonComponent(
+								margin = 'xl',
+								style='secondary',
+								color='#FFEE99',
+								height='sm',
+								action=MessageAction(label='甜點',text='甜點')
 							)																	
-						]
-					),
-					footer = BoxComponent(
-						layout = 'baseline',
-						contents = [
-							IconComponent(
-								url = 'https://i.imgur.com/GsWCrIx.png',
-								size = 'xl',
-								aspectRatio = '1:1'
-							),
-							TextComponent(
-								text = '示範',
-								weight = 'bold',
-								size = 'xxl',
-								flex =2,
-								align = 'center'
-							)						
-						]
-					)		
-				),
-				BubbleContainer(
-					header = BoxComponent(
-						layout = 'baseline',
-						contents = [
-							TextComponent(
-								text = '示範2',
-								weight = 'bold',
-								size = 'xxl',
-								flex =2,
-								align = 'center'
-							)
-						]
-					),
-					body = BoxComponent(
-						layout = 'vertical',
-						spacing = 'xs',
-						contents = [
-							ButtonComponent(
-								style='secondary',
-								color='#FFEE99',
-								height='sm',
-								action=MessageAction(label='設定起始數字',text='測試')
-							)									
-						]
-					),
-					footer = BoxComponent(
-						layout = 'baseline',
-						contents = [
-							TextComponent(
-								text = '示範',
-								weight = 'bold',
-								size = 'xxl',
-								flex =2,
-								align = 'center'
-							)
-						]
-					)		
-				),
-				BubbleContainer(
-					header = BoxComponent(
-						layout = 'baseline',
-						contents = [
-							TextComponent(
-								text = '示範3',
-								weight = 'bold',
-								size = 'xxl',
-								flex =2,
-								align = 'center'
-							)
-						]
-					),
-					hero = ImageComponent(
-								url = 'https://i.imgur.com/A5TeDg0.png',
-								size = 'full',
-								align = 'center',
-								aspect_ratio = '792:555',
-								aspect_mode = 'cover',
-							),
-					body = BoxComponent(
-						layout = 'vertical',
-						spacing = 'xs',
-						contents = [
-							ButtonComponent(
-								style='secondary',
-								color='#FFEE99',
-								height='sm',
-								action=MessageAction(label='設定起始數字',text='測試')
-							)									
 						]
 					)		
 				)
