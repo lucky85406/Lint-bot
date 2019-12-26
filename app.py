@@ -367,7 +367,7 @@ def function(event):
 		elif ukey =="go":
 			user_id = event.source.user_id
 			go(user_id)
-		elif ukey =="showimg":
+		elif ukey =="showImg":
 			user_id = event.source.user_id
 			data = dataList(showMes(user_id))
 			dlist = list(data)
