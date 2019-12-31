@@ -377,21 +377,21 @@ def testimg():
 						text = '敘述:故事敘述法，就是像講故事一樣,',
 						weight = 'bold',
 						size = 'xs',	
-						align = 'center',
+						align = 'start',
 						color = '#FF00FF'
 					),
 					TextComponent(
 						text = '	把事情的前因後果、來龍去脈、出場人物、',
 						weight = 'bold',
 						size = 'xs',	
-						align = 'center',
+						align = 'start',
 						color = '#FF00FF'
 					),
 					TextComponent(
 						text = '	發展過程、結局和解決方案都說明白的一種方法。',
 						weight = 'bold',
 						size = 'xs',	
-						align = 'center',
+						align = 'start',
 						color = '#FF00FF'
 					)
 				]
