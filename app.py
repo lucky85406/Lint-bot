@@ -379,7 +379,6 @@ def testimg():
 								發展過程、結局和解決方案都說明白的一種方法。',
 						weight = 'bold',
 						size = 'xs',
-						flex = 2,
 						align = 'center',
 						color = '#FF00FF'
 					)
