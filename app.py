@@ -346,13 +346,17 @@ def showimg():
 #測試版型
 def testimg():
 	mes = BubbleContainer(
-			header = TextComponent(
-				text = '測試版型',
-				weight = 'bold',
-				size = 'xxl',
-				flex = 2,
-				align = 'center',
-				color = '#FF00FF'
+			header = BoxComponent(
+				layout = 'baseline',
+				contents = [
+					TextComponent(
+						text = 'Q5:價格預算',
+						weight = 'bold',
+						size = 'xxl',
+						flex =2,
+						align = 'center'
+					)
+				]
 			),
 			hero = ImageComponent(
 				url = 'https://i.imgur.com/A5TeDg0.png',
@@ -360,6 +364,24 @@ def testimg():
 				align = 'center',
 				aspect_ratio = '792:555',
 				aspect_mode = 'cover'
+			),
+			footer = BoxComponent(
+				layout = 'vertical',
+				spacing = 'xs',
+				contents = [
+					SeparatorComponent(
+						margin = 'lg',
+						color = '#0000FF'
+					),
+					TextComponent(
+						text = '敘述:故事敘述法，就是像講故事一樣，把事情的前因後果、來龍去脈、出場人物、發展過程、結局和解決方案都說明白的一種方法。',
+						weight = 'bold',
+						size = ' xxl',
+						flex = 2,
+						align = 'center',
+						color = '#FF00FF'
+					)
+				]
 			)
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
