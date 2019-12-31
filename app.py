@@ -527,7 +527,7 @@ def function(event):
 				)
 			)
 			line_bot_api.reply_message(event.reply_token,Image_Carousel)
-		elif ukey =="testImg"
+		elif ukey =="testimg":
 			line_bot_api.reply_message(event.reply_token,testimg())
 
 
