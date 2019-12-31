@@ -378,8 +378,7 @@ def testimg():
 						weight = 'bold',
 						size = ' xxl',
 						flex = 2,
-						align = 'center',
-						color = '#FF00FF'
+						align = 'center'
 					)
 				]
 			)
