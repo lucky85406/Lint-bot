@@ -346,7 +346,6 @@ def showimg():
 #測試版型
 def testimg():
 	mes = BubbleContainer(
-			direction = 'ltr',
 			header = TextComponent(
 				text = '測試版型',
 				weight = 'bold',
