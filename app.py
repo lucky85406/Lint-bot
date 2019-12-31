@@ -365,7 +365,7 @@ def testimg():
 				aspect_ratio = '792:555',
 				aspect_mode = 'cover'
 			),
-			footer = BoxComponent(
+			body = BoxComponent(
 				layout = 'vertical',
 				spacing = 'xs',
 				contents = [
