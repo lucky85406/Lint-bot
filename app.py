@@ -366,10 +366,6 @@ def testimg():
 				layout = 'vertical',
 				spacing = 'xs',
 				contents = [
-					SeparatorComponent(
-						margin = 'lg',
-						color = '#0000FF'
-					),
 					TextComponent(
 						text = '敘述:故事敘述法，就是像講故事一樣，把事情的前因後果、來龍去脈、出場人物、發展過程、結局和解決方案都說明白的一種方法。',
 						weight = 'bold',
