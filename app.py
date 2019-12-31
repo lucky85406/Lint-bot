@@ -343,6 +343,43 @@ def showimg():
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
 
+#測試版型
+def testimg():
+	mes = BubbleContainer(
+			direction = 'ltr',
+			header = TextComponent(
+				text = '測試版型',
+				weight = 'bold',
+				size = 'xxl',
+				flex = 2,
+				align = 'center',
+				color = '#FF00FF'
+			),
+			hero = ImageComponent(
+				url = 'https://i.imgur.com/A5TeDg0.png',
+				size = 'full',
+				align = 'center',
+				aspect_ratio = '792:555',
+				aspect_mode = 'cover'
+			),
+			body = BoxComponent(
+				SeparatorComponent(
+					margin = 'lg',
+					color = '#0000FF'
+				)
+				TextComponent(
+					text = '敘述:故事敘述法，就是像講故事一樣，把事情的前因後果、來龍去脈、出場人物、發展過程、結局和解決方案都說明白的一種方法。',
+					weight = 'bold',
+					size = ' xxl',
+					flex = 2,
+					align = 'center',
+					color = '#FF00FF'
+				)
+			)
+		)
+	message = FlexSendMessage(alt_text = "hello",contents = mes)
+	return message
+
 def conversionCode(k):
 	code = {'紅肉':'a','白肉':'b','海鮮':'c','甜點':'d','花香':'e'
 			,'漿果':'f','柑橘':'g','熱帶水果':'h','淺色水果':'i','香料':'j'
@@ -490,6 +527,9 @@ def function(event):
 				)
 			)
 			line_bot_api.reply_message(event.reply_token,Image_Carousel)
+		elif ukey =="testImg"
+			line_bot_api.reply_message(event.reply_token,testimg())
+
 
 
 # 執行
