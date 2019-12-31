@@ -378,7 +378,7 @@ def testimg():
 								把事情的前因後果、來龍去脈、出場人物、\
 								發展過程、結局和解決方案都說明白的一種方法。',
 						weight = 'bold',
-						size = 'xxl',
+						size = 'xs',
 						flex = 2,
 						align = 'center',
 						color = '#FF00FF'
