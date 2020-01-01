@@ -374,35 +374,14 @@ def testimg():
 						color = '#0000FF'
 					),
 					TextComponent(
-						text = '第一:',
+						text = '英數: 30字數、國字: 18字數',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
 						color = '#FF00FF'
 					),
 					TextComponent(
-						text = '      就是像講故事一樣,',
-						weight = 'bold',
-						size = 'xs',	
-						align = 'start',
-						color = '#FF00FF'
-					),
-					TextComponent(
-						text = '      把事情的前因後果',
-						weight = 'bold',
-						size = 'xs',	
-						align = 'start',
-						color = '#FF00FF'
-					),
-					TextComponent(
-						text = '01234567891123456789212345678931234567894123456789',
-						weight = 'bold',
-						size = 'xs',	
-						align = 'start',
-						color = '#FF00FF'
-					),
-					TextComponent(
-						text = '一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十',
+						text = 'He who has health has hope.123',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
