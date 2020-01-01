@@ -374,14 +374,14 @@ def testimg():
 						color = '#0000FF'
 					),
 					TextComponent(
-						text = '英數: 30字數、國字: 18字數',
+						text = '英數: 30字數、國字: 18字數(含標點符號)',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
 						color = '#FF00FF'
 					),
 					TextComponent(
-						text = '男兒有淚不輕彈，只因未到傷心處傷心處',
+						text = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
