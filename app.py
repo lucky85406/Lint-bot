@@ -381,7 +381,7 @@ def testimg():
 						color = '#FF00FF'
 					),
 					TextComponent(
-						text = 'He who has health has hope.123',
+						text = 'He who has health has hope.123456789123456',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
