@@ -381,7 +381,7 @@ def testimg():
 						color = '#FF00FF'
 					),
 					TextComponent(
-						text = '男兒有淚不輕彈，只因未到傷心處男兒有淚不輕彈，只因未到傷心處',
+						text = '男兒有淚不輕彈，只因未到傷心處傷心處',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
