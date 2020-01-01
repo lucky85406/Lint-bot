@@ -395,7 +395,7 @@ def testimg():
 						color = '#FF00FF'
 					),
 					TextComponent(
-						text = '      來龍去脈、出場人物、',
+						text = '0123456789abcdefghijklmnopqrstuvwxyz',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
