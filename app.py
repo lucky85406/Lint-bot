@@ -381,7 +381,7 @@ def testimg():
 						color = '#FF00FF'
 					),
 					TextComponent(
-						text = 'He who has health has hope.123456789123456',
+						text = '男兒有淚不輕彈，只因未到傷心處男兒有淚不輕彈，只因未到傷心處',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
