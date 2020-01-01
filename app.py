@@ -388,7 +388,14 @@ def testimg():
 						color = '#FF00FF'
 					),
 					TextComponent(
-						text = '      把事情的前因後果、來龍去脈、出場人物、',
+						text = '      把事情的前因後果',
+						weight = 'bold',
+						size = 'xs',	
+						align = 'start',
+						color = '#FF00FF'
+					),
+					TextComponent(
+						text = '      來龍去脈、出場人物、',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
