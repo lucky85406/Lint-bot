@@ -381,7 +381,7 @@ def testimg():
 						color = '#FF00FF'
 					),
 					TextComponent(
-						text = '故事敘述法 %0D%0A 就是像講故事一樣,',
+						text = '故事敘述法'+ %0D%0A +'就是像講故事一樣,',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
