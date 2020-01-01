@@ -374,8 +374,8 @@ def testimg():
 						color = '#0000FF'
 					),
 					TextComponent(
-						text = '故事敘述法 \n \
-								就是像講故事一樣,\n\
+						text = '故事敘述法 \\n \
+								就是像講故事一樣,\\n\
 								把事情的前因後果、來龍去脈、出場人物、',
 						weight = 'bold',
 						size = 'xs',	
