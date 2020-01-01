@@ -374,39 +374,39 @@ def testimg():
 						color = '#0000FF'
 					),
 					TextComponent(
-						text = '一行可以顯示多少字(含手機)',
+						text = '一行可以顯示多少字(含手機)↓',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
-						color = '#FF00FF'
+						color = '#000000'
 					),
 					TextComponent(
 						text = '數: 30字',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
-						color = '#FF00FF'
+						color = '#000000'
 					),
 					TextComponent(
 						text = '英文小寫: 35字(含符號)',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
-						color = '#FF00FF'
+						color = '#000000'
 					),
 					TextComponent(
 						text = '英文大寫: 27字(含符號)',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
-						color = '#FF00FF'
+						color = '#000000'
 					),
 					TextComponent(
 						text = '國字: 18字數(含符號)',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
-						color = '#FF00FF'
+						color = '#000000'
 					)
 				]
 			)
