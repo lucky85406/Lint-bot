@@ -374,21 +374,21 @@ def testimg():
 						color = '#0000FF'
 					),
 					TextComponent(
-						text = '第一: 故事敘述法',
+						text = '第一:',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
 						color = '#FF00FF'
 					),
 					TextComponent(
-						text = '第一: 就是像講故事一樣,',
+						text = '      就是像講故事一樣,',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
 						color = '#FF00FF'
 					),
 					TextComponent(
-						text = '第一: 把事情的前因後果、來龍去脈、出場人物、',
+						text = '      把事情的前因後果、來龍去脈、出場人物、',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
