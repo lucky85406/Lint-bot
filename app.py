@@ -395,7 +395,14 @@ def testimg():
 						color = '#FF00FF'
 					),
 					TextComponent(
-						text = '0123456789abcdefghijklmnopqrstuvwxyz',
+						text = '01234567891123456789212345678931234567894123456789',
+						weight = 'bold',
+						size = 'xs',	
+						align = 'start',
+						color = '#FF00FF'
+					),
+					TextComponent(
+						text = '一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
