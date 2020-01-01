@@ -374,14 +374,14 @@ def testimg():
 						color = '#0000FF'
 					),
 					TextComponent(
-						text = '數: 30字、英文小寫: 35字(含符號)、國字: 18字數(含符號)',
+						text = '數: 30字、英文小寫: 35字(含符號)、英文大寫: 27字(含符號)、國字: 18字數(含符號)',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
 						color = '#FF00FF'
 					),
 					TextComponent(
-						text = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ',
+						text = '123456789123456789123456789123456789123456789123456789',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
