@@ -8,10 +8,10 @@ from linebot.models import (
 def testimg():
 	mes = BubbleContainer(
 			hero = ImageComponent(
-				margin = 'xxl',
 				url = 'https://i.imgur.com/YVk6nFG.jpg',
 				size = 'full',
 				align = 'center',
+				gravity = 'bottom',
 				aspect_ratio = '13:11',
 				aspect_mode = 'fit'
 			),
