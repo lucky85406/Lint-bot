@@ -351,7 +351,7 @@ def testimg(ulist):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = a[0]+"您好",
+						text = a[1]+"您好",
 						weight = 'bold',
 						size = 'md',
 						flex =2,
@@ -368,7 +368,7 @@ def testimg(ulist):
 						color = '#0000FF'
 					),
 					TextComponent(
-						text = a[1],
+						text = a[2],
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
