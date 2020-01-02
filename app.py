@@ -411,7 +411,7 @@ def testimg():
 				size = '5xl',
 				align = 'center',
 				aspect_ratio = '792:555',
-				aspect_mode = 'cover'
+				aspect_mode = 'fit'
 			),
 			body = BoxComponent(
 				layout = 'vertical',
