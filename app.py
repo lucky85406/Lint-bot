@@ -16,7 +16,7 @@ from linebot.models import (
 )
 from utoken import(go,inMes,showMes,test)
 from datalist import(dataList)
-from imgmessage import(testimg)
+from imgmessage import(tenMod, ninMod, eigMod, sevMod, sixMod, fivMod, fouMod, thrMod, twoMod, oneMod)
 import random
 import time  # 待會會取時間
 
@@ -534,98 +534,6 @@ def function(event):
 			user_id = event.source.user_id
 			go(user_id)
 			line_bot_api.reply_message(event.reply_token,food())
-		elif ukey == "showImg":
-			user_id = event.source.user_id
-			data = dataList(showMes(user_id))
-			dlist = list(data)
-			Image_Carousel = TemplateSendMessage(
-				alt_text='目錄 template',
-				template=ImageCarouselTemplate(
-				columns=[
-					ImageCarouselColumn(
-						image_url=dlist[0],
-						action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=1'
-						)
-					),
-					ImageCarouselColumn(
-						image_url=dlist[1],
-						action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=2'
-						)
-					),
-					ImageCarouselColumn(
-						image_url=dlist[2],
-						action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=3'
-						)
-					),
-					ImageCarouselColumn(
-						image_url=dlist[3],
-						action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=4'
-						)
-					),
-					ImageCarouselColumn(
-						image_url=dlist[4],
-						action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=5'
-						)
-					),
-					ImageCarouselColumn(
-						image_url=dlist[5],
-						action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=6'
-						)
-					),
-					ImageCarouselColumn(
-						image_url=dlist[6],
-						action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=7'
-						)
-					),
-					ImageCarouselColumn(
-						image_url=dlist[7],
-						action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=8'
-						)
-					),
-					ImageCarouselColumn(
-						image_url=dlist[8],
-						action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=9'
-						)
-					),
-					ImageCarouselColumn(
-						image_url=dlist[9],
-						action=PostbackTemplateAction(
-							label=' ',
-							text=' ',
-							data='action=buy&itemid=10'
-						)
-					)
-				]
-				)
-			)
-			line_bot_api.reply_message(event.reply_token,Image_Carousel)
 		elif ukey == "mylove":
 			user_id = event.source.user_id
 			profile = line_bot_api.get_profile(user_id)
@@ -634,7 +542,7 @@ def function(event):
 			line_bot_api.reply_message(event.reply_token,mylove(a))
 		elif ukey == "testimg":
 			user_id = event.source.user_id
-			line_bot_api.reply_message(event.reply_token,testimg())
+			line_bot_api.reply_message(event.reply_token,sixMod())
 
 
 
