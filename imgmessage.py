@@ -7,17 +7,12 @@ from linebot.models import (
 #測試版型
 def testimg():
 	mes = BubbleContainer(
-			hero =  BoxComponent(
-				layout = 'vertical',
-				contents = [
-					ImageComponent(
+			hero = ImageComponent(
 						url = 'https://i.imgur.com/YVk6nFG.jpg',
 						size = 'full',
 						align = 'center',
 						aspect_ratio = '13:11',
 						aspect_mode = 'fit'
-					)
-				]
 			),
 			body = BoxComponent(
 				layout = 'vertical',
