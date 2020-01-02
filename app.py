@@ -371,7 +371,7 @@ def testimg(ulist):
 						contents = [
 							ButtonComponent(
 								style='secondary',
-								color='#FFEE99',
+								color='#84C1FF',
 								flex = 3,
 								height='sm',
 								action=MessageAction(label=a[2],text='showImg')
@@ -379,7 +379,7 @@ def testimg(ulist):
 							ButtonComponent(
 								margin = 'xxl',
 								style='secondary',
-								color='#FFEE99',
+								color='#A6FFFF',
 								flex = 1,
 								height='sm',
 								action=MessageAction(label="-",text='-')
