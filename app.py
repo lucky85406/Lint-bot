@@ -348,7 +348,7 @@ def testimg(ulist):
 	a = ulist
 	mes = BubbleContainer(
 			header = BoxComponent(
-				layout = 'horizontal',
+				layout = 'baseline',
 				contents = [
 					TextComponent(
 						text = a[1]+"的最愛",
@@ -359,7 +359,7 @@ def testimg(ulist):
 				]
 			),
 			body = BoxComponent(
-				layout = 'vertical',
+				layout = 'horizontal',
 				spacing = 'xs',
 				contents = [
 					SeparatorComponent(
@@ -369,8 +369,16 @@ def testimg(ulist):
 					ButtonComponent(
 						style='secondary',
 						color='#FFEE99',
+						flex = 2,
 						height='sm',
 						action=MessageAction(label=a[2],text='showImg')
+					),
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						flex = 1,
+						height='sm',
+						action=MessageAction(label="-",text='-')
 					)
 				]
 			)
