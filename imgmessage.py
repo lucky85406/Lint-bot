@@ -22,34 +22,37 @@ def testimg():
 						text = "敘述:",
 						weight = 'bold',
 						size = 'md',
-						align = 'start'
+						align = 'center'
 					),
 					TextComponent(
 						margin = 'md',
 						text = "第一段",
 						weight = 'bold',
 						size = 'xs',
-						align = 'start'
+						align = 'center'
 					),
 					TextComponent(
 						margin = 'md',
 						text = "第二段",
 						weight = 'bold',
 						size = 'xs',
-						align = 'start'
+						align = 'center'
 					),
 					TextComponent(
 						margin = 'md',
 						text = "第三段",
 						weight = 'bold',
 						size = 'xs',
-						align = 'start'
+						align = 'center'
 					),
 					BoxComponent(
 						margin = 'md',
 						layout = 'horizontal',
 						spacing = 'xs',
 						contents = [
+							SeparatorComponent(
+								color = '#0000FF'
+							),
 							ButtonComponent(
 								style='link',
 								color='#84C1FF',
