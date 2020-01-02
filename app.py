@@ -16,6 +16,7 @@ from linebot.models import (
 )
 from utoken import(go,inMes,showMes,test)
 from datalist import(dataList)
+from imgmessage import(testimg)
 import random
 import time  # 待會會取時間
 
@@ -391,7 +392,7 @@ def mylove(ulist):
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
-
+'''
 #測試版型
 def testimg():
 	mes = BubbleContainer(
@@ -477,7 +478,7 @@ def testimg():
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
-
+'''
 def conversionCode(k):
 	code = {'紅肉':'a','白肉':'b','海鮮':'c','甜點':'d','花香':'e'
 			,'漿果':'f','柑橘':'g','熱帶水果':'h','淺色水果':'i','香料':'j'
