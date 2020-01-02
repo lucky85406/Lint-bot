@@ -46,6 +46,7 @@ def testimg():
 						align = 'center'
 					),
 					SeparatorComponent(
+						margin = 'xl',
 						color = '#0000FF'
 					),
 					BoxComponent(
