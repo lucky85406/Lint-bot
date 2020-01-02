@@ -8,7 +8,7 @@ from linebot.models import (
 def testimg():
 	mes = BubbleContainer(
 			header = TextComponent(
-						text = " ",
+						text = "--",
 						weight = 'bold',
 						size = 'xl',
 						align = 'center'
