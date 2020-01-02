@@ -368,6 +368,7 @@ def testimg(ulist):
 					),
 					TextComponent(
 						text = a[2],
+						margin = 'sm',
 						weight = 'bold',
 						size = 'xs',	
 						align = 'start',
