@@ -8,7 +8,7 @@ from linebot.models import (
 def testimg():
 	mes = BubbleContainer(
 			hero =  BoxComponent(
-				layout = 'baseline',
+				layout = 'vertical',
 				contents = [
 					ImageComponent(
 						url = 'https://i.imgur.com/YVk6nFG.jpg',
