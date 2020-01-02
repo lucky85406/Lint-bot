@@ -1,5 +1,7 @@
 from linebot.models import (
-	BubbleContainer, BoxComponent, TextComponent, ImageComponent, SeparatorComponent, ButtonComponent, MessageAction, FlexSendMessage
+	BubbleContainer, BoxComponent, TextComponent, 
+	ImageComponent, SeparatorComponent, ButtonComponent, 
+	MessageAction, FlexSendMessage, CarouselContainer
 )
 
 
