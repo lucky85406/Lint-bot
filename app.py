@@ -362,14 +362,10 @@ def testimg(ulist):
 				layout = 'horizontal',
 				spacing = 'xs',
 				contents = [
-					SeparatorComponent(
-						margin = 'none',
-						color = '#0000FF'
-					),
 					ButtonComponent(
 						style='secondary',
 						color='#FFEE99',
-						flex = 2,
+						flex = 3,
 						height='sm',
 						action=MessageAction(label=a[2],text='showImg')
 					),
