@@ -359,12 +359,22 @@ def testimg(ulist):
 					)
 				]
 			),
-			hero = ImageComponent(
-				url = a[1],
-				size = 'full',
-				align = 'center',
-				aspect_ratio = '792:555',
-				aspect_mode = 'cover'
+			body = BoxComponent(
+				layout = 'vertical',
+				spacing = 'xs',
+				contents = [
+					SeparatorComponent(
+						margin = 'lg',
+						color = '#0000FF'
+					),
+					TextComponent(
+						text = a[1],
+						weight = 'bold',
+						size = 'xs',	
+						align = 'start',
+						color = '#000000'
+					)
+				]
 			)
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
