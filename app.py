@@ -366,54 +366,6 @@ def testimg(ulist):
 				aspect_ratio = '792:555',
 				aspect_mode = 'cover'
 			)
-			'''
-			,
-			body = BoxComponent(
-				layout = 'vertical',
-				spacing = 'xs',
-				contents = [
-					SeparatorComponent(
-						margin = 'lg',
-						color = '#0000FF'
-					),
-					TextComponent(
-						text = '一行可以顯示多少字(含手機)↓',
-						weight = 'bold',
-						size = 'xs',	
-						align = 'start',
-						color = '#000000'
-					),
-					TextComponent(
-						text = '數: 30字',
-						weight = 'bold',
-						size = 'xs',	
-						align = 'start',
-						color = '#000000'
-					),
-					TextComponent(
-						text = '英文小寫: 35字(含符號)',
-						weight = 'bold',
-						size = 'xs',	
-						align = 'start',
-						color = '#000000'
-					),
-					TextComponent(
-						text = '英文大寫: 27字(含符號)',
-						weight = 'bold',
-						size = 'xs',	
-						align = 'start',
-						color = '#000000'
-					),
-					TextComponent(
-						text = '國字: 18字數(含符號)',
-						weight = 'bold',
-						size = 'xs',	
-						align = 'start',
-						color = '#000000'
-					)
-				]
-			)
-			'''
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
