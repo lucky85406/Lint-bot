@@ -17,9 +17,6 @@ def testimg():
 			body = BoxComponent(
 				layout = 'vertical',
 				contents = [
-					SeparatorComponent(
-						color = '#0000FF'
-					),
 					TextComponent(
 						margin = 'md',
 						text = "敘述:",
@@ -47,9 +44,6 @@ def testimg():
 						weight = 'bold',
 						size = 'xs',
 						align = 'start'
-					),
-					SeparatorComponent(
-						color = '#0000FF'
 					),
 					BoxComponent(
 						margin = 'md',
