@@ -358,7 +358,10 @@ def testimg(ulist):
 					)
 				]
 			),
-			body = BoxComponent(
+			body = SeparatorComponent(
+					color = '#0000FF'
+			),
+			BoxComponent(
 				layout = 'horizontal',
 				spacing = 'xs',
 				contents = [
