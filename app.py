@@ -465,7 +465,7 @@ def testimg():
 							ButtonComponent(
 								margin = 'xxl',
 								style='link',
-								color='#A6FFFF',
+								color='#84C1FF',
 								flex = 1,
 								height='sm',
 								action=MessageAction(label="還沒想到",text='還沒想到')
