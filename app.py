@@ -410,7 +410,7 @@ def testimg():
 				url = 'https://i.imgur.com/YVk6nFG.jpg',
 				size = 'full',
 				align = 'center',
-				aspect_ratio = '200:100',
+				aspect_ratio = '792:555',
 				aspect_mode = 'fit'
 			),
 			body = BoxComponent(
