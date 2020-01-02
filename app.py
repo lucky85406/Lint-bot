@@ -417,7 +417,7 @@ def testimg():
 				layout = 'vertical',
 				contents = [
 					SeparatorComponent(
-					color = '#0000FF'
+						color = '#0000FF'
 					),
 					TextComponent(
 						margin = 'md',
