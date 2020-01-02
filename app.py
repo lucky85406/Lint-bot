@@ -355,10 +355,6 @@ def testimg(ulist):
 						weight = 'bold',
 						size = 'md',
 						align = 'center'
-					),
-					SeparatorComponent(
-						margin = 'sm',
-						color = '#0000FF'
 					)
 				]
 			),
@@ -367,7 +363,7 @@ def testimg(ulist):
 				spacing = 'xs',
 				contents = [
 					SeparatorComponent(
-						margin = 'sm',
+						margin = 'xs',
 						color = '#0000FF'
 					),
 					TextComponent(
