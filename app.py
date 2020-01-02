@@ -353,7 +353,7 @@ def testimg(ulist):
 					TextComponent(
 						text = a[1]+"的最愛",
 						weight = 'bold',
-						size = 'xs',
+						size = 'xl',
 						align = 'center'
 					)
 				]
