@@ -395,7 +395,6 @@ def function(event):
 	ukey = event.message.text
 	#!!!!!!!!!!!!!!!!!這裡有ID
 	user_id = event.source.user_id
-	display_name = event.source.display_name
 	
 	
 
