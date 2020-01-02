@@ -358,27 +358,32 @@ def testimg(ulist):
 					)
 				]
 			),
-			body = SeparatorComponent(
-					color = '#0000FF'
-			),
-			BoxComponent(
-				layout = 'horizontal',
-				spacing = 'xs',
+			body = BoxComponent(
+				layout = 'vertical',
 				contents = [
-					ButtonComponent(
-						style='secondary',
-						color='#FFEE99',
-						flex = 3,
-						height='sm',
-						action=MessageAction(label=a[2],text='showImg')
+					SeparatorComponent(
+					color = '#0000FF'
 					),
-					ButtonComponent(
-						margin = 'xxl',
-						style='secondary',
-						color='#FFEE99',
-						flex = 1,
-						height='sm',
-						action=MessageAction(label="-",text='-')
+					BoxComponent(
+						layout = 'horizontal',
+						spacing = 'xs',
+						contents = [
+							ButtonComponent(
+								style='secondary',
+								color='#FFEE99',
+								flex = 3,
+								height='sm',
+								action=MessageAction(label=a[2],text='showImg')
+							),
+							ButtonComponent(
+								margin = 'xxl',
+								style='secondary',
+								color='#FFEE99',
+								flex = 1,
+								height='sm',
+								action=MessageAction(label="-",text='-')
+							)
+						]
 					)
 				]
 			)
