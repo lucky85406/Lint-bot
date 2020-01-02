@@ -354,7 +354,6 @@ def testimg(ulist):
 						text = a[1]+"的最愛",
 						weight = 'bold',
 						size = 'md',
-						flex =2,
 						align = 'center'
 					)
 				]
