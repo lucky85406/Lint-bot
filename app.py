@@ -423,11 +423,32 @@ def testimg():
 						margin = 'md',
 						text = "敘述:",
 						weight = 'bold',
-						size = 'xl',
+						size = 'md',
+						align = 'start'
+					),
+					TextComponent(
+						margin = 'md',
+						text = "第一段",
+						weight = 'bold',
+						size = 'xs',
+						align = 'start'
+					),
+					TextComponent(
+						margin = 'md',
+						text = "第二段",
+						weight = 'bold',
+						size = 'xs',
+						align = 'start'
+					),
+					TextComponent(
+						margin = 'md',
+						text = "第三段",
+						weight = 'bold',
+						size = 'xs',
 						align = 'start'
 					),
 					SeparatorComponent(
-								color = '#0000FF'
+						color = '#0000FF'
 					),
 					BoxComponent(
 						margin = 'md',
