@@ -456,7 +456,7 @@ def testimg():
 						spacing = 'xs',
 						contents = [
 							ButtonComponent(
-								style='secondary',
+								style='link',
 								color='#84C1FF',
 								flex = 1,
 								height='sm',
