@@ -424,13 +424,16 @@ def testimg():
 						text = "敘述:",
 						weight = 'bold',
 						size = 'xl',
-						align = 'center'
+						align = 'start'
 					),
 					BoxComponent(
 						margin = 'md',
 						layout = 'horizontal',
 						spacing = 'xs',
 						contents = [
+							SeparatorComponent(
+								color = '#0000FF'
+							),
 							ButtonComponent(
 								style='secondary',
 								color='#84C1FF',
