@@ -464,7 +464,7 @@ def testimg():
 							),
 							ButtonComponent(
 								margin = 'xxl',
-								style='secondary',
+								style='link',
 								color='#A6FFFF',
 								flex = 1,
 								height='sm',
