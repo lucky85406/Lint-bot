@@ -365,6 +365,7 @@ def testimg(ulist):
 					color = '#0000FF'
 					),
 					BoxComponent(
+						margin = 'sm',
 						layout = 'horizontal',
 						spacing = 'xs',
 						contents = [
