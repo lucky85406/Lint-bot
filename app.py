@@ -351,7 +351,7 @@ def testimg(ulist):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = a[1]+"您好",
+						text = a[1]+"的最愛",
 						weight = 'bold',
 						size = 'md',
 						flex =2,
@@ -364,7 +364,7 @@ def testimg(ulist):
 				spacing = 'xs',
 				contents = [
 					SeparatorComponent(
-						margin = 'lg',
+						margin = 'sm',
 						color = '#0000FF'
 					),
 					TextComponent(
