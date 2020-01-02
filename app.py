@@ -362,6 +362,10 @@ def testimg(ulist):
 				layout = 'vertical',
 				spacing = 'xs',
 				contents = [
+					SeparatorComponent(
+						margin = 'none',
+						color = '#0000FF'
+					),
 					TextComponent(
 						text = a[2],
 						weight = 'bold',
