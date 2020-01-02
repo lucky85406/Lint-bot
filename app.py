@@ -408,7 +408,7 @@ def testimg():
 			),
 			hero = ImageComponent(
 				url = 'https://i.imgur.com/YVk6nFG.jpg',
-				size = 'full',
+				size = 'xl',
 				align = 'center',
 				aspect_ratio = '792:555',
 				aspect_mode = 'cover'
