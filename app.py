@@ -366,13 +366,11 @@ def testimg(ulist):
 						margin = 'none',
 						color = '#0000FF'
 					),
-					TextComponent(
-						text = a[2],
-						margin = 'xl',
-						weight = 'bold',
-						size = 'xs',	
-						align = 'start',
-						color = '#000000'
+					ButtonComponent(
+						style='secondary',
+						color='#FFEE99',
+						height='sm',
+						action=MessageAction(label=a[2],text='showImg')
 					)
 				]
 			)
