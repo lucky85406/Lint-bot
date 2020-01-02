@@ -7,13 +7,14 @@ from linebot.models import (
 
 
 #10
-def tenMod():
+def tenMod(imgurl):
+	imglist = imgurl
 	Carousel = CarouselContainer(
 		contents = [
 			  #1
 			BubbleContainer(
 				hero = ImageComponent(
-							url = 'https://i.imgur.com/YVk6nFG.jpg',
+							url = imglist[0],
 							size = 'full',
 							align = 'center',
 							aspect_ratio = '13:13',
@@ -67,7 +68,7 @@ def tenMod():
 			),#2
 			BubbleContainer(
 				hero = ImageComponent(
-							url = 'https://i.imgur.com/YVk6nFG.jpg',
+							url = imglist[1],
 							size = 'full',
 							align = 'center',
 							aspect_ratio = '13:13',
@@ -121,7 +122,7 @@ def tenMod():
 			),#3
 			BubbleContainer(
 				hero = ImageComponent(
-							url = 'https://i.imgur.com/YVk6nFG.jpg',
+							url = imglist[2],
 							size = 'full',
 							align = 'center',
 							aspect_ratio = '13:13',
@@ -175,7 +176,7 @@ def tenMod():
 			),#4
 			BubbleContainer(
 				hero = ImageComponent(
-							url = 'https://i.imgur.com/YVk6nFG.jpg',
+							url = imglist[3],
 							size = 'full',
 							align = 'center',
 							aspect_ratio = '13:13',
@@ -229,7 +230,7 @@ def tenMod():
 			),#5
 			BubbleContainer(
 				hero = ImageComponent(
-							url = 'https://i.imgur.com/YVk6nFG.jpg',
+							url = imglist[4],
 							size = 'full',
 							align = 'center',
 							aspect_ratio = '13:13',
@@ -283,7 +284,7 @@ def tenMod():
 			),#6
 			BubbleContainer(
 				hero = ImageComponent(
-							url = 'https://i.imgur.com/YVk6nFG.jpg',
+							url = imglist[5],
 							size = 'full',
 							align = 'center',
 							aspect_ratio = '13:13',
@@ -337,7 +338,7 @@ def tenMod():
 			),#7
 			BubbleContainer(
 				hero = ImageComponent(
-							url = 'https://i.imgur.com/YVk6nFG.jpg',
+							url = imglist[6],
 							size = 'full',
 							align = 'center',
 							aspect_ratio = '13:13',
@@ -391,7 +392,7 @@ def tenMod():
 			),#8
 			BubbleContainer(
 				hero = ImageComponent(
-							url = 'https://i.imgur.com/YVk6nFG.jpg',
+							url = imglist[7],
 							size = 'full',
 							align = 'center',
 							aspect_ratio = '13:13',
@@ -445,7 +446,7 @@ def tenMod():
 			),#9
 			BubbleContainer(
 				hero = ImageComponent(
-							url = 'https://i.imgur.com/YVk6nFG.jpg',
+							url = imglist[8],
 							size = 'full',
 							align = 'center',
 							aspect_ratio = '13:13',
@@ -499,7 +500,7 @@ def tenMod():
 			),#10
 			BubbleContainer(
 				hero = ImageComponent(
-							url = 'https://i.imgur.com/YVk6nFG.jpg',
+							url = imglist[9],
 							size = 'full',
 							align = 'center',
 							aspect_ratio = '13:13',

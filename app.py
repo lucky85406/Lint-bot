@@ -534,6 +534,11 @@ def function(event):
 			user_id = event.source.user_id
 			go(user_id)
 			line_bot_api.reply_message(event.reply_token,food())
+		elif ukey == "showImg":
+			user_id = event.source.user_id
+			data = dataList(showMes(user_id))
+			dlist = list(data)
+			line_bot_api.reply_message(event.reply_token,tenMod(dlist))
 		elif ukey == "mylove":
 			user_id = event.source.user_id
 			profile = line_bot_api.get_profile(user_id)
@@ -542,7 +547,7 @@ def function(event):
 			line_bot_api.reply_message(event.reply_token,mylove(a))
 		elif ukey == "testimg":
 			user_id = event.source.user_id
-			line_bot_api.reply_message(event.reply_token,sixMod())
+			line_bot_api.reply_message(event.reply_token,testimg())
 
 
 
