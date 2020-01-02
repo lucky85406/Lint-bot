@@ -365,9 +365,9 @@ def testimg(ulist):
 					color = '#0000FF'
 					),
 					BoxComponent(
-						margin = 'sm',
+						margin = 'xxl',
 						layout = 'horizontal',
-						spacing = 'xxl',
+						spacing = 'xs',
 						contents = [
 							ButtonComponent(
 								style='secondary',
