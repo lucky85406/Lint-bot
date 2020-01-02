@@ -426,14 +426,14 @@ def testimg():
 						size = 'xl',
 						align = 'start'
 					),
+					SeparatorComponent(
+								color = '#0000FF'
+					),
 					BoxComponent(
 						margin = 'md',
 						layout = 'horizontal',
 						spacing = 'xs',
 						contents = [
-							SeparatorComponent(
-								color = '#0000FF'
-							),
 							ButtonComponent(
 								style='secondary',
 								color='#84C1FF',
