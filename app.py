@@ -529,8 +529,9 @@ def function(event):
 			line_bot_api.reply_message(event.reply_token,Image_Carousel)
 		elif ukey =="testimg":
 			user_id = event.source.user_id
-			b = event.responses.display_name
-			a = test(user_id,b)
+			profile = line_bot_api.get_profile(user_id)
+			name = profile.display_name
+			a = test(user_id,name)
 			line_bot_api.reply_message(event.reply_token,testimg(a))
 
 
