@@ -343,8 +343,8 @@ def showimg():
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
 
-#測試版型
-def testimg(ulist):
+#我的最愛
+def mylove(ulist):
 	a = ulist
 	mes = BubbleContainer(
 			header = BoxComponent(
@@ -383,6 +383,68 @@ def testimg(ulist):
 								flex = 1,
 								height='sm',
 								action=MessageAction(label="-",text='-')
+							)
+						]
+					)
+				]
+			)
+		)
+	message = FlexSendMessage(alt_text = "hello",contents = mes)
+	return message
+
+#測試版型
+def testimg():
+	mes = BubbleContainer(
+			header = BoxComponent(
+				layout = 'baseline',
+				contents = [
+					TextComponent(
+						text = "克曼沙酒堡紅酒",
+						weight = 'bold',
+						size = 'xl',
+						align = 'center'
+					)
+				]
+			),
+			hero = ImageComponent(
+				url = 'https://i.imgur.com/YVk6nFG.jpg',
+				size = 'full',
+				align = 'center',
+				aspect_ratio = '792:555',
+				aspect_mode = 'cover'
+			),
+			body = BoxComponent(
+				layout = 'vertical',
+				contents = [
+					SeparatorComponent(
+					color = '#0000FF'
+					),
+					TextComponent(
+						margin = 'md',
+						text = "敘述:",
+						weight = 'bold',
+						size = 'xl',
+						align = 'center'
+					),
+					BoxComponent(
+						margin = 'md',
+						layout = 'horizontal',
+						spacing = 'xs',
+						contents = [
+							ButtonComponent(
+								style='secondary',
+								color='#84C1FF',
+								flex = 1,
+								height='sm',
+								action=MessageAction(label="加入最愛",text='加入最愛')
+							),
+							ButtonComponent(
+								margin = 'xxl',
+								style='secondary',
+								color='#A6FFFF',
+								flex = 1,
+								height='sm',
+								action=MessageAction(label="還沒想到",text='還沒想到')
 							)
 						]
 					)
@@ -443,11 +505,11 @@ def function(event):
 				line_bot_api.reply_message(	
 					event.reply_token,
 					TextSendMessage(text= showMes(user_id)))
-		elif ukey =="go":
+		elif ukey == "go":
 			user_id = event.source.user_id
 			go(user_id)
 			line_bot_api.reply_message(event.reply_token,food())
-		elif ukey =="showImg":
+		elif ukey == "showImg":
 			user_id = event.source.user_id
 			data = dataList(showMes(user_id))
 			dlist = list(data)
@@ -539,12 +601,15 @@ def function(event):
 				)
 			)
 			line_bot_api.reply_message(event.reply_token,Image_Carousel)
-		elif ukey =="testimg":
+		elif ukey == "mylove":
 			user_id = event.source.user_id
 			profile = line_bot_api.get_profile(user_id)
 			name = profile.display_name
 			a = test(user_id,name)
-			line_bot_api.reply_message(event.reply_token,testimg(a))
+			line_bot_api.reply_message(event.reply_token,mylove(a))
+		elif ukey == "testimg":
+			user_id = event.source.user_id
+			line_bot_api.reply_message(event.reply_token,testimg())
 
 
 
