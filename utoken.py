@@ -99,6 +99,6 @@ def showMes(url):
 				return "{}{}{}{}{}".format(row['D1'],row['D2'],row['D3'],row['D4'],row['D5'])
 	return a
 
-def test(Uid):
-	ulist = [Uid,'克曼沙酒堡紅酒','testmod','https://i.imgur.com/YVk6nFG.jpg']
+def test(Uid,Uname):
+	ulist = [Uid,Uname,'克曼沙酒堡紅酒','testmod','https://i.imgur.com/YVk6nFG.jpg']
 	return ulist
