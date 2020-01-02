@@ -370,7 +370,8 @@ def testimg(ulist):
 						action=MessageAction(label=a[2],text='showImg')
 					),
 					ButtonComponent(
-						style='primary',
+						margin = 'sm',
+						style='secondary',
 						color='#FFEE99',
 						flex = 1,
 						height='sm',
