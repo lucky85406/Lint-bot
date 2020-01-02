@@ -45,14 +45,14 @@ def testimg():
 						size = 'xs',
 						align = 'center'
 					),
+					SeparatorComponent(
+						color = '#0000FF'
+					),
 					BoxComponent(
 						margin = 'md',
 						layout = 'horizontal',
 						spacing = 'xs',
 						contents = [
-							SeparatorComponent(
-								color = '#0000FF'
-							),
 							ButtonComponent(
 								style='link',
 								color='#84C1FF',
