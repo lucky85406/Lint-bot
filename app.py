@@ -351,16 +351,16 @@ def testimg(ulist):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = a[1],
+						text = a[0]+"您好",
 						weight = 'bold',
-						size = 'xxl',
+						size = 'md',
 						flex =2,
 						align = 'center'
 					)
 				]
 			),
 			hero = ImageComponent(
-				url = a[3],
+				url = a[1],
 				size = 'full',
 				align = 'center',
 				aspect_ratio = '792:555',
