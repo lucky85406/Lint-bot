@@ -12,7 +12,7 @@ def testimg():
 						size = 'full',
 						align = 'center',
 						aspect_ratio = '13:11',
-						aspect_mode = 'fit'
+						aspect_mode = 'cover'
 			),
 			body = BoxComponent(
 				layout = 'vertical',
