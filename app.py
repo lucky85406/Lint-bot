@@ -355,6 +355,10 @@ def testimg(ulist):
 						weight = 'bold',
 						size = 'md',
 						align = 'center'
+					),
+					SeparatorComponent(
+						margin = 'sm',
+						color = '#0000FF'
 					)
 				]
 			),
