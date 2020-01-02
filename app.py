@@ -14,7 +14,7 @@ from linebot.models import (
     BubbleContainer, BoxComponent, TextComponent, FlexSendMessage, ImageComponent, ButtonComponent,
     URIAction, MessageAction, CarouselContainer, SeparatorComponent, IconComponent
 )
-from utoken import(go,inMes,showMes)
+from utoken import(go,inMes,showMes,test)
 from datalist import(dataList)
 import random
 import time  # 待會會取時間
@@ -344,13 +344,14 @@ def showimg():
 	return message
 
 #測試版型
-def testimg():
+def testimg(ulist):
+	a = ulist
 	mes = BubbleContainer(
 			header = BoxComponent(
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = 'Q5:價格預算',
+						text = a[1],
 						weight = 'bold',
 						size = 'xxl',
 						flex =2,
@@ -359,12 +360,14 @@ def testimg():
 				]
 			),
 			hero = ImageComponent(
-				url = 'https://i.imgur.com/A5TeDg0.png',
+				url = a[3],
 				size = 'full',
 				align = 'center',
 				aspect_ratio = '792:555',
 				aspect_mode = 'cover'
-			),
+			)
+			'''
+			,
 			body = BoxComponent(
 				layout = 'vertical',
 				spacing = 'xs',
@@ -410,6 +413,7 @@ def testimg():
 					)
 				]
 			)
+			'''
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
@@ -562,7 +566,9 @@ def function(event):
 			)
 			line_bot_api.reply_message(event.reply_token,Image_Carousel)
 		elif ukey =="testimg":
-			line_bot_api.reply_message(event.reply_token,testimg())
+			user_id = event.source.user_id
+			a = test(user_id)
+			line_bot_api.reply_message(event.reply_token,testimg(a))
 
 
 
