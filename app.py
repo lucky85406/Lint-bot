@@ -367,7 +367,7 @@ def testimg(ulist):
 					BoxComponent(
 						margin = 'sm',
 						layout = 'horizontal',
-						spacing = 'xs',
+						spacing = 'xxl',
 						contents = [
 							ButtonComponent(
 								style='secondary',
