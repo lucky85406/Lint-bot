@@ -395,6 +395,7 @@ def function(event):
 	ukey = event.message.text
 	#!!!!!!!!!!!!!!!!!這裡有ID
 	user_id = event.source.user_id
+	b = event.source.display_name
 	
 	
 
@@ -528,7 +529,7 @@ def function(event):
 			)
 			line_bot_api.reply_message(event.reply_token,Image_Carousel)
 		elif ukey =="testimg":
-			user_id = ""
+			user_id = event.source.user_id
 			b = event.source.display_name
 			a = test(user_id,b)
 			line_bot_api.reply_message(event.reply_token,testimg(a))
