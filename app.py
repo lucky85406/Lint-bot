@@ -348,7 +348,7 @@ def testimg(ulist):
 	a = ulist
 	mes = BubbleContainer(
 			header = BoxComponent(
-				layout = 'baseline',
+				layout = 'horizontal',
 				contents = [
 					TextComponent(
 						text = a[1]+"的最愛",
