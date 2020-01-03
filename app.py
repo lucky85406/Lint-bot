@@ -359,7 +359,7 @@ def mylove(n,ulist):
 				contents = [
 					BoxComponent(
 						margin = 'md',
-						layout = 'vertical',
+						layout = 'horizontal',
 						spacing = 'xs',
 						contents = [
 							ButtonComponent(
@@ -390,7 +390,7 @@ def mylove(n,ulist):
 				contents = [
 					BoxComponent(
 						margin = 'md',
-						layout = 'vertical',
+						layout = 'horizontal',
 						spacing = 'xs',
 						contents = [
 							ButtonComponent(
