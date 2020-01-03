@@ -374,7 +374,8 @@ def mylove(n,ulist):
 						]
 					)
 	print(arr)
-	print("------------"+arr[0])
+	print("\n----------------------------------------\n")
+	print(arr[0])
 	Carousel = CarouselContainer(
 		contents = [
 			BubbleContainer(
