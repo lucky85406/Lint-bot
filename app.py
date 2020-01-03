@@ -367,14 +367,14 @@ def mylove(n,ulist):
 								color='#84C1FF',
 								flex = 3,
 								height='sm',
-								action=MessageAction(label='a[x]',text='showImg')
+								action=MessageAction(label=a[0],text='showImg')
 							)
 						]
 					)
 				]
 			)
 		]
-	for x in range(0,alen):
+	for x in range(1,alen):
 		contents.append(BoxComponent(
 				margin = 'md',
 				layout = 'vertical',
@@ -390,7 +390,7 @@ def mylove(n,ulist):
 								color='#84C1FF',
 								flex = 3,
 								height='sm',
-								action=MessageAction(label='a[x]',text='showImg')
+								action=MessageAction(label=a[x],text='showImg')
 							)
 						]
 					)
