@@ -384,6 +384,7 @@ def mylove(n,ulist):
 					action=MessageAction(label=a[x],text='showImg')
 				)
 	'''
+	print(type(contents))
 	Carousel = CarouselContainer(
 			contents = [
 				BubbleContainer(
