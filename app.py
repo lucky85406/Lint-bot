@@ -350,7 +350,6 @@ def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
 	arr = [BoxComponent()]*alen
-	ayy = [BoxComponent()]
 	print(len(arr))
 	for x in range(0,alen):
 		arr[x] = BoxComponent(
@@ -374,9 +373,7 @@ def mylove(n,ulist):
 							)
 						]
 					)
-	for y in range(0,alen):
-		ayy[0] = ayy[0]+','+arr[y]
-	print(ayy)
+	print(arr)
 	Carousel = CarouselContainer(
 		contents = [
 			BubbleContainer(
@@ -402,7 +399,7 @@ def mylove(n,ulist):
 						layout = 'vertical',
 						spacing = 'xs',
 						contents = [
-							ayy[0]
+							arr
 						]
 					)
 				]
