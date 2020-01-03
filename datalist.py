@@ -17,9 +17,8 @@ def dataList(intxt):
 	if a >=10:
 		set2 = random.sample(list(set1),10)
 		for x in set2:
-			if x == set1:
-				set3[x] = set1[x]
-				print(set3)
+			set3[x] = set1[x]
+			print(set3)
 	else:
 		return set1	
 
