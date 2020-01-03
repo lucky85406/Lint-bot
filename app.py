@@ -382,7 +382,7 @@ def mylove(n,ulist):
 					),
 					BoxComponent(
 						margin = 'md',
-						layout = 'horizontal',
+						layout = 'vertical',
 						spacing = 'xs',
 						contents = [
 							arr[0],
