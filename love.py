@@ -2,7 +2,7 @@ import csv
 
 def love(uid,text):
 	keyin = text.split(":")
-	with open('mylove.csv','w',newline='')as cfile:
+	with open('mylove.csv','a',newline='')as cfile:
 			fieldn = ['ID','love']
 
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
