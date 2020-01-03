@@ -349,7 +349,13 @@ def showimg():
 def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
-	arr = [ButtonComponent()]*alen
+	arr = [ButtonComponent(
+					style='secondary',
+					color='#84C1FF',
+					flex = 3,
+					height='sm',
+					action=MessageAction(label=a[x],text='showImg')
+				)]*alen
 	print(len(arr))
 	for x in range(0,alen):
 		arr[x] = ButtonComponent(
@@ -392,7 +398,7 @@ def mylove(n,ulist):
 								layout = 'horizontal',
 								spacing = 'xs',
 								contents = [
-									arr[0]		
+									arr		
 						]
 					)
 						]
