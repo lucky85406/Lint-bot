@@ -372,7 +372,7 @@ def mylove(n,ulist):
 								action=MessageAction(label="-",text='-')
 							)
 						]
-					)
+					)+arr[x]
 	print(arr)
 	print("\n----------------------------------------\n")
 	print(arr[0])
