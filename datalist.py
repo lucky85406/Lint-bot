@@ -5,6 +5,7 @@ Lcode = ['L1','L2','L3','L4','L5','L6','L7','L8','L9','L10','L11','L12','L13','L
 def dataList(intxt):
 	set1 = {}
 	set2 = set()
+	set3 = set()
 	s = intxt
 	with open('cosurl.csv',newline='')as csvfile:
 		rows = csv.DictReader(csvfile)
@@ -14,8 +15,8 @@ def dataList(intxt):
 					set1[row['url']] = row['酒類']
 	a = len(set1)
 	if a >=10:
-		set2 = set1
-		set2 = random.sample(set1,10)
+		set3 = set1
+		set2 = random.sample(set3,10)
 	else:
 		return set1	
 
