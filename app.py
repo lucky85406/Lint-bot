@@ -349,7 +349,9 @@ def showimg():
 def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
-	arr = [BubbleContainer(
+	arr = [BubbleContainer()]
+	print(len(arr))
+	arr[0] = BubbleContainer(
 			header = BoxComponent(
 				layout = 'baseline',
 				contents = [
@@ -391,9 +393,7 @@ def mylove(n,ulist):
 					)
 				]
 			)
-		)]
-	print(len(arr))
-
+		)
 
 	Carousel = CarouselContainer(
 		contents = [
