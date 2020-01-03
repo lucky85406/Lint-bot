@@ -11,7 +11,7 @@ def dataList(intxt):
 		for row in rows:
 			for x in range(0,18):
 				if row[Lcode[x]] == s:
-					set1.add(row['url']:row['酒類'])
+					set1.add(row['url'])
 	a = len(set1)
 	if a >=10:
 		set2 = random.sample(set1,10)
