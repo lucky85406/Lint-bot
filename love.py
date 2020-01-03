@@ -8,7 +8,7 @@ def love(uid,text):
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
 
 			writer.writerow({'ID':uid,'love':keyin[1]})
-	with open('cosurl.csv',newline='')as csvfile:
+	with open('mylove.csv',newline='')as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			print(row['ID']+":"+row['love'])	
