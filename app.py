@@ -17,6 +17,7 @@ from linebot.models import (
 from utoken import(go,inMes,showMes)
 from datalist import(dataList)
 from imgmessage import(tenMod, ninMod, eigMod, sevMod, sixMod, fivMod, fouMod, thrMod, twoMod, oneMod)
+from love import(love)
 import random
 import time  # 待會會取時間
 
@@ -548,6 +549,10 @@ def function(event):
 		elif ukey == "testimg":
 			user_id = event.source.user_id
 			line_bot_api.reply_message(event.reply_token,testimg())
+		elif ukey.split(':')[0] == 'MyLove':
+			 user_id = event.source.user_id
+			 love(user_id,ukey)
+
 
 
 
