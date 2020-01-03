@@ -348,7 +348,11 @@ def showimg():
 #我的最愛
 def mylove(ulist):
 	a = ulist
-	mes = BubbleContainer(
+	alen = len(ulist)
+	arr = []*alen
+
+	for x in range(0,alen):
+		arr[x] = BubbleContainer(
 			header = BoxComponent(
 				layout = 'baseline',
 				contents = [
@@ -391,7 +395,13 @@ def mylove(ulist):
 				]
 			)
 		)
-	message = FlexSendMessage(alt_text = "hello",contents = mes)
+
+	Carousel = CarouselContainer(
+		contents = [
+			arr[0]
+		]
+	)
+	message = FlexSendMessage(alt_text = "hello",contents = Carousel)
 	return message
 '''
 #測試版型
@@ -564,7 +574,7 @@ def function(event):
 			profile = line_bot_api.get_profile(user_id)
 			name = profile.display_name		
 			dlist = list(love2(name))
-			print(dlist)
+			line_bot_api.reply_message(event.reply_token,mylove(dlist))
 
 
 
