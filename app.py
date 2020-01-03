@@ -364,49 +364,50 @@ def mylove(n,ulist):
 					height='sm',
 					action=MessageAction(label=a[x],text='showImg')
 				)
+		Carousel = CarouselContainer(
+			contents = [
+				BubbleContainer(
+				header = BoxComponent(
+					layout = 'baseline',
+					contents = [
+						TextComponent(
+							text = n +"的最愛",
+							weight = 'bold',
+							size = 'xl',
+							align = 'center'
+						)
+					]
+				),
+				body = BoxComponent(
+					layout = 'vertical',
+					contents = [
+						SeparatorComponent(
+							color = '#0000FF'
+						),
+						BoxComponent(
+							margin = 'md',
+							layout = 'vertical',
+							spacing = 'xs',
+							contents = [
+								BoxComponent(
+									margin = 'md',
+									layout = 'vertical',
+									spacing = 'xs',
+									contents = [
+										arr		
+									]
+								)
+							]
+						)
+					]
+				)
+			)
+		]
+	)	
 	print(arr)
 	print("\n----------------------------------------\n")
 	print(arr[0])
-	Carousel = CarouselContainer(
-		contents = [
-			BubbleContainer(
-			header = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = n +"的最愛",
-						weight = 'bold',
-						size = 'xl',
-						align = 'center'
-					)
-				]
-			),
-			body = BoxComponent(
-				layout = 'vertical',
-				contents = [
-					SeparatorComponent(
-					color = '#0000FF'
-					),
-					BoxComponent(
-						margin = 'md',
-						layout = 'vertical',
-						spacing = 'xs',
-						contents = [
-							BoxComponent(
-								margin = 'md',
-								layout = 'vertical',
-								spacing = 'xs',
-								contents = [
-									arr		
-						]
-					)
-						]
-					)
-				]
-			)
-		)
-		]
-	)
+
 	message = FlexSendMessage(alt_text = "hello",contents = Carousel)
 	return message
 '''
