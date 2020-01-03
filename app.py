@@ -364,46 +364,88 @@ def mylove(n,ulist):
 					height='sm',
 					action=MessageAction(label=a[x],text='showImg')
 				)
-		Carousel = CarouselContainer(
-			contents = [
-				BubbleContainer(
-				header = BoxComponent(
-					layout = 'baseline',
-					contents = [
-						TextComponent(
-							text = n +"的最愛",
-							weight = 'bold',
-							size = 'xl',
-							align = 'center'
-						)
-					]
-				),
-				body = BoxComponent(
-					layout = 'vertical',
-					contents = [
-						SeparatorComponent(
-							color = '#0000FF'
-						),
-						BoxComponent(
-							margin = 'md',
-							layout = 'vertical',
-							spacing = 'xs',
-							contents = [
-								BoxComponent(
-									margin = 'md',
-									layout = 'vertical',
-									spacing = 'xs',
-									contents = [
-										arr[x]		
-									]
-								)
-							]
-						)
-					]
+		if x == 0:
+			Carousel = CarouselContainer(
+				contents = [
+					BubbleContainer(
+					header = BoxComponent(
+						layout = 'baseline',
+						contents = [
+							TextComponent(
+								text = n +"的最愛",
+								weight = 'bold',
+								size = 'xl',
+								align = 'center'
+							)
+						]
+					),
+					body = BoxComponent(
+						layout = 'vertical',
+						contents = [
+							SeparatorComponent(
+								color = '#0000FF'
+							),
+							BoxComponent(
+								margin = 'md',
+								layout = 'vertical',
+								spacing = 'xs',
+								contents = [
+									BoxComponent(
+										margin = 'md',
+										layout = 'vertical',
+										spacing = 'xs',
+										contents = [
+											arr[x]		
+										]
+									)
+								]
+							)
+						]
+					)
 				)
-			)
-		]
-	)	
+			]
+		)
+	else:
+		Carousel = CarouselContainer(
+				contents = [
+					BubbleContainer(
+					header = BoxComponent(
+						layout = 'baseline',
+						contents = [
+							TextComponent(
+								text = n +"的最愛",
+								weight = 'bold',
+								size = 'xl',
+								align = 'center'
+							)
+						]
+					),
+					body = BoxComponent(
+						layout = 'vertical',
+						contents = [
+							SeparatorComponent(
+								color = '#0000FF'
+							),
+							BoxComponent(
+								margin = 'md',
+								layout = 'vertical',
+								spacing = 'xs',
+								contents = [
+									BoxComponent(
+										margin = 'md',
+										layout = 'vertical',
+										spacing = 'xs',
+										contents = [
+											arr[0],arr[x]		
+										]
+									)
+								]
+							)
+						]
+					)
+				)
+			]
+		)	
 	print(arr)
 	print("\n----------------------------------------\n")
 	print(arr[0])
