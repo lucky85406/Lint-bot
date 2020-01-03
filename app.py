@@ -399,8 +399,7 @@ def mylove(n,ulist):
 						layout = 'vertical',
 						spacing = 'xs',
 						contents = [
-							arr[0],
-							arr[1]
+							arr
 						]
 					)
 				]
