@@ -550,8 +550,9 @@ def function(event):
 			user_id = event.source.user_id
 			line_bot_api.reply_message(event.reply_token,testimg())
 		elif ukey.split(':')[0] == 'MyLove':
-			 user_id = event.source.user_id
-			 love(user_id,ukey)
+			print("OK")
+			user_id = event.source.user_id
+			love(user_id,ukey)
 
 
 
