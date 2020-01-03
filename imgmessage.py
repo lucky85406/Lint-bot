@@ -52,7 +52,7 @@ def tenMod(img,dset):
 											color='#84C1FF',
 											flex = 1,
 											height='sm',
-											action=MessageAction(label="加入最愛",text='加入最愛')
+											action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[0]])
 										),
 										ButtonComponent(
 											margin = 'xxl',
@@ -106,7 +106,7 @@ def tenMod(img,dset):
 											color='#84C1FF',
 											flex = 1,
 											height='sm',
-											action=MessageAction(label="加入最愛",text='加入最愛')
+											action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[1]])
 										),
 										ButtonComponent(
 											margin = 'xxl',
@@ -160,7 +160,7 @@ def tenMod(img,dset):
 											color='#84C1FF',
 											flex = 1,
 											height='sm',
-											action=MessageAction(label="加入最愛",text='加入最愛')
+											action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[2]])
 										),
 										ButtonComponent(
 											margin = 'xxl',
@@ -214,7 +214,7 @@ def tenMod(img,dset):
 											color='#84C1FF',
 											flex = 1,
 											height='sm',
-											action=MessageAction(label="加入最愛",text='加入最愛')
+											action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[3]])
 										),
 										ButtonComponent(
 											margin = 'xxl',
@@ -268,7 +268,7 @@ def tenMod(img,dset):
 											color='#84C1FF',
 											flex = 1,
 											height='sm',
-											action=MessageAction(label="加入最愛",text='加入最愛')
+											action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[4]])
 										),
 										ButtonComponent(
 											margin = 'xxl',
@@ -322,7 +322,7 @@ def tenMod(img,dset):
 											color='#84C1FF',
 											flex = 1,
 											height='sm',
-											action=MessageAction(label="加入最愛",text='加入最愛')
+											action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[5]])
 										),
 										ButtonComponent(
 											margin = 'xxl',
@@ -376,7 +376,7 @@ def tenMod(img,dset):
 											color='#84C1FF',
 											flex = 1,
 											height='sm',
-											action=MessageAction(label="加入最愛",text='加入最愛')
+											action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[6]])
 										),
 										ButtonComponent(
 											margin = 'xxl',
@@ -430,7 +430,7 @@ def tenMod(img,dset):
 											color='#84C1FF',
 											flex = 1,
 											height='sm',
-											action=MessageAction(label="加入最愛",text='加入最愛')
+											action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[7]])
 										),
 										ButtonComponent(
 											margin = 'xxl',
@@ -484,7 +484,7 @@ def tenMod(img,dset):
 											color='#84C1FF',
 											flex = 1,
 											height='sm',
-											action=MessageAction(label="加入最愛",text='加入最愛')
+											action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[8]])
 										),
 										ButtonComponent(
 											margin = 'xxl',
@@ -538,7 +538,7 @@ def tenMod(img,dset):
 											color='#84C1FF',
 											flex = 1,
 											height='sm',
-											action=MessageAction(label="加入最愛",text='加入最愛')
+											action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[9]])
 										),
 										ButtonComponent(
 											margin = 'xxl',
