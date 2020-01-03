@@ -11,5 +11,5 @@ def love(uid,text):
 	with open('mylove.csv',newline='')as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
-			if row != None:
+			if row != "":
 				print(row['ID']+":"+row['love'])	
