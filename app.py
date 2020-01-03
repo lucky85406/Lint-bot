@@ -349,13 +349,33 @@ def showimg():
 def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
-	arr = [ButtonComponent(
-					style='secondary',
-					color='#84C1FF',
-					flex = 3,
-					height='sm',
-					action=MessageAction(label=a[0],text='showImg')
-				)]*alen
+	arr = [
+			SeparatorComponent(
+				color = '#0000FF'
+			),
+			BoxComponent(
+				margin = 'md',
+				layout = 'vertical',
+				spacing = 'xs',
+				contents = [
+					BoxComponent(
+						margin = 'md',
+						layout = 'vertical',
+						spacing = 'xs',
+						contents = [
+							ButtonComponent(
+								style='secondary',
+								color='#84C1FF',
+								flex = 3,
+								height='sm',
+								action=MessageAction(label='a[x]',text='showImg')
+							)
+						]
+					)
+				]
+			)
+		]
+	'''	
 	for x in range(0,alen):
 		arr[0] = ButtonComponent(
 					style='secondary',
@@ -364,6 +384,7 @@ def mylove(n,ulist):
 					height='sm',
 					action=MessageAction(label=a[x],text='showImg')
 				)
+	'''
 	Carousel = CarouselContainer(
 			contents = [
 				BubbleContainer(
@@ -381,25 +402,7 @@ def mylove(n,ulist):
 				body = BoxComponent(
 					layout = 'vertical',
 					contents = [
-						SeparatorComponent(
-							color = '#0000FF'
-						),
-						BoxComponent(
-							margin = 'md',
-							layout = 'vertical',
-							spacing = 'xs',
-							contents = [
-								BoxComponent(
-									margin = 'md',
-									layout = 'vertical',
-									spacing = 'xs',
-									contents = [
-										arr[0],
-										arr[0]
-									]
-								)
-							]
-						)
+						arr[0]
 					]
 				)
 			)
