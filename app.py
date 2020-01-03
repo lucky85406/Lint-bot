@@ -349,10 +349,20 @@ def showimg():
 def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
-	arr = [BubbleContainer()]*alen
+	arr = [ButtonComponent()]*alen
 	print(len(arr))
 	for x in range(0,alen):
-		arr[x] = BubbleContainer(
+		arr[x] = ButtonComponent(
+								style='secondary',
+								color='#84C1FF',
+								flex = 3,
+								height='sm',
+								action=MessageAction(label=a[x],text='showImg')
+		)
+	print(arr)
+	Carousel = CarouselContainer(
+		contents = [
+			BubbleContainer(
 			header = BoxComponent(
 				layout = 'baseline',
 				contents = [
@@ -375,31 +385,12 @@ def mylove(n,ulist):
 						layout = 'horizontal',
 						spacing = 'xs',
 						contents = [
-							ButtonComponent(
-								style='secondary',
-								color='#84C1FF',
-								flex = 3,
-								height='sm',
-								action=MessageAction(label=a[x],text='showImg')
-							),
-							ButtonComponent(
-								margin = 'xxl',
-								style='secondary',
-								color='#A6FFFF',
-								flex = 1,
-								height='sm',
-								action=MessageAction(label="-",text='-')
-							)
+							arr[0]
 						]
 					)
 				]
 			)
 		)
-	print(arr)
-	Carousel = CarouselContainer(
-		contents = [
-			arr[0],
-			arr[1]
 		]
 	)
 	message = FlexSendMessage(alt_text = "hello",contents = Carousel)
