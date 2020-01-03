@@ -397,7 +397,7 @@ def mylove(n,ulist):
 								layout = 'horizontal',
 								spacing = 'xs',
 								contents = [
-									arr		
+									arr[0:alen-1]		
 						]
 					)
 						]
