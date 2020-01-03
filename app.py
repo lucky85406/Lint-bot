@@ -350,9 +350,8 @@ def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
 	arr = []*alen
-
-	for x in range(0,alen):
-		arr[x] = BubbleContainer(
+	print(len(arr))
+	arr[0] = BubbleContainer(
 			header = BoxComponent(
 				layout = 'baseline',
 				contents = [
@@ -393,8 +392,8 @@ def mylove(n,ulist):
 						]
 					)
 				]
-			)
-		)
+			))
+
 
 	Carousel = CarouselContainer(
 		contents = [
