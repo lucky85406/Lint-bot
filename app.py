@@ -357,7 +357,7 @@ def mylove(n,ulist):
 					action=MessageAction(label=a[0],text='showImg')
 				)]*alen
 	for x in range(0,alen):
-		arr[0] = arr[0]+ButtonComponent(
+		arr[0] = arr[0]+,ButtonComponent(
 					style='secondary',
 					color='#84C1FF',
 					flex = 3,
