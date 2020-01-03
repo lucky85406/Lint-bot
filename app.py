@@ -349,7 +349,7 @@ def showimg():
 def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
-	arr = [ButtonComponent()]*alen
+	arr = [BoxComponent()]*alen
 	print(len(arr))
 	for x in range(0,alen):
 		arr[x] = BoxComponent(
@@ -399,7 +399,8 @@ def mylove(n,ulist):
 						layout = 'vertical',
 						spacing = 'xs',
 						contents = [
-							arr[0],arr[1]
+							for x in arr:
+								x
 						]
 					)
 				]
