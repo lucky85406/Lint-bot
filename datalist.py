@@ -18,9 +18,8 @@ def dataList(intxt):
 		set2 = random.sample(list(set1),10)
 		for x in set2:
 			set3[x] = set1[x]
-			print(set3)
 	else:
 		return set1	
 
-	return set2
+	return set3
 
