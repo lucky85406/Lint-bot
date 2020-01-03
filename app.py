@@ -564,7 +564,8 @@ def function(event):
 			profile = line_bot_api.get_profile(user_id)
 			name = profile.display_name		
 			dlist = list(love2(name))
-				
+			print(dlist)
+
 
 
 

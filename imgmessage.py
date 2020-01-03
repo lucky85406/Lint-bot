@@ -4,115 +4,6 @@ from linebot.models import (
 	MessageAction, FlexSendMessage, CarouselContainer
 )
 
-def test():
-	a = [BubbleContainer(
-				hero = ImageComponent(
-							url = 'https://i.imgur.com/diorIgW.jpg',
-							size = 'full',
-							align = 'center',
-							aspect_ratio = '13:13',
-							aspect_mode = 'cover'
-				),
-				body = BoxComponent(
-							layout = 'vertical',
-							contents = [
-								TextComponent(
-									margin = 'md',
-									text = '拉圖城堡紅酒',
-									weight = 'bold',
-									size = 'md',
-									align = 'center'
-								),
-								TextComponent(
-									margin = 'md',
-									text = "第一段",
-									weight = 'bold',
-									size = 'xs',
-									align = 'center'
-								),
-								SeparatorComponent(
-									margin = 'xl',
-									color = '#0000FF'
-								),
-								BoxComponent(
-									margin = 'md',
-									layout = 'horizontal',
-									spacing = 'xs',
-									contents = [
-										ButtonComponent(
-											style='link',
-											color='#84C1FF',
-											flex = 1,
-											height='sm',
-											action=MessageAction(label="加入最愛",text='MyLove:'+'拉圖城堡紅酒')
-										),
-										ButtonComponent(
-											margin = 'xxl',
-											style='link',
-											color='#84C1FF',
-											flex = 1,
-											height='sm',
-											action=MessageAction(label="還沒想到",text='還沒想到')
-										)
-									]
-								)
-							]
-				)			
-			),BubbleContainer(
-				hero = ImageComponent(
-							url = 'https://i.imgur.com/diorIgW.jpg',
-							size = 'full',
-							align = 'center',
-							aspect_ratio = '13:13',
-							aspect_mode = 'cover'
-				),
-				body = BoxComponent(
-							layout = 'vertical',
-							contents = [
-								TextComponent(
-									margin = 'md',
-									text = '拉圖城堡紅酒',
-									weight = 'bold',
-									size = 'md',
-									align = 'center'
-								),
-								TextComponent(
-									margin = 'md',
-									text = "第一段",
-									weight = 'bold',
-									size = 'xs',
-									align = 'center'
-								),
-								SeparatorComponent(
-									margin = 'xl',
-									color = '#0000FF'
-								),
-								BoxComponent(
-									margin = 'md',
-									layout = 'horizontal',
-									spacing = 'xs',
-									contents = [
-										ButtonComponent(
-											style='link',
-											color='#84C1FF',
-											flex = 1,
-											height='sm',
-											action=MessageAction(label="加入最愛",text='MyLove:'+'拉圖城堡紅酒')
-										),
-										ButtonComponent(
-											margin = 'xxl',
-											style='link',
-											color='#84C1FF',
-											flex = 1,
-											height='sm',
-											action=MessageAction(label="還沒想到",text='還沒想到')
-										)
-									]
-								)
-							]
-				)			
-			)]
-	return a[1]
 
 #10
 def tenMod(img,dset):
@@ -121,7 +12,60 @@ def tenMod(img,dset):
 	Carousel = CarouselContainer(
 		contents = [
 			#1
-			test(),
+			BubbleContainer(
+				hero = ImageComponent(
+							url = imglist[0],
+							size = 'full',
+							align = 'center',
+							aspect_ratio = '13:13',
+							aspect_mode = 'cover'
+				),
+				body = BoxComponent(
+							layout = 'vertical',
+							contents = [
+								TextComponent(
+									margin = 'md',
+									text = d[imglist[0]],
+									weight = 'bold',
+									size = 'md',
+									align = 'center'
+								),
+								TextComponent(
+									margin = 'md',
+									text = "第一段",
+									weight = 'bold',
+									size = 'xs',
+									align = 'center'
+								),
+								SeparatorComponent(
+									margin = 'xl',
+									color = '#0000FF'
+								),
+								BoxComponent(
+									margin = 'md',
+									layout = 'horizontal',
+									spacing = 'xs',
+									contents = [
+										ButtonComponent(
+											style='link',
+											color='#84C1FF',
+											flex = 1,
+											height='sm',
+											action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[0]])
+										),
+										ButtonComponent(
+											margin = 'xxl',
+											style='link',
+											color='#84C1FF',
+											flex = 1,
+											height='sm',
+											action=MessageAction(label="還沒想到",text='還沒想到')
+										)
+									]
+								)
+							]
+				)			
+			),
 			#2
 			BubbleContainer(
 				hero = ImageComponent(
