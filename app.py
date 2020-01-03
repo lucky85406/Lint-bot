@@ -394,7 +394,7 @@ def mylove(n,ulist):
 						contents = [
 							BoxComponent(
 								margin = 'md',
-								layout = 'horizontal',
+								layout = 'vertical',
 								spacing = 'xs',
 								contents = [
 									arr[0],arr[1]		
