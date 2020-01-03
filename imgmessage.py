@@ -7,7 +7,8 @@ from linebot.models import (
 
 
 #10
-def tenMod(img):
+def tenMod(img,dset):
+	d = dset
 	imglist = img
 	Carousel = CarouselContainer(
 		contents = [
@@ -25,7 +26,7 @@ def tenMod(img):
 							contents = [
 								TextComponent(
 									margin = 'md',
-									text = "敘述:",
+									text = d[imglist[0]],
 									weight = 'bold',
 									size = 'md',
 									align = 'center'
@@ -79,7 +80,7 @@ def tenMod(img):
 							contents = [
 								TextComponent(
 									margin = 'md',
-									text = "敘述:",
+									text = d[imglist[1]],
 									weight = 'bold',
 									size = 'md',
 									align = 'center'
@@ -133,7 +134,7 @@ def tenMod(img):
 							contents = [
 								TextComponent(
 									margin = 'md',
-									text = "敘述:",
+									text = d[imglist[2]],
 									weight = 'bold',
 									size = 'md',
 									align = 'center'
@@ -187,7 +188,7 @@ def tenMod(img):
 							contents = [
 								TextComponent(
 									margin = 'md',
-									text = "敘述:",
+									text = d[imglist[3]],
 									weight = 'bold',
 									size = 'md',
 									align = 'center'
@@ -241,7 +242,7 @@ def tenMod(img):
 							contents = [
 								TextComponent(
 									margin = 'md',
-									text = "敘述:",
+									text = d[imglist[4]],
 									weight = 'bold',
 									size = 'md',
 									align = 'center'
@@ -295,7 +296,7 @@ def tenMod(img):
 							contents = [
 								TextComponent(
 									margin = 'md',
-									text = "敘述:",
+									text = d[imglist[5]],
 									weight = 'bold',
 									size = 'md',
 									align = 'center'
@@ -349,7 +350,7 @@ def tenMod(img):
 							contents = [
 								TextComponent(
 									margin = 'md',
-									text = "敘述:",
+									text = d[imglist[6]],
 									weight = 'bold',
 									size = 'md',
 									align = 'center'
@@ -403,7 +404,7 @@ def tenMod(img):
 							contents = [
 								TextComponent(
 									margin = 'md',
-									text = "敘述:",
+									text = d[imglist[7]],
 									weight = 'bold',
 									size = 'md',
 									align = 'center'
@@ -457,7 +458,7 @@ def tenMod(img):
 							contents = [
 								TextComponent(
 									margin = 'md',
-									text = "敘述:",
+									text = d[imglist[8]],
 									weight = 'bold',
 									size = 'md',
 									align = 'center'
@@ -511,7 +512,7 @@ def tenMod(img):
 							contents = [
 								TextComponent(
 									margin = 'md',
-									text = "敘述:",
+									text = d[imglist[9]],
 									weight = 'bold',
 									size = 'md',
 									align = 'center'
