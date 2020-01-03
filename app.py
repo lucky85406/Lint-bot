@@ -17,7 +17,7 @@ from linebot.models import (
 from utoken import(go,inMes,showMes)
 from datalist import(dataList)
 from imgmessage import(tenMod, ninMod, eigMod, sevMod, sixMod, fivMod, fouMod, thrMod, twoMod, oneMod)
-from love import(love)
+from love import(love,love2)
 import random
 import time  # 待會會取時間
 
@@ -531,29 +531,40 @@ def function(event):
 				line_bot_api.reply_message(	
 					event.reply_token,
 					TextSendMessage(text= showMes(user_id)))
+
 		elif ukey == "go":
 			user_id = event.source.user_id
 			go(user_id)
 			line_bot_api.reply_message(event.reply_token,food())
+
 		elif ukey == "showImg":
 			user_id = event.source.user_id
 			data = dataList(showMes(user_id))
 			dlist = list(data)
 			line_bot_api.reply_message(event.reply_token,tenMod(dlist,data))
+
 		elif ukey == "mylove":
 			user_id = event.source.user_id
 			profile = line_bot_api.get_profile(user_id)
 			name = profile.display_name
 			a = test(user_id,name)
 			line_bot_api.reply_message(event.reply_token,mylove(a))
+
 		elif ukey == "testimg":
 			user_id = event.source.user_id
 			line_bot_api.reply_message(event.reply_token,testimg())
+
 		elif ukey.split(':')[0] == 'MyLove':
 			user_id = event.source.user_id
 			profile = line_bot_api.get_profile(user_id)
 			name = profile.display_name
 			love(name,ukey)
+		elif ukey == 'seemylove':
+			user_id = event.source.user_id
+			profile = line_bot_api.get_profile(user_id)
+			name = profile.display_name		
+			dlist = list(love2(name))
+				
 
 
 

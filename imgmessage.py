@@ -4,16 +4,8 @@ from linebot.models import (
 	MessageAction, FlexSendMessage, CarouselContainer
 )
 
-
-
-#10
-def tenMod(img,dset):
-	d = dset
-	imglist = img
-	Carousel = CarouselContainer(
-		contents = [
-			  #1
-			BubbleContainer(
+def test():
+	return BubbleContainer(
 				hero = ImageComponent(
 							url = imglist[0],
 							size = 'full',
@@ -66,7 +58,17 @@ def tenMod(img,dset):
 								)
 							]
 				)			
-			),#2
+			)
+
+#10
+def tenMod(img,dset):
+	d = dset
+	imglist = img
+	Carousel = CarouselContainer(
+		contents = [
+			#1
+			test()
+			#2
 			BubbleContainer(
 				hero = ImageComponent(
 							url = imglist[1],
