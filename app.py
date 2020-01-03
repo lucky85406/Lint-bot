@@ -374,6 +374,27 @@ def mylove(n,ulist):
 				]
 			)
 		]
+	contents.append(BoxComponent(
+				margin = 'md',
+				layout = 'vertical',
+				spacing = 'xs',
+				contents = [
+					BoxComponent(
+						margin = 'md',
+						layout = 'vertical',
+						spacing = 'xs',
+						contents = [
+							ButtonComponent(
+								style='secondary',
+								color='#84C1FF',
+								flex = 3,
+								height='sm',
+								action=MessageAction(label='a[x]',text='showImg')
+							)
+						]
+					)
+				]
+			))
 	'''	
 	for x in range(0,alen):
 		arr[0] = ButtonComponent(
