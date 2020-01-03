@@ -405,7 +405,7 @@ def mylove(n,ulist):
 			)
 		]
 	)	
-	print(type(arr))
+	print(type(arr[0]))
 	print("\n----------------------------------------\n")
 	print(arr[0])
 
