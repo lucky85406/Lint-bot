@@ -7,7 +7,7 @@ from linebot.models import (
 def test():
 	return BubbleContainer(
 				hero = ImageComponent(
-							url = imglist[0],
+							url = 'https://i.imgur.com/diorIgW.jpg',
 							size = 'full',
 							align = 'center',
 							aspect_ratio = '13:13',
@@ -18,7 +18,7 @@ def test():
 							contents = [
 								TextComponent(
 									margin = 'md',
-									text = d[imglist[0]],
+									text = '拉圖城堡紅酒',
 									weight = 'bold',
 									size = 'md',
 									align = 'center'
@@ -44,7 +44,7 @@ def test():
 											color='#84C1FF',
 											flex = 1,
 											height='sm',
-											action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[0]])
+											action=MessageAction(label="加入最愛",text='MyLove:'+'拉圖城堡紅酒')
 										),
 										ButtonComponent(
 											margin = 'xxl',
