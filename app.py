@@ -346,7 +346,7 @@ def showimg():
 	return message
 
 #我的最愛
-def mylove(ulist):
+def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
 	arr = []*alen
@@ -357,7 +357,7 @@ def mylove(ulist):
 				layout = 'baseline',
 				contents = [
 					TextComponent(
-						text = a[1]+"的最愛",
+						text = n +"的最愛",
 						weight = 'bold',
 						size = 'xl',
 						align = 'center'
@@ -380,7 +380,7 @@ def mylove(ulist):
 								color='#84C1FF',
 								flex = 3,
 								height='sm',
-								action=MessageAction(label=a[2],text='showImg')
+								action=MessageAction(label=a[0],text='showImg')
 							),
 							ButtonComponent(
 								margin = 'xxl',
@@ -574,7 +574,7 @@ def function(event):
 			profile = line_bot_api.get_profile(user_id)
 			name = profile.display_name		
 			dlist = list(love2(name))
-			line_bot_api.reply_message(event.reply_token,mylove(dlist))
+			line_bot_api.reply_message(event.reply_token,mylove(name,dlist))
 
 
 
