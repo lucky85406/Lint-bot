@@ -349,10 +349,9 @@ def showimg():
 def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
-	arr = [
-			SeparatorComponent(
+	contents = [SeparatorComponent(
 				color = '#0000FF'
-			),
+				),
 			BoxComponent(
 				margin = 'md',
 				layout = 'vertical',
@@ -390,14 +389,7 @@ def mylove(n,ulist):
 				BubbleContainer(
 				header = BoxComponent(
 					layout = 'baseline',
-					contents = [
-						TextComponent(
-							text = n +"的最愛",
-							weight = 'bold',
-							size = 'xl',
-							align = 'center'
-						)
-					]
+					contents = contents
 				),
 				body = BoxComponent(
 					layout = 'vertical',
