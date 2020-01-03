@@ -538,6 +538,7 @@ def function(event):
 			user_id = event.source.user_id
 			data = dataList(showMes(user_id))
 			dlist = list(data)
+			print(data['https://i.imgur.com/vn81cGW.jpg'])
 			line_bot_api.reply_message(event.reply_token,tenMod(dlist))
 		elif ukey == "mylove":
 			user_id = event.source.user_id
