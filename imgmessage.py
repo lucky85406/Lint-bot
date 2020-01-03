@@ -67,7 +67,7 @@ def tenMod(img,dset):
 	Carousel = CarouselContainer(
 		contents = [
 			#1
-			test()
+			test(),
 			#2
 			BubbleContainer(
 				hero = ImageComponent(
