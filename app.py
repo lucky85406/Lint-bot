@@ -356,16 +356,14 @@ def mylove(n,ulist):
 					height='sm',
 					action=MessageAction(label=a[0],text='showImg')
 				)]*alen
-	ayy =[]
 	for x in range(0,alen):
-		arr[x] = ButtonComponent(
+		arr[0] = arr[0],ButtonComponent(
 					style='secondary',
 					color='#84C1FF',
 					flex = 3,
 					height='sm',
 					action=MessageAction(label=a[x],text='showImg')
 				)
-		ayy[0] = arr[x]+','+arr[x]
 	print(arr)
 	print("\n----------------------------------------\n")
 	print(arr[0])
@@ -399,7 +397,7 @@ def mylove(n,ulist):
 								layout = 'vertical',
 								spacing = 'xs',
 								contents = [
-									arr[0],arr[1]		
+									arr[0]		
 						]
 					)
 						]
