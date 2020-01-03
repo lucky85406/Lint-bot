@@ -352,13 +352,27 @@ def mylove(n,ulist):
 	arr = [ButtonComponent()]*alen
 	print(len(arr))
 	for x in range(0,alen):
-		arr[x] = ButtonComponent(
+		arr[x] = BoxComponent(
+						margin = 'md',
+						layout = 'horizontal',
+						spacing = 'xs',
+						contents = [
+							ButtonComponent(
 								style='secondary',
 								color='#84C1FF',
 								flex = 3,
 								height='sm',
 								action=MessageAction(label=a[x],text='showImg')
-		)
+							),
+							ButtonComponent(
+								style='secondary',
+								color='#84C1FF',
+								flex = 3,
+								height='sm',
+								action=MessageAction(label=a[x],text='showImg')
+							)
+						]
+					)
 	print(arr)
 	Carousel = CarouselContainer(
 		contents = [
