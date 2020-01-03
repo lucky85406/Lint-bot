@@ -15,7 +15,7 @@ def dataList(intxt):
 					set1[row['url']] = row['酒類']
 	a = len(set1)
 	if a >=10:
-		set3 = set1
+		set3 = list(set1)
 		set2 = random.sample(set3,10)
 	else:
 		return set1	
