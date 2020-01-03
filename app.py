@@ -372,7 +372,7 @@ def mylove(n,ulist):
 							ButtonComponent(
 								style='secondary',
 								color='#84C1FF',
-								flex = 3,
+								flex = 1,
 								height='sm',
 								action=MessageAction(label='-',text='-')
 							)
@@ -403,7 +403,7 @@ def mylove(n,ulist):
 							ButtonComponent(
 								style='secondary',
 								color='#84C1FF',
-								flex = 3,
+								flex = 1,
 								height='sm',
 								action=MessageAction(label='-',text='-')
 							)
