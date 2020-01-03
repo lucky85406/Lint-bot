@@ -372,11 +372,10 @@ def mylove(n,ulist):
 								action=MessageAction(label="-",text='-')
 							)
 						]
-					)
+					),
 	print(arr)
 	print("\n----------------------------------------\n")
 	print(arr[0])
-	s = set(arr)
 	Carousel = CarouselContainer(
 		contents = [
 			BubbleContainer(
@@ -402,7 +401,7 @@ def mylove(n,ulist):
 						layout = 'vertical',
 						spacing = 'xs',
 						contents = [
-							s
+							arr
 						]
 					)
 				]
