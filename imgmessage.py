@@ -7,8 +7,8 @@ from linebot.models import (
 
 
 #10
-def tenMod(imgurl):
-	imglist = imgurl
+def tenMod(img):
+	imglist = img
 	Carousel = CarouselContainer(
 		contents = [
 			  #1
