@@ -374,7 +374,8 @@ def mylove(n,ulist):
 				]
 			)
 		]
-	contents.append(BoxComponent(
+	for x in range(0,alen):
+		contents.append(BoxComponent(
 				margin = 'md',
 				layout = 'vertical',
 				spacing = 'xs',
@@ -395,6 +396,7 @@ def mylove(n,ulist):
 					)
 				]
 			))
+	
 	'''	
 	for x in range(0,alen):
 		arr[0] = ButtonComponent(
