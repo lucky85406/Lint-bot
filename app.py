@@ -398,7 +398,8 @@ def mylove(n,ulist):
 	print(arr)
 	Carousel = CarouselContainer(
 		contents = [
-			arr[0]
+			arr[0],
+			arr[1]
 		]
 	)
 	message = FlexSendMessage(alt_text = "hello",contents = Carousel)
