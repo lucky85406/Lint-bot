@@ -349,30 +349,16 @@ def showimg():
 def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
-	arr = [BoxComponent()]*alen
+	arr = [ButtonComponent()]*alen
 	print(len(arr))
 	for x in range(0,alen):
-		arr[x] = BoxComponent(
-						margin = 'md',
-						layout = 'horizontal',
-						spacing = 'xs',
-						contents = [
-							ButtonComponent(
-								style='secondary',
-								color='#84C1FF',
-								flex = 3,
-								height='sm',
-								action=MessageAction(label=a[x],text='showImg')
-							),
-							ButtonComponent(
-								style='secondary',
-								color='#84C1FF',
-								flex = 1,
-								height='sm',
-								action=MessageAction(label="-",text='-')
-							)
-						]
-					)+arr[x]
+		arr[x] = ButtonComponent(
+					style='secondary',
+					color='#84C1FF',
+					flex = 3,
+					height='sm',
+					action=MessageAction(label=a[x],text='showImg')
+				)
 	print(arr)
 	print("\n----------------------------------------\n")
 	print(arr[0])
@@ -401,7 +387,14 @@ def mylove(n,ulist):
 						layout = 'vertical',
 						spacing = 'xs',
 						contents = [
-							arr[0]
+							BoxComponent(
+								margin = 'md',
+								layout = 'horizontal',
+								spacing = 'xs',
+								contents = [
+									arr[0]		
+						]
+					)
 						]
 					)
 				]
