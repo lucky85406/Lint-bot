@@ -404,10 +404,7 @@ def mylove(n,ulist):
 				)
 			)
 		]
-	)	
-	print(type(arr[0]))
-	print("\n----------------------------------------\n")
-	print(arr[0])
+	)
 
 	message = FlexSendMessage(alt_text = "hello",contents = Carousel)
 	return message
