@@ -389,13 +389,18 @@ def mylove(n,ulist):
 				BubbleContainer(
 				header = BoxComponent(
 					layout = 'baseline',
-					contents = contents
+					contents = [
+						TextComponent(
+							text = n +"的最愛",
+							weight = 'bold',
+							size = 'xl',
+							align = 'center'
+						)
+					]
 				),
 				body = BoxComponent(
 					layout = 'vertical',
-					contents = [
-						arr[0]
-					]
+					contents = contents
 				)
 			)
 		]
