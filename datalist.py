@@ -19,7 +19,7 @@ def dataList(intxt):
 		for x in set2:
 			if x == set1:
 				set3[x] = set1[x]
-		print(set3)
+				print(set3)
 	else:
 		return set1	
 
