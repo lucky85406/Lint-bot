@@ -72,33 +72,7 @@ def showMes(url):
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
-			if row['ID'] == url and row['Ver'] == '0':
-				print('--------------\n')
-				print('ID:{} D1:{} D2:{} D3:{} D4:{} D5:{} Ver:{}'.format(row['ID'],row['D1'],row['D2'],row['D3'],row['D4'],row['D5'],row['Ver']))
-				print('\n--------------')
-			elif row['ID'] == url and row['Ver'] == '1':
-				print('--------------\n')
-				print('ID:{} D1:{} D2:{} D3:{} D4:{} D5:{} Ver:{}'.format(row['ID'],row['D1'],row['D2'],row['D3'],row['D4'],row['D5'],row['Ver']))
-				print('\n--------------')
-			elif row['ID'] == url and row['Ver'] == '2':
-				print('--------------\n')
-				print('ID:{} D1:{} D2:{} D3:{} D4:{} D5:{} Ver:{}'.format(row['ID'],row['D1'],row['D2'],row['D3'],row['D4'],row['D5'],row['Ver']))
-				print('\n--------------')
-			elif row['ID'] == url and row['Ver'] == '3':
-				print('--------------\n')
-				print('ID:{} D1:{} D2:{} D3:{} D4:{} D5:{} Ver:{}'.format(row['ID'],row['D1'],row['D2'],row['D3'],row['D4'],row['D5'],row['Ver']))
-				print('\n--------------')
-			elif row['ID'] == url and row['Ver'] == '4':
-				print('--------------\n')
-				print('ID:{} D1:{} D2:{} D3:{} D4:{} D5:{} Ver:{}'.format(row['ID'],row['D1'],row['D2'],row['D3'],row['D4'],row['D5'],row['Ver']))
-				print('\n--------------')
-			elif row['ID'] == url and row['Ver'] == '5':
-				print('--------------\n')
-				print('ID:{} D1:{} D2:{} D3:{} D4:{} D5:{} Ver:{}'.format(row['ID'],row['D1'],row['D2'],row['D3'],row['D4'],row['D5'],row['Ver']))
-				print('\n--------------')
+			if row['ID'] == url and row['Ver'] == '5':
 				return "{}{}{}{}{}".format(row['D1'],row['D2'],row['D3'],row['D4'],row['D5'])
 	return a
 
-def test(Uid,Uname):
-	ulist = [Uid,Uname,'克曼沙酒堡紅酒','testmod','https://i.imgur.com/YVk6nFG.jpg']
-	return ulist

@@ -14,7 +14,7 @@ from linebot.models import (
     BubbleContainer, BoxComponent, TextComponent, FlexSendMessage, ImageComponent, ButtonComponent,
     URIAction, MessageAction, CarouselContainer, SeparatorComponent, IconComponent
 )
-from utoken import(go,inMes,showMes,test)
+from utoken import(go,inMes,showMes)
 from datalist import(dataList)
 from imgmessage import(tenMod, ninMod, eigMod, sevMod, sixMod, fivMod, fouMod, thrMod, twoMod, oneMod)
 import random
