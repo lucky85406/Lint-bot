@@ -395,44 +395,6 @@ def mylove(n,ulist):
 									spacing = 'xs',
 									contents = [
 										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],		
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],		
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
-										arr[0],
 										arr[0]
 									]
 								)
@@ -443,7 +405,7 @@ def mylove(n,ulist):
 			)
 		]
 	)	
-	print(arr)
+	print(type(arr))
 	print("\n----------------------------------------\n")
 	print(arr[0])
 
