@@ -368,9 +368,17 @@ def mylove(n,ulist):
 								flex = 3,
 								height='sm',
 								action=MessageAction(label=a[0],text='showImg')
+							),
+							ButtonComponent(
+								style='secondary',
+								color='#84C1FF',
+								flex = 3,
+								height='sm',
+								action=MessageAction(label='-',text='-')
 							)
 						]
 					)
+
 				]
 			)
 		]
@@ -391,6 +399,13 @@ def mylove(n,ulist):
 								flex = 3,
 								height='sm',
 								action=MessageAction(label=a[x],text='showImg')
+							),
+							ButtonComponent(
+								style='secondary',
+								color='#84C1FF',
+								flex = 3,
+								height='sm',
+								action=MessageAction(label='-',text='-')
 							)
 						]
 					)
