@@ -5,7 +5,7 @@ from linebot.models import (
 )
 
 def test():
-	a = [BubbleContainer(
+	a = {BubbleContainer(
 				hero = ImageComponent(
 							url = 'https://i.imgur.com/diorIgW.jpg',
 							size = 'full',
@@ -58,8 +58,8 @@ def test():
 								)
 							]
 				)			
-			)]
-	return a[0]
+			)}
+	return list(a)[0]
 
 #10
 def tenMod(img,dset):
