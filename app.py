@@ -16,7 +16,7 @@ from linebot.models import (
 )
 from utoken import(go,inMes,showMes)
 from datalist import(dataList)
-from imgmessage import(tenMod, ninMod, eigMod, sevMod, sixMod, fivMod, fouMod, thrMod, twoMod, oneMod)
+from imgmessage import(tenMod)
 from love import(love,love2)
 import random
 import time  # 待會會取時間
