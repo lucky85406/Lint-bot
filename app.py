@@ -155,8 +155,6 @@ def conversionCode(k):
 def function(event):
 	
 	ukey = event.message.text
-	#!!!!!!!!!!!!!!!!!這裡有ID
-	user_id = event.source.user_id
 	
 	if ukey == "紅肉" or ukey =="白肉" or ukey =="海鮮" or ukey =="甜點":
 		user_id = event.source.user_id
@@ -179,19 +177,7 @@ def function(event):
 		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,showimg())
 	else:
-		if ukey == "show":
-			user_id = event.source.user_id
-			a = showMes(user_id)
-			if a == "1":
-				line_bot_api.reply_message(	
-					event.reply_token,
-					TextSendMessage(text= "null"))
-			else:
-				line_bot_api.reply_message(	
-					event.reply_token,
-					TextSendMessage(text= showMes(user_id)))
-
-		elif ukey == "go":
+		if ukey == "go":
 			user_id = event.source.user_id
 			go(user_id)
 			line_bot_api.reply_message(event.reply_token,food())
