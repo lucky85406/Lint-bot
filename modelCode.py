@@ -320,15 +320,15 @@ def mylove(n,ulist):
 						spacing = 'xs',
 						contents = [
 							ButtonComponent(
-								style='secondary',
-								color='#84C1FF',
+								style='link',
+								color='#ACD6FF',
 								flex = 3,
 								height='sm',
 								action=MessageAction(label=a[0],text='showImg')
 							),
 							ButtonComponent(
 								style='secondary',
-								color='#84C1FF',
+								color='	#ECFFFF',
 								flex = 1,
 								height='sm',
 								action=MessageAction(label='-',text='-')
