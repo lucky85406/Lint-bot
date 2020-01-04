@@ -553,11 +553,7 @@ def function(event):
 	#!!!!!!!!!!!!!!!!!這裡有ID
 	user_id = event.source.user_id
 	
-	
-
-	if event.message.text == "showshow":
-		line_bot_api.reply_message(event.reply_token,showimg())
-	elif ukey == "紅肉" or ukey =="白肉" or ukey =="海鮮" or ukey =="甜點":
+	if ukey == "紅肉" or ukey =="白肉" or ukey =="海鮮" or ukey =="甜點":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,aroma())
@@ -576,6 +572,7 @@ def function(event):
 	elif ukey =="100~350元" or ukey =="351~600元" or ukey =="600元以上":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
+		line_bot_api.reply_message(event.reply_token,showimg())
 	else:
 		if ukey == "show":
 			user_id = event.source.user_id
