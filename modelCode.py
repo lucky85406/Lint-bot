@@ -331,7 +331,7 @@ def mylove(n,ulist):
 								color='#ECFFFF',
 								flex = 1,
 								height='sm',
-								action=MessageAction(label='-',text='-')
+								action=MessageAction(label='-',text='re:'+a[0])
 							)
 						]
 					)
@@ -362,7 +362,7 @@ def mylove(n,ulist):
 								color='#84C1FF',
 								flex = 1,
 								height='sm',
-								action=MessageAction(label='-',text='-')
+								action=MessageAction(label='-',text='re:'+a[x])
 							)
 						]
 					)
