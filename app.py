@@ -14,10 +14,9 @@ from linebot.models import (
     BubbleContainer, BoxComponent, TextComponent, FlexSendMessage, ImageComponent, ButtonComponent,
     URIAction, MessageAction, CarouselContainer, SeparatorComponent, IconComponent
 )
-from modelCode import(food, aroma, taste, chain, price, showimg, mylove)
+from modelCode import(food, aroma, taste, chain, price, showimg, mylove, tenMod)
 from utoken import(go,inMes,showMes)
 from datalist import(dataList)
-from imgmessage import(tenMod)
 from love import(love,love2)
 import random
 import time  # 待會會取時間
