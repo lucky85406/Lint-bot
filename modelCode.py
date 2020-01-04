@@ -320,7 +320,7 @@ def mylove(n,ulist):
 						spacing = 'xs',
 						contents = [
 							ButtonComponent(
-								style='link',
+								style='primary',
 								color='#84C1FF',
 								flex = 3,
 								height='sm',
