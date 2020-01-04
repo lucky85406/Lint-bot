@@ -320,8 +320,8 @@ def mylove(n,ulist):
 						spacing = 'xs',
 						contents = [
 							ButtonComponent(
-								style='primary',
-								color='#84C1FF',
+								style='secondary',
+								color='#FFF4C1',
 								flex = 3,
 								height='sm',
 								action=MessageAction(label=a[0],text='showImg')
