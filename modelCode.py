@@ -282,7 +282,7 @@ def price():
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
 
-#顯示圖片
+#圖片按鈕
 def showimg():
 	mes = BubbleContainer(
 			body = BoxComponent(
@@ -393,7 +393,7 @@ def mylove(n,ulist):
 	message = FlexSendMessage(alt_text = "hello",contents = Carousel)
 	return message
 
-#10
+#顯示圖片
 def tenMod(img,dset):
 	d = dset
 	imglist = img
