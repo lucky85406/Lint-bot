@@ -201,7 +201,7 @@ def function(event):
 			user_id = event.source.user_id
 			profile = line_bot_api.get_profile(user_id)
 			name = profile.display_name
-			relove(name,ukey)
+			relove(name,ukey.split(':')[1])
 			dlist = list(love2(name))
 			line_bot_api.reply_message(event.reply_token,mylove(name,dlist))	
 
