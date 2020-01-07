@@ -462,14 +462,11 @@ def tenMod(img,dset):
 	message = FlexSendMessage(alt_text = "hello",contents= Carousel)
 	return message
 
-def single(img,set1):
-	dset = set1
-	print(type(dset))
-	print(dset.keys())
-	s = dset.keys()[0]
+def single(set1):
+	s = list(dset)
 	mes = BubbleContainer(
 				hero = ImageComponent(
-					url = dset[img],
+					url = s[1],
 					size = 'full',
 					align = 'center',
 					aspect_ratio = '13:13',
@@ -480,7 +477,7 @@ def single(img,set1):
 					contents = [
 						TextComponent(
 							margin = 'md',
-							text = s,
+							text = s[0],
 							weight = 'bold',
 							size = 'md',
 							align = 'center'
@@ -506,7 +503,7 @@ def single(img,set1):
 									color='#84C1FF',
 									flex = 1,
 									height='sm',
-									action=MessageAction(label="加入最愛",text='MyLove:'+s)
+									action=MessageAction(label="加入最愛",text='MyLove:'+s[0])
 								),
 								ButtonComponent(
 									margin = 'xxl',

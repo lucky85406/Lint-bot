@@ -210,7 +210,7 @@ def function(event):
 
 		elif ukey.split(':')[0] == 'see':
 			data = singleList(ukey.split(':')[1])
-			line_bot_api.reply_message(event.reply_token,single(ukey.split(':')[1],data))
+			line_bot_api.reply_message(event.reply_token,single(data))
 
 
 
