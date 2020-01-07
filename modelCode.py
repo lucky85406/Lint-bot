@@ -463,6 +463,8 @@ def tenMod(img,dset):
 	return message
 
 def single(img,set1):
+	print(img)
+	print(set1)
 	dset = set1
 	mes = BubbleContainer(
 				hero = ImageComponent(
