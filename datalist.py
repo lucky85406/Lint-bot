@@ -6,12 +6,11 @@ def dataList(intxt):
 	set1 = {}
 	set2 = set()
 	set3 = {}
-	s = intxt
 	with open('cosurl.csv',newline='')as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			for x in range(0,18):
-				if row[Lcode[x]] == s:
+				if row[Lcode[x]] == intxt:
 					set1[row['url']] = row['酒類']
 	a = len(set1)
 	if a >=10:
@@ -22,4 +21,13 @@ def dataList(intxt):
 		return set1	
 
 	return set3
+def singleList(intxt):
+	set1 = set()
+
+	with open('cosurl.csv',newline='')as csvfile:
+		rows = csv.DictReader(csvfile)
+		for row in rows:
+			if row['酒類'] == intxt:
+				set1[row['酒類']] = row['url']
+	return set1	
 

@@ -14,9 +14,9 @@ from linebot.models import (
     BubbleContainer, BoxComponent, TextComponent, FlexSendMessage, ImageComponent, ButtonComponent,
     URIAction, MessageAction, CarouselContainer, SeparatorComponent, IconComponent
 )
-from modelCode import(food, aroma, taste, chain, price, showimg, mylove, tenMod)
+from modelCode import(food, aroma, taste, chain, price, showimg, mylove, tenMod, single)
 from utoken import(go,inMes,showMes)
-from datalist import(dataList)
+from datalist import(dataList,singleList)
 from love import(love,love2,relove)
 import random
 import time  # 待會會取時間
@@ -187,10 +187,6 @@ def function(event):
 			dlist = list(data)
 			line_bot_api.reply_message(event.reply_token,tenMod(dlist,data))
 
-		elif ukey == "testimg":
-			user_id = event.source.user_id
-			line_bot_api.reply_message(event.reply_token,testimg())
-
 		elif ukey.split(':')[0] == 'MyLove':
 			user_id = event.source.user_id
 			profile = line_bot_api.get_profile(user_id)
@@ -211,6 +207,12 @@ def function(event):
 			name = profile.display_name		
 			dlist = list(love2(name))
 			line_bot_api.reply_message(event.reply_token,mylove(name,dlist))
+
+		elif ukey.split(':')[0] == 'see':
+			data = singleList(ukey.split(':')[1])
+			line_bot_api.reply_message(event.reply_token,single(ukey.split(':')[1],data))
+
+
 
 
 
