@@ -304,10 +304,8 @@ def showimg():
 #我的最愛
 def mylove(n,ulist):
 	a = ulist
-	b=0
 	alen = len(ulist)
-	if alen == 0:
-		print(a[0])
+	print(a[0])
 	contents = [SeparatorComponent(
 				color = '#0000FF'
 				),
