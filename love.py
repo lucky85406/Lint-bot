@@ -61,9 +61,8 @@ def relove(uid,text):
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
 
 			writer.writeheader()
-			for x in range(0,len(c)):
-				if c[x] is None and g[x] is None:
-					writer.writerow({'ID':c[x],'love':g[x]})
+			for x in range(0,len(c)-1):
+				writer.writerow({'ID':c[x],'love':g[x]})
 	with open('mylove.csv',newline='')as csvfile:
 		rows = csv.DictReader(csvfile)
 		
