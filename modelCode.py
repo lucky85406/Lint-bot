@@ -307,7 +307,7 @@ def mylove(n,ulist):
 	alen = len(ulist)
 	print(type(a))
 	if alen == 0:
-		a[0] = 'None'
+		a.append('None')
 	contents = [SeparatorComponent(
 				color = '#0000FF'
 				),
