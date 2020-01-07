@@ -306,6 +306,7 @@ def mylove(n,ulist):
 	a = ulist
 	b=0
 	alen = len(ulist)
+	print(alen)
 	contents = [SeparatorComponent(
 				color = '#0000FF'
 				),
