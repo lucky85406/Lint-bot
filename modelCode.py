@@ -465,7 +465,7 @@ def tenMod(img,dset):
 def single(img,set1):
 	dset = set1
 	print(type(dset))
-	print(dset)
+	print(dset.keys())
 	mes = BubbleContainer(
 				hero = ImageComponent(
 					url = dset[img],
