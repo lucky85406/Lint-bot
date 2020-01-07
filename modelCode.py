@@ -464,9 +464,10 @@ def tenMod(img,dset):
 
 def single(set1):
 	s = list(set1)
+	print(s)
 	mes = BubbleContainer(
 				hero = ImageComponent(
-					url = s[1],
+					url = s[0][1],
 					size = 'full',
 					align = 'center',
 					aspect_ratio = '13:13',
@@ -477,7 +478,7 @@ def single(set1):
 					contents = [
 						TextComponent(
 							margin = 'md',
-							text = s[0],
+							text = s[0][0],
 							weight = 'bold',
 							size = 'md',
 							align = 'center'
@@ -503,7 +504,7 @@ def single(set1):
 									color='#84C1FF',
 									flex = 1,
 									height='sm',
-									action=MessageAction(label="加入最愛",text='MyLove:'+s[0])
+									action=MessageAction(label="加入最愛",text='MyLove:'+s[0][0])
 								),
 								ButtonComponent(
 									margin = 'xxl',
