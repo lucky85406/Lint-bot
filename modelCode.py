@@ -466,7 +466,9 @@ def single(img,set1):
 	print(img)
 	print(set1)
 	dset = set1
-	mes = BubbleContainer(
+
+	contents = []
+	contents.append(BubbleContainer(
 				hero = ImageComponent(
 					url = dset['img'],
 					size = 'full',
@@ -520,3 +522,9 @@ def single(img,set1):
 					]
 				)			
 			)
+	)
+	Carousel = CarouselContainer(
+		contents = contents		
+	)	
+	message = FlexSendMessage(alt_text = "hello",contents= Carousel)
+	return message
