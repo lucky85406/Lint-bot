@@ -463,7 +463,7 @@ def tenMod(img,dset):
 	return message
 
 def single(set1):
-	s = list(dset)
+	s = list(set1)
 	mes = BubbleContainer(
 				hero = ImageComponent(
 					url = s[1],
