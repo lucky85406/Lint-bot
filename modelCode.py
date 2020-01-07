@@ -463,11 +463,14 @@ def tenMod(img,dset):
 	return message
 
 def single(set1):
-	s = [list(set1),set1[list(set1)]]
+	s = list(set1)
+	d = list(set1.values())
 	print(s)
+	print('----')
+	print(d)
 	mes = BubbleContainer(
 				hero = ImageComponent(
-					url = s[1],
+					url = d[0],
 					size = 'full',
 					align = 'center',
 					aspect_ratio = '13:13',
