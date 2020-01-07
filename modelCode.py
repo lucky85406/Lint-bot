@@ -466,7 +466,7 @@ def single(img,set1):
 	dset = set1
 	print(type(dset))
 	print(dset.keys())
-	s = dset.keys()
+	s = dset.keys()[0]
 	mes = BubbleContainer(
 				hero = ImageComponent(
 					url = dset[img],
@@ -480,7 +480,7 @@ def single(img,set1):
 					contents = [
 						TextComponent(
 							margin = 'md',
-							text = dset.keys(),
+							text = s,
 							weight = 'bold',
 							size = 'md',
 							align = 'center'
@@ -506,7 +506,7 @@ def single(img,set1):
 									color='#84C1FF',
 									flex = 1,
 									height='sm',
-									action=MessageAction(label="加入最愛",text='MyLove:'+dset.keys())
+									action=MessageAction(label="加入最愛",text='MyLove:'+s)
 								),
 								ButtonComponent(
 									margin = 'xxl',
