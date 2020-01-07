@@ -466,6 +466,7 @@ def single(img,set1):
 	dset = set1
 	print(type(dset))
 	print(dset.keys())
+	s = dset.keys()
 	mes = BubbleContainer(
 				hero = ImageComponent(
 					url = dset[img],
