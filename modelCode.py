@@ -305,7 +305,7 @@ def showimg():
 def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
-	print(ulist)
+	print(type(a))
 	if alen == 0:
 		a[0] = 'None'
 	contents = [SeparatorComponent(
