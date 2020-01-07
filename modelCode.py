@@ -305,7 +305,6 @@ def showimg():
 def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
-	print(type(a))
 	if alen == 0:
 		a.append('None')
 	contents = [SeparatorComponent(
@@ -326,7 +325,7 @@ def mylove(n,ulist):
 								color='#FFF4C1',
 								flex = 3,
 								height='sm',
-								action=MessageAction(label=a[0],text='showImg')
+								action=MessageAction(label=a[0],text='see:'+a[0])
 							),
 							ButtonComponent(
 								style='secondary',
@@ -364,7 +363,7 @@ def mylove(n,ulist):
 								color='#84C1FF',
 								flex = 1,
 								height='sm',
-								action=MessageAction(label='-',text='re:'+a[x])
+								action=MessageAction(label='-',text='see:'+a[x])
 							)
 						]
 					)

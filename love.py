@@ -32,7 +32,6 @@ def relove(uid,text):
 
 	with open('mylove.csv',newline='')as csvfile:
 		rows = csv.DictReader(csvfile)
-		print(type(rows))
 		for row in rows:
 			c.append(row['ID'])
 			e.append(row['love'])
