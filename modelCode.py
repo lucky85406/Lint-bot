@@ -305,7 +305,8 @@ def showimg():
 def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
-	print(ulist)
+	if alen == 0:
+		a[0] = 'None'
 	contents = [SeparatorComponent(
 				color = '#0000FF'
 				),
