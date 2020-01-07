@@ -22,7 +22,7 @@ def dataList(intxt):
 
 	return set3
 def singleList(intxt):
-	set1 = set()
+	set1 = {}
 
 	with open('cosurl.csv',newline='')as csvfile:
 		rows = csv.DictReader(csvfile)
