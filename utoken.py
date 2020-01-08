@@ -16,20 +16,6 @@ def go(url):
 	for x in c:
 		if x.split('-')[6] == '5':
 			c.remove(x)
-	if len(c)==0:
-		with open('user.csv','w',newline='')as cfile:
-			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
-
-			writer = csv.DictWriter(cfile,fieldnames=fieldn)
-			for x in d:
-				title = x.split('-')[0]
-				d1 = x.split('-')[1]
-				d2 = x.split('-')[2]
-				d3 = x.split('-')[3]
-				d4 = x.split('-')[4]
-				d5 = x.split('-')[5]
-				ver = x.split('-')[6]
-				writer.writerow({'ID':title,'D1':d1,'D2':d2,'D3':d3,'D4':d4,'D5':d5,'Ver':ver})
 
 	with open('user.csv','a',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
