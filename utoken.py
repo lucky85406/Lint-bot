@@ -15,7 +15,10 @@ def go(url):
 		if x.split('-')[0] == url:
 			d.append(x)
 
-	c.remove(d)
+	for y in d:
+		for z in c:
+			if y == z:
+				c.remove(y)
 	print(c)
 
 	with open('user.csv','a',newline='')as cfile:
