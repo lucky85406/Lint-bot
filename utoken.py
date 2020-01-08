@@ -13,7 +13,7 @@ def go(url):
 
 	for x in c:
 		print('---------')
-		print(x[1])
+		print(x[0])
 
 	with open('user.csv','w',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
