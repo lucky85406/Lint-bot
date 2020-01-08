@@ -6,15 +6,16 @@ def go(url):
 
 	c = []
 	d = []
-
+	e = 5
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			c.append(row)
 	if len(c)>0:
 		for x in c:
-			if c[5]['Ver'] == '5' and x['ID'] == url:
+			if c[e]['Ver'] == '5' and x['ID'] == url:
 				c.remove(x)
+				e = e-1
 
 	print(c)
 	with open('user.csv','w',newline='')as cfile:
