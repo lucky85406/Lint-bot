@@ -14,7 +14,7 @@ def go(url):
 	for x in c:
 		if x.split('-')[0] == url:
 			d.append(x)
-
+	print(d)
 	for x in d:
 		if len(d) == 6:
 			c.remove(x)
