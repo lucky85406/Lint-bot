@@ -6,7 +6,6 @@ def go(url):
 	c = []
 	with open('user.csv',newline='')as csvfile:
 		rows = csv.DictReader(csvfile)
-		print(type(rows))
 		for row in rows:
 			print(row)
 			c.append(row['ID']+"-"+row['D1']+'-'+row['D2']+'-'+row['D3']+'-'+row['D4']+'-'+row['D5']+"-"+row['Ver'])
