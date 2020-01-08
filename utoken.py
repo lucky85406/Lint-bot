@@ -3,12 +3,10 @@ import random
 import json
 
 def go(url):
-	with open('user.csv','w',newline='')as cfile:
+	with open('user.csv','a',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
-
-			writer.writeheader()
 
 			writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})
 
