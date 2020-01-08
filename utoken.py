@@ -7,12 +7,9 @@ def go(url):
 	with open('user.csv',newline='')as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
-			print(row)
-			c.append(row['ID']+"-"+row['D1']+'-'+row['D2']+'-'+row['D3']+'-'+row['D4']+'-'+row['D5']+"-"+row['Ver'])
+			c.append(row)
 
-	for x in c:
-		if x.split('-')[6] == '5':
-			c.remove(x)
+	print(c)
 
 	with open('user.csv','a',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
