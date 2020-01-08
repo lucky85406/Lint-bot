@@ -13,7 +13,7 @@ def go(url):
 	if len(c)>0:
 		if c[5].split('-')[6] == '5':
 			for x in c:
-				print(x)
+				print(c)
 				c.remove(x)
 
 	print('---------------')
