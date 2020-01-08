@@ -10,10 +10,10 @@ def go(url):
 		for row in rows:
 			c.append(row['ID']+'-'+row['D1']+'-'+row['D2']+'-'+row['D3']+'-'+row['D4']+'-'+row['D5']+'-'+row['Ver'])
 	print(c)
-
-	if c[6].split('-')[6] == '5' and len(c)>0:
-		for x in c:
-			c.remove(x)
+	if len(c)>0:
+		if c[6].split('-')[6] == '5':
+			for x in c:
+				c.remove(x)
 
 	print('---------------')
 	print(c)
