@@ -18,17 +18,29 @@ def go(url):
 	for x in d:
 		if len(d) == 6:
 			c.remove(x)
-
-	for x in c:
-		print('---------')
-		print(x)
-
-	with open('user.csv','a',newline='')as cfile:
+	if len(d) == 6:
+		with open('user.csv','w',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
+			for x in c:
+				title = x.split('-')[0]
+				D1 = x.split('-')[1]
+				D2 = x.split('-')[2]
+				D3 = x.split('-')[3]
+				D4 = x.split('-')[4]
+				D5 = x.split('-')[5]
+				ver = x.split('-')[6]
+			writer.writerow({'ID':title,'D1':D1,'D2':D2,'D3':D3,'D4':D4,'D5':D5,'Ver':ver})
+	else:
+		with open('user.csv','a',newline='')as cfile:
+					fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
-			writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})
+					writer = csv.DictWriter(cfile,fieldnames=fieldn)
+
+					writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})
+
+	
 
 def inMes(url,x):
 	test = "1"
