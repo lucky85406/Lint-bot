@@ -13,8 +13,11 @@ def go(url):
 			c.append(row)
 	
 	if len(c):
-		print(c)
-		
+		for x in c:
+			if x['ID'] == url:
+				d.append(x)
+				print(d)
+
 	with open('user.csv','w',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
