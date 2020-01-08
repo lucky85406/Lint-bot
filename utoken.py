@@ -14,6 +14,8 @@ def go(url):
 	if len(c)>0:
 		for x in c:
 			if c[e]['Ver'] == '5' and x['ID'] == url:
+				print(x)
+				print('↑---------↓')
 				c.remove(x)
 				print(c)
 				e = e-1
