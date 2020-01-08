@@ -10,6 +10,9 @@ def go(url):
 			if row['Ver'] == '5':
 				c.append(row['ID']+'-'+row['D1']+'-'+row['D2']+'-'+row['D3']+'-'+row['D4']+'-'+row['D5']+'-'+row['Ver'])
 
+	for x in c:
+		if x.split(':')[6] == '5':
+			c.remove(x)
 	print(c)
 
 	with open('user.csv','a',newline='')as cfile:
