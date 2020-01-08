@@ -69,7 +69,8 @@ def conversionCode(k):
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
-	
+	tStart = time.time()#計時開始
+
 	ukey = event.message.text
 	
 	if foodk(ukey):
@@ -132,7 +133,8 @@ def function(event):
 	elif ukey.split(':')[0] == 'see':
 		data = singleList(ukey.split(':')[1])
 		line_bot_api.reply_message(event.reply_token,single(data))
-
+	tEnd = time.time()#計時結束
+	print( "It cost %f sec" % (tEnd - tStart))
 
 
 
