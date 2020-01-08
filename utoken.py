@@ -13,7 +13,7 @@ def go(url):
 	print('----------------')
 	for x in c:
 		if x.split('-')[0] == url and x.split('-')[6] == '5':
-			c.remove(x.split('-')[0] == url)
+			c.remove(url)
 
 	with open('user.csv','a',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
