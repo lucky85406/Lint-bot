@@ -8,10 +8,10 @@ def go(url):
 		rows = csv.DictReader(csvfile)
 		print(type(rows))
 		for row in rows:
-			c.append(row['ID']+":"+row['D1']+'-'+row['D2']+'-'+row['D3']+'-'+row['D4']+'-'+row['D5']+"-"+row['Ver'])
+			c.append(row['ID']+"-"+row['D1']+'-'+row['D2']+'-'+row['D3']+'-'+row['D4']+'-'+row['D5']+"-"+row['Ver'])
 
 	for x in c:
-		if x.split(':')[6] == '5':
+		if x.split('-')[6] == '5':
 			c.remove(x)
 
 
