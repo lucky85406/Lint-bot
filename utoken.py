@@ -12,7 +12,7 @@ def go(url):
 		for row in rows:
 			c.append(row)
 	if len(c)>0:
-		for x in range(0,len[c]):
+		for x in range(0,len(c)):
 			print(c[x])
 			print('-----------------')
 	with open('user.csv','w',newline='')as cfile:
