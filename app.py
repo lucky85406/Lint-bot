@@ -71,35 +71,35 @@ def function(event):
 	if ukey == "紅肉" or ukey =="白肉" or ukey =="海鮮" or ukey =="甜點":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		mod[0] = aroma()
+		mod.append(aroma())
 
 	elif ukey == "花香" or ukey =="漿果" or ukey =="柑橘" or ukey =="熱帶水果" or ukey =="淺色水果" or ukey =="香料" or ukey =="土木":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		mod[0] = taste()
+		mod.append(taste())
 	elif ukey == "清香" or ukey =="甜" or ukey =="圓潤" or ukey =="酸" or ukey =="濃厚":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		mod[0] = chain()
+		mod.append(chain())
 	elif ukey == "家樂福" or ukey =="全聯" or ukey =="Costco":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		mod[0] = price()
+		mod.append(price())
 	elif ukey =="100~350元" or ukey =="351~600元" or ukey =="600元以上":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		mod[0] = showimg()
+		mod.append(showimg())
 	else:
 		if ukey == "go":
 			user_id = event.source.user_id
 			go(user_id)
-			mod[0] = food()
+			mod.append(food())
 
 		elif ukey == "showImg":
 			user_id = event.source.user_id
 			data = dataList(showMes(user_id))
 			dlist = list(data)
-			mod[0] = tenMod(dlist,data)
+			mod.append(tenMod(dlist,data))
 
 		elif ukey.split(':')[0] == 'MyLove':
 			user_id = event.source.user_id
@@ -113,18 +113,18 @@ def function(event):
 			name = profile.display_name
 			relove(name,ukey.split(':')[1])
 			dlist = list(love2(name))
-			mod[0] = mylove(name,dlist)
+			mod.append(mylove(name,dlist))
 
 		elif ukey == 'seemylove':
 			user_id = event.source.user_id
 			profile = line_bot_api.get_profile(user_id)
 			name = profile.display_name		
 			dlist = list(love2(name))
-			mod[0] = mylove(name,dlist)
+			mod.append(mylove(name,dlist))
 
 		elif ukey.split(':')[0] == 'see':
 			data = singleList(ukey.split(':')[1])
-			mod[0] = single(data)
+			mod.append(single(data))
 
 	line_bot_api.reply_message(event.reply_token,aroma())
 
