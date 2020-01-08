@@ -462,6 +462,7 @@ def tenMod(img,dset):
 	message = FlexSendMessage(alt_text = "hello",contents= Carousel)
 	return message
 
+#顯示單張圖片
 def single(set1):
 	s = list(set1)
 	d = list(set1.values())
@@ -524,3 +525,38 @@ def single(set1):
 			)
 	message = FlexSendMessage(alt_text = "hello",contents= mes)
 	return message
+
+#食物Key
+def foodk(t):
+	key = ['紅肉','白肉','海鮮','甜點']
+	if t in key:
+		return True
+	return False
+
+#香氣Key
+def aromak(t):
+	key = ['花香','漿果','柑橘','熱帶水果','淺色水果','香料','土木']
+	if t in key:
+		return True
+	return False
+
+#口感Key
+def tastek(t):
+	key = ['清香','甜','圓潤','酸','濃厚']
+	if t in key:
+		return True
+	return False
+
+#通路Key
+def chaink(t):
+	key = ['家樂福','全聯','Costco']
+	if t in key:
+		return True
+	return False
+
+#價格Key
+def pricek(t):
+	key = ['100~350元','351~600元','600元以上']
+	if t in key:
+		return True
+	return False

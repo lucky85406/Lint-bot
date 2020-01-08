@@ -14,7 +14,9 @@ from linebot.models import (
     BubbleContainer, BoxComponent, TextComponent, FlexSendMessage, ImageComponent, ButtonComponent,
     URIAction, MessageAction, CarouselContainer, SeparatorComponent, IconComponent
 )
-from modelCode import(food, aroma, taste, chain, price, showimg, mylove, tenMod, single)
+from modelCode import(
+	food, aroma, taste, chain, price, showimg, mylove, tenMod, single
+	foodk, aromak, tastek, chaink, pricek)
 from utoken import(go,inMes,showMes)
 from datalist import(dataList,singleList)
 from love import(love,love2,relove)
@@ -62,11 +64,7 @@ def conversionCode(k):
 			,'100~350元':'t','351~600元':'u','600元以上':'v'}
 	return code[k]
 
-def foodk(t):
-	key = ['紅肉','白肉','海鮮','甜點']
-	if t in key:
-		return True
-	return False
+
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
@@ -79,22 +77,22 @@ def function(event):
 		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,aroma())
 
-	elif ukey == "花香" or ukey =="漿果" or ukey =="柑橘" or ukey =="熱帶水果" or ukey =="淺色水果" or ukey =="香料" or ukey =="土木":
+	elif aromak(ukey):
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,taste())
 
-	elif ukey == "清香" or ukey =="甜" or ukey =="圓潤" or ukey =="酸" or ukey =="濃厚":
+	elif tastek(ukey):
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,chain())
 
-	elif ukey == "家樂福" or ukey =="全聯" or ukey =="Costco":
+	elif chaink(ukey):
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,price())
 
-	elif ukey =="100~350元" or ukey =="351~600元" or ukey =="600元以上":
+	elif pricek(ukey):
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,showimg())
