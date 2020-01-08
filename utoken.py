@@ -11,6 +11,13 @@ def go(url):
 			c.append(row['ID']+'-'+row['D1']+'-'+row['D2']+'-'+row['D3']+'-'+row['D4']+'-'+row['D5']+'-'+row['Ver'])
 	print(c)
 
+	if c[6].split('-')[6] == '5':
+		for x in c:
+			c.remove(x)
+
+	print('---------------')
+	print(c)
+
 	with open('user.csv','a',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
