@@ -33,8 +33,8 @@ def go(url):
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
 
 			writer.writeheader()
-			for x in c:
-				writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})
+			
+			writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})
 
 	
 
