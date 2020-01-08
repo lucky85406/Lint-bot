@@ -17,6 +17,7 @@ def go(url):
 		if x.split('-')[6] == '5':
 			c.remove(x)
 	if c:
+		break
 	else:
 		with open('user.csv','w',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
