@@ -12,7 +12,9 @@ def go(url):
 		for row in rows:
 			c.append(row)
 	if len(c)>0:
-		print(c[0]['ID'])
+		for x in c:
+			if c[6]['Ver'] == '5':
+				print(x)
 
 
 	with open('user.csv','w',newline='')as cfile:
