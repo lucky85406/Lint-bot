@@ -62,13 +62,19 @@ def conversionCode(k):
 			,'100~350元':'t','351~600元':'u','600元以上':'v'}
 	return code[k]
 
+def foodk(t):
+	key = ['紅肉','白肉','海鮮','甜點']
+	if t in key:
+		return True
+	return False
+
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	
 	ukey = event.message.text
 	
-	if ukey == "紅肉" or ukey =="白肉" or ukey =="海鮮" or ukey =="甜點":
+	if foodk(ukey):
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,aroma())
