@@ -11,7 +11,7 @@ def go(url):
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			c.append(row)
-	print(c[0])
+	print(c)
 
 
 	with open('user.csv','w',newline='')as cfile:
