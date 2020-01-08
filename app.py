@@ -15,7 +15,7 @@ from linebot.models import (
     URIAction, MessageAction, CarouselContainer, SeparatorComponent, IconComponent
 )
 from modelCode import(
-	food, aroma, taste, chain, price, showimg, mylove, tenMod, single
+	food, aroma, taste, chain, price, showimg, mylove, tenMod, single,
 	foodk, aromak, tastek, chaink, pricek)
 from utoken import(go,inMes,showMes)
 from datalist import(dataList,singleList)
