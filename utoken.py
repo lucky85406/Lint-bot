@@ -12,7 +12,7 @@ def go(url):
 		for row in rows:
 			c.append(row)
 
-	print(c)
+	print(c[0]['ID'])
 
 	with open('user.csv','w',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
