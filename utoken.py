@@ -31,7 +31,7 @@ def go(url):
 				D4 = x.split('-')[4]
 				D5 = x.split('-')[5]
 				ver = x.split('-')[6]
-			writer.writerow({'ID':title,'D1':D1,'D2':D2,'D3':D3,'D4':D4,'D5':D5,'Ver':ver})
+				writer.writerow({'ID':title,'D1':D1,'D2':D2,'D3':D3,'D4':D4,'D5':D5,'Ver':ver})
 	else:
 		with open('user.csv','a',newline='')as cfile:
 					fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
