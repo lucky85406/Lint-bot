@@ -16,7 +16,6 @@ def go(url):
 			print(x)
 			print('↑---------↓')
 			if c[e]['Ver'] == '5' and x['ID'] == url:
-				c.remove(x)
 				print(c)
 				e = e-1
 	with open('user.csv','w',newline='')as cfile:
