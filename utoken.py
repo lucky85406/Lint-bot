@@ -13,7 +13,7 @@ def go(url):
 			c.append(row)
 	if len(c)>0:
 		for x in range(0,len(c)):
-			print(c[x])
+			print(c[x]['ID']+'▼'+c[x]['Ver'])
 			print('-----------------')
 	with open('user.csv','w',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
