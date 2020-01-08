@@ -5,15 +5,14 @@ import json
 def go(url):
 
 	c = []
+	d = []
 
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			c.append(row)
 
-	for x in c:
-		print('---------')
-		print(x)
+	print(c)
 
 	with open('user.csv','w',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
