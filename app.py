@@ -134,6 +134,7 @@ def function(event):
 		data = singleList(ukey.split(':')[1])
 		line_bot_api.reply_message(event.reply_token,single(data))
 	tEnd = time.time()#計時結束
+	print('-------------------')
 	print( "It cost %f sec" % (tEnd - tStart))
 
 
