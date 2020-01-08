@@ -18,16 +18,25 @@ def go(url):
 				d.append(x)
 		for x in d:
 			c.remove(x)
-	print(c)
-
-	with open('user.csv','w',newline='')as cfile:
+		with open('user.csv','w',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
 
 			writer.writeheader()
+			for x in c:
+				writer.writerow({'ID':x['ID'],'D1':x['D1'],'D2':x['D2'],'D3':x['D3'],'D4':x['D4'],'D5':x['D5'],'Ver':x['Ver']})
+	else:
+		with open('user.csv','w',newline='')as cfile:
+			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
-			writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})
+			writer = csv.DictWriter(cfile,fieldnames=fieldn)
+
+			writer.writeheader()
+			for x in c:
+				writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})
+
+	
 
 def inMes(url,x):
 	test = "1"
