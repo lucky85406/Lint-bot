@@ -54,93 +54,6 @@ def callback():
     return 'OK'
 
 
-'''
-#測試版型
-def testimg():
-	mes = BubbleContainer(
-			header = BoxComponent(
-				layout = 'baseline',
-				contents = [
-					TextComponent(
-						text = "克曼沙酒堡紅酒",
-						weight = 'bold',
-						size = 'xl',
-						align = 'center'
-					)
-				]
-			),
-			hero = ImageComponent(
-				url = 'https://i.imgur.com/YVk6nFG.jpg',
-				size = 'full',
-				align = 'center',
-				aspect_ratio = '13:11',
-				aspect_mode = 'fit'
-			),
-			body = BoxComponent(
-				layout = 'vertical',
-				contents = [
-					SeparatorComponent(
-						color = '#0000FF'
-					),
-					TextComponent(
-						margin = 'md',
-						text = "敘述:",
-						weight = 'bold',
-						size = 'md',
-						align = 'start'
-					),
-					TextComponent(
-						margin = 'md',
-						text = "第一段",
-						weight = 'bold',
-						size = 'xs',
-						align = 'start'
-					),
-					TextComponent(
-						margin = 'md',
-						text = "第二段",
-						weight = 'bold',
-						size = 'xs',
-						align = 'start'
-					),
-					TextComponent(
-						margin = 'md',
-						text = "第三段",
-						weight = 'bold',
-						size = 'xs',
-						align = 'start'
-					),
-					SeparatorComponent(
-						color = '#0000FF'
-					),
-					BoxComponent(
-						margin = 'md',
-						layout = 'horizontal',
-						spacing = 'xs',
-						contents = [
-							ButtonComponent(
-								style='link',
-								color='#84C1FF',
-								flex = 1,
-								height='sm',
-								action=MessageAction(label="加入最愛",text='加入最愛')
-							),
-							ButtonComponent(
-								margin = 'xxl',
-								style='link',
-								color='#84C1FF',
-								flex = 1,
-								height='sm',
-								action=MessageAction(label="還沒想到",text='還沒想到')
-							)
-						]
-					)
-				]
-			)
-		)
-	message = FlexSendMessage(alt_text = "hello",contents = mes)
-	return message
-'''
 def conversionCode(k):
 	code = {'紅肉':'a','白肉':'b','海鮮':'c','甜點':'d','花香':'e'
 			,'漿果':'f','柑橘':'g','熱帶水果':'h','淺色水果':'i','香料':'j'
@@ -154,38 +67,39 @@ def conversionCode(k):
 def function(event):
 	
 	ukey = event.message.text
-	
+	mod = []
 	if ukey == "紅肉" or ukey =="白肉" or ukey =="海鮮" or ukey =="甜點":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		line_bot_api.reply_message(event.reply_token,aroma())
+		mod[0] = aroma()
+
 	elif ukey == "花香" or ukey =="漿果" or ukey =="柑橘" or ukey =="熱帶水果" or ukey =="淺色水果" or ukey =="香料" or ukey =="土木":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		line_bot_api.reply_message(event.reply_token,taste())
+		mod[0] = taste()
 	elif ukey == "清香" or ukey =="甜" or ukey =="圓潤" or ukey =="酸" or ukey =="濃厚":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		line_bot_api.reply_message(event.reply_token,chain())
+		mod[0] = chain()
 	elif ukey == "家樂福" or ukey =="全聯" or ukey =="Costco":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		line_bot_api.reply_message(event.reply_token,price())
+		mod[0] = price()
 	elif ukey =="100~350元" or ukey =="351~600元" or ukey =="600元以上":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		line_bot_api.reply_message(event.reply_token,showimg())
+		mod[0] = showimg()
 	else:
 		if ukey == "go":
 			user_id = event.source.user_id
 			go(user_id)
-			line_bot_api.reply_message(event.reply_token,food())
+			mod[0] = food()
 
 		elif ukey == "showImg":
 			user_id = event.source.user_id
 			data = dataList(showMes(user_id))
 			dlist = list(data)
-			line_bot_api.reply_message(event.reply_token,tenMod(dlist,data))
+			mod[0] = tenMod(dlist,data)
 
 		elif ukey.split(':')[0] == 'MyLove':
 			user_id = event.source.user_id
@@ -199,18 +113,20 @@ def function(event):
 			name = profile.display_name
 			relove(name,ukey.split(':')[1])
 			dlist = list(love2(name))
-			line_bot_api.reply_message(event.reply_token,mylove(name,dlist))	
+			mod[0] = mylove(name,dlist)
 
 		elif ukey == 'seemylove':
 			user_id = event.source.user_id
 			profile = line_bot_api.get_profile(user_id)
 			name = profile.display_name		
 			dlist = list(love2(name))
-			line_bot_api.reply_message(event.reply_token,mylove(name,dlist))
+			mod[0] = mylove(name,dlist)
 
 		elif ukey.split(':')[0] == 'see':
 			data = singleList(ukey.split(':')[1])
-			line_bot_api.reply_message(event.reply_token,single(data))
+			mod[0] = single(data)
+
+	line_bot_api.reply_message(event.reply_token,aroma())
 
 
 

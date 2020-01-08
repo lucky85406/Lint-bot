@@ -6,7 +6,7 @@ def go(url):
 
 	c = []
 	d = []
-	e = 5
+	
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
