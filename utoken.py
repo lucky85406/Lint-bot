@@ -3,44 +3,23 @@ import random
 import json
 
 def go(url):
+
 	c = []
-	d = []
-	with open('user.csv',newline='')as csvfile:
+
+	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
-			c.append(row['ID']+'-'+row['D1']+'-'+row['D2']+'-'+row['D3']+'-'+row['D4']+'-'+row['D5']+'-'+row['Ver'])
+			c.append(row)
 	print(c)
-	print('----------------')
-	for x in c:
-		if x.split('-')[0] == url:
-			d.append(x)
-	print(d)
-	for x in d:
-		if len(d) == 6:
-			c.remove(x)
-	if len(d) == 6:
-		with open('user.csv','w',newline='')as cfile:
+
+	with open('user.csv','w',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
-			for x in c:
-				title = x.split('-')[0]
-				D1 = x.split('-')[1]
-				D2 = x.split('-')[2]
-				D3 = x.split('-')[3]
-				D4 = x.split('-')[4]
-				D5 = x.split('-')[5]
-				ver = x.split('-')[6]
-				writer.writerow({'ID':title,'D1':D1,'D2':D2,'D3':D3,'D4':D4,'D5':D5,'Ver':ver})
-	else:
-		with open('user.csv','a',newline='')as cfile:
-					fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
-					writer = csv.DictWriter(cfile,fieldnames=fieldn)
+			writer.writeheader()
 
-					writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})
-
-	
+			writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})
 
 def inMes(url,x):
 	test = "1"
