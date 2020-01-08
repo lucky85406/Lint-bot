@@ -13,7 +13,7 @@ def go(url):
 			c.append(row)
 	if len(c)>0:
 		for x in c:
-			if c[6]['Ver'] == '5':
+			if c[5]['Ver'] == '5':
 				print(x)
 
 
