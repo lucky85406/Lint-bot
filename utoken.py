@@ -13,6 +13,8 @@ def go(url):
 			c.append(row)
 	if len(c)>0:
 		for x in c:
+			print(x)
+			print('↑---------↓')
 			if c[e]['Ver'] == '5' and x['ID'] == url:
 				print(x)
 				print('↑---------↓')
