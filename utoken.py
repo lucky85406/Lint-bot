@@ -15,7 +15,7 @@ def go(url):
 		if x.split('-')[6] == '5':
 			for y in c:
 				if x.split('-')[0] == url:
-					c.remove(x) 
+					c.remove(y) 
 			break
 
 	print(c)
