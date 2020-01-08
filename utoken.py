@@ -17,6 +17,8 @@ def go(url):
 			print('↑---------↓')
 			if c[e]['Ver'] == '5' and x['ID'] == url:
 				print(c)
+				c.remove(x)
+				e =e -1
 	with open('user.csv','w',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
