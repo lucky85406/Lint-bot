@@ -12,7 +12,7 @@ def go(url):
 	print(c)
 	print('----------------')
 	for x in c:
-		if x.split('-')[0] == url and x.split('-') == '5':
+		if x.split('-')[0] == url and x.split('-')[6] == '5':
 			print(x)
 
 	with open('user.csv','a',newline='')as cfile:
