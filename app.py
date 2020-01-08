@@ -67,39 +67,38 @@ def conversionCode(k):
 def function(event):
 	
 	ukey = event.message.text
-	mod = []
+	
 	if ukey == "紅肉" or ukey =="白肉" or ukey =="海鮮" or ukey =="甜點":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		mod.append(aroma())
-
+		line_bot_api.reply_message(event.reply_token,aroma())
 	elif ukey == "花香" or ukey =="漿果" or ukey =="柑橘" or ukey =="熱帶水果" or ukey =="淺色水果" or ukey =="香料" or ukey =="土木":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		mod.append(taste())
+		line_bot_api.reply_message(event.reply_token,taste())
 	elif ukey == "清香" or ukey =="甜" or ukey =="圓潤" or ukey =="酸" or ukey =="濃厚":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		mod.append(chain())
+		line_bot_api.reply_message(event.reply_token,chain())
 	elif ukey == "家樂福" or ukey =="全聯" or ukey =="Costco":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		mod.append(price())
+		line_bot_api.reply_message(event.reply_token,price())
 	elif ukey =="100~350元" or ukey =="351~600元" or ukey =="600元以上":
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		mod.append(showimg())
+		line_bot_api.reply_message(event.reply_token,showimg())
 	else:
 		if ukey == "go":
 			user_id = event.source.user_id
 			go(user_id)
-			mod.append(food())
+			line_bot_api.reply_message(event.reply_token,food())
 
 		elif ukey == "showImg":
 			user_id = event.source.user_id
 			data = dataList(showMes(user_id))
 			dlist = list(data)
-			mod.append(tenMod(dlist,data))
+			line_bot_api.reply_message(event.reply_token,tenMod(dlist,data))
 
 		elif ukey.split(':')[0] == 'MyLove':
 			user_id = event.source.user_id
@@ -113,20 +112,18 @@ def function(event):
 			name = profile.display_name
 			relove(name,ukey.split(':')[1])
 			dlist = list(love2(name))
-			mod.append(mylove(name,dlist))
+			line_bot_api.reply_message(event.reply_token,mylove(name,dlist))	
 
 		elif ukey == 'seemylove':
 			user_id = event.source.user_id
 			profile = line_bot_api.get_profile(user_id)
 			name = profile.display_name		
 			dlist = list(love2(name))
-			mod.append(mylove(name,dlist))
+			line_bot_api.reply_message(event.reply_token,mylove(name,dlist))
 
 		elif ukey.split(':')[0] == 'see':
 			data = singleList(ukey.split(':')[1])
-			mod.append(single(data))
-
-	line_bot_api.reply_message(event.reply_token,aroma())
+			line_bot_api.reply_message(event.reply_token,single(data))
 
 
 
