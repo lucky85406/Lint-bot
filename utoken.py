@@ -12,13 +12,9 @@ def go(url):
 		for row in rows:
 			c.append(row)
 	if len(c)>0:
-		for x in c:
-			print(x)
-			print('↑---------↓')
-			if c[e]['Ver'] == '5' and x['ID'] == url:
-				print(c)
-				c.remove(x)
-				e =e -1
+		for x in range(0,len[c]):
+			print(c[x])
+			print('-----------------')
 	with open('user.csv','w',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
 
