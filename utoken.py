@@ -10,7 +10,8 @@ def go(url):
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			c.append(row)
-	print(c[6])
+	if len(c)==6:
+		print(c[5])
 
 	with open('user.csv','w',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5','Ver']
