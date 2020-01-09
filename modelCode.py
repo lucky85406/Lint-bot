@@ -301,6 +301,7 @@ def showimg():
 def mylove(n,ulist):
 	a = ulist
 	alen = len(ulist)
+	print(alen)
 	if alen == 0:
 		a.append('None')
 	contents = []
