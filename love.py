@@ -8,6 +8,7 @@ def love(uid,text):
 		for row in rows:
 			if row['ID'] == uid and row['love'] == text:
 				c = True
+				break
 	if c:
 		return c
 	else:
