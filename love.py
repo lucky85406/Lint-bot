@@ -18,20 +18,17 @@ def love2(uid):
 	return set1	
 def relove(uid,text):
 	mes = set()
-	a = []
 	c = []	
-	e = []	
+	e = []
+	a = []	
 	f = []
 	g = []
-	d=0
 
 	with open('mylove.csv',newline='')as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			c.append(row['ID'])
 			e.append(row['love'])
-
-
 
 	for x in range(0,len(c)):
 		if c[x] == uid:
