@@ -523,7 +523,7 @@ def single(set1):
 				)
 		message = FlexSendMessage(alt_text = "hello",contents= mes)
 	else:
-		message = TextMessage(Text=d[0])
+		message = TextSendMessage(Text=d[0])
 	return message
 
 #食物Key
