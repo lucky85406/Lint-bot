@@ -304,8 +304,35 @@ def mylove(n,ulist):
 	print(alen)
 	if alen == 0:
 		a.append('None')
-	contents = []
-	for x in range(0,alen):
+	contents = [BoxComponent(
+				margin = 'md',
+				layout = 'vertical',
+				spacing = 'xs',
+				contents = [
+					BoxComponent(
+						margin = 'md',
+						layout = 'horizontal',
+						spacing = 'xs',
+						contents = [
+							ButtonComponent(
+								style='secondary',
+								color='#84C1FF',
+								flex = 3,
+								height='sm',
+								action=MessageAction(label=a[x],text='see:'+a[x])
+							),
+							ButtonComponent(
+								style='secondary',
+								color='#ECFFFF',
+								flex = 1,
+								height='sm',
+								action=MessageAction(label='-',text='re:'+a[x])
+							)
+						]
+					)
+				]
+			)]
+	for x in range(1,alen):
 		contents.append(BoxComponent(
 				margin = 'md',
 				layout = 'vertical',
