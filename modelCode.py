@@ -307,7 +307,7 @@ def mylove(n,ulist):
 		a.append('None')
 		s.append('x')
 	else:
-		s.append('-')
+		s.append(a[0])
 	contents = [BoxComponent(
 				margin = 'md',
 				layout = 'vertical',
@@ -330,7 +330,7 @@ def mylove(n,ulist):
 								color='#ECFFFF',
 								flex = 1,
 								height='sm',
-								action=MessageAction(label=s[0],text='re:'+s[0])
+								action=MessageAction(label='-',text='re:'+s[0])
 							)
 						]
 					)
