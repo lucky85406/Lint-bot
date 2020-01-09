@@ -302,7 +302,6 @@ def mylove(n,ulist):
 	a = ulist
 	s = []
 	alen = len(ulist)
-	print(alen)
 	if alen == 0:
 		a.append('None')
 		s.append('x')
