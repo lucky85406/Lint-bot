@@ -113,7 +113,8 @@ def function(event):
 		user_id = event.source.user_id
 		profile = line_bot_api.get_profile(user_id)
 		name = profile.display_name
-		love(name,ukey)
+		if love(name,ukey):
+			line_bot_api.reply_message(event.reply_token,TextSendMessage(text='我的最愛:已存在'))
 
 	elif ukey.split(':')[0] == 're':
 		user_id = event.source.user_id

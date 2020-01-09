@@ -2,12 +2,22 @@ import csv
 
 def love(uid,text):
 	keyin = text.split(":")
-	with open('mylove.csv','a',newline='')as cfile:
-			fieldn = ['ID','love']
+	c = False
+	with open('mylove.csv',newline='')as cfile:
+		rows = csv.DictReader(csvfile)
+		for row in rows:
+			if row['ID'] == uid and row['love'] == text:
+				c = True
+	if c:
+		return c
+	else:
+		with open('mylove.csv','a',newline='')as cfile:
+				fieldn = ['ID','love']
 
-			writer = csv.DictWriter(cfile,fieldnames=fieldn)
+				writer = csv.DictWriter(cfile,fieldnames=fieldn)
 
-			writer.writerow({'ID':uid,'love':keyin[1]})
+				writer.writerow({'ID':uid,'love':keyin[1]})
+		return c
 def love2(uid):
 	set1 = set()
 	with open('mylove.csv',newline='')as csvfile:
