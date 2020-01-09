@@ -6,13 +6,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, 
-    ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, 
-    URITemplateAction, ImageCarouselColumn, ImageCarouselTemplate, 
-    ImageSendMessage, URIImagemapAction, MessageImagemapAction, CarouselTemplate ,
-    CarouselColumn, MessageImagemapAction, ImagemapArea, ImagemapSendMessage, BaseSize,
-    BubbleContainer, BoxComponent, TextComponent, FlexSendMessage, ImageComponent, ButtonComponent,
-    URIAction, MessageAction, CarouselContainer, SeparatorComponent, IconComponent
+    MessageEvent, TextMessage, TextSendMessage
 )
 from modelCode import(
 	food, aroma, taste, chain, price, showimg, mylove, tenMod, single,
