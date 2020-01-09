@@ -522,10 +522,9 @@ def single(set1):
 						]
 					)			
 				)
-		message = FlexSendMessage(alt_text = "hello",contents= mes)
+		return FlexSendMessage(alt_text = "hello",contents= mes)
 	else:
-		message = TextSendMessage(Text=d[0])
-	return message
+		return TextSendMessage(Text=d[0])
 
 #食物Key
 def foodk(t):
