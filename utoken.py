@@ -6,7 +6,7 @@ def go(url):
 
 	c = []
 	d = []
-	
+
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
@@ -36,8 +36,6 @@ def go(url):
 			writer.writeheader()
 			
 			writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':"",'Ver':"0"})
-
-	
 
 def inMes(url,x):
 	test = "1"

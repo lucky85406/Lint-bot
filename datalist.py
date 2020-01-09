@@ -23,11 +23,14 @@ def dataList(intxt):
 	return set3
 def singleList(intxt):
 	set1 = {}
-
-	with open('cosurl.csv',newline='')as csvfile:
-		rows = csv.DictReader(csvfile)
-		for row in rows:
-			if row['酒類'] == intxt:
-				set1[row['酒類']] = row['url']
-	return set1	
+	if intxt != 'None':
+		with open('cosurl.csv',newline='')as csvfile:
+			rows = csv.DictReader(csvfile)
+			for row in rows:
+				if row['酒類'] == intxt:
+					set1[row['酒類']] = row['url']
+		return set1
+	else:
+		set1 = {'None':'無資料'}
+		return set1
 

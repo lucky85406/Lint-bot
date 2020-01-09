@@ -466,61 +466,64 @@ def tenMod(img,dset):
 def single(set1):
 	s = list(set1)
 	d = list(set1.values())
-	mes = BubbleContainer(
-				hero = ImageComponent(
-					url = d[0],
-					size = 'full',
-					align = 'center',
-					aspect_ratio = '13:13',
-					aspect_mode = 'cover'
-				),
-				body = BoxComponent(
-					layout = 'vertical',
-					contents = [
-						TextComponent(
-							margin = 'md',
-							text = s[0],
-							weight = 'bold',
-							size = 'md',
-							align = 'center'
-						),
-						TextComponent(
-							margin = 'md',
-							text = "第一段",
-							weight = 'bold',
-							size = 'xs',
-							align = 'center'
-						),
-						SeparatorComponent(
-							margin = 'xl',
-							color = '#0000FF'
-						),
-						BoxComponent(
-							margin = 'md',
-							layout = 'horizontal',
-							spacing = 'xs',
-							contents = [
-								ButtonComponent(
-									style='link',
-									color='#84C1FF',
-									flex = 1,
-									height='sm',
-									action=MessageAction(label="加入最愛",text='MyLove:'+s[0])
-								),
-								ButtonComponent(
-									margin = 'xxl',
-									style='link',
-									color='#84C1FF',
-									flex = 1,
-									height='sm',
-									action=MessageAction(label="還沒想到",text='還沒想到')
-								)
-							]
-						)
-					]
-				)			
-			)
-	message = FlexSendMessage(alt_text = "hello",contents= mes)
+	if s[0] != 'None':
+		mes = BubbleContainer(
+					hero = ImageComponent(
+						url = d[0],
+						size = 'full',
+						align = 'center',
+						aspect_ratio = '13:13',
+						aspect_mode = 'cover'
+					),
+					body = BoxComponent(
+						layout = 'vertical',
+						contents = [
+							TextComponent(
+								margin = 'md',
+								text = s[0],
+								weight = 'bold',
+								size = 'md',
+								align = 'center'
+							),
+							TextComponent(
+								margin = 'md',
+								text = "第一段",
+								weight = 'bold',
+								size = 'xs',
+								align = 'center'
+							),
+							SeparatorComponent(
+								margin = 'xl',
+								color = '#0000FF'
+							),
+							BoxComponent(
+								margin = 'md',
+								layout = 'horizontal',
+								spacing = 'xs',
+								contents = [
+									ButtonComponent(
+										style='link',
+										color='#84C1FF',
+										flex = 1,
+										height='sm',
+										action=MessageAction(label="加入最愛",text='MyLove:'+s[0])
+									),
+									ButtonComponent(
+										margin = 'xxl',
+										style='link',
+										color='#84C1FF',
+										flex = 1,
+										height='sm',
+										action=MessageAction(label="還沒想到",text='還沒想到')
+									)
+								]
+							)
+						]
+					)			
+				)
+		message = FlexSendMessage(alt_text = "hello",contents= mes)
+	else:
+		message = TextMessage(Text=d[0])
 	return message
 
 #食物Key
