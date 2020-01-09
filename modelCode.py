@@ -319,14 +319,14 @@ def mylove(n,ulist):
 								color='#84C1FF',
 								flex = 3,
 								height='sm',
-								action=MessageAction(label=a[x],text='see:'+a[x])
+								action=MessageAction(label=a[0],text='see:'+a[0])
 							),
 							ButtonComponent(
 								style='secondary',
 								color='#ECFFFF',
 								flex = 1,
 								height='sm',
-								action=MessageAction(label='-',text='re:'+a[x])
+								action=MessageAction(label='-',text='re:'+a[0])
 							)
 						]
 					)
