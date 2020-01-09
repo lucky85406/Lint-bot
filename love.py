@@ -4,7 +4,7 @@ def love(uid,text):
 	keyin = text.split(":")
 	c = False
 	with open('mylove.csv',newline='')as cfile:
-		rows = csv.DictReader(csvfile)
+		rows = csv.DictReader(cfile)
 		for row in rows:
 			if row['ID'] == uid and row['love'] == text:
 				c = True
