@@ -30,7 +30,7 @@ def singleList(intxt):
 				if row['酒類'] == intxt:
 					set1[row['酒類']] = row['url']
 	else:
-		set1 = {'None':'無資料'}
+		set1 = {'None':'請加入選項至我的最愛'}
 
 	return set1
 
