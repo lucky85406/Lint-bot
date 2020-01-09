@@ -300,10 +300,14 @@ def showimg():
 #我的最愛
 def mylove(n,ulist):
 	a = ulist
+	s = []
 	alen = len(ulist)
 	print(alen)
 	if alen == 0:
 		a.append('None')
+		s.append('x')
+	else:
+		s.append('-')
 	contents = [BoxComponent(
 				margin = 'md',
 				layout = 'vertical',
@@ -326,7 +330,7 @@ def mylove(n,ulist):
 								color='#ECFFFF',
 								flex = 1,
 								height='sm',
-								action=MessageAction(label='-',text='re:'+a[0])
+								action=MessageAction(label=s[0],text='re:'+s[0])
 							)
 						]
 					)

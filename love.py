@@ -35,40 +35,41 @@ def relove(uid,text):
 	f = []
 	g = []
 
-	with open('mylove.csv',newline='')as csvfile:
-		rows = csv.DictReader(csvfile)
-		for row in rows:
-			c.append(row['ID'])
-			e.append(row['love'])
+	if text != 'x':
+		with open('mylove.csv',newline='')as csvfile:
+			rows = csv.DictReader(csvfile)
+			for row in rows:
+				c.append(row['ID'])
+				e.append(row['love'])
 
-	for x in range(0,len(c)):
-		if c[x] == uid:
-			a.append(c[x])
-			f.append(e[x])
-		else:
-			g.append(e[x])		
+		for x in range(0,len(c)):
+			if c[x] == uid:
+				a.append(c[x])
+				f.append(e[x])
+			else:
+				g.append(e[x])		
 
-	a.remove(uid)
-	f.remove(text)
-	for x in c:
-		if x == uid:
-			c.remove(uid)
+		a.remove(uid)
+		f.remove(text)
+		for x in c:
+			if x == uid:
+				c.remove(uid)
 
-	c.extend(a)
-	g.extend(f)
+		c.extend(a)
+		g.extend(f)
 
-	with open('mylove.csv','w',newline='')as cfile:
-			fieldn = ['ID','love']
+		with open('mylove.csv','w',newline='')as cfile:
+				fieldn = ['ID','love']
 
-			writer = csv.DictWriter(cfile,fieldnames=fieldn)
+				writer = csv.DictWriter(cfile,fieldnames=fieldn)
 
-			writer.writeheader()
-			for x in range(0,len(c)-1):
-				writer.writerow({'ID':c[x],'love':g[x]})
-	with open('mylove.csv',newline='')as csvfile:
-		rows = csv.DictReader(csvfile)
-		
-		for row in rows:
-			if uid == row['ID']:
-				mes.add(row['love'])
-	return mes
+				writer.writeheader()
+				for x in range(0,len(c)-1):
+					writer.writerow({'ID':c[x],'love':g[x]})
+		with open('mylove.csv',newline='')as csvfile:
+			rows = csv.DictReader(csvfile)
+			
+			for row in rows:
+				if uid == row['ID']:
+					mes.add(row['love'])
+		return mes
