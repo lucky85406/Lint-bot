@@ -29,8 +29,8 @@ def singleList(intxt):
 			for row in rows:
 				if row['酒類'] == intxt:
 					set1[row['酒類']] = row['url']
-		return set1
 	else:
 		set1 = {'None':'無資料'}
-		return set1
+
+	return set1
 
