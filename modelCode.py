@@ -303,40 +303,8 @@ def mylove(n,ulist):
 	alen = len(ulist)
 	if alen == 0:
 		a.append('None')
-	contents = [SeparatorComponent(
-				color = '#0000FF'
-				),
-			BoxComponent(
-				margin = 'md',
-				layout = 'vertical',
-				spacing = 'xs',
-				contents = [
-					BoxComponent(
-						margin = 'md',
-						layout = 'horizontal',
-						spacing = 'xs',
-						contents = [
-							ButtonComponent(
-								style='secondary',
-								color='#FFF4C1',
-								flex = 3,
-								height='sm',
-								action=MessageAction(label=a[0],text='see:'+a[0])
-							),
-							ButtonComponent(
-								style='secondary',
-								color='#ECFFFF',
-								flex = 1,
-								height='sm',
-								action=MessageAction(label='-',text='re:'+a[0])
-							)
-						]
-					)
-
-				]
-			)
-		]
-	for x in range(1,alen):
+	contents = []
+	for x in range(0,alen):
 		contents.append(BoxComponent(
 				margin = 'md',
 				layout = 'vertical',
