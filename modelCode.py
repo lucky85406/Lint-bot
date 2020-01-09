@@ -360,7 +360,7 @@ def mylove(n,ulist):
 							),
 							ButtonComponent(
 								style='secondary',
-								color='#84C1FF',
+								color='#ECFFFF',
 								flex = 1,
 								height='sm',
 								action=MessageAction(label='-',text='re:'+a[x])
