@@ -332,7 +332,8 @@ def mylove(n,ulist):
 						]
 					)
 				]
-			))
+			)
+		)
 	Carousel = CarouselContainer(
 			contents = [
 				BubbleContainer(
@@ -430,7 +431,6 @@ def tenMod(img,dset):
 def single(set1):
 	s = list(set1)
 	d = list(set1.values())
-	print(s[0]+'----'+d[0])
 	if s[0] != 'None':
 		mes = BubbleContainer(
 					hero = ImageComponent(
