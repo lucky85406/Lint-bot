@@ -66,7 +66,7 @@ def function(event):
 	tStart = time.time()#計時開始
 
 	ukey = event.message.text
-	
+
 	if foodk(ukey):
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
@@ -91,7 +91,7 @@ def function(event):
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,showimg())
-	
+
 	elif ukey == "go":
 		user_id = event.source.user_id
 		go(user_id)
@@ -116,12 +116,12 @@ def function(event):
 		name = profile.display_name
 		relove(name,ukey.split(':')[1])
 		dlist = list(love2(name))
-		line_bot_api.reply_message(event.reply_token,mylove(name,dlist))	
+		line_bot_api.reply_message(event.reply_token,mylove(name,dlist))
 
 	elif ukey == 'seemylove':
 		user_id = event.source.user_id
 		profile = line_bot_api.get_profile(user_id)
-		name = profile.display_name		
+		name = profile.display_name
 		dlist = list(love2(name))
 		line_bot_api.reply_message(event.reply_token,mylove(name,dlist))
 
