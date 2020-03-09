@@ -113,6 +113,6 @@ def showMes(url):
 		for row in rows:
 			if row['ID'] == url:
 				print("------------")
-				print(row['D1']+"->"+row['D2']+"->"+row['D3']+"->"+row['D4']+"->"+row['D5'])
+				print(row)
 				return "{}{}{}{}{}".format(row['D1'],row['D2'],row['D3'],row['D4'],row['D5'])
 	return a
