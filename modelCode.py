@@ -395,7 +395,7 @@ def tenMod(img,dset):
 	d = dset
 	imglist = img
 	contents = []
-	dlen = len(imglist)
+	print(d)
 	print("圖片數量",dlen,sep=":")
 	if dlen > 0:
 		for x in range(0,dlen):
