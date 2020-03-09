@@ -59,42 +59,37 @@ def level(x):
 	return lev
 
 def inMes(url,x):
-	con = ""
+	con = url
 	Dlist = [""]*5
-	ver = ""
+	print
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			if row['ID'] == url and level(x) == "1":
-				con = row['ID']
 				Dlist[0] = x
 				Dlist[1] = row['D2']
 				Dlist[2] = row['D3']
 				Dlist[3] = row['D4']
 				Dlist[4] = row['D5']
 			elif row['ID'] == url and level(x) == "2":
-				con = row['ID']
 				Dlist[0] = row['D1']
 				Dlist[1] = x
 				Dlist[2] = row['D3']
 				Dlist[3] = row['D4']
 				Dlist[4] = row['D5']
 			elif row['ID'] == url and level(x) == "3":
-				con = row['ID']
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = x
 				Dlist[3] = row['D4']
 				Dlist[4] = row['D5']
 			elif row['ID'] == url and level(x) == "4":
-				con = row['ID']
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = row['D3']
 				Dlist[3] = x
 				Dlist[4] = row['D5']
 			elif row['ID'] == url and level(x) == "5":
-				con = row['ID']
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = row['D3']
