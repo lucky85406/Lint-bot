@@ -66,8 +66,11 @@ def inMes(url,x):
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
-			print(a)
-			a =a+1
+			print(row['D1'])
+			print(row['D2'])
+			print(row['D3'])
+			print(row['D4'])
+			print(row['D5'])
 			if row['ID'] == url and lev == "1":
 				Dlist[0] = x
 				Dlist[1] = row['D2']
