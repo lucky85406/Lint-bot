@@ -72,6 +72,7 @@ def inMes(url,x):
 				Dlist[2] = row['D3']
 				Dlist[3] = row['D4']
 				Dlist[4] = row['D5']
+				print(Dlist)
 				lev = ""
 			elif row['ID'] == url and lev == "2" and len(row):
 				Dlist[0] = row['D1']
@@ -79,6 +80,7 @@ def inMes(url,x):
 				Dlist[2] = row['D3']
 				Dlist[3] = row['D4']
 				Dlist[4] = row['D5']
+				print(Dlist)
 				lev = ""
 			elif row['ID'] == url and lev == "3" and len(row):
 				Dlist[0] = row['D1']
@@ -86,6 +88,7 @@ def inMes(url,x):
 				Dlist[2] = x
 				Dlist[3] = row['D4']
 				Dlist[4] = row['D5']
+				print(Dlist)
 				lev = ""
 			elif row['ID'] == url and lev == "4" and len(row):
 				Dlist[0] = row['D1']
@@ -93,6 +96,7 @@ def inMes(url,x):
 				Dlist[2] = row['D3']
 				Dlist[3] = x
 				Dlist[4] = row['D5']
+				print(Dlist)
 				lev = ""
 			elif row['ID'] == url and lev == "5" and len(row):
 				Dlist[0] = row['D1']
@@ -100,6 +104,7 @@ def inMes(url,x):
 				Dlist[2] = row['D3']
 				Dlist[3] = row['D4']
 				Dlist[4] = x
+				print(Dlist)
 				lev = ""
 
 	with open('user.csv','a',newline='')as cfile:
