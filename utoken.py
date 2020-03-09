@@ -109,7 +109,7 @@ def showMes(url):
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
-			if row['ID'] == url and len(row):
+			if row['ID'] == url and len(row['D5']):
 				print(row['D1'])
 				return "{}{}{}{}{}".format(row['D1'],row['D2'],row['D3'],row['D4'],row['D5'])
 	return a
