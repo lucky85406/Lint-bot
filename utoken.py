@@ -96,6 +96,9 @@ def inMes(url,x):
 				Dlist[3] = row['D4']
 				Dlist[4] = x
 
+		for x in Dlist:
+			print(x)
+
 	with open('user.csv','a',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5']
 
@@ -112,7 +115,5 @@ def showMes(url):
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			if row['ID'] == url:
-				print("------------")
-				print(row)
 				return "{}{}{}{}{}".format(row['D1'],row['D2'],row['D3'],row['D4'],row['D5'])
 	return a
