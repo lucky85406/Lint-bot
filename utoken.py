@@ -73,24 +73,28 @@ def inMes(url,x):
 				Dlist[3] = row['D4']
 				Dlist[4] = row['D5']
 			elif row['ID'] == url and level(x) == "2":
+				con = row['ID']
 				Dlist[0] = row['D1']
 				Dlist[1] = x
 				Dlist[2] = row['D3']
 				Dlist[3] = row['D4']
 				Dlist[4] = row['D5']
 			elif row['ID'] == url and level(x) == "3":
+				con = row['ID']
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = x
 				Dlist[3] = row['D4']
 				Dlist[4] = row['D5']
 			elif row['ID'] == url and level(x) == "4":
+				con = row['ID']
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = row['D3']
 				Dlist[3] = x
 				Dlist[4] = row['D5']
 			elif row['ID'] == url and level(x) == "5":
+				con = row['ID']
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = row['D3']
@@ -101,7 +105,7 @@ def inMes(url,x):
 			fieldn = ['ID','D1','D2','D3','D4','D5']
 
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
-			print(con,Dlist[0],Dlist[1],Dlist[2],Dlist[3],Dlist[4],sep = "-")
+			print(con)
 			if con != url:
 				writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':""})
 			else:
