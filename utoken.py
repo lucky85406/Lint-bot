@@ -45,16 +45,15 @@ def level(x):
 	l5 = ["t","u","v"]
 
 	lev = "0"
-	print(x)
-	for x in l1:
+	if x in l1:
 		return "1"
-	for x in l2:
+	if x in l2:
 		return "2"
-	for x in l3:
+	if x in l3:
 		return "3"
-	for x in l4:
+	if x in l4:
 		return "4"
-	for x in l5:
+	if x in l5:
 		return "5"
 
 def inMes(url,x):
