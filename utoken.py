@@ -45,7 +45,7 @@ def level(x):
 	l5 = ["t","u","v"]
 
 	lev = "0"
-
+	print(x)
 	for x in l1:
 		return "1"
 	for x in l2:
