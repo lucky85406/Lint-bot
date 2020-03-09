@@ -47,16 +47,15 @@ def level(x):
 	lev = "0"
 
 	for x in l1:
-		lev = "1"
+		return "1"
 	for x in l2:
-		lev = "2"
+		return "2"
 	for x in l3:
-		lev = "3"
+		return "3"
 	for x in l4:
-		lev ="4"
+		return "4"
 	for x in l5:
-		lev = "5"
-	return lev
+		return "5"
 
 def inMes(url,x):
 	con = url
