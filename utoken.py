@@ -108,10 +108,7 @@ def inMes(url,x):
 			print(con)
 			print("------")
 			print(Dlist)
-			if con != url:
-				writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':""})
-			else:
-				writer.writerow({'ID':url,'D1':Dlist[0],'D2':Dlist[1],'D3':Dlist[2],'D4':Dlist[3],'D5':Dlist[4]})
+			writer.writerow({'ID':url,'D1':Dlist[0],'D2':Dlist[1],'D3':Dlist[2],'D4':Dlist[3],'D5':Dlist[4]})
 
 def showMes(url):
 	a = "1"
