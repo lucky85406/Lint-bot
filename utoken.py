@@ -57,6 +57,7 @@ def level(x):
 	for x in l5:
 		lev = "5"
 	return lev
+
 def inMes(url,x):
 	con = ""
 	Dlist = [""]*5
@@ -100,7 +101,7 @@ def inMes(url,x):
 			fieldn = ['ID','D1','D2','D3','D4','D5']
 
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
-
+			print(con,Dlist[0],Dlist[1],Dlist[2],Dlist[3],Dlist[4],sep = "-")
 			if con != url:
 				writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':""})
 			else:
