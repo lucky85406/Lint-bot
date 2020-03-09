@@ -61,31 +61,29 @@ def inMes(url,x):
 	Dlist = [""]*5
 	lev = level(x)
 	a = 0
+	c = []
+	d = []
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			if row['ID'] == url and lev == "1" and len(row):
 				Dlist[0] = x
 				print(lev)
-				break
 			elif row['ID'] == url and lev == "2" and len(row['D1']):
 				Dlist[0] = row['D1']
 				Dlist[1] = x
 				print(lev)
-				break
 			elif row['ID'] == url and lev == "3" and len(row['D2']):
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = x
 				print(lev)
-				break
 			elif row['ID'] == url and lev == "4" and len(row['D3']):
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = row['D3']
 				Dlist[3] = x
 				print(lev)
-				break
 			elif row['ID'] == url and lev == "5" and len(row['D4']):
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
@@ -93,16 +91,24 @@ def inMes(url,x):
 				Dlist[3] = row['D4']
 				Dlist[4] = x
 				print(lev)
-				break
+			c.append(row)
 
-	with open('user.csv','a',newline='')as cfile:
+	if len(c):
+		for x in c:
+			if x['ID'] == url:
+				d.append(x)
+		for x in d:
+			c.remove(x)
+		with open('user.csv','w',newline='')as cfile:
 			fieldn = ['ID','D1','D2','D3','D4','D5']
 
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
-			print(con)
-			print("------")
-			print(Dlist)
+
+			writer.writeheader()
+			for x in c:
+				writer.writerow({'ID':x['ID'],'D1':x['D1'],'D2':x['D2'],'D3':x['D3'],'D4':x['D4'],'D5':x['D5']})
 			writer.writerow({'ID':url,'D1':Dlist[0],'D2':Dlist[1],'D3':Dlist[2],'D4':Dlist[3],'D5':Dlist[4]})
+
 
 def showMes(url):
 	a = "1"
