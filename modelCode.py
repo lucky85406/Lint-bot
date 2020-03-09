@@ -459,7 +459,7 @@ def tenMod(img,dset):
 		)
 		message = FlexSendMessage(alt_text = "hello",contents= Carousel)
 	else:
-		message = TextSendMessage(TextSendMessage(text='Sorry，無此選項'+chr(0x100010)))
+		message = TextSendMessage(text='Sorry，無此選項'+chr(0x100010))
 	return message
 
 #顯示單張圖片
