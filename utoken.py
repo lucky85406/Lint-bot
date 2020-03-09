@@ -101,6 +101,8 @@ def inMes(url,x):
 
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
 			print(con)
+			print("------")
+			print(Dlist)
 			if con != url:
 				writer.writerow({'ID':url,'D1':"",'D2':"",'D3':"",'D4':"",'D5':""})
 			else:
@@ -112,6 +114,5 @@ def showMes(url):
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			if row['ID'] == url:
-				print(row['D1']+row['D2']+row['D3']+row['D4']+row['D5'])
 				return "{}{}{}{}{}".format(row['D1'],row['D2'],row['D3'],row['D4'],row['D5'])
 	return a
