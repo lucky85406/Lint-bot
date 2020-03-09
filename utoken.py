@@ -66,40 +66,35 @@ def inMes(url,x):
 	with open('user.csv',newline='') as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
-			print(row['D1'])
-			print(row['D2'])
-			print(row['D3'])
-			print(row['D4'])
-			print(row['D5'])
-			if row['ID'] == url and lev == "1":
+			if row['ID'] == url and lev == "1" and len(row):
 				Dlist[0] = x
 				Dlist[1] = row['D2']
 				Dlist[2] = row['D3']
 				Dlist[3] = row['D4']
 				Dlist[4] = row['D5']
 				lev = ""
-			elif row['ID'] == url and lev == "2":
+			elif row['ID'] == url and lev == "2" and len(row):
 				Dlist[0] = row['D1']
 				Dlist[1] = x
 				Dlist[2] = row['D3']
 				Dlist[3] = row['D4']
 				Dlist[4] = row['D5']
 				lev = ""
-			elif row['ID'] == url and lev == "3":
+			elif row['ID'] == url and lev == "3" and len(row):
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = x
 				Dlist[3] = row['D4']
 				Dlist[4] = row['D5']
 				lev = ""
-			elif row['ID'] == url and lev == "4":
+			elif row['ID'] == url and lev == "4" and len(row):
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = row['D3']
 				Dlist[3] = x
 				Dlist[4] = row['D5']
 				lev = ""
-			elif row['ID'] == url and lev == "5":
+			elif row['ID'] == url and lev == "5" and len(row):
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = row['D3']
