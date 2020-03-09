@@ -67,12 +67,7 @@ def function(event):
 
 	ukey = event.message.text
 
-	if ukey == "go":
-		user_id = event.source.user_id
-		go(user_id)
-		line_bot_api.reply_message(event.reply_token,food())
-
-	elif foodk(ukey):
+	if foodk(ukey):
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,aroma())
@@ -95,11 +90,14 @@ def function(event):
 	elif pricek(ukey):
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-        data = dataList(showMes(user_id))
-        dlist = list(data)
-		line_bot_api.reply_message(event.reply_token,tenMod(dlist,data))
+		line_bot_api.reply_message(event.reply_token,tenMod(list(dataList(showMes(user_id))),dataList(showMes(user_id))))
 
-    elif ukey.split(':')[0] == 'MyLove':
+	elif ukey == "go":
+		user_id = event.source.user_id
+		go(user_id)
+		line_bot_api.reply_message(event.reply_token,food())
+
+	elif ukey.split(':')[0] == 'MyLove':
 		user_id = event.source.user_id
 		profile = line_bot_api.get_profile(user_id)
 		name = profile.display_name
