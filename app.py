@@ -67,7 +67,12 @@ def function(event):
 
 	ukey = event.message.text
 
-	if foodk(ukey):
+	if ukey == "go":
+		user_id = event.source.user_id
+		go(user_id)
+		line_bot_api.reply_message(event.reply_token,food())
+
+	elif foodk(ukey):
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,aroma())
@@ -94,12 +99,7 @@ def function(event):
         dlist = list(data)
 		line_bot_api.reply_message(event.reply_token,tenMod(dlist,data))
 
-	elif ukey == "go":
-		user_id = event.source.user_id
-		go(user_id)
-		line_bot_api.reply_message(event.reply_token,food())
-
-	elif ukey.split(':')[0] == 'MyLove':
+    elif ukey.split(':')[0] == 'MyLove':
 		user_id = event.source.user_id
 		profile = line_bot_api.get_profile(user_id)
 		name = profile.display_name
