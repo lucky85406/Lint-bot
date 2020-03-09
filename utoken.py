@@ -72,7 +72,7 @@ def inMes(url,x):
 				Dlist[2] = row['D3']
 				Dlist[3] = row['D4']
 				Dlist[4] = row['D5']
-				print(Dlist)
+				print(Dlist[0])
 				lev = ""
 			elif row['ID'] == url and lev == "2" and len(row):
 				Dlist[0] = row['D1']
