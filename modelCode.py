@@ -1,6 +1,6 @@
 from linebot.models import (
     TextSendMessage, CarouselTemplate , BubbleContainer,
-    BoxComponent, TextComponent, FlexSendMessage, ImageComponent, 
+    BoxComponent, TextComponent, FlexSendMessage, ImageComponent,
     ButtonComponent, MessageAction, CarouselContainer, SeparatorComponent, IconComponent
 )
 
@@ -49,9 +49,9 @@ def food():
 						color='#FFEE99',
 						height='sm',
 						action=MessageAction(label='甜點',text='甜點')
-					)																	
+					)
 				]
-			)		
+			)
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
@@ -122,9 +122,9 @@ def aroma():
 						color='#FFEE99',
 						height='sm',
 						action=MessageAction(label='土木',text='土木')
-					)																	
+					)
 				]
-			)		
+			)
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
@@ -181,9 +181,9 @@ def taste():
 						color='#FFEE99',
 						height='sm',
 						action=MessageAction(label='濃厚',text='濃厚')
-					)																	
+					)
 				]
-			)		
+			)
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
@@ -226,9 +226,9 @@ def chain():
 						color='#FFEE99',
 						height='sm',
 						action=MessageAction(label='Costco',text='Costco')
-					)																	
+					)
 				]
-			)		
+			)
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
@@ -271,9 +271,9 @@ def price():
 						color='#FFEE99',
 						height='sm',
 						action=MessageAction(label='600元以上',text='600元以上')
-					)																	
+					)
 				]
-			)		
+			)
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
@@ -290,9 +290,9 @@ def showimg():
 						color='#FFEE99',
 						height='sm',
 						action=MessageAction(label='ShowImg',text='showImg')
-					)																	
+					)
 				]
-			)		
+			)
 		)
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
@@ -396,6 +396,7 @@ def tenMod(img,dset):
 	imglist = img
 	contents = []
 	dlen = len(imglist)
+	print("圖片數量",dlen,sep=":")
 	for x in range(0,dlen):
 		contents.append(BubbleContainer(
 				hero = ImageComponent(
@@ -449,11 +450,11 @@ def tenMod(img,dset):
 									]
 								)
 							]
-				)			
+				)
 			)
 		)
 	Carousel = CarouselContainer(
-		contents = contents		
+		contents = contents
 	)
 	message = FlexSendMessage(alt_text = "hello",contents= Carousel)
 	return message
@@ -515,7 +516,7 @@ def single(set1):
 								]
 							)
 						]
-					)			
+					)
 				)
 		return FlexSendMessage(alt_text = "hello",contents= mes)
 	else:
