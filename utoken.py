@@ -112,6 +112,7 @@ def showMes(url):
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			if row['ID'] == url:
-				print(row['D1'],row['D2'],row['D3'],row['D4'],row['D5'],sep = "->")
+				print("------------")
+				print(row['D1']+"->"+row['D2']+"->"+row['D3']+"->"+row['D4']+"->"+row['D5'])
 				return "{}{}{}{}{}".format(row['D1'],row['D2'],row['D3'],row['D4'],row['D5'])
 	return a
