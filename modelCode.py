@@ -79,7 +79,7 @@ def aroma():
 						style='secondary',
 						color='#FFEE99',
 						height='sm',
-						action=MessageAction(label='花香 %0D%0A (ex:玫瑰花...)',text='花香')
+						action=MessageAction(label='花香 (ex:玫瑰花...)',text='花香')
 					),
 					ButtonComponent(
 						margin = 'xl',
