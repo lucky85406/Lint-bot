@@ -23,5 +23,6 @@
 * 1230:
 	* 移除 modelCode.py 移除(第一段)文字
 	* 修改 modelCode.py aroma() label 文字增加 舉例文字(ex:...)
+	* 修改 modelCode.py tenMod() 移除(還沒想到)按鈕
 
 ```
