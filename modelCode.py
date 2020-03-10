@@ -432,14 +432,6 @@ def tenMod(img,dset):
 												flex = 1,
 												height='sm',
 												action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[x]])
-											),
-											ButtonComponent(
-												margin = 'xxl',
-												style='link',
-												color='#84C1FF',
-												flex = 1,
-												height='sm',
-												action=MessageAction(label="還沒想到",text='還沒想到')
 											)
 										]
 									)
