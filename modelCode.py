@@ -79,7 +79,7 @@ def aroma():
 						style='secondary',
 						color='#FFEE99',
 						height='sm',
-						action=MessageAction(label='花香',text='花香')
+						action=MessageAction(label='花香',text='花香\n(ex:玫瑰花...)')
 					),
 					ButtonComponent(
 						margin = 'xl',
@@ -415,13 +415,6 @@ def tenMod(img,dset):
 										text = d[imglist[x]],
 										weight = 'bold',
 										size = 'md',
-										align = 'center'
-									),
-									TextComponent(
-										margin = 'md',
-										text = "第一段",
-										weight = 'bold',
-										size = 'xs',
 										align = 'center'
 									),
 									SeparatorComponent(
