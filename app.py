@@ -70,7 +70,6 @@ def function(event):
 	def Opt():
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		name = line_bot_api.get_profile(user_id).display_name
 		return "ok"
 
 	def Name():
@@ -85,7 +84,8 @@ def function(event):
 		line_bot_api.reply_message(event.reply_token,food())
 
 	elif foodk(ukey):
-		Opt()
+		user_id = event.source.user_id
+		inMes(user_id,conversionCode(ukey))
 		line_bot_api.reply_message(event.reply_token,aroma())
 
 	elif aromak(ukey):
