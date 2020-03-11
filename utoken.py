@@ -68,29 +68,24 @@ def inMes(url,x):
 		for row in rows:
 			if row['ID'] == url and lev == "1" and len(row):
 				Dlist[0] = x
-				print(lev)
 			elif row['ID'] == url and lev == "2" and len(row['D1']):
 				Dlist[0] = row['D1']
 				Dlist[1] = x
-				print(lev)
 			elif row['ID'] == url and lev == "3" and len(row['D2']):
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = x
-				print(lev)
 			elif row['ID'] == url and lev == "4" and len(row['D3']):
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = row['D3']
 				Dlist[3] = x
-				print(lev)
 			elif row['ID'] == url and lev == "5" and len(row['D4']):
 				Dlist[0] = row['D1']
 				Dlist[1] = row['D2']
 				Dlist[2] = row['D3']
 				Dlist[3] = row['D4']
 				Dlist[4] = x
-				print(lev)
 			c.append(row)
 
 	if len(c):
@@ -116,6 +111,5 @@ def showMes(url):
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			if row['ID'] == url and len(row['D5']):
-				print(row['D1'])
 				return "{}{}{}{}{}".format(row['D1'],row['D2'],row['D3'],row['D4'],row['D5'])
 	return a

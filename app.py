@@ -89,11 +89,12 @@ def function(event):
 
 	elif pricek(ukey):
 		user_id = event.source.user_id
+		print(line_bot_api.get_profile(user_id).display_name)
 		inMes(user_id,conversionCode(ukey))
 		data = dataList(showMes(user_id))
 		dlist = list(data)
 		line_bot_api.reply_message(event.reply_token,tenMod(dlist,data))
-		
+
 	elif ukey == "go":
 		user_id = event.source.user_id
 		go(user_id)
