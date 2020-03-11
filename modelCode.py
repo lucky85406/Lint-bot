@@ -122,52 +122,6 @@ def aroma():
 						color='#FFEE99',
 						height='sm',
 						action=MessageAction(label='土木 (ex:橡木桶...)',text='土木')
-					),
-					SeparatorComponent(
-						margin = 'xl',
-						color = '#0000FF'
-					),
-					TextComponent(
-						margin = 'md',
-						text = "花香 (ex:玫瑰花...)",
-						weight = 'bold',
-						size = 'md',
-						align = 'center'
-					),
-					TextComponent(
-						margin = 'md',
-						text = 	"漿果 (ex:櫻桃...)",
-						weight = 'bold',
-						size = 'md',
-						align = 'center'
-					),
-					TextComponent(
-						margin = 'md',
-						text = "熱帶水果 (ex:鳳梨...)",
-						weight = 'bold',
-						size = 'md',
-						align = 'center'
-					),
-					TextComponent(
-						margin = 'md',
-						text = "淺色水果 (ex:杏桃...)",
-						weight = 'bold',
-						size = 'md',
-						align = 'center'
-					),
-					TextComponent(
-						margin = 'md',
-						text = "香料 (ex:胡椒...)",
-						weight = 'bold',
-						size = 'md',
-						align = 'center'
-					),
-					TextComponent(
-						margin = 'md',
-						text = 	"土木 (ex:橡木桶...)",
-						weight = 'bold',
-						size = 'md',
-						align = 'center'
 					)
 				]
 			)
