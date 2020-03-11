@@ -70,7 +70,7 @@ def function(event):
 	def Opt():
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
-		return ""
+		return "ok"
 
 	def Name():
 		user_id = event.source.user_id
