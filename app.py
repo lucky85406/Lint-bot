@@ -71,7 +71,7 @@ def function(event):
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
 		name = line_bot_api.get_profile(user_id).display_name
-		return name+"ok"
+		return "ok"
 
 	def Name():
 		user_id = event.source.user_id
@@ -85,23 +85,23 @@ def function(event):
 		line_bot_api.reply_message(event.reply_token,food())
 
 	elif foodk(ukey):
-		print(Opt())
+		Opt()
 		line_bot_api.reply_message(event.reply_token,aroma())
 
 	elif aromak(ukey):
-		print(Opt())
+		Opt()
 		line_bot_api.reply_message(event.reply_token,taste())
 
 	elif tastek(ukey):
-		print(Opt())
+		Opt()
 		line_bot_api.reply_message(event.reply_token,chain())
 
 	elif chaink(ukey):
-		print(Opt())
+		Opt()
 		line_bot_api.reply_message(event.reply_token,price())
 
 	elif pricek(ukey):
-		print(Opt())
+		Opt()
 		user_id = event.source.user_id
 		data = dataList(showMes(user_id))
 		dlist = list(data)
