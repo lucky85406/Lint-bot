@@ -67,30 +67,31 @@ def function(event):
 
 	ukey = event.message.text
 
-	if foodk(ukey):
+	def Opt(mes):
 		user_id = event.source.user_id
 		inMes(user_id,conversionCode(ukey))
+		name = line_bot_api.get_profile(user_id).display_name
+		return name+"ok"
+
+	if foodk(ukey):
+		print(Opt(ukey))
 		line_bot_api.reply_message(event.reply_token,aroma())
 
 	elif aromak(ukey):
-		user_id = event.source.user_id
-		inMes(user_id,conversionCode(ukey))
+		print(Opt(ukey))
 		line_bot_api.reply_message(event.reply_token,taste())
 
 	elif tastek(ukey):
-		user_id = event.source.user_id
-		inMes(user_id,conversionCode(ukey))
+		print(Opt(ukey))
 		line_bot_api.reply_message(event.reply_token,chain())
 
 	elif chaink(ukey):
-		user_id = event.source.user_id
-		inMes(user_id,conversionCode(ukey))
+		print(Opt(ukey))
 		line_bot_api.reply_message(event.reply_token,price())
 
 	elif pricek(ukey):
+		print(Opt(ukey))
 		user_id = event.source.user_id
-		print(line_bot_api.get_profile(user_id).display_name)
-		inMes(user_id,conversionCode(ukey))
 		data = dataList(showMes(user_id))
 		dlist = list(data)
 		line_bot_api.reply_message(event.reply_token,tenMod(dlist,data))
