@@ -470,13 +470,6 @@ def single(set1):
 								size = 'md',
 								align = 'center'
 							),
-							TextComponent(
-								margin = 'md',
-								text = "第一段",
-								weight = 'bold',
-								size = 'xs',
-								align = 'center'
-							),
 							SeparatorComponent(
 								margin = 'xl',
 								color = '#0000FF'
@@ -492,14 +485,6 @@ def single(set1):
 										flex = 1,
 										height='sm',
 										action=MessageAction(label="加入最愛",text='MyLove:'+s[0])
-									),
-									ButtonComponent(
-										margin = 'xxl',
-										style='link',
-										color='#84C1FF',
-										flex = 1,
-										height='sm',
-										action=MessageAction(label="還沒想到",text='還沒想到')
 									)
 								]
 							)
