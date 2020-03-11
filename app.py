@@ -73,6 +73,12 @@ def function(event):
 		name = line_bot_api.get_profile(user_id).display_name
 		return name+"ok"
 
+	def Name():
+		user_id = event.source.user_id
+		profile = line_bot_api.get_profile(user_id)
+		name = profile.display_name
+		return name
+
 	if foodk(ukey):
 		print(Opt(ukey))
 		line_bot_api.reply_message(event.reply_token,aroma())
@@ -102,26 +108,17 @@ def function(event):
 		line_bot_api.reply_message(event.reply_token,food())
 
 	elif ukey.split(':')[0] == 'MyLove':
-		user_id = event.source.user_id
-		profile = line_bot_api.get_profile(user_id)
-		name = profile.display_name
-		if love(name,ukey):
+		if love(Name(),ukey):
 			line_bot_api.reply_message(event.reply_token,TextSendMessage(text='我的最愛:已存在'))
 
 	elif ukey.split(':')[0] == 're':
-		user_id = event.source.user_id
-		profile = line_bot_api.get_profile(user_id)
-		name = profile.display_name
-		relove(name,ukey.split(':')[1])
-		dlist = list(love2(name))
-		line_bot_api.reply_message(event.reply_token,mylove(name,dlist))
+		relove(Name(),ukey.split(':')[1])
+		dlist = list(love2(Name()))
+		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
 
 	elif ukey == 'seemylove':
-		user_id = event.source.user_id
-		profile = line_bot_api.get_profile(user_id)
-		name = profile.display_name
-		dlist = list(love2(name))
-		line_bot_api.reply_message(event.reply_token,mylove(name,dlist))
+		dlist = list(love2(Name()))
+		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
 
 	elif ukey.split(':')[0] == 'see':
 		data = singleList(ukey.split(':')[1])
