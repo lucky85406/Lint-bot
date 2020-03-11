@@ -75,53 +75,71 @@ def aroma():
 				layout = 'vertical',
 				spacing = 'xs',
 				contents = [
-					ButtonComponent(
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='花香 (ex:玫瑰花...)',text='花香')
+					BoxComponent(
+						layout = 'horizontal',
+						spacing = 'xs',
+						contents=[
+							ButtonComponent(
+								style='secondary',
+								color='#FFEE99',
+								height='sm',
+								action=MessageAction(label='花香 (ex:玫瑰花...)',text='花香')
+							),
+							ButtonComponent(
+								margin = 'xl',
+								style='secondary',
+								color='#FFEE99',
+								height='sm',
+								action=MessageAction(label='漿果 (ex:櫻桃...)',text='漿果')
+							),
+							ButtonComponent(
+								margin = 'xl',
+								style='secondary',
+								color='#FFEE99',
+								height='sm',
+								action=MessageAction(label='柑橘',text='柑橘')
+							)
+						]
 					),
-					ButtonComponent(
-						margin = 'xl',
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='漿果 (ex:櫻桃...)',text='漿果')
+					BoxComponent(
+						layout = 'horizontal',
+						spacing = 'xs',
+						contents=[
+							ButtonComponent(
+								margin = 'xl',
+								style='secondary',
+								color='#FFEE99',
+								height='sm',
+								action=MessageAction(label='熱帶水果 (ex:鳳梨...)',text='熱帶水果')
+							),
+							ButtonComponent(
+								margin = 'xl',
+								style='secondary',
+								color='#FFEE99',
+								height='sm',
+								action=MessageAction(label='淺色水果 (ex:杏桃...)',text='淺色水果')
+							),
+							ButtonComponent(
+								margin = 'xl',
+								style='secondary',
+								color='#FFEE99',
+								height='sm',
+								action=MessageAction(label='香料 (ex:胡椒...)',text='香料')
+							)
+						]
 					),
-					ButtonComponent(
-						margin = 'xl',
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='柑橘',text='柑橘')
-					),
-					ButtonComponent(
-						margin = 'xl',
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='熱帶水果 (ex:鳳梨...)',text='熱帶水果')
-					),
-					ButtonComponent(
-						margin = 'xl',
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='淺色水果 (ex:杏桃...)',text='淺色水果')
-					),
-					ButtonComponent(
-						margin = 'xl',
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='香料 (ex:胡椒...)',text='香料')
-					),
-					ButtonComponent(
-						margin = 'xl',
-						style='secondary',
-						color='#FFEE99',
-						height='sm',
-						action=MessageAction(label='土木 (ex:橡木桶...)',text='土木')
+					BoxComponent(
+						layout = 'horizontal',
+						spacing = 'xs',
+						contents = [
+							ButtonComponent(
+								margin = 'xl',
+								style='secondary',
+								color='#FFEE99',
+								height='sm',
+								action=MessageAction(label='土木 (ex:橡木桶...)',text='土木')
+							)
+						]
 					)
 				]
 			)
