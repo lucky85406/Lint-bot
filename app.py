@@ -64,16 +64,20 @@ def conversionCode(k):
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	tStart = time.time()#計時開始
-	a = 0
+
+	#取得使用者輸入訊息
 	def Ukey():
 		return event.message.text
 
+	#取得使用者ID
 	def Uid():
 		return event.source.user_id
 
+	#將使用者選擇寫進user.csv
 	def InMes():
 		return inMes(Uid(),conversionCode(Ukey()))
 
+	#取得使用者姓名
 	def Name():
 		return line_bot_api.get_profile(Uid()).display_name
 
