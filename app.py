@@ -72,7 +72,7 @@ def function(event):
 		return event.source.user_id
 
 	def InMes():
-		return inMes(user_id,conversionCode(Uid()))
+		return inMes(Uid(),conversionCode(Uid()))
 
 	def Name():
 		return line_bot_api.get_profile(Uid()).display_name
