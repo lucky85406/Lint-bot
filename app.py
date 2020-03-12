@@ -64,7 +64,7 @@ def conversionCode(k):
 @handler.add(MessageEvent, message=TextMessage)
 def function(event):
 	tStart = time.time()#計時開始
-
+	a = 0
 	def Ukey():
 		return event.message.text
 
