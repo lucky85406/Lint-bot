@@ -93,7 +93,7 @@ def aroma():
 						style='secondary',
 						color='#FFEE99',
 						height='sm',
-						action=MessageAction(label='柑橘',text='柑橘')
+						action=MessageAction(label='柑橘 (ex:檸檬...)',text='柑橘')
 					),
 					ButtonComponent(
 						margin = 'xl',
