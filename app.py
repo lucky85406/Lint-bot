@@ -65,62 +65,59 @@ def conversionCode(k):
 def function(event):
 	tStart = time.time()#計時開始
 
-	ukey = event.message.text
+	def Ukey():
+		return event.message.text
 
-	def Opt():
-		user_id = event.source.user_id
-		inMes(user_id,conversionCode(ukey))
-		return "ok"
+	def Uid():
+		return event.source.user_id
+
+	def InMes():
+		return inMes(user_id,conversionCode(Uid()))
 
 	def Name():
-		user_id = event.source.user_id
-		profile = line_bot_api.get_profile(user_id)
-		name = profile.display_name
-		return name
+		return line_bot_api.get_profile(Uid()).display_name
 
-	if ukey == "go":
-		user_id = event.source.user_id
-		go(user_id)
+	if Ukey() == "go":
+		go(Uid())
 		line_bot_api.reply_message(event.reply_token,food())
 
-	elif foodk(ukey):
-		Opt()
+	elif foodk(Ukey()):
+		InMes()
 		line_bot_api.reply_message(event.reply_token,aroma())
 
-	elif aromak(ukey):
-		Opt()
+	elif aromak(Ukey()):
+		InMes()
 		line_bot_api.reply_message(event.reply_token,taste())
 
-	elif tastek(ukey):
-		Opt()
+	elif tastek(Ukey()):
+		InMes()
 		line_bot_api.reply_message(event.reply_token,chain())
 
-	elif chaink(ukey):
-		Opt()
+	elif chaink(Ukey()):
+		InMes()
 		line_bot_api.reply_message(event.reply_token,price())
 
-	elif pricek(ukey):
-		Opt()
-		user_id = event.source.user_id
-		data = dataList(showMes(user_id))
+	elif pricek(Ukey()):
+		InMes()
+		data = dataList(showMes(Uid()))
 		dlist = list(data)
 		line_bot_api.reply_message(event.reply_token,tenMod(dlist,data))
 
-	elif ukey.split(':')[0] == 'MyLove':
-		if love(Name(),ukey):
+	elif Ukey().split(':')[0] == 'MyLove':
+		if love(Name(),Ukey()):
 			line_bot_api.reply_message(event.reply_token,TextSendMessage(text='我的最愛:已存在'))
 
-	elif ukey.split(':')[0] == 're':
-		relove(Name(),ukey.split(':')[1])
+	elif Ukey().split(':')[0] == 're':
+		relove(Name(),Ukey().split(':')[1])
 		dlist = list(love2(Name()))
 		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
 
-	elif ukey == 'seemylove':
+	elif Ukey() == 'seemylove':
 		dlist = list(love2(Name()))
 		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
 
-	elif ukey.split(':')[0] == 'see':
-		data = singleList(ukey.split(':')[1])
+	elif Ukey().split(':')[0] == 'see':
+		data = singleList(Ukey().split(':')[1])
 		line_bot_api.reply_message(event.reply_token,single(data))
 	tEnd = time.time()#計時結束
 	print('-------------------')
