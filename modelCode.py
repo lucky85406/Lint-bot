@@ -454,10 +454,10 @@ def single(set1):
 	print(set1)
 	print("----")
 	print(set1.values())
-	if s[0] != 'None':
+	if set1 != '':
 		mes = BubbleContainer(
 					hero = ImageComponent(
-						url = d[0],
+						url = set1.values(),
 						size = 'full',
 						align = 'center',
 						aspect_ratio = '13:13',
@@ -468,7 +468,7 @@ def single(set1):
 						contents = [
 							TextComponent(
 								margin = 'md',
-								text = s[0],
+								text = set1,
 								weight = 'bold',
 								size = 'md',
 								align = 'center'
@@ -496,7 +496,7 @@ def single(set1):
 				)
 		return FlexSendMessage(alt_text = "hello",contents= mes)
 	else:
-		return TextSendMessage(text=d[0])
+		return TextSendMessage(set1.values())
 
 #食物Key
 def foodk(t):
