@@ -451,13 +451,10 @@ def tenMod(img,dset):
 def single(set1):
 	s = list(set1)
 	d = list(set1.values())
-	print(set1)
-	print("----")
-	print(set1.values())
-	if set1 != '':
+	if s[0] != 'None':
 		mes = BubbleContainer(
 					hero = ImageComponent(
-						url = set1.values(),
+						url = d[0],
 						size = 'full',
 						align = 'center',
 						aspect_ratio = '13:13',
@@ -468,7 +465,7 @@ def single(set1):
 						contents = [
 							TextComponent(
 								margin = 'md',
-								text = set1,
+								text = s[0],
 								weight = 'bold',
 								size = 'md',
 								align = 'center'
@@ -496,7 +493,7 @@ def single(set1):
 				)
 		return FlexSendMessage(alt_text = "hello",contents= mes)
 	else:
-		return TextSendMessage(set1.values())
+		return TextSendMessage(text=d[0])
 
 #食物Key
 def foodk(t):
