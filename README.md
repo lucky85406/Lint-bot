@@ -34,4 +34,5 @@
 ```
 * 1230:  
 	* data.csv 修改 項目選項修改
+	* app.py 修改 將相同功能合併 Uid()、Name()、Ukey()、InMes()
 ```
