@@ -451,6 +451,9 @@ def tenMod(img,dset):
 def single(set1):
 	s = list(set1)
 	d = list(set1.values())
+	print(set1)
+	print("----")
+	print(set1.values())
 	if s[0] != 'None':
 		mes = BubbleContainer(
 					hero = ImageComponent(
