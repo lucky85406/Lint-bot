@@ -517,14 +517,14 @@ def ckey(mes):
 	print(type(mes))
 	if mes in fkey:
 		return True
-	if mes in akey:
+	elif mes in akey:
 		print("OK")
 		return True
-	if mes in tkey:
+	elif mes in tkey:
 		return True
-	if mes in chkey:
+	elif mes in chkey:
 		return True
-	if mes in pkey:
+	elif mes in pkey:
 		return True
 
 	return False
