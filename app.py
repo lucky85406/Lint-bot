@@ -96,6 +96,8 @@ def function(event):
 	elif Ukey().split(':')[0] == 'MyLove':
 		if love(Name(),Ukey()):
 			line_bot_api.reply_message(event.reply_token,TextSendMessage(text='我的最愛:已存在'))
+		else:
+			line_bot_api.reply_message(event.reply_token,TextSendMessage(text='我的最愛:新增成功'))
 
 	elif Ukey().split(':')[0] == 're':
 		relove(Name(),Ukey().split(':')[1])
