@@ -399,10 +399,10 @@ def tenMod(img,dset):
 	for y in d:
 		print("img",y,sep = ":")
 	if dlen > 0:
-		for x in range(0,dlen):
+		for x in d:
 			contents.append(BubbleContainer(
 					hero = ImageComponent(
-								url = imglist[x],
+								url = x,
 								size = 'full',
 								align = 'center',
 								aspect_ratio = '13:13',
@@ -413,7 +413,7 @@ def tenMod(img,dset):
 								contents = [
 									TextComponent(
 										margin = 'md',
-										text = d[imglist[x]],
+										text = d[x],
 										weight = 'bold',
 										size = 'md',
 										align = 'center'
@@ -432,7 +432,7 @@ def tenMod(img,dset):
 												color='#84C1FF',
 												flex = 1,
 												height='sm',
-												action=MessageAction(label="加入最愛",text='MyLove:'+d[imglist[x]])
+												action=MessageAction(label="加入最愛",text='MyLove:'+d[x])
 											)
 										]
 									)
