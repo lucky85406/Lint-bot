@@ -284,16 +284,15 @@ def model(mes):
 	akey = ['花香','漿果','柑橘','熱帶水果','淺色水果','香料','土木']
 	tkey = ['清香','甜','圓潤','酸','濃厚']
 	chkey = ['家樂福','全聯','Costco']
-	pkey = ['100~350元','351~600元','600元以上']
 	if mes == "go":
 		return food()
-	elif mes in akey:
+	elif mes in fkey:
 		return aroma()
-	elif mes in tkey:
+	elif mes in akey:
 		return taste()
-	elif mes in chkey:
+	elif mes in tkey:
 		return chain()
-	elif mes in pkey:
+	elif mes in chkey:
 		return price()
 	return TextSendMessage(text="None img")
 
