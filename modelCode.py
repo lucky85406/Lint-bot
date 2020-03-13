@@ -294,6 +294,7 @@ def model(mes):
 		return chain()
 	if mes in pkey:
 		return price()
+	return TextSendMessage(text="None img")
 
 #圖片按鈕
 def showimg():
