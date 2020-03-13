@@ -284,7 +284,7 @@ def model(mes):
 	akey = ['花香','漿果','柑橘','熱帶水果','淺色水果','香料','土木']
 	tkey = ['清香','甜','圓潤','酸','濃厚']
 	chkey = ['家樂福','全聯','Costco']
-	if mes == "go":
+	if mes == "Go":
 		return food()
 	elif mes in fkey:
 		return aroma()
