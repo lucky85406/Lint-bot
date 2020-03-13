@@ -284,6 +284,7 @@ def model(mes):
 	tkey = ['清香','甜','圓潤','酸','濃厚']
 	chkey = ['家樂福','全聯','Costco']
 	pkey = ['100~350元','351~600元','600元以上']
+	print(mes)
 	if mes == "go":
 		return food()
 	elif mes in akey:
@@ -514,9 +515,7 @@ def ckey(mes):
 	tkey = ['清香','甜','圓潤','酸','濃厚']
 	chkey = ['家樂福','全聯','Costco']
 	pkey = ['100~350元','351~600元','600元以上']
-	print(mes)
 	if mes in fkey:
-		print("OK")
 		return True
 	elif mes in akey:
 		return True
