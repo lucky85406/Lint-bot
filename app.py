@@ -102,11 +102,11 @@ def function(event):
 		dlist = list(love2(Name()))
 		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
 
-	elif Ukey() == 'seemylove':
+	elif Ukey() == 'SeeMyLove':
 		dlist = list(love2(Name()))
 		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
 
-	elif Ukey().split(':')[0] == 'see':
+	elif Ukey().split(':')[0] == 'See':
 		data = singleList(Ukey().split(':')[1])
 		line_bot_api.reply_message(event.reply_token,single(data))
 	tEnd = time.time()#計時結束
