@@ -40,4 +40,5 @@
 ```
 * 1207:  
 	* modelCode.py 修改 tenMod()方法 精簡程式內容，原本取兩格數值-->現在只取得一格數值
+	* modelCode.py 修改 single()方法 精簡程式內容
 ```

@@ -445,8 +445,6 @@ def tenMod(dset):
 
 #顯示單張圖片
 def single(set1):
-	for y in set1:
-		print("img:",set1[y],sep = ":")
 	for x in set1:
 		mes = BubbleContainer(
 					hero = ImageComponent(
