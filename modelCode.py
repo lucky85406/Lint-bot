@@ -516,6 +516,7 @@ def ckey(mes):
 	pkey = ['100~350元','351~600元','600元以上']
 
 	if mes in fkey:
+		print("OK")
 		return True
 	if mes in akey:
 		return True
