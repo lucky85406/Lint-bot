@@ -286,13 +286,13 @@ def model(mes):
 	pkey = ['100~350元','351~600元','600元以上']
 	if mes == "go":
 		return food()
-	if mes in akey:
+	elif mes in akey:
 		return aroma()
-	if mes in tkey:
+	elif mes in tkey:
 		return taste()
-	if mes in chkey:
+	elif mes in chkey:
 		return chain()
-	if mes in pkey:
+	elif mes in pkey:
 		return price()
 	return TextSendMessage(text="None img")
 
