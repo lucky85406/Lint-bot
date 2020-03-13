@@ -445,12 +445,10 @@ def tenMod(dset):
 
 #顯示單張圖片
 def single(set1):
-	s = list(set1)
-	d = list(set1.values())
-	if s[0] != 'None':
+	for x in set1:
 		mes = BubbleContainer(
 					hero = ImageComponent(
-						url = d[0],
+						url = x,
 						size = 'full',
 						align = 'center',
 						aspect_ratio = '13:13',
@@ -461,7 +459,7 @@ def single(set1):
 						contents = [
 							TextComponent(
 								margin = 'md',
-								text = s[0],
+								text = set1[x],
 								weight = 'bold',
 								size = 'md',
 								align = 'center'
@@ -480,7 +478,7 @@ def single(set1):
 										color='#84C1FF',
 										flex = 1,
 										height='sm',
-										action=MessageAction(label="加入最愛",text='MyLove:'+s[0])
+										action=MessageAction(label="加入最愛",text='MyLove:'+set1[x])
 									)
 								]
 							)
@@ -489,7 +487,7 @@ def single(set1):
 				)
 		return FlexSendMessage(alt_text = "hello",contents= mes)
 	else:
-		return TextSendMessage(text=d[0])
+		return TextSendMessage(text="None img")
 
 #食物Key
 def foodk(t):
