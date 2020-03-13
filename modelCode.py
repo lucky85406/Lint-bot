@@ -396,7 +396,7 @@ def tenMod(img,dset):
 	imglist = img
 	contents = []
 	dlen = len(imglist)
-	for y in d:
+	for y in dset:
 		print("img",y,sep = ":")
 	if dlen > 0:
 		for x in d:
