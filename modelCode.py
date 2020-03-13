@@ -396,7 +396,8 @@ def tenMod(img,dset):
 	imglist = img
 	contents = []
 	dlen = len(imglist)
-	print("圖片數量",dlen,sep=":")
+	for y in d:
+		print("img",y,sep = ":")
 	if dlen > 0:
 		for x in range(0,dlen):
 			contents.append(BubbleContainer(
