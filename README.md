@@ -41,4 +41,6 @@
 * 1207:  
 	* modelCode.py 修改 tenMod()方法 精簡程式內容，原本取兩格數值-->現在只取得一格數值
 	* modelCode.py 修改 single()方法 精簡程式內容
+	* app.py 修改 移除原本選項判斷 foodk() 新增ckey()判斷 "ck"為前四部分 "pk"為顯示圖片
+	* modelCode.py 修改 移除foodk()等相關內容 新增為 ckey()與model()分別為判斷訊息與顯示板型
 ```
