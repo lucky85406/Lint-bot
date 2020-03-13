@@ -280,11 +280,11 @@ def price():
 
 #選擇清單:
 def model(mes):
+	fkey = ['紅肉','白肉','海鮮','甜點']
 	akey = ['花香','漿果','柑橘','熱帶水果','淺色水果','香料','土木']
 	tkey = ['清香','甜','圓潤','酸','濃厚']
 	chkey = ['家樂福','全聯','Costco']
 	pkey = ['100~350元','351~600元','600元以上']
-	print(mes)
 	if mes == "go":
 		return food()
 	elif mes in akey:
