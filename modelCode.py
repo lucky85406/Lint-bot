@@ -446,11 +446,11 @@ def tenMod(dset):
 #顯示單張圖片
 def single(set1):
 	for y in set1:
-		print("img:",y,sep = ":")
+		print("img:",set1[y],sep = ":")
 	for x in set1:
 		mes = BubbleContainer(
 					hero = ImageComponent(
-						url = x,
+						url = set1[x],
 						size = 'full',
 						align = 'center',
 						aspect_ratio = '13:13',
@@ -461,7 +461,7 @@ def single(set1):
 						contents = [
 							TextComponent(
 								margin = 'md',
-								text = set1[x],
+								text = x,
 								weight = 'bold',
 								size = 'md',
 								align = 'center'
@@ -480,7 +480,7 @@ def single(set1):
 										color='#84C1FF',
 										flex = 1,
 										height='sm',
-										action=MessageAction(label="加入最愛",text='MyLove:'+set1[x])
+										action=MessageAction(label="加入最愛",text='MyLove:'+x)
 									)
 								]
 							)
