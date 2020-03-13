@@ -391,12 +391,9 @@ def mylove(n,ulist):
 	return message
 
 #顯示圖片
-def tenMod(img,dset):
-	d = dset
-	imglist = img
+def tenMod(dset):
 	contents = []
-	dlen = len(imglist)
-	if dlen > 0:
+	if len(dset):
 		for x in dset:
 			contents.append(BubbleContainer(
 					hero = ImageComponent(

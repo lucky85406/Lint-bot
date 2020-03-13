@@ -104,8 +104,7 @@ def function(event):
 	elif pricek(Ukey()):
 		InMes()
 		data = dataList(showMes(Uid()))
-		dlist = list(data)
-		line_bot_api.reply_message(event.reply_token,tenMod(dlist,data))
+		line_bot_api.reply_message(event.reply_token,tenMod(data))
 
 	elif Ukey().split(':')[0] == 'MyLove':
 		if love(Name(),Ukey()):
