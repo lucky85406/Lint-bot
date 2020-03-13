@@ -84,11 +84,11 @@ def function(event):
 		go(Uid())
 		line_bot_api.reply_message(event.reply_token,model(Ukey()))
 
-	elif ckey(Ukey()):
+	elif ckey(Ukey()) == "ck":
 		InMes()
 		line_bot_api.reply_message(event.reply_token,model(Ukey()))
 
-	elif ckey(Ukey()):
+	elif ckey(Ukey()) == "pk":
 		InMes()
 		data = dataList(showMes(Uid()))
 		line_bot_api.reply_message(event.reply_token,tenMod(data))

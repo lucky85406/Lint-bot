@@ -515,14 +515,14 @@ def ckey(mes):
 	chkey = ['家樂福','全聯','Costco']
 	pkey = ['100~350元','351~600元','600元以上']
 	if mes in fkey:
-		return True
+		return "ck"
 	elif mes in akey:
-		return True
+		return "ck"
 	elif mes in tkey:
-		return True
+		return "ck"
 	elif mes in chkey:
-		return True
+		return "ck"
 	elif mes in pkey:
-		return True
+		return "pk"
 
-	return False
+	return "none"
