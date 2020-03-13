@@ -278,6 +278,23 @@ def price():
 	message = FlexSendMessage(alt_text = "hello",contents = mes)
 	return message
 
+#選擇清單:
+def model(mes):
+	akey = ['花香','漿果','柑橘','熱帶水果','淺色水果','香料','土木']
+	tkey = ['清香','甜','圓潤','酸','濃厚']
+	chkey = ['家樂福','全聯','Costco']
+	pkey = ['100~350元','351~600元','600元以上']
+	if mes == "go":
+		return food()
+	if mes in akey:
+		return aroma()
+	if mes in tkey:
+		return taste()
+	if mes in chkey:
+		return chain()
+	if mes in pkey:
+		return price()
+
 #圖片按鈕
 def showimg():
 	mes = BubbleContainer(
@@ -489,37 +506,23 @@ def single(set1):
 	else:
 		return TextSendMessage(text="None img")
 
-#食物Key
-def foodk(t):
-	key = ['紅肉','白肉','海鮮','甜點']
-	if t in key:
-		return True
-	return False
+#Ukey 選項確認
+def ckey(mes):
+	fkey = ['紅肉','白肉','海鮮','甜點']
+	akey = ['花香','漿果','柑橘','熱帶水果','淺色水果','香料','土木']
+	tkey = ['清香','甜','圓潤','酸','濃厚']
+	chkey = ['家樂福','全聯','Costco']
+	pkey = ['100~350元','351~600元','600元以上']
 
-#香氣Key
-def aromak(t):
-	key = ['花香','漿果','柑橘','熱帶水果','淺色水果','香料','土木']
-	if t in key:
+	if mes in fkey:
 		return True
-	return False
+	if mes in akey:
+		return True
+	if mes in tkey:
+		return True
+	if mes in chkey:
+		return True
+	if mes in pkey:
+		return True
 
-#口感Key
-def tastek(t):
-	key = ['清香','甜','圓潤','酸','濃厚']
-	if t in key:
-		return True
-	return False
-
-#通路Key
-def chaink(t):
-	key = ['家樂福','全聯','Costco']
-	if t in key:
-		return True
-	return False
-
-#價格Key
-def pricek(t):
-	key = ['100~350元','351~600元','600元以上']
-	if t in key:
-		return True
 	return False

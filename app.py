@@ -9,8 +9,7 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage
 )
 from modelCode import(
-	food, aroma, taste, chain, price, showimg, mylove, tenMod, single,
-	foodk, aromak, tastek, chaink, pricek)
+	food, aroma, taste, chain, price, showimg, mylove, tenMod, single,ckey,model)
 from utoken import(go,inMes,showMes)
 from datalist import(dataList,singleList)
 from love import(love,love2,relove)
@@ -83,25 +82,13 @@ def function(event):
 
 	if Ukey() == "go":
 		go(Uid())
-		line_bot_api.reply_message(event.reply_token,food())
+		line_bot_api.reply_message(event.reply_token,model(Ukey()))
 
-	elif foodk(Ukey()):
+	elif ckey(Ukey()):
 		InMes()
-		line_bot_api.reply_message(event.reply_token,aroma())
+		line_bot_api.reply_message(event.reply_token,model(Ukey()))
 
-	elif aromak(Ukey()):
-		InMes()
-		line_bot_api.reply_message(event.reply_token,taste())
-
-	elif tastek(Ukey()):
-		InMes()
-		line_bot_api.reply_message(event.reply_token,chain())
-
-	elif chaink(Ukey()):
-		InMes()
-		line_bot_api.reply_message(event.reply_token,price())
-
-	elif pricek(Ukey()):
+	elif ckey(Ukey()):
 		InMes()
 		data = dataList(showMes(Uid()))
 		line_bot_api.reply_message(event.reply_token,tenMod(data))
