@@ -519,6 +519,7 @@ def ckey(mes):
 		print("OK")
 		return True
 	if mes in akey:
+		print("OK")
 		return True
 	if mes in tkey:
 		return True
