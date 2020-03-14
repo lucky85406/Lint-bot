@@ -331,7 +331,7 @@ def mylove(n,ulist):
 				spacing = 'xs',
 				contents = [
 					BoxComponent(
-						margin = 'xl',
+						margin = 'xs',
 						layout = 'horizontal',
 						spacing = 'xs',
 						contents = [
