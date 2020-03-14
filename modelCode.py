@@ -360,21 +360,21 @@ def mylove(n,ulist):
 				spacing = 'xs',
 				contents = [
 					BoxComponent(
-						margin = 'md',
+						margin = 'xs',
 						layout = 'horizontal',
 						spacing = 'xs',
 						contents = [
 							ButtonComponent(
 								style='secondary',
 								color='#84C1FF',
-								flex = 3,
+								flex = 8,
 								height='sm',
 								action=MessageAction(label=a[x],text='see:'+a[x])
 							),
 							ButtonComponent(
 								style='secondary',
 								color='#ECFFFF',
-								flex = 1,
+								flex = 4,
 								height='sm',
 								action=MessageAction(label='刪除',text='re:'+a[x])
 							)
