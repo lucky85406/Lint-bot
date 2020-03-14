@@ -99,7 +99,7 @@ def function(event):
 		else:
 			line_bot_api.reply_message(event.reply_token,TextSendMessage(text='我的最愛:新增成功'))
 
-	elif Ukey().split(':')[0] == 're':
+	elif Ukey().split(':')[0] == "re":
 		relove(Name(),Ukey().split(':')[1])
 		dlist = list(love2(Name()))
 		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
