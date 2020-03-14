@@ -355,7 +355,7 @@ def mylove(n,ulist):
 			)]
 	for x in range(1,alen):
 		contents.append(BoxComponent(
-				margin = 'md',
+				margin = 'xl',
 				layout = 'vertical',
 				spacing = 'xs',
 				contents = [
