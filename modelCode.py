@@ -345,7 +345,7 @@ def mylove(n,ulist):
 							ButtonComponent(
 								style='secondary',
 								color='#ECFFFF',
-								flex = 2,
+								flex = 4,
 								height='sm',
 								action=MessageAction(label="刪除",text='re:'+s[0])
 							)
