@@ -326,7 +326,7 @@ def mylove(n,ulist):
 	else:
 		s.append(a[0])
 	contents = [BoxComponent(
-				margin = 'md',
+				margin = 'xl',
 				layout = 'vertical',
 				spacing = 'xs',
 				contents = [
