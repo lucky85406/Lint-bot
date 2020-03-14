@@ -317,6 +317,7 @@ def showimg():
 
 #我的最愛
 def mylove(n,ulist):
+	de = "刪除"
 	a = ulist
 	s = []
 	alen = len(ulist)
@@ -347,7 +348,7 @@ def mylove(n,ulist):
 								color='#ECFFFF',
 								flex = 1,
 								height='sm',
-								action=MessageAction(label='刪除',text='re:'+s[0])
+								action=MessageAction(label=de,text='re:'+s[0])
 							)
 						]
 					)
