@@ -1,11 +1,11 @@
 import pygsheets
 
-gc = pygsheets.authorize(service_account_file='googleToken.json')
 
-survey_url = 'https://docs.google.com/spreadsheets/d/1vhiAa6idyIwIkVVZdTXzhAHKclf9lvb5j4PXhsodWXM/'
-sh = gc.open_by_url(survey_url)
 
 def mesin():
+	gc = pygsheets.authorize(service_account_file='googleToken.json')
+	survey_url = 'https://docs.google.com/spreadsheets/d/1vhiAa6idyIwIkVVZdTXzhAHKclf9lvb5j4PXhsodWXM/'
+	sh = gc.open_by_url(survey_url)
 	ws = sh.worksheet_by_title(' P_UpLoadTest')
 	ws.update_value('A1','test')
 
