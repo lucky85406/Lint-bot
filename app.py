@@ -8,6 +8,9 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage
 )
+from googleSheet import (
+	gmes
+)
 from modelCode import(
 	food, aroma, taste, chain, price, showimg, mylove, tenMod, single,ckey,model)
 from utoken import(go,inMes,showMes)
@@ -82,6 +85,7 @@ def function(event):
 
 	if Ukey() == "Go":
 		go(Uid())
+		gmes(Name())
 		line_bot_api.reply_message(event.reply_token,model(Ukey()))
 
 	elif ckey(Ukey()) == "ck":
