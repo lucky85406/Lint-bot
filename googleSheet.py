@@ -1,7 +1,7 @@
 import sys
 import datetime
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials as SAC
+from oauth2client.service_account import ServiceAccountCredentials
 
 def gmes(txt):
 
@@ -9,7 +9,7 @@ def gmes(txt):
 	gss_scopes = ['https://spreadsheets.google.com/feeds'] #我們想要取用的範圍
 
 
-	
+
 	def auth_gss_client(path, scopes):
 		credentials = ServiceAccountCredentials.from_json_keyfile_name(path, scopes)
 		return gspread.authorize(credentials)
