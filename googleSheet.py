@@ -10,7 +10,7 @@ def gmes(txt):
 
 		while True:
 			try:
-				scope = ['https://docs.google.com/spreadsheets/d/1vhiAa6idyIwIkVVZdTXzhAHKclf9lvb5j4PXhsodWXM/edit#gid=0']
+				scope = ['https://spreadsheets.google.com/feeds']
 				key = SAC.from_json_keyfile_name(GDriveJSON,scope)
 				gc = gspread.authorize(key)
 				worksheet = gc.open(GSpreadSheet).sheet1
