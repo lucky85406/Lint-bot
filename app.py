@@ -111,7 +111,7 @@ def function(event):
 		dlist = list(love2(Name()))
 		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
 		pass
-		kmes(Name())
+		kmes(Name(),"HI")
 
 	elif Ukey().split(':')[0] == 'See':
 		data = singleList(Ukey().split(':')[1])

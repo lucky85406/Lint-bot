@@ -3,7 +3,7 @@ from datetime import datetime
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
-def kmes(txt):
+def kmes(user,love):
 
 	auth_json_path = 'googleToken.json' #由剛剛建立出的憑證，放置相同目錄以供引入
 	gss_scopes = ['https://spreadsheets.google.com/feeds'] #我們想要取用的範圍
@@ -26,7 +26,7 @@ def kmes(txt):
 	now = datetime.now()
 	time = now.strftime("%Y/%m/%d-%H:%M:%S")
 	#透過insert_row寫入值 第二行塞入時間,abc,123的值
-	sheet.insert_row([time,txt],2)
+	sheet.insert_row([time,user,love],2)
 
 def gmes():
 
