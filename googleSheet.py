@@ -21,5 +21,5 @@ def gmes(txt):
 			textt+= text
 			if textt != "":
 				worksheet.append_row((datatime.datetime.now(),textt))
-				print('新增一列資料到試算表',GSpreadSheet)
+				print('新增一列資料到試算表OK',GSpreadSheet)
 				return textt
