@@ -12,3 +12,4 @@ flask==1.0.2
 gspread
 oauth2client
 numpy
+pygsheets
