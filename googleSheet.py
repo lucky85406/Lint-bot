@@ -2,6 +2,10 @@ import sys
 from datetime import datetime
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+from apiclient import discovery
+from oauth2client import client
+from oauth2client import tools
+from oauth2client.file import Storage
 
 def gmes(txt):
 
@@ -27,3 +31,20 @@ def gmes(txt):
 	time = now.strftime("%Y/%m/%d-%H:%M:%S")
 	#透過insert_row寫入值 第二行塞入時間,abc,123的值
 	sheet.insert_row([time,txt],2)
+	print(getSheetValue(spreadsheet_key_path,'sheet1!A1:B'))
+
+
+def getSheetValue(spreadsheetId, rangeName):
+ 
+    # 建立 Google Sheet API 連線
+    credentials = getCredentials()
+    http = credentials.authorize(httplib2.Http())
+    discoveryUrl = ('https://sheets.googleapis.com/$discovery/rest?'
+                    'version=v4')
+    service = discovery.build('sheets', 'v4', http=http, discoveryServiceUrl=discoveryUrl)
+ 
+    # 取的 Sheet 資料
+    result = service.spreadsheets().values().get(spreadsheetId=spreadsheetId, range=rangeName).execute()
+    values = result.get('values', [])
+ 
+    return values
