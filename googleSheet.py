@@ -48,7 +48,6 @@ def gmes():
 	#我們透過open_by_key這個method來開啟sheet
 	sheet = gss_client.open_by_key(spreadsheet_key_path).sheet1
 
-	for x in sheet.col_values(1):
+	for x,y in sheet.col_values(1),sheet.col_values(2):
 		print("time:",x)
-	for y in sheet.col_values(2):
 		print("user:",y)
