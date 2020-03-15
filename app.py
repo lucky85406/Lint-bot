@@ -85,7 +85,7 @@ def function(event):
 
 	if Ukey() == "Go":
 		go(Uid())
-		kmes()
+		gmes()
 		line_bot_api.reply_message(event.reply_token,model(Ukey()))
 
 	elif ckey(Ukey()) == "ck":
