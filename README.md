@@ -51,3 +51,8 @@
 	* app.py 新增 使用者輸入與關鍵字不相同時，顯示引導訊息
 	* modelCode.py 修改 mylove()修改"-"為刪除
 ```
+### 2020/03/15
+```
+* 1825:  
+	* googleSheet.py 新增 資料上傳與取得googlesheet資料 
+```
