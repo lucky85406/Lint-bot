@@ -27,4 +27,4 @@ def gmes(txt):
 	time = now.strftime("%Y/%m/%d-%H:%M:%S")
 	#透過insert_row寫入值 第二行塞入時間,abc,123的值
 	sheet.insert_row([time,txt],2)
-	print("show:",sheet.col_values(1))
+	print("show:",type(sheet.col_values(1)))
