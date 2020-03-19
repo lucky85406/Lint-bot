@@ -40,6 +40,6 @@ def gmes(user):
 	if user in token().col_values(2):
 		data.append(token().col_values(3))
 	for x in data:
-		if x != "love":
+		if x is not "love":
 			dict[user] = x
 	print(dict)
