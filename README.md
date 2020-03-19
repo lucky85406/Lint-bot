@@ -54,5 +54,10 @@
 ### 2020/03/15
 ```
 * 1825:  
-	* googleSheet.py 新增 資料上傳與取得googlesheet資料 
+	* googleSheet.py 新增 資料上傳與取得googlesheet資料
+```
+### 2020/03/19
+```
+* 2217:  
+	* googleSheet.py 修改 將驗證區獨立出來為token()
 ```
