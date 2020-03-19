@@ -26,7 +26,7 @@ def token():
 	return sheet
 
 def kmes(user,love):
-	time = dt.now().strftime("%Y/%m/%d-%H:%M:%S")
+	time = dt.datetime.now().strftime("%Y/%m/%d-%H:%M:%S")
 	d = dt.datetime.now(time)
 	tw = pytz.timezone('Asia/Taipei')
 	twdt = tw.localize(d)
