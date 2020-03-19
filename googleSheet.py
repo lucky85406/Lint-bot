@@ -29,7 +29,7 @@ def kmes(user,love):
 	time = datetime.now().strftime("%Y/%m/%d-%H:%M:%S")
 
 	utc = pytz.utc
-	tpe = pytz.timezone('Asiz/Taipei')
+	tpe = pytz.timezone('Asia/Taipei')
 	utcnow = datetime.utcnow()
 	print(utcnow)
 
