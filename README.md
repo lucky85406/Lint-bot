@@ -60,4 +60,5 @@
 ```
 * 2217:  
 	* googleSheet.py 修改 將驗證區獨立出來為token()
+	* googleSheet.py 修改 time 修改時區為GMT+8
 ```
