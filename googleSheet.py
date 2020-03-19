@@ -35,6 +35,5 @@ def kmes(user,love):
 	token().insert_row([stime,user,love],2)
 
 def gmes():
-	user = set([i for i in token().col_values(2)])
-	if user in token().col_values(2):
-		print(token().col_values(3))
+	dict = {'love':[i for i in token().col_values(3)]}
+	print(dict)
