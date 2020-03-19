@@ -101,6 +101,8 @@ def function(event):
 			line_bot_api.reply_message(event.reply_token,TextSendMessage(text='我的最愛:已存在'))
 		else:
 			line_bot_api.reply_message(event.reply_token,TextSendMessage(text='我的最愛:新增成功'))
+			pass
+			kmes(Name(),Ukey())
 
 	elif Ukey().split(':')[0] == "re":
 		relove(Name(),Ukey().split(':')[1])
@@ -110,9 +112,6 @@ def function(event):
 	elif Ukey() == 'SeeMyLove':
 		dlist = list(love2(Name()))
 		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
-		pass
-		for x in dlist:
-			kmes(Name(),x)
 
 	elif Ukey().split(':')[0] == 'See':
 		data = singleList(Ukey().split(':')[1])
