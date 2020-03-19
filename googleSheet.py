@@ -36,6 +36,5 @@ def kmes(user,love):
 
 def gmes():
 	user = set([i for i in token().col_values(2)])
-	love = set([i for i in token().col_values(3)])
-	print("set:",user)
-	print("set:",love)
+	if user in token().col_values(2):
+		print(token().col_values(3))
