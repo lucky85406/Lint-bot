@@ -39,7 +39,7 @@ def gmes(user):
 	data = list()
 	if user in token().col_values(2):
 		data.append(token().col_values(3))
-	if x in data:
+	for x in data:
 		if x.equals("love") == false:
 			dict[user] = x
 	print(dict)
