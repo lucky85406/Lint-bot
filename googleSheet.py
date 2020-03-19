@@ -35,4 +35,7 @@ def kmes(user,love):
 	token().insert_row([stime,user,love],2)
 
 def gmes():
-	print("type:",type(token().col_values(1)))
+	user = set([i for i in token().col_values(2)])
+	love = set([i for i in token().col_values(3)])
+	print("set:",user)
+	print("set:",love)
