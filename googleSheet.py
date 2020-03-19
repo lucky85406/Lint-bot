@@ -31,7 +31,7 @@ def kmes(user,love):
 	utc = pytz.utc
 	tpe = pytz.timezone('Asia/Taipei')
 	utcnow = datetime.utcnow()
-	print(utcnow)
+	print("time:",utcnow)
 
 	#透過insert_row寫入值 第二行塞入時間,abc,123的值
 	token().insert_row([time,user,love],2)
