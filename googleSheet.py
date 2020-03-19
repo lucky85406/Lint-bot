@@ -38,4 +38,5 @@ def gmes(user):
 	dict = {}
 	if user in token().col_values(2):
 		dict[user] = [i for i in token().col_values(3)]
+	del dict[user:'love']
 	print(dict)
