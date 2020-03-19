@@ -27,10 +27,7 @@ def token():
 
 def kmes(user,love):
 	time = datetime.now().strftime("%Y/%m/%d-%H:%M:%S")
-	tw = pytz.timezone('Asia/Taipei')
-	twdt = tw.localize(time)
-	utc_dt = twdt.astimezone(pytz.utc)
-	print(utc_dt)
+
 	#透過insert_row寫入值 第二行塞入時間,abc,123的值
 	token().insert_row([time,user,love],2)
 
