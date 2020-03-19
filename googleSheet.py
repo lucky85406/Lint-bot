@@ -1,5 +1,6 @@
 import sys
-from datetime import datetime
+import datetime as dt
+import pytz
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
@@ -25,11 +26,9 @@ def token():
 	return sheet
 
 def kmes(user,love):
-	#單純取出時間稍後塞入sheet
-	now = datetime.now()
-	time = now.strftime("%Y/%m/%d-%H:%M:%S")
+	d = dt.datetime.now()
 	#透過insert_row寫入值 第二行塞入時間,abc,123的值
-	token().insert_row([time,user,love],2)
+	token().insert_row([d,user,love],2)
 
 def gmes():
 	for x in token().col_values(1):
