@@ -117,7 +117,7 @@ def function(event):
 		data = singleList(Ukey().split(':')[1])
 		line_bot_api.reply_message(event.reply_token,single(data))
 
-	elif Ukey() == "test":
+	elif Ukey() == "test ":
 		gmes(Name())
 
 	else:
