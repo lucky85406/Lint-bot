@@ -26,15 +26,13 @@ def token():
 	return sheet
 
 def kmes(user,love):
-	time = datetime.now().strftime("%Y/%m/%d-%H:%M:%S")
-
 	utc = pytz.utc
 	tpe = pytz.timezone('Asia/Taipei')
 	utcnow = datetime.utcnow()
-	print("time:",tpe.fromutc(utcnow).strftime("%Y/%m/%d-%H:%M:%S"))
+	stime = tpe.fromutc(utcnow).strftime("%Y/%m/%d-%H:%M")
 
 	#透過insert_row寫入值 第二行塞入時間,abc,123的值
-	token().insert_row([time,user,love],2)
+	token().insert_row([stime,user,love],2)
 
 def gmes():
 	for x in token().col_values(1):
