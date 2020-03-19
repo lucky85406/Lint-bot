@@ -34,7 +34,8 @@ def kmes(user,love):
 	#透過insert_row寫入值 第二行塞入時間,abc,123的值
 	token().insert_row([stime,user,love],2)
 
-def gmes():
-	dict = {'love':[i for i in token().col_values(3)]}
-	if '柏任' in token().col_values(2):
-		print(token().col_values(3))
+def gmes(user):
+	dict = {}
+	if user in token().col_values(2):
+		dict[user] = [i for i in token().col_values(3)]
+	print(dict)
