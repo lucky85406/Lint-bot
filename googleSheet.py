@@ -40,6 +40,6 @@ def gmes(user):
 	if user in token().col_values(2):
 		data.append(token().col_values(3))
 	print(data)
-	data.remove("love")
-	dict[user] = data
+	data[0].remove("love")
+	dict[user] = data[0]
 	print(dict)
