@@ -36,6 +36,9 @@ def kmes(user,love):
 
 def gmes(user):
 	dict = {}
+	data = list()
 	if user in token().col_values(2):
-		dict[user] = {[i for i in token().col_values(3)]}
+		data.append(token().col_values(3))
+	del data["love"]
+	dict[user] = data
 	print(dict)
