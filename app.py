@@ -122,12 +122,6 @@ def function(event):
 		data = singleList(Ukey().split(':')[1])
 		line_bot_api.reply_message(event.reply_token,single(data))
 
-	elif Ukey() == "test ":
-		gmes(Name())
-
-	elif Ukey() == "the":
-		tmes()
-
 	else:
 		line_bot_api.reply_message(event.reply_token,TextSendMessage(text="您好～請先點選下方選單中的開始進行葡萄酒選擇喔"))
 	tEnd = time.time()#計時結束

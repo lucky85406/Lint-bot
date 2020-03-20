@@ -62,3 +62,12 @@
 	* googleSheet.py 修改 將驗證區獨立出來為token()
 	* googleSheet.py 修改 time 修改時區為GMT+8
 ```
+### 2020/03/20
+```
+* 1900:  
+	* googleSheet.py 新增 tmes()先清空googlesheet內資料將mylove.csv資料寫進googlesheet
+	* love.py 修改 relove()程式內容修改
+	* app.py 新增 當GO()之後直接把googlesheet資料寫進mylove.csv內
+	* app.py 新增 MyLove 當新增最愛時 kmes()寫進googlesheet、gmes()寫進mylove.csv內
+	* app.py 新增 re 當刪除最愛時跑進tmes()
+```
