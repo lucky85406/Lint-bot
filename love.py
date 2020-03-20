@@ -20,6 +20,7 @@ def love2(uid):
 	return set1
 
 def relove(uid,text):
+	mes = set()
 	a = list()
 	if text != 'x':
 		with open('mylove.csv',newline='')as csvfile:
@@ -30,4 +31,17 @@ def relove(uid,text):
 	for x in a:
 		if x[1] == uid and x[2] == text:
 			a.remove(x)
-	print(a)
+	with open('mylove.csv','w',newline='')as cfile:
+			fieldn = ['time','ID','love']
+
+			writer = csv.DictWriter(cfile,fieldnames=fieldn)
+
+			writer.writeheader()
+			for y in a:
+				writer.writerow({'time':y[0],'ID':y[1],'love':y[2]})
+	with open('mylove.csv',newline='')as csvfile:
+		rows = csv.DictReader(csvfile)
+		for row in rows:
+			if uid == row['ID']:
+				mes.add(row['love'])
+	return mes
