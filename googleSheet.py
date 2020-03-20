@@ -36,6 +36,7 @@ def kmes(user,love):
 
 def gmes(user):
 	dict = {}
+	dlist = list()
 	for x in range(2,len(token().col_values(1))+1):
-		print("|-----------|")
-		print(token().row_values(x))
+		dlist.append(token().row_values(x))
+	print(dlist)
