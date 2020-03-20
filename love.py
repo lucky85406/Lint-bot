@@ -28,4 +28,6 @@ def relove(uid,text):
 				if len(row):
 					a.append([row['time'],row['ID'],row['love']])
 	for x in a:
-		print(x[0],x[1],x[2],sep=":")
+		if x[1] == uid and x[2] == text:
+			a.remove(x)
+	print(a)
