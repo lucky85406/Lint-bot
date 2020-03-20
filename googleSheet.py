@@ -55,4 +55,5 @@ def tmes():
 	with open('mylove.csv',newline='')as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
-			token().insert_row(["stime",row['ID'],row['love']],2)
+			if len(row):
+				token().insert_row(["stime",row['ID'],row['love']],2)
