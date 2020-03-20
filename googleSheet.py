@@ -39,4 +39,6 @@ def gmes(user):
 	dlist = list()
 	for x in range(2,len(token().col_values(1))+1):
 		dlist.append(token().row_values(x))
-	print(dlist)
+	for y in dlist:
+		if y[1] == "柏任":
+			print(y)
