@@ -30,6 +30,7 @@ def love2(uid):
 def relove(uid,text):
 	print("uname:",uid)
 	print("text:",text)
+	n = 0
 	mes = set()
 	c = []
 	e = []
@@ -62,7 +63,9 @@ def relove(uid,text):
 		print("|----remove-------->")
 		for x in c:
 			if x == uid:
-				c.remove(x)
+				n = n +1
+		for y in range(1,n):
+			c.remove(uid)
 		print("c:",c)
 		print("|----extend-------->")
 		c.extend(a)
