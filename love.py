@@ -53,11 +53,11 @@ def relove(uid,text):
 		f.remove(text)
 		for x in c:
 			if x == uid:
+				print("del")
 				c.remove(uid)
 
 		c.extend(a)
 		g.extend(f)
-		print(len(c))
 		with open('mylove.csv','w',newline='')as cfile:
 				fieldn = ['ID','love']
 
