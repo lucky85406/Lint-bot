@@ -11,7 +11,6 @@ def go(url):
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			c.append(row)
-	print("len",len(c))
 	if len(c):
 		for x in c:
 			if x['ID'] == url:
