@@ -27,48 +27,15 @@ def love2(uid):
 			if row['ID'] == uid:
 				set1.add(row['love'])
 	return set1
-def relove(uid,text):
-	print("uname:",uid)
-	print("text:",text)
-	n = 0
-	mes = set()
-	c = []
-	e = []
-	a = []
-	f = []
-	g = []
 
+def relove(uid,text):
+	a = [[""]]
+	i = 0
 	if text != 'x':
 		with open('mylove.csv',newline='')as csvfile:
 			rows = csv.DictReader(csvfile)
 			for row in rows:
-				c.append(row['ID'])
-				e.append(row['love'])
-		for x in range(0,len(c)):
-			if c[x] == uid:
-				a.append(c[x])
-				f.append(e[x])
-			else:
-				g.append(e[x])
-		a.remove(uid)
-		f.remove(text)
-		n = c.count(uid)
-		for y in range(1,n):
-			c.remove(uid)
-		c.extend(a)
-		g.extend(f)
-		with open('mylove.csv','w',newline='')as cfile:
-				fieldn = ['ID','love']
-
-				writer = csv.DictWriter(cfile,fieldnames=fieldn)
-
-				writer.writeheader()
-				for x in range(0,len(c)-1):
-					writer.writerow({'ID':c[x],'love':g[x]})
-		with open('mylove.csv',newline='')as csvfile:
-			rows = csv.DictReader(csvfile)
-
-			for row in rows:
-				if uid == row['ID']:
-					mes.add(row['love'])
-		return mes
+				if len(row):
+					a[i]=[row['time'],row['ID'],row['love']]
+					i = i +1
+	print(a)

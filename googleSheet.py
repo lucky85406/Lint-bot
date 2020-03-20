@@ -41,13 +41,13 @@ def gmes(user):
 	for x in range(2,len(token().col_values(1))+1):
 		dlist.append(token().row_values(x))
 	with open('mylove.csv','w',newline='')as cfile:
-			fieldn = ['ID','love']
+			fieldn = ['time','ID','love']
 
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
 
 			writer.writeheader()
 			for y in dlist:
-				writer.writerow({'ID':y[1],'love':y[2]})
+				writer.writerow({'time':y[0],'ID':y[1],'love':y[2]})
 
 def tmes():
 	token().clear()
@@ -56,4 +56,4 @@ def tmes():
 		rows = csv.DictReader(csvfile)
 		for row in rows:
 			if len(row):
-				token().insert_row(["stime",row['ID'],row['love']],2)
+				token().insert_row([row['time'],row['ID'],row['love']],2)
