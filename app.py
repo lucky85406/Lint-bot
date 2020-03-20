@@ -105,6 +105,7 @@ def function(event):
 			line_bot_api.reply_message(event.reply_token,TextSendMessage(text='我的最愛:新增成功'))
 			pass
 			kmes(Name(),Ukey().split(':')[1])
+			gmes(Name())
 
 	elif Ukey().split(':')[0] == "re":
 		relove(Name(),Ukey().split(':')[1])

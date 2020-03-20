@@ -8,17 +8,8 @@ def love(uid,text):
 		for row in rows:
 			if row['ID'] == uid and row['love'] == keyin[1]:
 				c = True
-				break
-	if c:
-		return c
-	else:
-		with open('mylove.csv','a',newline='')as cfile:
-				fieldn = ['ID','love']
-
-				writer = csv.DictWriter(cfile,fieldnames=fieldn)
-
-				writer.writerow({'ID':uid,'love':keyin[1]})
-		return c
+				return c
+	return c
 def love2(uid):
 	set1 = set()
 	with open('mylove.csv',newline='')as csvfile:
