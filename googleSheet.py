@@ -50,7 +50,7 @@ def gmes(user):
 				writer.writerow({'ID':y[1],'love':y[2]})
 
 def tmes():
-	token().update_cell("")
+	token().update_cells("")
 	with open('mylove.csv',newline='')as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
