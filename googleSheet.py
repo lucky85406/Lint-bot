@@ -39,6 +39,11 @@ def gmes(user):
 	dlist = list()
 	for x in range(2,len(token().col_values(1))+1):
 		dlist.append(token().row_values(x))
-	for y in dlist:
-		if y[1] == "柏任":
-			print(y)
+	with open('mylove.csv','w',newline='')as cfile:
+			fieldn = ['ID','love']
+
+			writer = csv.DictWriter(cfile,fieldnames=fieldn)
+
+			writer.writeheader()
+			for y in dlist:
+				writer.writerow({'ID':y[1],'love':y[2]})
