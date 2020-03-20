@@ -84,7 +84,6 @@ def function(event):
 		return line_bot_api.get_profile(Uid()).display_name
 
 	if Ukey() == "Go":
-		gmes()
 		line_bot_api.reply_message(event.reply_token,model(Ukey()))
 
 	elif ckey(Ukey()) == "ck":
