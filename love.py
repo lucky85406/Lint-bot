@@ -27,6 +27,6 @@ def relove(uid,text):
 			rows = csv.DictReader(csvfile)
 			for row in rows:
 				if len(row):
-					a[i]=[row['time'],row['ID'],row['love']]
+					a[i].append([row['time'],row['ID'],row['love']])
 					i = i +1
 	print(a)
