@@ -44,34 +44,19 @@ def relove(uid,text):
 			for row in rows:
 				c.append(row['ID'])
 				e.append(row['love'])
-		print("c:",c)
-		print("e:",e)
 		for x in range(0,len(c)):
 			if c[x] == uid:
 				a.append(c[x])
 				f.append(e[x])
 			else:
 				g.append(e[x])
-		print("a:",a)
-		print("f:",f)
-		print("g:",g)
-		print("|----remove-------->")
 		a.remove(uid)
 		f.remove(text)
-		print("a:",a)
-		print("f:",f)
-		print("|----remove-------->")
-		for x in c:
-			if x == uid:
-				n = n +1
+		n = c.count(uid)
 		for y in range(1,n):
 			c.remove(uid)
-		print("c:",c)
-		print("|----extend-------->")
 		c.extend(a)
 		g.extend(f)
-		print("c:",c)
-		print("g:",g)
 		with open('mylove.csv','w',newline='')as cfile:
 				fieldn = ['ID','love']
 
