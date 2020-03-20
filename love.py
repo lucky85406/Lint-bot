@@ -57,7 +57,7 @@ def relove(uid,text):
 
 		c.extend(a)
 		g.extend(f)
-		print(c,g)
+		print(len(c))
 		with open('mylove.csv','w',newline='')as cfile:
 				fieldn = ['ID','love']
 
