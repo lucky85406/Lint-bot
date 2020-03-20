@@ -26,12 +26,12 @@ def love2(uid):
 		for row in rows:
 			if row['ID'] == uid:
 				set1.add(row['love'])
-	return set1	
+	return set1
 def relove(uid,text):
 	mes = set()
-	c = []	
+	c = []
 	e = []
-	a = []	
+	a = []
 	f = []
 	g = []
 
@@ -47,7 +47,7 @@ def relove(uid,text):
 				a.append(c[x])
 				f.append(e[x])
 			else:
-				g.append(e[x])		
+				g.append(e[x])
 
 		a.remove(uid)
 		f.remove(text)
@@ -57,7 +57,7 @@ def relove(uid,text):
 
 		c.extend(a)
 		g.extend(f)
-
+		print(c,g)
 		with open('mylove.csv','w',newline='')as cfile:
 				fieldn = ['ID','love']
 
@@ -68,7 +68,7 @@ def relove(uid,text):
 					writer.writerow({'ID':c[x],'love':g[x]})
 		with open('mylove.csv',newline='')as csvfile:
 			rows = csv.DictReader(csvfile)
-			
+
 			for row in rows:
 				if uid == row['ID']:
 					mes.add(row['love'])
