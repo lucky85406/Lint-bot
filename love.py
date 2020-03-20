@@ -20,13 +20,11 @@ def love2(uid):
 	return set1
 
 def relove(uid,text):
-	a = [[""]]
-	i = 0
+	a = list()
 	if text != 'x':
 		with open('mylove.csv',newline='')as csvfile:
 			rows = csv.DictReader(csvfile)
 			for row in rows:
 				if len(row):
-					a[i].append([row['time'],row['ID'],row['love']])
-					i = i +1
+					a.append([row['time'],row['ID'],row['love']])
 	print(a)
