@@ -54,14 +54,21 @@ def relove(uid,text):
 		print("a:",a)
 		print("f:",f)
 		print("g:",g)
+		print("|----remove-------->")
 		a.remove(uid)
 		f.remove(text)
+		print("a:",a)
+		print("f:",f)
+		print("|----remove-------->")
 		for x in c:
 			if x == uid:
 				c.remove(uid)
-
+		print("c:",c)
+		print("|----extend-------->")
 		c.extend(a)
 		g.extend(f)
+		print("a:",a)
+		print("g:",g)
 		with open('mylove.csv','w',newline='')as cfile:
 				fieldn = ['ID','love']
 
