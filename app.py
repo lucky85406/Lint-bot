@@ -112,6 +112,8 @@ def function(event):
 	elif Ukey() == 'SeeMyLove':
 		dlist = list(love2(Name()))
 		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
+		pass
+		gmes(Name())
 
 	elif Ukey().split(':')[0] == 'See':
 		data = singleList(Ukey().split(':')[1])
