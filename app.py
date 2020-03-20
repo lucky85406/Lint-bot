@@ -9,7 +9,7 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage
 )
 from googleSheet import (
-	gmes,kmes
+	gmes,kmes,tmes
 )
 from modelCode import(
 	food, aroma, taste, chain, price, showimg, mylove, tenMod, single,ckey,model)
@@ -119,6 +119,9 @@ def function(event):
 
 	elif Ukey() == "test ":
 		gmes(Name())
+
+	elif Ukey() == "the":
+		tmes()
 
 	else:
 		line_bot_api.reply_message(event.reply_token,TextSendMessage(text="您好～請先點選下方選單中的開始進行葡萄酒選擇喔"))
