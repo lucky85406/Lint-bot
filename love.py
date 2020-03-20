@@ -28,6 +28,8 @@ def love2(uid):
 				set1.add(row['love'])
 	return set1
 def relove(uid,text):
+	print("uname:",uid)
+	print("text:",text)
 	mes = set()
 	c = []
 	e = []
@@ -41,19 +43,21 @@ def relove(uid,text):
 			for row in rows:
 				c.append(row['ID'])
 				e.append(row['love'])
-
+		print("c:",c)
+		print("e:",e)
 		for x in range(0,len(c)):
 			if c[x] == uid:
 				a.append(c[x])
 				f.append(e[x])
 			else:
 				g.append(e[x])
-
+		print("a:",a)
+		print("f:",f)
+		print("g:",g)
 		a.remove(uid)
 		f.remove(text)
 		for x in c:
 			if x == uid:
-				print("del")
 				c.remove(uid)
 
 		c.extend(a)
