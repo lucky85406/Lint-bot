@@ -94,7 +94,6 @@ def function(event):
 	elif ckey(Ukey()) == "pk":
 		InMes()
 		data = dataList(showMes(Uid()))
-		print(showMes(Uid()))
 		line_bot_api.reply_message(event.reply_token,tenMod(data))
 
 	elif Ukey().split(':')[0] == 'MyLove':
