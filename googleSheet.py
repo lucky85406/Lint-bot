@@ -51,6 +51,7 @@ def gmes(user):
 
 def tmes():
 	token().clear()
+	token().insert_row(["time","user","love"],1)
 	with open('mylove.csv',newline='')as csvfile:
 		rows = csv.DictReader(csvfile)
 		for row in rows:
