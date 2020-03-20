@@ -61,7 +61,8 @@ def relove(uid,text):
 		print("f:",f)
 		print("|----remove-------->")
 		for x in c:
-			print(x)
+			if x is uid:
+				c.remove(x)
 		print("c:",c)
 		print("|----extend-------->")
 		c.extend(a)
