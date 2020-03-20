@@ -27,4 +27,5 @@ def relove(uid,text):
 			for row in rows:
 				if len(row):
 					a.append([row['time'],row['ID'],row['love']])
-	print(a)
+	for x in a:
+		print(x[0],x[1],x[2],sep=":")
