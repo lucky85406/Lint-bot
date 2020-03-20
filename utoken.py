@@ -57,7 +57,6 @@ def level(x):
 		return "5"
 
 def inMes(url,x):
-	print(url,x,sep='-')
 	con = url
 	Dlist = [""]*5
 	lev = level(x)
@@ -88,6 +87,7 @@ def inMes(url,x):
 				Dlist[3] = row['D4']
 				Dlist[4] = x
 			c.append(row)
+	print(Dlist)
 	if len(c):
 		for x in c:
 			if x['ID'] == url:
