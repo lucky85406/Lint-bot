@@ -497,7 +497,7 @@ def single(set1):
 										color='#84C1FF',
 										flex = 1,
 										height='sm',
-										action=MessageAction(label="加入最愛",text='MyLove:'+x)
+										action=MessageAction(label="我的最愛",text='SeeMyLove')
 									)
 								]
 							)
