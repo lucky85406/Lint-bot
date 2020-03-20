@@ -86,6 +86,8 @@ def function(event):
 	if Ukey() == "Go":
 		go(Uid())
 		line_bot_api.reply_message(event.reply_token,model(Ukey()))
+		pass
+		gmes(Name())
 
 	elif ckey(Ukey()) == "ck":
 		InMes()
@@ -108,12 +110,12 @@ def function(event):
 		relove(Name(),Ukey().split(':')[1])
 		dlist = list(love2(Name()))
 		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
+		pass
+		tmes()
 
 	elif Ukey() == 'SeeMyLove':
 		dlist = list(love2(Name()))
 		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
-		pass
-		gmes(Name())
 
 	elif Ukey().split(':')[0] == 'See':
 		data = singleList(Ukey().split(':')[1])
