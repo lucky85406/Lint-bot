@@ -115,6 +115,7 @@ def function(event):
 		tmes()
 
 	elif Ukey() == 'SeeMyLove':
+		gmes(Name())
 		dlist = list(love2(Name()))
 		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
 
