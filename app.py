@@ -110,6 +110,8 @@ def function(event):
 		relove(Name(),Ukey().split(':')[1])
 		dlist = list(love2(Name()))
 		line_bot_api.reply_message(event.reply_token,mylove(Name(),dlist))
+		pass
+		tmes()
 
 	elif Ukey() == 'SeeMyLove':
 		dlist = list(love2(Name()))
@@ -119,9 +121,6 @@ def function(event):
 	elif Ukey().split(':')[0] == 'See':
 		data = singleList(Ukey().split(':')[1])
 		line_bot_api.reply_message(event.reply_token,single(data))
-
-	elif Ukey() == "test ":
-		tmes()
 
 	else:
 		line_bot_api.reply_message(event.reply_token,TextSendMessage(text="您好～請先點選下方選單中的開始進行葡萄酒選擇喔"))
