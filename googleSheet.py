@@ -39,8 +39,7 @@ def kmes(user,love):
 	with open('mylove.csv','a',newline='')as cfile:
 			fieldn = ['time','ID','love']
 			writer = csv.DictWriter(cfile,fieldnames=fieldn)
-			for y in dlist:
-				writer.writerow({'time':stime,'ID':user,'love':love})
+			writer.writerow({'time':stime,'ID':user,'love':love})
 
 def gmes(user):
 	dict = {}
