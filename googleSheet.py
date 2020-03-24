@@ -35,6 +35,12 @@ def kmes(user,love):
 
 	#透過insert_row寫入值 第二行塞入時間,abc,123的值
 	token().insert_row([stime,user,love],2)
+	#寫入csv中
+	with open('mylove.csv','a',newline='')as cfile:
+			fieldn = ['time','ID','love']
+			writer = csv.DictWriter(cfile,fieldnames=fieldn)
+			for y in dlist:
+				writer.writerow({'time':stime,'ID':user,'love':love})
 
 def gmes(user):
 	dict = {}
