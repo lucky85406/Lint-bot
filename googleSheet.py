@@ -1,3 +1,4 @@
+import os
 import sys
 import csv
 import pytz
@@ -38,16 +39,21 @@ def kmes(user,love):
 def gmes(user):
 	dict = {}
 	dlist = list()
-	for x in range(2,len(token().col_values(1))+1):
-		dlist.append(token().row_values(x))
-	with open('mylove.csv','w',newline='')as cfile:
-			fieldn = ['time','ID','love']
+	if os.path.isfile("mylove.csv"):
+		for x in range(2,len(token().col_values(1))+1):
+			dlist.append(token().row_values(x))
+		with open('mylove.csv','w',newline='')as cfile:
+				fieldn = ['time','ID','love']
 
-			writer = csv.DictWriter(cfile,fieldnames=fieldn)
+				writer = csv.DictWriter(cfile,fieldnames=fieldn)
 
-			writer.writeheader()
-			for y in dlist:
-				writer.writerow({'time':y[0],'ID':y[1],'love':y[2]})
+				writer.writeheader()
+				for y in dlist:
+					writer.writerow({'time':y[0],'ID':y[1],'love':y[2]})
+		print("ok")
+	else:
+		print("none")
+
 
 def tmes():
 	token().clear()
