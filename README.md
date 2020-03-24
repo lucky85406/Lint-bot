@@ -71,3 +71,9 @@
 	* app.py 新增 MyLove 當新增最愛時 kmes()寫進googlesheet、gmes()寫進mylove.csv內
 	* app.py 新增 re 當刪除最愛時跑進tmes()
 ```
+### 2020/03/24
+```
+* 1400:  
+	* app.py 修改 Go()當使用者點選開始後判斷mylove.csv 若無建立csv
+	* googleSheet.py 修改 kmes()當使用者新增最愛時同步新增googlesheet與mylove.csv
+```
