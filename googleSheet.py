@@ -40,6 +40,8 @@ def gmes(user):
 	dict = {}
 	dlist = list()
 	if os.path.isfile("mylove.csv"):
+		print("check")
+	else:
 		for x in range(2,len(token().col_values(1))+1):
 			dlist.append(token().row_values(x))
 		with open('mylove.csv','w',newline='')as cfile:
@@ -50,9 +52,7 @@ def gmes(user):
 				writer.writeheader()
 				for y in dlist:
 					writer.writerow({'time':y[0],'ID':y[1],'love':y[2]})
-		print("ok")
-	else:
-		print("none")
+		print("OK")
 
 
 def tmes():
