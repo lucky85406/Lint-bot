@@ -8,7 +8,7 @@ python-jsonrpc-server==0.3.4
 python-language-server==0.31.8
 static3==0.7.0
 line-bot-sdk==1.8.0
-flask==1.0.2
+flask==2.3.2
 gspread
 oauth2client
 numpy
